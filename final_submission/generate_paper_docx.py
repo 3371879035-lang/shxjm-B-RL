@@ -275,7 +275,7 @@ def is_formula_line(s: str) -> bool:
         return False
     if re.match(r'^[-*]\s+', s) or re.match(r'^\d+\.\s+', s):
         return False
-    if 'http' in s or '微信公众号' in s:
+    if 'http' in s or '微信公众号' in s or '`' in s or '.py' in s or 'scripts/' in s:
         return False
     cjk = sum(1 for ch in s if '\u4e00' <= ch <= '\u9fff')
     if cjk > 0: return False
