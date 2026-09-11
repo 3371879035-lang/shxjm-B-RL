@@ -1,0 +1,8 @@
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[enter] remaining_real_duration_s=1200.0
+{"success": true, "cleared": 13, "virtual_time_s": 7257.078458, "distance_m": 26345.392309887837, "measure_calls": 322, "switches": 313, "clear_calls": 13, "failed_clear": 0, "solver_failures": 0, "optical_fallbacks": 0, "extra_measurements": 54, "mode": 4, "variant": "G25O", "coverage": "S25", "robot_id": "202610094088", "request_log": "results\\extreme_plan\\official_b1_s25_p4_3\\run_0001\\requests.jsonl", "exit_response": {"accepted": true, "real_timestamp_ms": 1789153746196, "virtual_time_s": 7257.078458, "exit_reason": "user_exit"}}

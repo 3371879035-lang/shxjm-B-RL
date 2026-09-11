@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from brl.coverage import s25_points, s3_points
+from brl.coverage import s21_points, s25_points, s3_points
 from brl.g25o import G25OPolicy
 from brl.remote import OfficialClient, RemoteBelief
 
@@ -34,6 +34,7 @@ def main():
     ap.add_argument("--wait-interface-s", type=float, default=1200.0)
     ap.add_argument("--out-dir", type=str, default="")
     ap.add_argument("--variant", type=str, default="G25O")
+    ap.add_argument("--coverage", type=str, default="S25", choices=["S25", "S21", "S4"])
     args = ap.parse_args()
 
     stamp = time.strftime("%Y%m%d_%H%M%S")
@@ -56,13 +57,21 @@ def main():
             time.sleep(1.0)
 
     belief = RemoteBelief(client, mode=args.mode)
-    # G25O 使用新的覆盖点集合，完成证书必须和策略实际扫描的点集一致。
-    belief.coverage_points = s3_points() if args.mode == 3 else s25_points()
-    belief.n_coverage = len(belief.coverage_points)
-    policy = G25OPolicy(args.variant)
+    if args.mode == 3:
+        cov_points = s3_points()
+    elif args.coverage == "S21":
+        cov_points = s21_points()
+    elif args.coverage == "S4":
+        cov_points = __import__("brl.coverage", fromlist=["s4_points"]).s4_points()
+    else:
+        cov_points = s25_points()
+    # 完成证书必须和策略实际扫描的点集一致。
+    belief.coverage_points = cov_points
+    belief.n_coverage = len(cov_points)
+    policy = G25OPolicy(args.variant, coverage=args.coverage)
     print(f"[enter] remaining_real_duration_s={client.remaining_real_duration_s}", flush=True)
     result = policy.run(belief)
-    result.update({"mode": args.mode, "variant": args.variant,
+    result.update({"mode": args.mode, "variant": args.variant, "coverage": args.coverage,
                    "robot_id": args.robot_id, "request_log": str(req_log)})
     if belief.success and not getattr(belief, "exited", False):
         try:

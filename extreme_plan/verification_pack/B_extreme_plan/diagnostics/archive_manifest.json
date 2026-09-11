@@ -1,0 +1,1387 @@
+[
+  {
+    "path": "Jammers-simulator-full/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/AdSelectionAttestationsPreloaded/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/EBWebView/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/EBWebView/x64/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/EBWebView/x86/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Extensions/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Installer/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/MEIPreload/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/PdfPreview/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/WidevineCdm/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/WidevineCdm/_platform_specific/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/WidevineCdm/_platform_specific/win_x64/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/edge_feedback/",
+    "size": 0,
+    "type": 16384
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/151.0.4129.86.manifest",
+    "size": 226,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/AdSelectionAttestationsPreloaded/ad-selection-attestations.dat",
+    "size": 63,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/AdSelectionAttestationsPreloaded/manifest.json",
+    "size": 128,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Copilot.dat",
+    "size": 8192,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/EBWebView/x64/EmbeddedBrowserWebView.dll",
+    "size": 8936264,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/EBWebView/x86/EmbeddedBrowserWebView.dll",
+    "size": 5684040,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Edge.dat",
+    "size": 12288,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/EdgeWebView.dat",
+    "size": 8192,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Extensions/external_extensions.json",
+    "size": 99,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Installer/copilot_setup.exe",
+    "size": 31048,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/af.pak",
+    "size": 1026407,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/am.pak",
+    "size": 1508368,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ar.pak",
+    "size": 1564980,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/as.pak",
+    "size": 2225229,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/az.pak",
+    "size": 1175564,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/bg.pak",
+    "size": 1758154,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/bn-IN.pak",
+    "size": 2304701,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/bs.pak",
+    "size": 1096530,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ca-Es-VALENCIA.pak",
+    "size": 1149060,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ca.pak",
+    "size": 1150868,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_af.pak",
+    "size": 65947,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_am.pak",
+    "size": 96062,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ar.pak",
+    "size": 93004,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_as.pak",
+    "size": 142921,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_az.pak",
+    "size": 74045,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_bg.pak",
+    "size": 108956,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_bn-IN.pak",
+    "size": 149292,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_bs.pak",
+    "size": 68559,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ca-Es-VALENCIA.pak",
+    "size": 72239,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ca.pak",
+    "size": 72028,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_cs.pak",
+    "size": 70186,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_cy.pak",
+    "size": 70308,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_da.pak",
+    "size": 65502,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_de.pak",
+    "size": 73077,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_el.pak",
+    "size": 123327,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_en-GB.pak",
+    "size": 60360,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_en-US.pak",
+    "size": 59715,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_es-419.pak",
+    "size": 70491,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_es.pak",
+    "size": 70294,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_et.pak",
+    "size": 64342,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_eu.pak",
+    "size": 66310,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_fa.pak",
+    "size": 102624,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_fi.pak",
+    "size": 67853,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_fil.pak",
+    "size": 73734,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_fr-CA.pak",
+    "size": 77573,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_fr.pak",
+    "size": 77083,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ga.pak",
+    "size": 77094,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_gd.pak",
+    "size": 78881,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_gl.pak",
+    "size": 68763,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_gu.pak",
+    "size": 144459,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_he.pak",
+    "size": 83302,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_hi.pak",
+    "size": 141375,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_hr.pak",
+    "size": 69143,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_hu.pak",
+    "size": 74069,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_id.pak",
+    "size": 65631,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_is.pak",
+    "size": 69612,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_it.pak",
+    "size": 70128,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ja.pak",
+    "size": 84817,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ka.pak",
+    "size": 152225,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_kk.pak",
+    "size": 112252,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_km.pak",
+    "size": 153416,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_kn.pak",
+    "size": 155692,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ko.pak",
+    "size": 73263,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_kok.pak",
+    "size": 134913,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_lb.pak",
+    "size": 70886,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_lo.pak",
+    "size": 138960,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_lt.pak",
+    "size": 73228,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_lv.pak",
+    "size": 70605,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_mi.pak",
+    "size": 71485,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_mk.pak",
+    "size": 110460,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ml.pak",
+    "size": 172513,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_mr.pak",
+    "size": 145047,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ms.pak",
+    "size": 67955,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_mt.pak",
+    "size": 73582,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_nb.pak",
+    "size": 63861,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ne.pak",
+    "size": 148982,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_nl.pak",
+    "size": 68651,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_nn.pak",
+    "size": 63735,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_or.pak",
+    "size": 155466,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_pa.pak",
+    "size": 148146,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_pl.pak",
+    "size": 75598,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_pt-BR.pak",
+    "size": 68947,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_pt-PT.pak",
+    "size": 71215,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_qu.pak",
+    "size": 71205,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ro.pak",
+    "size": 72117,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ru.pak",
+    "size": 110505,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_sk.pak",
+    "size": 71708,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_sl.pak",
+    "size": 69341,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_sq.pak",
+    "size": 71248,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_sr-Cyrl-BA.pak",
+    "size": 106369,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_sr-Latn-RS.pak",
+    "size": 69339,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_sr.pak",
+    "size": 108029,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_sv.pak",
+    "size": 64998,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ta.pak",
+    "size": 167728,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_te.pak",
+    "size": 154493,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_th.pak",
+    "size": 136462,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_tr.pak",
+    "size": 70749,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_tt.pak",
+    "size": 107387,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ug.pak",
+    "size": 108661,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_uk.pak",
+    "size": 106756,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_ur.pak",
+    "size": 104804,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_vi.pak",
+    "size": 80861,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_zh-CN.pak",
+    "size": 56780,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/copilot_overlay_strings_zh-TW.pak",
+    "size": 58999,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/cs.pak",
+    "size": 1146599,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/cy.pak",
+    "size": 1135776,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/da.pak",
+    "size": 1026500,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/de.pak",
+    "size": 1143861,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/el.pak",
+    "size": 1947647,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/en-GB.pak",
+    "size": 935966,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/en-US.pak",
+    "size": 917879,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/es-419.pak",
+    "size": 1135705,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/es.pak",
+    "size": 1136528,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/et.pak",
+    "size": 1016608,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/eu.pak",
+    "size": 1057749,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/fa.pak",
+    "size": 1585008,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/fi.pak",
+    "size": 1061233,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/fil.pak",
+    "size": 1144947,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/fr-CA.pak",
+    "size": 1223377,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/fr.pak",
+    "size": 1214916,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ga.pak",
+    "size": 1219939,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/gd.pak",
+    "size": 1282973,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/gl.pak",
+    "size": 1087963,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/gu.pak",
+    "size": 2179496,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/he.pak",
+    "size": 1317548,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/hi.pak",
+    "size": 2174279,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/hr.pak",
+    "size": 1109591,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/hu.pak",
+    "size": 1173666,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/id.pak",
+    "size": 1003418,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/is.pak",
+    "size": 1076156,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/it.pak",
+    "size": 1121044,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ja.pak",
+    "size": 1309461,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ka.pak",
+    "size": 2431575,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/kk.pak",
+    "size": 1722463,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/km.pak",
+    "size": 2340352,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/kn.pak",
+    "size": 2433285,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ko.pak",
+    "size": 1103185,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/kok.pak",
+    "size": 2103415,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/lb.pak",
+    "size": 1106542,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/lo.pak",
+    "size": 2126166,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/lt.pak",
+    "size": 1161224,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/lv.pak",
+    "size": 1130573,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/mi.pak",
+    "size": 1106673,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/mk.pak",
+    "size": 1756403,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ml.pak",
+    "size": 2663823,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/mr.pak",
+    "size": 2197560,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ms.pak",
+    "size": 1034186,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/mt.pak",
+    "size": 1179685,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/nb.pak",
+    "size": 999933,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ne.pak",
+    "size": 2333599,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/nl.pak",
+    "size": 1070242,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/nn.pak",
+    "size": 1004241,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/or.pak",
+    "size": 2424532,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/pa.pak",
+    "size": 2220962,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/pl.pak",
+    "size": 1191733,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/pt-BR.pak",
+    "size": 1102628,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/pt-PT.pak",
+    "size": 1134117,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/qu.pak",
+    "size": 1134767,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ro.pak",
+    "size": 1147235,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ru.pak",
+    "size": 1799982,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/sk.pak",
+    "size": 1167283,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/sl.pak",
+    "size": 1108106,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/sq.pak",
+    "size": 1123205,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/sr-Cyrl-BA.pak",
+    "size": 1700237,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/sr-Latn-RS.pak",
+    "size": 1101146,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/sr.pak",
+    "size": 1716962,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/sv.pak",
+    "size": 1027730,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ta.pak",
+    "size": 2657438,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/te.pak",
+    "size": 2401593,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/th.pak",
+    "size": 2101953,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/tr.pak",
+    "size": 1100364,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/tt.pak",
+    "size": 1727432,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ug.pak",
+    "size": 1669116,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/uk.pak",
+    "size": 1764915,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/ur.pak",
+    "size": 1606652,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/vi.pak",
+    "size": 1256304,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/zh-CN.pak",
+    "size": 880754,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Locales/zh-TW.pak",
+    "size": 909743,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/MEIPreload/manifest.json",
+    "size": 238,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/MEIPreload/preloaded_data.pb",
+    "size": 8254,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/PdfPreview/PdfPreviewHandler.dll",
+    "size": 261448,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/Advertising",
+    "size": 20362,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/Analytics",
+    "size": 4106,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/CompatExceptions",
+    "size": 689,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/Content",
+    "size": 4540,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/Cryptomining",
+    "size": 668,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/Entities",
+    "size": 69999,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/Fingerprinting",
+    "size": 1124,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/LICENSE",
+    "size": 35147,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/Other",
+    "size": 34,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/Social",
+    "size": 754,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Mu/TransparentAdvertisers",
+    "size": 105,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/Advertising",
+    "size": 20812,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/Analytics",
+    "size": 3243,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/Content",
+    "size": 5111,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/Cryptomining",
+    "size": 32,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/Entities",
+    "size": 129152,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/Fingerprinting",
+    "size": 2342,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/LICENSE",
+    "size": 66,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/Other",
+    "size": 34,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/Social",
+    "size": 3424,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/Sigma/Staging",
+    "size": 1816,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/Trust Protection Lists/manifest.json",
+    "size": 132,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/WidevineCdm/LICENSE",
+    "size": 473,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/WidevineCdm/_platform_specific/win_x64/widevinecdm.dll",
+    "size": 22716072,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/WidevineCdm/_platform_specific/win_x64/widevinecdm.dll.sig",
+    "size": 1389,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/WidevineCdm/manifest.json",
+    "size": 1002,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/concrt140.dll",
+    "size": 331760,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/copilot_overlay_images_100_percent.pak",
+    "size": 8439,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/copilot_overlay_images_200_percent.pak",
+    "size": 13095,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/copilot_overlay_unscaled_images.pak",
+    "size": 21561,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/copilotapp.exe",
+    "size": 4604744,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/d3dcompiler_47.dll",
+    "size": 4751568,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/dual_engine_adapter_x64.dll",
+    "size": 5382856,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/dxcompiler.dll",
+    "size": 20531528,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/dxil.dll",
+    "size": 1519840,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/edge_feedback/camera_mf_trace.wprp",
+    "size": 24910,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/edge_feedback/mf_trace.wprp",
+    "size": 12735,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/elevated_tracing_service.exe",
+    "size": 5394760,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/eventlog_provider.dll",
+    "size": 16200,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/ffmpeg.dll",
+    "size": 3081544,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/icudtl.dat",
+    "size": 12461408,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/learning_tools.dll",
+    "size": 1296712,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/microsoft_shell_integration.dll",
+    "size": 457544,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/mip_core_gn.dll",
+    "size": 8724808,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/mscopilot.exe",
+    "size": 4574024,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msedge.dll",
+    "size": 342032200,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msedge.dll.sig",
+    "size": 1389,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msedge_100_percent.pak",
+    "size": 1281826,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msedge_200_percent.pak",
+    "size": 2025386,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msedge_elf.dll",
+    "size": 3984200,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msedge_wer.dll",
+    "size": 118600,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msedgewebview2.exe",
+    "size": 4477256,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msedgewebview2.exe.sig",
+    "size": 1389,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/mspdf.dll",
+    "size": 19607368,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msvcp140.dll",
+    "size": 563616,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/msvcp140_codecvt_ids.dll",
+    "size": 41456,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/notification_helper.exe",
+    "size": 2800968,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/oneauth.dll",
+    "size": 6061896,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/oneds.dll",
+    "size": 3391296,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/onnxruntime.dll",
+    "size": 10910016,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/onramp.dll",
+    "size": 466248,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/platform_experiences_helper.exe",
+    "size": 3113800,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/prefs_enclave_x64.dll",
+    "size": 116216,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/resources.pak",
+    "size": 39783667,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/show_third_party_software_licenses.bat",
+    "size": 270,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/telclient.dll",
+    "size": 3989832,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/textInputMethod.sccd",
+    "size": 18615,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/v8_context_snapshot.bin",
+    "size": 757736,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/vccorlib140.dll",
+    "size": 360944,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/vcruntime140.dll",
+    "size": 133536,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/vcruntime140_1.dll",
+    "size": 57328,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/version.txt",
+    "size": 14,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/vk_swiftshader.dll",
+    "size": 4723528,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/vk_swiftshader_icd.json",
+    "size": 106,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/vulkan-1.dll",
+    "size": 952648,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/wdag.dll",
+    "size": 251208,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/WebView2Runtime/webview2_integration.dll",
+    "size": 31048,
+    "type": 32768
+  },
+  {
+    "path": "Jammers-simulator-full/jammers-simulator-full.exe",
+    "size": 18768896,
+    "type": 32768
+  }
+]

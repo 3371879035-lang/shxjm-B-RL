@@ -16,7 +16,7 @@ import numpy as np
 
 from brl.g25o import G25OPolicy
 from brl.local_env import MacroEnv, RadioEnv, Source
-from brl.coverage import s25_points, s25_max_triangle_edge
+from brl.coverage import s21_points, s25_points, s25_max_triangle_edge
 
 
 def generate_sources(seed: int, mode: int, kind: str):
@@ -61,13 +61,13 @@ def run_a0(mode, seed, sources):
     }
 
 
-def run_g25o(mode, seed, sources, variant="G25O"):
+def run_g25o(mode, seed, sources, variant="G25O", coverage="S25"):
     n = len(sources)
     env = RadioEnv(mode=mode, n_sources=n, seed=seed, step_limit=20000)
     env.reset(seed=seed, n_sources=n, sources=sources)
-    policy = G25OPolicy(variant)
+    policy = G25OPolicy(variant, coverage=coverage)
     out = policy.run(env)
-    out.update({"variant": "G25O", "sources": n})
+    out.update({"variant": f"{variant}-{coverage}", "sources": n})
     out["success"] = bool(out["success"] or env.completion_certificate())
     return out
 
@@ -78,6 +78,7 @@ def main():
     ap.add_argument("--start", type=int, default=92000)
     ap.add_argument("--out", type=str, default=str(ROOT / "results" / "g25o_paired_validation.csv"))
     ap.add_argument("--variant", type=str, default="G25O")
+    ap.add_argument("--coverage", type=str, default="S25", choices=["S25", "S21", "S4"])
     args = ap.parse_args()
     rows = []
     t0 = time.time()
@@ -86,9 +87,9 @@ def main():
             for seed in range(args.start, args.start + args.n):
                 src = generate_sources(seed, mode, kind)
                 a = run_a0(mode, seed, src)
-                b = run_g25o(mode, seed, src, variant=args.variant)
+                b = run_g25o(mode, seed, src, variant=args.variant, coverage=args.coverage)
                 for method, out in (("A0", a), ("G25O", b)):
-                    r = {"kind": kind, "mode": mode, "seed": seed, "method": method, "variant": args.variant}
+                    r = {"kind": kind, "mode": mode, "seed": seed, "method": method, "variant": args.variant, "coverage": args.coverage}
                     r.update({k: out[k] for k in out if k not in ("variant", "sources")})
                     r["sources"] = len(src)
                     rows.append(r)
@@ -113,8 +114,9 @@ def main():
         w.writeheader()
         w.writerows(rows)
     meta = {"n_per_group": args.n, "start_seed": args.start, "wall_s": time.time() - t0,
-            "s25_points": len(s25_points()), "s25_max_triangle_edge_m": s25_max_triangle_edge(),
-            "rows": len(rows)}
+            "variant": args.variant, "coverage": args.coverage,
+            "coverage_points": len(s21_points() if args.coverage == "S21" else s25_points()),
+            "s25_max_triangle_edge_m": s25_max_triangle_edge(), "rows": len(rows)}
     (ROOT / "results" / "g25o_paired_validation_meta.json").write_text(
         json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps(meta, ensure_ascii=False), flush=True)

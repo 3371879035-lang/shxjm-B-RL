@@ -1,0 +1,13 @@
+{
+  "target_cell_index": 146,
+  "target_cell_center": [
+    0.0,
+    0.0
+  ],
+  "q4_marks_target": true,
+  "q3_marks_target": true,
+  "q4_far_marks_target": false,
+  "q4_total_cells": 1,
+  "q3_total_cells": 111,
+  "note": "Q4证书要求负测点凸包严格包含单元四角且全部在1000m内；远处点不能排除目标单元。"
+}

@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import time
@@ -20,7 +21,7 @@ import win32process
 from pywinauto.application import Application
 
 TITLE = "无线电干扰源环境模拟器"
-SIM_EXE = r"C:\Users\huani\Desktop\CUMCM2026B\Jammers-simulator-full-win64\Jammers-simulator-full\jammers-simulator-full.exe"
+SIM_EXE = os.environ.get("JAMMER_SIM_EXE", r"<path-to-jammers-simulator-full.exe>")
 
 
 def get_sim_window():
@@ -112,6 +113,7 @@ def main():
     ap.add_argument("--out-dir", type=str, required=True)
     ap.add_argument("--wait-interface-s", type=float, default=180.0)
     ap.add_argument("--variant", type=str, default="G25O")
+    ap.add_argument("--coverage", type=str, default="S25", choices=["S25", "S21", "S4"])
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -131,7 +133,7 @@ def main():
         cmd = [sys.executable, str(ROOT / "scripts" / "run_official_g25o.py"),
                "--mode", str(args.mode), "--robot-id", args.robot_id,
                "--base-url", args.base_url, "--wait-interface-s", str(args.wait_interface_s),
-               "--variant", args.variant, "--out-dir", str(run_dir)]
+               "--variant", args.variant, "--coverage", args.coverage, "--out-dir", str(run_dir)]
         proc = subprocess.Popen(cmd, stdout=log_out, stderr=log_err)
         time.sleep(0.8)
         w, pid = get_sim_window()

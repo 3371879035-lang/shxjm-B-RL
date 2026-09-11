@@ -11,8 +11,10 @@ from typing import Dict, List, Optional, Sequence, Tuple
 import numpy as np
 
 from .bilateral import K, bearing_clip, clip, solve_bilateral
-from .coverage import s25_points, s3_points, s4_points
-from .geometry import minimum_enclosing_circle
+from .certificates import (cell_index_of_point, grid_cells_intersecting_disk,
+                           q3_absent_cells, q4_absent_cells)
+from .coverage import s25_points, s21_points, s3_points, s4_points
+from .geometry import bearing_cross_sine, minimum_enclosing_circle
 from .local_env import CHANNELS, RadioEnv
 from .resolver import optical_fallback_points
 
@@ -107,22 +109,37 @@ def _best_clear_point(P: np.ndarray, A: Sequence[float], B: Sequence[float],
 class G25OPolicy:
     """机会式几何主动搜索策略。"""
 
-    def __init__(self, variant: str = "G25O"):
+    def __init__(self, variant: str = "G25O", coverage: str = "S25", enable_q4_cert: bool = True):
         self.variant = variant
+        self.enable_q4_cert = bool(enable_q4_cert)
+        self.coverage = str(coverage).upper()
+        if self.coverage not in ("S25", "S21", "S4"):
+            raise ValueError("coverage must be S25, S21 or S4")
         self.full_rolling = variant in ("G25O-R", "G25ORFull", "G25ORF", "G25OR+")
         self.rolling = variant in ("G25OR", "G25O-R", "G25OR+") or self.full_rolling
         self.fallback_count = 0
         self.solver_failures = 0
         self.extra_measurements = 0
+        self.dynamic_absent_channels = 0
+        self.dynamic_absent_cells = 0
+
+    def coverage_set(self, mode: int) -> np.ndarray:
+        if int(mode) == 3:
+            return s3_points()
+        if self.coverage == "S21":
+            return s21_points()
+        if self.coverage == "S4":
+            return s4_points()
+        return s25_points()
 
     def run(self, env: RadioEnv) -> dict:
         if self.full_rolling:
             return _run_full(self, env)
         mode = env.mode
-        if mode == 3:
-            points = s3_points()
-        else:
-            points = s25_points() if self.variant in ("G25", "G25O", "G25OR", "G25O-R", "G25OR+") else s4_points()
+        points = self.coverage_set(mode)
+        if hasattr(env, "coverage_points"):
+            env.coverage_points = points
+            env.n_coverage = len(points)
         order = route_open(points, env.pos)
         tracks: Dict[int, dict] = {}
 
@@ -288,32 +305,57 @@ _Q3_CELLS = None
 _Q3_CELL_R = None
 
 
+def _circle_rect_min_dist(center, half, radius=1800.0):
+    """圆心到轴对齐矩形的最近距离；用于保留与目标圆相交的闭单元。"""
+    c = np.asarray(center, dtype=float)
+    dx = max(abs(c[0]) - half, 0.0)
+    dy = max(abs(c[1]) - half, 0.0)
+    return math.hypot(dx, dy)
+
+
 def _q3_absence_grid(spacing: float = 200.0):
+    """返回与目标圆相交的闭正方形单元中心和半边长。
+
+    旧实现只保留中心位于圆内的格子，会在圆边界留下未覆盖细片。
+    新实现用圆到矩形最近距离 <= 1800 保留所有相交单元；证书检查时
+    使用单元四个角点，而不是中心加外接圆半径。
+    """
     global _Q3_CELLS, _Q3_CELL_R
     if _Q3_CELLS is None:
         cells = []
         limit = 1800.0
+        half = spacing / 2.0
         k = int(limit / spacing) + 2
         for i in range(-k, k + 1):
             x = i * spacing
             for j in range(-k, k + 1):
                 y = j * spacing
-                if x * x + y * y <= limit * limit + 1e-9:
+                if _circle_rect_min_dist((x, y), half, limit) <= limit + 1e-9:
                     cells.append((x, y))
         _Q3_CELLS = np.asarray(cells, dtype=float)
         _Q3_CELL_R = spacing * math.sqrt(2.0) / 2.0
     return _Q3_CELLS, _Q3_CELL_R
 
 
-def _q3_proven_absent(neg_points, cells, cell_radius, margin: float = 5.0) -> bool:
+def _q3_proven_absent(neg_points, cells, cell_radius=None, margin: float = 1e-6) -> bool:
+    """Q3 全向源不存在证书。
+
+    对一个闭单元，只要存在一个 no_signal 测点 p 满足 p 到单元四个角点
+    距离都 <= 1000 - margin，则单元内任意全向源都应被 p 接收，与实测
+    矛盾，因此整个单元可排除。所有保留单元都被排除后，频道才标记 absent。
+    """
     pts = np.asarray(neg_points, dtype=float)
-    if len(pts) == 0:
+    if len(pts) == 0 or cells is None or len(cells) == 0:
         return False
-    safe_r = 1000.0 - cell_radius - margin
-    if safe_r <= 0:
-        return False
-    for c in cells:
-        if not np.any(np.linalg.norm(pts - c, axis=1) <= safe_r):
+    spacing = 200.0
+    half = spacing / 2.0
+    safe_r = 1000.0 - margin
+    corners = np.asarray([[-half, -half], [half, -half], [half, half], [-half, half]], dtype=float)
+    for c in np.asarray(cells, dtype=float):
+        cc = c[None, :] + corners
+        # 距离的 max 是凸函数，矩形上最大值在角点取到
+        d = np.linalg.norm(pts[:, None, :] - cc[None, :, :], axis=2)
+        if not np.any(np.max(d, axis=1) <= safe_r):
             return False
     return True
 
@@ -324,15 +366,24 @@ def _run_full(policy: G25OPolicy, env: RadioEnv) -> dict:
     双侧区间定位和最终光学保底。
     """
     mode = env.mode
-    points = s3_points() if mode == 3 else s25_points()
+    points = policy.coverage_set(mode)
+    if hasattr(env, "coverage_points"):
+        env.coverage_points = points
+        env.n_coverage = len(points)
     unvisited = set(range(len(points)))
     tracks: Dict[int, dict] = {}
     neg_points: Dict[int, list] = {ch: [] for ch in CHANNELS}
     proven_absent: set = set()
     if mode == 3:
         cells, cell_radius = _q3_absence_grid()
+        q4_absent = None
     else:
-        cells, cell_radius = None, None
+        if policy.enable_q4_cert:
+            cells, half = grid_cells_intersecting_disk(200.0, 1800.0)
+            cell_radius = half
+            q4_absent = {ch: np.zeros(len(cells), dtype=bool) for ch in CHANNELS}
+        else:
+            cells, cell_radius, q4_absent = None, None, None
 
     def observe(ch: int, p: np.ndarray, obs: dict) -> None:
         typ = obs.get("measure_result")
@@ -369,19 +420,46 @@ def _run_full(policy: G25OPolicy, env: RadioEnv) -> dict:
         return out
 
     def update_absence() -> None:
-        if mode != 3 or cells is None:
+        if cells is None:
+            return
+        if mode == 3:
+            for ch in CHANNELS:
+                if env.channels[ch].status != "unknown" or ch in proven_absent:
+                    continue
+                if _q3_proven_absent(neg_points[ch], cells, cell_radius):
+                    env.channels[ch].status = "absent"
+                    proven_absent.add(ch)
+                    policy.dynamic_absent_channels += 1
+            return
+        # Q4：位置-方向局部凸包证书；只有全部单元被排除才标记频道不存在
+        if q4_absent is None:
             return
         for ch in CHANNELS:
             if env.channels[ch].status != "unknown" or ch in proven_absent:
                 continue
-            if _q3_proven_absent(neg_points[ch], cells, cell_radius):
+            if len(neg_points[ch]) < 3:
+                continue
+            new = q4_absent_cells(neg_points[ch], cells, cell_radius) & (~q4_absent[ch])
+            if new.any():
+                q4_absent[ch] |= new
+                policy.dynamic_absent_cells += int(new.sum())
+            if bool(q4_absent[ch].all()):
                 env.channels[ch].status = "absent"
                 proven_absent.add(ch)
+                policy.dynamic_absent_channels += 1
 
     def scan_point(idx: int) -> None:
         p = points[idx]
-        chs = [ch for ch in CHANNELS if env.channels[ch].status == "unknown"
-               and ch not in proven_absent and idx not in env.channels[ch].scan_points]
+        cell_idx = cell_index_of_point(p, cells, cell_radius) if (mode == 4 and cells is not None) else -1
+        chs = []
+        for ch in CHANNELS:
+            if env.channels[ch].status != "unknown" or ch in proven_absent:
+                continue
+            if idx in env.channels[ch].scan_points:
+                continue
+            if mode == 4 and q4_absent is not None and cell_idx >= 0 and q4_absent[ch][cell_idx]:
+                continue
+            chs.append(ch)
         chs.sort(key=lambda c: (c != env.current_channel, c))
         for ch in chs:
             if env.done:
@@ -390,22 +468,23 @@ def _run_full(policy: G25OPolicy, env: RadioEnv) -> dict:
         update_absence()
 
     def geom_angle_bonus(idx: int) -> float:
+        """在候选源估计位置处计算两条观测方向的交叉正弦。
+
+        旧实现计算的是候选测点 p 处的夹角，会把共线观测奖励成 180 度。
+        新实现使用 |cross(s1-g, p-g)|/(|s1-g||p-g|)，共线时为 0。
+        """
         p = points[idx]
         bonus = 0.0
         for ch, st in tracks.items():
             c, r = _poly_center_radius(st["P"])
             if not np.isfinite(r):
                 continue
-            a = st["first"]
-            v1 = a - p
-            v2 = c - p
-            n1 = float(np.linalg.norm(v1))
-            n2 = float(np.linalg.norm(v2))
-            if n1 < 1.0 or n2 < 1.0:
+            g = np.asarray(c, dtype=float)
+            a = np.asarray(st["first"], dtype=float)
+            sine = bearing_cross_sine(a, g, p)
+            if sine <= 0.0 and float(np.linalg.norm(a - g)) > 1e-6 and float(np.linalg.norm(p - g)) > 1e-6:
                 continue
-            cosang = float(np.dot(v1, v2) / (n1 * n2))
-            cosang = min(1.0, max(-1.0, cosang))
-            ang = math.acos(cosang)
+            ang = math.asin(min(1.0, max(0.0, float(sine))))
             d = float(np.linalg.norm(p - c))
             if mode == 3:
                 if d <= 1300.0:
@@ -562,4 +641,6 @@ def _run_full(policy: G25OPolicy, env: RadioEnv) -> dict:
         "solver_failures": int(policy.solver_failures),
         "optical_fallbacks": int(policy.fallback_count),
         "extra_measurements": int(policy.extra_measurements),
+        "dynamic_absent_channels": int(policy.dynamic_absent_channels),
+        "dynamic_absent_cells": int(policy.dynamic_absent_cells),
     }

@@ -1,0 +1,18 @@
+{
+  "check_regressions.py": "109c36950c1a8adce03abeb8ae7298464e8329a00b60fb9ce9b58a468acb7aaf",
+  "coverage21.py": "bc4a7307fb5bcda0c0184909f100e5a274671c9707b45de26134a7ee7892e289",
+  "check_s21_certificate.py": "f365e5b28c79cdce0b3d2f47dd950254111b8b14ec5fddac071020b1f5d08a3e",
+  "README.md": "3731a6d793def7c0555057f45c8bbb940bb29bded8fe41e930542d000d67484d",
+  "oracle_bounds.py": "ed0c589950086b767e7824b54fa9c01f9bb089002a05288ac5196f00dfefc6d7",
+  "requirements.txt": "af216985bd31cd1cd90e691e43a7598e3004389ebcb00aff571890bd478f02b4",
+  "PLAN.md": "1afcf9c4d8147f8caf24766cb129cf18683d1d1b80ff5198b89d18ec33f9c464",
+  "proofs/s21_certificate.json": "e186c14152a1594d95e1947c35e45d1348de57eb40b8120303ab599b2b15fceb",
+  "diagnostics/archive_manifest.json": "cd53e9cec486f6511143bac4bd81b237e227c94b5189500ed775eccf80ea14f5",
+  "diagnostics/oracle_selftest.json": "6c0805dc1af29e4db6119806167bd57fc8e061b73fff176be71ff1d58ef032d8",
+  "diagnostics/certificate_negative_test.json": "95cba55079d7d4f55890afb378b3d5bb1cacdb4671f678f7ee74ae6c1fb2adae",
+  "diagnostics/s21_independent_check.json": "1be698a3bded18b5f68a152ff8891829656b5fa3994636a6cb355496fb8074af",
+  "diagnostics/regression_results.json": "251da53097e27fd21ef8e528c3dbff546262d308413bf1366f1a73c0ccfc5309",
+  "diagnostics/s21_build.log": "8308600bdb41288e3e3d73cd22ab6b930a2dee2da2dce332dde353f401ef1470",
+  "diagnostics/archive_summary.json": "45f646021b261858399a1e953bc94f48ee1c55b5cff19859d6c8010ed6a9c61f",
+  "diagnostics/coverage_route_comparison.json": "801c33c7de5c5302ebaa959c8d3e237d847b564f90c932a3a3aa84b4ad8af1c3"
+}

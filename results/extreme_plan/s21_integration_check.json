@@ -1,0 +1,10 @@
+{
+  "coordinate_match": true,
+  "points": 21,
+  "route_s25_m": 18173.85131839358,
+  "route_s21_m": 17908.93006489585,
+  "route_shortening_m": 264.9212534977305,
+  "random_direction_misses": 0,
+  "random_samples": 300000,
+  "note": "随机抽样只作交叉检查，连续覆盖保证来自整数四叉树证书。"
+}

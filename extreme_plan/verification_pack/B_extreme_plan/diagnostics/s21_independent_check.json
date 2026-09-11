@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "verified_cells": 3832,
+  "outside_cells": 2376,
+  "integer_checks": true,
+  "max_support_corner_distance_m": 998.7888916082317,
+  "boundary_covered": true
+}

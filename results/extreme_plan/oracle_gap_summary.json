@@ -1,0 +1,25 @@
+{
+  "n": 20,
+  "start": 94500,
+  "coverage": "S25",
+  "summary": {
+    "problem3": {
+      "runs": 40,
+      "actual_s_per_source": 374.0896937361582,
+      "oracle_lower_s_per_source": 151.637547888916,
+      "oracle_upper_s_per_source": 159.27467862073223,
+      "gap_to_lower_s_per_source": 222.45214584724218,
+      "gap_to_upper_s_per_source": 214.815015115426,
+      "all_clear": true
+    },
+    "problem4": {
+      "runs": 40,
+      "actual_s_per_source": 701.6311746752256,
+      "oracle_lower_s_per_source": 146.71987881140194,
+      "oracle_upper_s_per_source": 154.35287170835525,
+      "gap_to_lower_s_per_source": 554.9112958638236,
+      "gap_to_upper_s_per_source": 547.2783029668705,
+      "all_clear": true
+    }
+  }
+}

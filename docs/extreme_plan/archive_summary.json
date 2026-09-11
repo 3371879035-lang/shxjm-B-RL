@@ -1,0 +1,11 @@
+{
+  "archive_name": "be7161c4-54f6-4dad-871f-a2c7d087b78e.7z",
+  "compressed_bytes": 236850965,
+  "sha256": "4ef8c5d054c6841b32871ca0e0a571fbf4df931ce6e46d85dbd732c48a90e2cf",
+  "entries": 277,
+  "directories": 18,
+  "files": 259,
+  "total_uncompressed_bytes": 711808082,
+  "method": "Read-only libarchive directory inspection through ctypes. No executable was run, decompiled, or used to extract protected game state.",
+  "scope_note": "No standalone environment source or test-scene data files found in directory listing. This does not establish what resources the executable may embed."
+}

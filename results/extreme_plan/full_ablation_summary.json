@@ -1,0 +1,110 @@
+{
+  "n": 15,
+  "start": 96000,
+  "summary": {
+    "uniform_p3": {
+      "G25OR": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 4210.953804474771,
+        "mean_distance_m": 17498.102355707186,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      },
+      "Full_noQ4": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 4259.596251126302,
+        "mean_distance_m": 17701.981255631512,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      },
+      "Full_Q4": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 4259.596251126302,
+        "mean_distance_m": 17701.981255631512,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      }
+    },
+    "uniform_p4": {
+      "G25OR": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 6906.199890165691,
+        "mean_distance_m": 26312.666117495115,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      },
+      "Full_noQ4": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 6908.540960214896,
+        "mean_distance_m": 26288.70480107448,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      },
+      "Full_Q4": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 6908.540960214896,
+        "mean_distance_m": 26288.70480107448,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 16283
+      }
+    },
+    "edge_p3": {
+      "G25OR": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 4741.783255564586,
+        "mean_distance_m": 19416.91627782293,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      },
+      "Full_noQ4": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 4757.24091053705,
+        "mean_distance_m": 19455.537886018577,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      },
+      "Full_Q4": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 4757.24091053705,
+        "mean_distance_m": 19455.537886018577,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      }
+    },
+    "edge_p4": {
+      "G25OR": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 9530.79674115089,
+        "mean_distance_m": 33257.650372421136,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      },
+      "Full_noQ4": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 9492.026646027369,
+        "mean_distance_m": 33107.799896803524,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 0
+      },
+      "Full_Q4": {
+        "runs": 15,
+        "all_clear": true,
+        "mean_v_s": 9492.026646027369,
+        "mean_distance_m": 33107.799896803524,
+        "dynamic_absent_channels": 0,
+        "dynamic_absent_cells": 32846
+      }
+    }
+  }
+}

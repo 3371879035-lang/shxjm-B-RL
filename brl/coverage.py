@@ -95,11 +95,33 @@ def coverage_verify_s4(samples: int = 200000, seed: int = 2) -> dict:
     return {"points": len(pts), "misses": miss, "samples": len(q), "worst_visible_min": worst_visible}
 
 
+
+S21_EXACT = np.asarray([
+    [0, 0],
+    [998, 0], [706, 706], [0, 998], [-706, 706],
+    [-998, 0], [-706, -706], [0, -998], [706, -706],
+    [1866, 0], [1616, 933], [933, 1616], [0, 1866],
+    [-933, 1616], [-1616, 933], [-1866, 0], [-1616, -933],
+    [-933, -1616], [0, -1866], [933, -1616], [1616, -933],
+], dtype=float)
+
+
+def s21_points() -> np.ndarray:
+    """问题4的21点候选覆盖构造：原点 + 内层8点 + 外层12点。
+
+    坐标必须与整数几何证书保持一致，不要改用三角函数近似环点。
+    证书由 scripts/coverage21.py 与 scripts/check_s21_certificate.py 生成和独立校验。
+    """
+    return S21_EXACT.copy()
+
+
 if __name__ == "__main__":
     p3 = s3_points()
     p4 = s4_points()
+    p21 = s21_points()
     print("S3", len(p3), p3.tolist())
     print("S4", len(p4))
+    print("S21", len(p21))
     print(coverage_verify_s3(samples=50000))
     print(coverage_verify_s4(samples=50000))
 

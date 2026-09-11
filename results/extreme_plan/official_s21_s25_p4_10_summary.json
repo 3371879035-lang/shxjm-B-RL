@@ -1,0 +1,58 @@
+{
+  "S25": {
+    "runs": 10,
+    "all_success": true,
+    "total_sources": 125,
+    "total_V": 75320.053925,
+    "aggregate_V_per_source": 602.5604314,
+    "mean_run_V_per_source": 614.5552640922427,
+    "median_run_V_per_source": 588.7418070934066,
+    "mean_sources": 12.5,
+    "std_V": 425.6800271424561,
+    "per_run_V_per_source": [
+      558.2,
+      678.8,
+      595.8,
+      501.8,
+      646.5,
+      809.3,
+      573.9,
+      472.2,
+      581.7,
+      727.4
+    ]
+  },
+  "S21": {
+    "runs": 10,
+    "all_success": true,
+    "total_sources": 121,
+    "total_V": 66974.76139,
+    "aggregate_V_per_source": 553.5104247107438,
+    "mean_run_V_per_source": 576.9074225026106,
+    "median_run_V_per_source": 608.6092095265151,
+    "mean_sources": 12.1,
+    "std_V": 891.8217493014728,
+    "per_run_V_per_source": [
+      264.0,
+      691.6,
+      724.1,
+      679.9,
+      671.4,
+      533.1,
+      561.6,
+      655.7,
+      534.8,
+      452.9
+    ]
+  },
+  "comparison": {
+    "mean_diff_S21_minus_S25_s_per_source": -37.647841589632094,
+    "pct_change": -6.126030283906457,
+    "mannwhitney_p": 0.7337299956962472,
+    "bootstrap_ci95": [
+      -144.2850677699189,
+      61.435638925181436
+    ],
+    "note": "官方案例随机不可重放，这是10+10局分布比较，不是同案例配对；样本量小，只作初步验证。"
+  }
+}

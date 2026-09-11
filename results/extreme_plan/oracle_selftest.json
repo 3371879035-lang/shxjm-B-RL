@@ -1,0 +1,19 @@
+{
+  "held_karp_vs_bruteforce": "PASS for n=1..8",
+  "single_source_example": {
+    "n": 1,
+    "center_tour_length_m": 100.0,
+    "center_visit_order_zero_based": [
+      0
+    ],
+    "oracle_length_lower_bound_m": 79.9999999,
+    "oracle_time_lower_bound_s": 20.999999980000002,
+    "oracle_feasible_time_upper_bound_s": 25.0,
+    "oracle_lower_s_per_source": 20.999999980000002,
+    "oracle_upper_s_per_source": 25.0,
+    "oracle_bracket_width_s_per_source": 4.000000019999999,
+    "interpretation": "Clairvoyant disk-visiting benchmark, NOT an online completion guarantee."
+  },
+  "bound_note": "For n<=16, the theoretical center/disk bracket is at most 7.75 s/source.",
+  "wall_seconds_including_optional_jit": 3.2209857999987435
+}

@@ -1,0 +1,82 @@
+{
+  "q1_realizable_counterexample": {
+    "stations": [
+      [
+        -600.0,
+        0.0
+      ],
+      [
+        320.0,
+        -519.6152422706632
+      ],
+      [
+        310.0,
+        536.9357503463519
+      ]
+    ],
+    "bearings_deg": [
+      1.0,
+      121.0,
+      241.0
+    ],
+    "vertices": [
+      [
+        19.999999999999993,
+        -0.0
+      ],
+      [
+        1.9688138852888052e-13,
+        -0.0
+      ],
+      [
+        10.000000000000092,
+        17.320508075688597
+      ]
+    ],
+    "diameter_m": 19.999999999999797,
+    "MEC_radius_m": 11.547005383792516,
+    "D_over_2_m": 9.999999999999899
+  },
+  "q2_individual_candidates": {
+    "candidates_local": [
+      [
+        750,
+        300
+      ],
+      [
+        750,
+        -300
+      ]
+    ],
+    "error_deg": 1.01,
+    "each_worst_distance_m": 817.7492249880285,
+    "bound_type": "continuous-sector analytic endpoint bound"
+  },
+  "q3_grid_proof_gap": {
+    "point": [
+      1780.0,
+      260.0
+    ],
+    "radius_from_origin_m": 1798.8885457415088,
+    "distance_to_nearest_retained_center_m": 189.73665961010275,
+    "assumed_cell_radius_m": 141.42135623730948,
+    "meaning": "A gap in that enclosure argument; not an observed official missed source."
+  },
+  "angle_vertex_regression": {
+    "first": [
+      0.0,
+      0.0
+    ],
+    "source_estimate": [
+      1000.0,
+      0.0
+    ],
+    "candidate": [
+      500.0,
+      0.0
+    ],
+    "old_angle_deg": 180.0,
+    "correct_bearing_cross_sine": 0.0,
+    "meaning": "Collinear bearings must not be rewarded as maximal angular intersection."
+  }
+}

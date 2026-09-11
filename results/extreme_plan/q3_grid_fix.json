@@ -1,0 +1,14 @@
+{
+  "old_cells": 253,
+  "new_cells": 293,
+  "old_max_nearest_center_distance_m": 200.8131605493091,
+  "new_max_nearest_center_distance_m": 141.13559403341807,
+  "theoretical_cover_radius_m": 141.4213562373095,
+  "old_witness_distance_m": 189.73665961010275,
+  "new_witness_distance_m": 63.245553203367585,
+  "old_gap_exists": true,
+  "new_full_cover": true,
+  "synthetic_all_cells_covered": true,
+  "synthetic_no_negatives": false,
+  "note": "旧网格漏掉圆边界细片；新网格保留所有与目标圆相交的闭单元。"
+}
