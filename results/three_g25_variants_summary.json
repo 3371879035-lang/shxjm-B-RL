@@ -1,0 +1,384 @@
+{
+  "variants": {
+    "problem3": {
+      "G25O": {
+        "runs": 100,
+        "sources": 1332,
+        "cleared": 1332,
+        "full_clear": 100,
+        "success_rate": 1.0,
+        "mean_sources": 13.32,
+        "mean_V": 4182.81572102,
+        "median_V": 4183.4152175,
+        "mean_V_per_source": 319.30599464244045,
+        "median_V_per_source": 316.18083146190475,
+        "mean_program_s": 1.35131,
+        "median_program_s": 1.3575,
+        "p95_program_s": 1.5663,
+        "max_program_s": 1.686,
+        "mean_measures": 108.43,
+        "mean_switches": 103.5,
+        "mean_clear_failures": 0.59,
+        "mean_fixed_time_s": 714.02,
+        "mean_move_time_s": 3468.7957210199993,
+        "move_share": 0.8292968068347312,
+        "mean_move_distance_est_m": 17343.978605099997
+      },
+      "G25OR": {
+        "runs": 100,
+        "sources": 1294,
+        "cleared": 1294,
+        "full_clear": 100,
+        "success_rate": 1.0,
+        "mean_sources": 12.94,
+        "mean_V": 4164.201360420001,
+        "median_V": 4172.8646005,
+        "mean_V_per_source": 328.80625661829924,
+        "median_V_per_source": 322.6710936057692,
+        "mean_program_s": 1.46238,
+        "median_program_s": 1.4835,
+        "p95_program_s": 1.81845,
+        "max_program_s": 2.357,
+        "mean_measures": 110.39,
+        "mean_switches": 105.0,
+        "mean_clear_failures": 0.45,
+        "mean_fixed_time_s": 723.0,
+        "mean_move_time_s": 3441.201360420001,
+        "move_share": 0.8263772720330032,
+        "mean_move_distance_est_m": 17206.006802100004
+      },
+      "G25OR_Full": {
+        "runs": 100,
+        "sources": 1324,
+        "cleared": 1324,
+        "full_clear": 100,
+        "success_rate": 1.0,
+        "mean_sources": 13.24,
+        "mean_V": 4147.12304417,
+        "median_V": 4141.95835,
+        "mean_V_per_source": 318.69250817721337,
+        "median_V_per_source": 316.8538430494506,
+        "mean_program_s": 1.4881899999999997,
+        "median_program_s": 1.488,
+        "p95_program_s": 1.7515999999999998,
+        "max_program_s": 1.88,
+        "mean_measures": 108.27,
+        "mean_switches": 103.35,
+        "mean_clear_failures": 0.44,
+        "mean_fixed_time_s": 712.22,
+        "mean_move_time_s": 3434.90304417,
+        "move_share": 0.8282616666025296,
+        "mean_move_distance_est_m": 17174.51522085
+      }
+    },
+    "problem4": {
+      "G25O": {
+        "runs": 100,
+        "sources": 1283,
+        "cleared": 1283,
+        "full_clear": 100,
+        "success_rate": 1.0,
+        "mean_sources": 12.83,
+        "mean_V": 7131.285236210001,
+        "median_V": 7306.7316445,
+        "mean_V_per_source": 575.5339428079111,
+        "median_V_per_source": 571.8289111666667,
+        "mean_program_s": 3.0140099999999994,
+        "median_program_s": 3.002,
+        "p95_program_s": 3.8318499999999998,
+        "max_program_s": 4.14,
+        "mean_measures": 282.36,
+        "mean_switches": 270.91,
+        "mean_clear_failures": 0.04,
+        "mean_fixed_time_s": 1746.98,
+        "mean_move_time_s": 5384.30523621,
+        "move_share": 0.7550259256032152,
+        "mean_move_distance_est_m": 26921.526181049998
+      },
+      "G25OR": {
+        "runs": 100,
+        "sources": 1286,
+        "cleared": 1286,
+        "full_clear": 100,
+        "success_rate": 1.0,
+        "mean_sources": 12.86,
+        "mean_V": 6957.252480359999,
+        "median_V": 7034.512205,
+        "mean_V_per_source": 556.8250902776083,
+        "median_V_per_source": 573.1516030416667,
+        "mean_program_s": 3.54822,
+        "median_program_s": 3.676,
+        "p95_program_s": 4.52035,
+        "max_program_s": 5.175,
+        "mean_measures": 283.33,
+        "mean_switches": 272.05,
+        "mean_clear_failures": 0.02,
+        "mean_fixed_time_s": 1753.06,
+        "mean_move_time_s": 5204.19248036,
+        "move_share": 0.748024093570155,
+        "mean_move_distance_est_m": 26020.962401800003
+      },
+      "G25OR_Full": {
+        "runs": 100,
+        "sources": 1293,
+        "cleared": 1293,
+        "full_clear": 100,
+        "success_rate": 1.0,
+        "mean_sources": 12.93,
+        "mean_V": 6996.7376031700005,
+        "median_V": 7153.1407070000005,
+        "mean_V_per_source": 558.0130316389867,
+        "median_V_per_source": 553.8351544423076,
+        "mean_program_s": 3.6566999999999994,
+        "median_program_s": 3.6719999999999997,
+        "p95_program_s": 4.4067,
+        "max_program_s": 4.825,
+        "mean_measures": 284.67,
+        "mean_switches": 273.54,
+        "mean_clear_failures": 0.03,
+        "mean_fixed_time_s": 1761.63,
+        "mean_move_time_s": 5235.10760317,
+        "move_share": 0.7482212282475963,
+        "mean_move_distance_est_m": 26175.53801585
+      }
+    }
+  },
+  "pairwise": {
+    "problem3": {
+      "G25O_vs_G25OR": {
+        "pct": 2.975284565670997,
+        "mean_diff": 9.500261975858791,
+        "mannwhitney_p": 0.17007499992361697
+      },
+      "G25O_vs_G25OR_Full": {
+        "pct": -0.19213120815788848,
+        "mean_diff": -0.6134864652270835,
+        "mannwhitney_p": 0.9308779379858274
+      },
+      "G25OR_vs_G25OR_Full": {
+        "pct": -3.0758990248858327,
+        "mean_diff": -10.113748441085875,
+        "mannwhitney_p": 0.18177424397322073
+      }
+    },
+    "problem4": {
+      "G25O_vs_G25OR": {
+        "pct": -3.2506949006389063,
+        "mean_diff": -18.708852530302806,
+        "mannwhitney_p": 0.21678097888320502
+      },
+      "G25O_vs_G25OR_Full": {
+        "pct": -3.044288071602429,
+        "mean_diff": -17.520911168924385,
+        "mannwhitney_p": 0.22507531193110653
+      },
+      "G25OR_vs_G25OR_Full": {
+        "pct": 0.21334192408358718,
+        "mean_diff": 1.1879413613784209,
+        "mannwhitney_p": 0.9561573849567815
+      }
+    }
+  },
+  "by_source_count": {
+    "problem3": {
+      "10": {
+        "G25O": {
+          "runs": 10,
+          "mean_v_per_source": 385.05285274
+        },
+        "G25OR": {
+          "runs": 15,
+          "mean_v_per_source": 408.9588583866667
+        },
+        "G25OR_Full": {
+          "runs": 12,
+          "mean_v_per_source": 376.74960758333344
+        }
+      },
+      "11": {
+        "G25O": {
+          "runs": 11,
+          "mean_v_per_source": 371.9840172892562
+        },
+        "G25OR": {
+          "runs": 16,
+          "mean_v_per_source": 359.3016451931818
+        },
+        "G25OR_Full": {
+          "runs": 11,
+          "mean_v_per_source": 362.9856388016529
+        }
+      },
+      "12": {
+        "G25O": {
+          "runs": 11,
+          "mean_v_per_source": 334.7549333636364
+        },
+        "G25OR": {
+          "runs": 12,
+          "mean_v_per_source": 340.7143455486111
+        },
+        "G25OR_Full": {
+          "runs": 15,
+          "mean_v_per_source": 347.2585938
+        }
+      },
+      "13": {
+        "G25O": {
+          "runs": 18,
+          "mean_v_per_source": 330.6899372136752
+        },
+        "G25OR": {
+          "runs": 17,
+          "mean_v_per_source": 324.98019557918553
+        },
+        "G25OR_Full": {
+          "runs": 12,
+          "mean_v_per_source": 319.5907051474359
+        }
+      },
+      "14": {
+        "G25O": {
+          "runs": 21,
+          "mean_v_per_source": 303.87571854421765
+        },
+        "G25OR": {
+          "runs": 13,
+          "mean_v_per_source": 311.6846436263736
+        },
+        "G25OR_Full": {
+          "runs": 19,
+          "mean_v_per_source": 299.8702706879699
+        }
+      },
+      "15": {
+        "G25O": {
+          "runs": 13,
+          "mean_v_per_source": 284.3441041692308
+        },
+        "G25OR": {
+          "runs": 11,
+          "mean_v_per_source": 280.66967107878787
+        },
+        "G25OR_Full": {
+          "runs": 15,
+          "mean_v_per_source": 291.3116991333334
+        }
+      },
+      "16": {
+        "G25O": {
+          "runs": 16,
+          "mean_v_per_source": 267.2287603867187
+        },
+        "G25OR": {
+          "runs": 16,
+          "mean_v_per_source": 265.30714015624994
+        },
+        "G25OR_Full": {
+          "runs": 16,
+          "mean_v_per_source": 265.26471881640623
+        }
+      }
+    },
+    "problem4": {
+      "10": {
+        "G25O": {
+          "runs": 20,
+          "mean_v_per_source": 740.7455736999999
+        },
+        "G25OR": {
+          "runs": 11,
+          "mean_v_per_source": 717.4087567363637
+        },
+        "G25OR_Full": {
+          "runs": 14,
+          "mean_v_per_source": 719.3191642928571
+        }
+      },
+      "11": {
+        "G25O": {
+          "runs": 13,
+          "mean_v_per_source": 669.0522085664335
+        },
+        "G25OR": {
+          "runs": 19,
+          "mean_v_per_source": 650.2926492057417
+        },
+        "G25OR_Full": {
+          "runs": 18,
+          "mean_v_per_source": 657.7491237777779
+        }
+      },
+      "12": {
+        "G25O": {
+          "runs": 13,
+          "mean_v_per_source": 614.0788348910256
+        },
+        "G25OR": {
+          "runs": 21,
+          "mean_v_per_source": 595.3552433492063
+        },
+        "G25OR_Full": {
+          "runs": 12,
+          "mean_v_per_source": 594.4472585833333
+        }
+      },
+      "13": {
+        "G25O": {
+          "runs": 13,
+          "mean_v_per_source": 564.4386961834318
+        },
+        "G25OR": {
+          "runs": 11,
+          "mean_v_per_source": 542.3081113916083
+        },
+        "G25OR_Full": {
+          "runs": 14,
+          "mean_v_per_source": 548.4719171373625
+        }
+      },
+      "14": {
+        "G25O": {
+          "runs": 13,
+          "mean_v_per_source": 538.6888493956044
+        },
+        "G25OR": {
+          "runs": 12,
+          "mean_v_per_source": 518.5924038988095
+        },
+        "G25OR_Full": {
+          "runs": 15,
+          "mean_v_per_source": 522.7141728380954
+        }
+      },
+      "15": {
+        "G25O": {
+          "runs": 15,
+          "mean_v_per_source": 493.1202547377777
+        },
+        "G25OR": {
+          "runs": 12,
+          "mean_v_per_source": 476.32424818333334
+        },
+        "G25OR_Full": {
+          "runs": 13,
+          "mean_v_per_source": 482.7804036820513
+        }
+      },
+      "16": {
+        "G25O": {
+          "runs": 13,
+          "mean_v_per_source": 332.3321021730769
+        },
+        "G25OR": {
+          "runs": 14,
+          "mean_v_per_source": 359.1859434375
+        },
+        "G25OR_Full": {
+          "runs": 14,
+          "mean_v_per_source": 354.4656323169643
+        }
+      }
+    }
+  }
+}

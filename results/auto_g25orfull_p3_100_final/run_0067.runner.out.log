@@ -1,0 +1,4 @@
+[wait] interface not ready: network failed after retries: <urlopen error [WinError 10053] 你的主机中的软件中止了一个已建立的连接。>
+[wait] interface not ready: network failed after retries: <urlopen error [WinError 10054] 远程主机强迫关闭了一个现有的连接。>
+[enter] remaining_real_duration_s=1200.0
+{"success": true, "cleared": 11, "virtual_time_s": 3460.873065, "distance_m": 13939.365326460394, "measure_calls": 103, "switches": 100, "clear_calls": 12, "failed_clear": 1, "solver_failures": 0, "optical_fallbacks": 0, "extra_measurements": 22, "mode": 3, "variant": "G25O-R", "robot_id": "202610094088", "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25orfull_p3_100_final\\run_0067\\requests.jsonl", "exit_response": {"accepted": true, "real_timestamp_ms": 1789143799081, "virtual_time_s": 3460.873065, "exit_reason": "user_exit"}}
