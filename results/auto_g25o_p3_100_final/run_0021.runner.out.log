@@ -1,0 +1,4 @@
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[enter] remaining_real_duration_s=1200.0
+{"success": true, "cleared": 12, "virtual_time_s": 4113.870796, "distance_m": 17174.353980693904, "measure_calls": 103, "switches": 101, "clear_calls": 13, "failed_clear": 1, "solver_failures": 0, "optical_fallbacks": 0, "extra_measurements": 29, "mode": 3, "variant": "G25O", "robot_id": "202610094088", "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25o_p3_100_final\\run_0021\\requests.jsonl", "exit_response": {"accepted": true, "real_timestamp_ms": 1789130047704, "virtual_time_s": 4113.870796, "exit_reason": "user_exit"}}
