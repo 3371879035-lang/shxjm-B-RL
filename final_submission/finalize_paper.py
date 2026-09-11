@@ -7,10 +7,10 @@ import fitz
 
 BASE = Path(r'D:\数学建模\数学建模B2-RL')
 PAPER = BASE / '论文'
-SRC_DOCX = PAPER / 'B题_方案B_强化学习_论文稿_v4.docx'
-FINAL_DOCX = PAPER / 'B题_方案B_强化学习_论文稿_匿名终稿.docx'
+SRC_DOCX = PAPER / 'B题_方案B_几何保证主动搜索_论文稿_v4.docx'
+FINAL_DOCX = PAPER / 'B题_方案B_几何保证主动搜索_论文稿_匿名终稿.docx'
 TMP_PDF = PAPER / '_final_tmp.pdf'
-FINAL_PDF = PAPER / 'B题_方案B_强化学习_论文稿_匿名终稿.pdf'
+FINAL_PDF = PAPER / 'B题_方案B_几何保证主动搜索_论文稿_匿名终稿.pdf'
 
 def clean_docx(src: Path, dst: Path):
     with zipfile.ZipFile(src, 'r') as zin:

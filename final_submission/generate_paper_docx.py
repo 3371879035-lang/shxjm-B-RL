@@ -426,6 +426,6 @@ def convert(md_path: Path, out_path: Path):
     print('saved', out_path, 'tables', table_no, 'figures', figure_no, 'formulas', formula_no)
 
 if __name__ == '__main__':
-    src = Path(sys.argv[1]) if len(sys.argv) > 1 else (Path(__file__).parent / 'B题_方案B_强化学习_论文稿.md')
-    dst = Path(sys.argv[2]) if len(sys.argv) > 2 else (Path(__file__).parent / 'B题_方案B_强化学习_论文稿_v4.docx')
+    src = Path(sys.argv[1]) if len(sys.argv) > 1 else (Path(__file__).parent / 'B题_方案B_几何保证主动搜索_论文稿.md')
+    dst = Path(sys.argv[2]) if len(sys.argv) > 2 else (Path(__file__).parent / 'B题_方案B_几何保证主动搜索_论文稿_v4.docx')
     convert(src, dst)

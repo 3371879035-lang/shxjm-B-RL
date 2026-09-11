@@ -7,7 +7,7 @@
 | competition-workflow | 全流程 | 明确任务、形式化表示、代码实现、验证、结果解释和论文输出 |
 | problem-classification | 第一、二章 | 判定本题为部分可观测、硬几何约束与在线决策的混合问题 |
 | question-routing | 第一、二章 | 为问题1-4分别路由到几何求交、第二测点、覆盖搜索和双侧定位清除 |
-| model-selection | 第二、十一章 | 比较端到端RL、纯规则、几何保证+RL三类路线，给出选择理由 |
+| model-selection | 第二、十一章 | 比较端到端RL、纯规则、几何保证+调度三类路线，最终选用几何保证主动搜索+A0调度 |
 | baseline-design | 第十、十一章 | 设计传统方法、旧安全PPO、G25O、G25OR和G25O-R full五类基线 |
 | model-comparison | 第十章 | 本地严格配对、官方随机案例分布比较、统一T指标和统计检验 |
 | model-formulation | 第四、五、六章 | 半平面、可行域、覆盖证书、双侧区间和奖励函数等数学定义 |
