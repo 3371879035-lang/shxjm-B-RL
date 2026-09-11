@@ -87,6 +87,7 @@ def main():
     ap.add_argument("--base-url", type=str, default="http://127.0.0.1:2026")
     ap.add_argument("--out-dir", type=str, required=True)
     ap.add_argument("--wait-interface-s", type=float, default=180.0)
+    ap.add_argument("--variant", type=str, default="G25O")
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -106,7 +107,7 @@ def main():
         cmd = [sys.executable, str(ROOT / "scripts" / "run_official_g25o.py"),
                "--mode", str(args.mode), "--robot-id", args.robot_id,
                "--base-url", args.base_url, "--wait-interface-s", str(args.wait_interface_s),
-               "--out-dir", str(run_dir)]
+               "--variant", args.variant, "--out-dir", str(run_dir)]
         proc = subprocess.Popen(cmd, stdout=log_out, stderr=log_err)
         time.sleep(0.8)
         w, pid = get_sim_window()

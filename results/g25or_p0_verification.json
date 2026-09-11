@@ -1,0 +1,7 @@
+{
+  "valid_source_points_checked": 167358,
+  "containment_violations": 0,
+  "old_triangle_central_cap_m": 0.23304913753759138,
+  "new_triangle_outer_radius_m": 1500.2330853510978,
+  "epsilon_deg": 1.01
+}

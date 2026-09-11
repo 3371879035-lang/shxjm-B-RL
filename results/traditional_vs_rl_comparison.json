@@ -83,22 +83,22 @@
     },
     "problem4": {
       "traditional": {
-        "n_runs": 17,
-        "sources": 224,
-        "cleared": 223,
-        "success_rate": 0.9411764705882353,
+        "n_runs": 16,
+        "sources": 214,
+        "cleared": 214,
+        "success_rate": 1.0,
         "full_clear_runs": 16,
-        "mean_sources": 13.176470588235293,
-        "mean_V": 14191.508133176469,
-        "median_V": 14208.677913,
-        "mean_V_per_source": 1075.747026259409,
-        "median_V_per_source": 1104.5690825333334,
-        "std_V_per_source": 190.077601366369,
-        "mean_program_s": 4.7084117647058825,
-        "median_program_s": 4.676,
-        "mean_measures": 320.7647058823529,
-        "mean_switches": 283.3529411764706,
-        "mean_clear_failures": 22.941176470588236
+        "mean_sources": 13.375,
+        "mean_V": 14754.4536146875,
+        "median_V": 14336.5213045,
+        "mean_V_per_source": 1110.5788377193724,
+        "median_V_per_source": 1121.0698731897437,
+        "std_V_per_source": 128.5992556465393,
+        "mean_program_s": 4.71025,
+        "median_program_s": 4.5705,
+        "mean_measures": 333.9375,
+        "mean_switches": 294.375,
+        "mean_clear_failures": 24.375
       },
       "rl": {
         "n_runs": 20,
@@ -155,11 +155,11 @@
         "mean_clear_failures": 108.35
       },
       "mannwhitney_u": 146.0,
-      "mannwhitney_p": 0.47387507982160837,
-      "mean_diff_V_per_source_rl_minus_trad": 47.02796931893727,
+      "mannwhitney_p": 0.6673539989711764,
+      "mean_diff_V_per_source_rl_minus_trad": 12.196157858973947,
       "bootstrap_ci95": [
-        -78.78034221358683,
-        177.26842386018242
+        -98.66490602254719,
+        122.40021602522233
       ]
     }
   },

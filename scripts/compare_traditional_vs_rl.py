@@ -23,12 +23,15 @@ RES = ROOT / "results"
 FIG.mkdir(parents=True, exist_ok=True)
 
 # 当前数据库中的方案B演练记录id（问题3：早期2局 + 20局批量；问题4：早期1局 + 20局批量）
-RL_IDS = {
+OLD_PLANB_IDS = {
     3: set(range(36, 56)),
     4: set(range(57, 77)),
 }
-# 早期方案B单局测试（包含一次补/exit延迟和一次示范），不纳入传统组合并比较
-EARLY_RL_IDS = {32, 33, 35}
+# 有效的传统方法官方演练记录（问题4的id14为q3-mode-on-q4无效局，已剔除）
+TRADITIONAL_IDS = {
+    3: {1, 3, 5, 6, 7, 11, 12, 13, 26, 27, 28, 29, 30, 31},
+    4: {2, 4, 8, 9, 10, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25},
+}
 
 
 def load_rows():
@@ -46,10 +49,13 @@ def metrics(rows, problem, method):
     for r in rows:
         if r["problem_no"] != problem:
             continue
-        if r["id"] in EARLY_RL_IDS:
-            continue
-        is_rl = r["id"] in RL_IDS[problem]
-        if (method == "RL") != is_rl:
+        if method == "Traditional":
+            if r["id"] not in TRADITIONAL_IDS[problem]:
+                continue
+        elif method in ("RL", "OldPlanB"):
+            if r["id"] not in OLD_PLANB_IDS[problem]:
+                continue
+        else:
             continue
         src = max(r["jammer_count"], 1)
         out.append({
@@ -104,7 +110,7 @@ def main():
     rows = load_rows()
     report = {"official_distribution_comparison": {}, "local_paired_comparison": {}}
     for problem in (3, 4):
-        trad = metrics(rows, problem, "传统")
+        trad = metrics(rows, problem, "Traditional")
         rl = metrics(rows, problem, "RL")
         st, sr = summarize(trad), summarize(rl)
         # 仅对完整清除局做敏感性分析
@@ -149,7 +155,7 @@ def main():
     # 图1：V/源箱线图
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
     for ax, problem in zip(axes, (3, 4)):
-        trad = metrics(rows, problem, "传统")
+        trad = metrics(rows, problem, "Traditional")
         rl = metrics(rows, problem, "RL")
         data = [[x["V_per_source"] for x in trad], [x["V_per_source"] for x in rl]]
         ax.boxplot(data, labels=["Traditional", "Plan B (RL)"], showmeans=True)
@@ -165,7 +171,7 @@ def main():
     x = np.arange(2)
     w = 0.35
     for j, problem in enumerate((3, 4)):
-        trad = metrics(rows, problem, "传统")
+        trad = metrics(rows, problem, "Traditional")
         rl = metrics(rows, problem, "RL")
         st, sr = summarize(trad), summarize(rl)
         axes[0].bar(x + (j - 0.5) * w * 2, [st["success_rate"], sr["success_rate"]],

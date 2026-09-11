@@ -61,11 +61,11 @@ def run_a0(mode, seed, sources):
     }
 
 
-def run_g25o(mode, seed, sources):
+def run_g25o(mode, seed, sources, variant="G25O"):
     n = len(sources)
     env = RadioEnv(mode=mode, n_sources=n, seed=seed, step_limit=20000)
     env.reset(seed=seed, n_sources=n, sources=sources)
-    policy = G25OPolicy("G7O" if mode == 3 else "G25O")
+    policy = G25OPolicy(variant)
     out = policy.run(env)
     out.update({"variant": "G25O", "sources": n})
     out["success"] = bool(out["success"] or env.completion_certificate())
@@ -77,6 +77,7 @@ def main():
     ap.add_argument("--n", type=int, default=100)
     ap.add_argument("--start", type=int, default=92000)
     ap.add_argument("--out", type=str, default=str(ROOT / "results" / "g25o_paired_validation.csv"))
+    ap.add_argument("--variant", type=str, default="G25O")
     args = ap.parse_args()
     rows = []
     t0 = time.time()
@@ -85,9 +86,9 @@ def main():
             for seed in range(args.start, args.start + args.n):
                 src = generate_sources(seed, mode, kind)
                 a = run_a0(mode, seed, src)
-                b = run_g25o(mode, seed, src)
+                b = run_g25o(mode, seed, src, variant=args.variant)
                 for method, out in (("A0", a), ("G25O", b)):
-                    r = {"kind": kind, "mode": mode, "seed": seed, "method": method}
+                    r = {"kind": kind, "mode": mode, "seed": seed, "method": method, "variant": args.variant}
                     r.update({k: out[k] for k in out if k not in ("variant", "sources")})
                     r["sources"] = len(src)
                     rows.append(r)

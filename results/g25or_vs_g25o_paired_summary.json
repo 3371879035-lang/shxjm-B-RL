@@ -1,0 +1,42 @@
+{
+  "uniform_mode3": {
+    "pairs": 100,
+    "G25O_mean": 4874.028157363488,
+    "G25OR_mean": 4219.203524398761,
+    "reduction_pct": 13.434978457714562,
+    "mean_diff": -654.8246329647267,
+    "wins_G25OR": 99,
+    "ties": 0,
+    "wins_G25O": 1
+  },
+  "uniform_mode4": {
+    "pairs": 100,
+    "G25O_mean": 7195.358543624448,
+    "G25OR_mean": 7005.831165682465,
+    "reduction_pct": 2.634022707734525,
+    "mean_diff": -189.52737794198418,
+    "wins_G25OR": 84,
+    "ties": 0,
+    "wins_G25O": 16
+  },
+  "edge_mode3": {
+    "pairs": 100,
+    "G25O_mean": 4763.498955929865,
+    "G25OR_mean": 4639.208776542478,
+    "reduction_pct": 2.609220250435102,
+    "mean_diff": -124.29017938738669,
+    "wins_G25OR": 80,
+    "ties": 0,
+    "wins_G25O": 20
+  },
+  "edge_mode4": {
+    "pairs": 100,
+    "G25O_mean": 9400.996161825156,
+    "G25OR_mean": 9399.577249842581,
+    "reduction_pct": 0.01509320882755944,
+    "mean_diff": -1.4189119825751186,
+    "wins_G25OR": 29,
+    "ties": 0,
+    "wins_G25O": 71
+  }
+}

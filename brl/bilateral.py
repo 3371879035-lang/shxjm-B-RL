@@ -11,6 +11,8 @@ from typing import Callable, Optional
 
 import numpy as np
 
+from .geometry import minimum_enclosing_circle
+
 EPS_DEG = 1.01  # 1度传感误差 + 0.005度两位小数舍入余量
 EPS = math.radians(EPS_DEG)
 K = math.tan(EPS)
@@ -95,9 +97,9 @@ def solve_bilateral(first_position, first_bearing_deg: float, current_position,
         if geometry:
             lo = max(lo, float(poly[:, 0].min()))
             hi = min(hi, float(poly[:, 0].max()))
-            center = (poly.min(axis=0) + poly.max(axis=0)) / 2.0
-            if float(np.linalg.norm(poly - center, axis=1).max()) <= 19.5:
-                pos = glob(center)
+            mec = minimum_enclosing_circle(poly)
+            if float(mec.radius) <= 19.5:
+                pos = glob(mec.center)
                 nc += 1
                 ans = clear(pos)
                 if ans.get("clear_result") == "success":

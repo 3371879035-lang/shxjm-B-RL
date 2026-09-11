@@ -12,6 +12,7 @@ import numpy as np
 
 from .bilateral import K, bearing_clip, clip, solve_bilateral
 from .coverage import s25_points, s3_points, s4_points
+from .geometry import minimum_enclosing_circle
 from .local_env import CHANNELS, RadioEnv
 from .resolver import optical_fallback_points
 
@@ -51,20 +52,56 @@ def _clip_target_square(poly: np.ndarray) -> np.ndarray:
 
 
 def initial_track_polygon(p: np.ndarray, theta_deg: float) -> np.ndarray:
+    # 严格外包半径1500m的扇形：用远边弦在中央方向投影为1500m。
+    # 两个边界点取 p + (1500/cos eps) * u(theta±eps)，三角形包含整个扇形。
     eps = math.radians(1.01)
     th = math.radians(theta_deg)
+    L = 1500.0 / math.cos(eps)
     u1 = np.array([math.cos(th - eps), math.sin(th - eps)])
     u2 = np.array([math.cos(th + eps), math.sin(th + eps)])
-    poly = np.asarray([p, p + 1500.0 * u1, p + 1500.0 * u2], dtype=float)
+    poly = np.asarray([p, p + L * u1, p + L * u2], dtype=float)
     return _clip_target_square(poly)
 
 
 def _poly_center_radius(P: np.ndarray) -> Tuple[np.ndarray, float]:
     if P is None or len(P) == 0:
         return np.zeros(2), float("inf")
-    c = (P.min(axis=0) + P.max(axis=0)) / 2.0
-    r = float(np.linalg.norm(P - c, axis=1).max())
-    return c, r
+    mec = minimum_enclosing_circle(P)
+    return np.asarray(mec.center, dtype=float), float(mec.radius)
+
+
+def _best_clear_point(P: np.ndarray, A: Sequence[float], B: Sequence[float],
+                      margin: float = 0.35) -> Optional[np.ndarray]:
+    """在保证一次clear成功的区域内，找使 A->q->B 绕行最小的清除点。
+
+    若可行域最小包围圆半径 r<=19.5，则圆 B(c, 20-r-margin) 内任意 q
+    都保证与 P 中任意点距离 <=20。返回 None 表示当前没有清除证书。
+    """
+    c, r = _poly_center_radius(P)
+    if r > 19.5:
+        return None
+    slack = 20.0 - r - margin
+    if slack <= 1e-9:
+        return None
+    A = np.asarray(A, dtype=float)
+    B = np.asarray(B, dtype=float)
+    AB = B - A
+    L = float(np.linalg.norm(AB))
+    cands = [c]
+    if L > 1e-9:
+        t = float(np.dot(c - A, AB) / (L * L))
+        t = min(1.0, max(0.0, t))
+        proj = A + t * AB
+        v = proj - c
+        nv = float(np.linalg.norm(v))
+        if nv <= slack:
+            cands.append(proj)
+        else:
+            cands.append(c + v / nv * slack)
+    valid = [q for q in cands if float(np.linalg.norm(q - c)) <= slack + 1e-9]
+    if not valid:
+        return None
+    return min(valid, key=lambda q: float(np.linalg.norm(A - q) + np.linalg.norm(q - B)))
 
 
 class G25OPolicy:
@@ -72,6 +109,7 @@ class G25OPolicy:
 
     def __init__(self, variant: str = "G25O"):
         self.variant = variant
+        self.rolling = variant in ("G25OR", "G25O-R", "G25OR+")
         self.fallback_count = 0
         self.solver_failures = 0
         self.extra_measurements = 0
@@ -81,7 +119,7 @@ class G25OPolicy:
         if mode == 3:
             points = s3_points()
         else:
-            points = s25_points() if self.variant in ("G25", "G25O") else s4_points()
+            points = s25_points() if self.variant in ("G25", "G25O", "G25OR", "G25O-R", "G25OR+") else s4_points()
         order = route_open(points, env.pos)
         tracks: Dict[int, dict] = {}
 
@@ -147,12 +185,33 @@ class G25OPolicy:
                 if d <= 1200.0 and sine > 0.15:
                     measure_and_observe(ch, p, coverage_idx=None, is_refine=True)
 
-        for idx in order:
+        for oi, idx in enumerate(order):
             if env.done:
                 break
             if env.cleared_count() + env.discovered_count() >= 16:
                 break
-            scan_point(idx, allow_opportunistic=(self.variant == "G25O"))
+            scan_point(idx, allow_opportunistic=(self.variant in ("G25O", "G25OR", "G25O-R", "G25OR+")))
+            if env.done:
+                break
+            if self.rolling and tracks and oi + 1 < len(order):
+                next_p = points[order[oi + 1]]
+                # 当前已能保证清除的源，若插入路线绕行不大，就地清除。
+                best = None
+                for ch, st in list(tracks.items()):
+                    q = _best_clear_point(st["P"], env.pos, next_p)
+                    if q is None:
+                        continue
+                    detour = float(np.linalg.norm(env.pos - q) + np.linalg.norm(q - next_p)
+                                   - np.linalg.norm(env.pos - next_p))
+                    if detour <= 250.0 and (best is None or detour < best[0]):
+                        best = (detour, ch, q)
+                if best is not None:
+                    _, ch, q = best
+                    out = env.clear(q, ch)
+                    if out.get("clear_result") == "success":
+                        tracks.pop(ch, None)
+                    else:
+                        self.fallback_count += 1
             if env.done:
                 break
 
@@ -202,7 +261,7 @@ class G25OPolicy:
                     break
             if need_idx is None:
                 break
-            scan_point(need_idx, allow_opportunistic=(self.variant == "G25O"))
+            scan_point(need_idx, allow_opportunistic=(self.variant in ("G25O", "G25OR", "G25O-R", "G25OR+")))
             while tracks and not env.done:
                 ch = next(iter(tracks))
                 resolve_track(ch)
