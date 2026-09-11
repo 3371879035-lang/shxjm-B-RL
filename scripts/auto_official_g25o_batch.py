@@ -20,6 +20,7 @@ import win32process
 from pywinauto.application import Application
 
 TITLE = "无线电干扰源环境模拟器"
+SIM_EXE = r"C:\Users\huani\Desktop\CUMCM2026B\Jammers-simulator-full-win64\Jammers-simulator-full\jammers-simulator-full.exe"
 
 
 def get_sim_window():
@@ -28,8 +29,31 @@ def get_sim_window():
         raise RuntimeError("simulator window not found")
     win32gui.ShowWindow(hwnd, 9)
     _, pid = win32process.GetWindowThreadProcessId(hwnd)
-    app = Application(backend="uia").connect(process=pid)
-    return app.window(handle=hwnd), pid
+    candidates = []
+    try:
+        app = Application(backend="uia").connect(process=pid, timeout=2)
+        candidates.append(app.window(handle=hwnd))
+    except Exception:
+        pass
+    try:
+        app2 = Application(backend="uia").connect(path=SIM_EXE, timeout=2)
+        for w in app2.windows():
+            try:
+                if TITLE in w.window_text():
+                    candidates.append(w)
+            except Exception:
+                pass
+    except Exception:
+        pass
+    for w in candidates:
+        try:
+            if len(w.descendants(control_type="Button")) > 5:
+                return w, pid
+        except Exception:
+            pass
+    if candidates:
+        return candidates[0], pid
+    raise RuntimeError("simulator UIA window not accessible")
 
 
 def find_button(w, text, timeout=30.0):
