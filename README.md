@@ -123,7 +123,11 @@ python scripts\run_official_g25o.py --mode 3 --robot-id 202610094088 --base-url 
 python scripts\run_official_g25o.py --mode 4 --robot-id 202610094088 --base-url http://127.0.0.1:2026
 ```
 
-## 8. 已知限制
+## 8. 完整G25O-R实验结论
+
+完整滚动版G25O-R（动态选点+机会测向+Q3动态无源证书+滚动清除）已实现，但本地四组各100对严格配对相对G25OR变化均在±0.2%以内，无实际收益；800局仍全部清除。正式方案继续使用G25OR，G25O-R仅保留为实验分支。
+
+## 9. 已知限制
 
 - 官方模拟器需要登录和联网，本目录无法执行正式测试；本地结果来自严格复现题面规则的 local_env.py 与 mock_server.py，不等同于官方成绩。
 - 训练分布是设计者设定的，不是官方案例生成分布。

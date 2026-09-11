@@ -1,0 +1,38 @@
+{
+  "uniform_mode3": {
+    "pairs": 100,
+    "G25OR_mean": 4219.203524398761,
+    "Full_mean": 4216.8059996466445,
+    "pct": -0.05682410763672727,
+    "wins_Full": 49,
+    "ties": 4,
+    "wins_G25OR": 47
+  },
+  "uniform_mode4": {
+    "pairs": 100,
+    "G25OR_mean": 7005.831165682465,
+    "Full_mean": 7010.857096119128,
+    "pct": 0.07173924574833704,
+    "wins_Full": 49,
+    "ties": 0,
+    "wins_G25OR": 51
+  },
+  "edge_mode3": {
+    "pairs": 100,
+    "G25OR_mean": 4639.208776542478,
+    "Full_mean": 4630.503043743674,
+    "pct": -0.1876555511539605,
+    "wins_Full": 22,
+    "ties": 64,
+    "wins_G25OR": 14
+  },
+  "edge_mode4": {
+    "pairs": 100,
+    "G25OR_mean": 9399.577249842581,
+    "Full_mean": 9405.204495716029,
+    "pct": 0.05986701022688805,
+    "wins_Full": 54,
+    "ties": 16,
+    "wins_G25OR": 30
+  }
+}
