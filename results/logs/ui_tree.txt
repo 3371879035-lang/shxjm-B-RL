@@ -1,0 +1,78 @@
+Control Identifiers:
+
+Dialog - '无线电干扰源环境模拟器'    (L320, T164, R2240, B1364)
+['无线电干扰源环境模拟器', 'Dialog', '无线电干扰源环境模拟器Dialog', '无线电干扰源环境模拟器0', '无线电干扰源环境模拟器1']
+child_window(title="无线电干扰源环境模拟器", control_type="Window")
+   | 
+   | Pane - '无线电干扰源环境模拟器'    (L331, T209, R2229, B1353)
+   | ['无线电干扰源环境模拟器Pane', '无线电干扰源环境模拟器2', 'Pane', 'Pane0', 'Pane1']
+   | child_window(title="无线电干扰源环境模拟器", control_type="Pane")
+   |    | 
+   |    | Pane - ''    (L331, T209, R2229, B1353)
+   |    | ['Pane2']
+   |    | 
+   |    | Pane - '无线电干扰源环境模拟器 - Web 内容'    (L332, T209, R2231, B1354)
+   |    | ['Pane3', '无线电干扰源环境模拟器 - Web 内容Pane', '无线电干扰源环境模拟器 - Web 内容']
+   |    | child_window(title="无线电干扰源环境模拟器 - Web 内容", control_type="Pane")
+   |    |    | 
+   |    |    | Pane - ''    (L332, T209, R2231, B1354)
+   |    |    | ['Pane4']
+   |    |    |    | 
+   |    |    |    | Pane - ''    (L0, T0, R0, B0)
+   |    |    |    | ['Pane5']
+   |    |    |    | 
+   |    |    |    | Pane - ''    (L332, T209, R2231, B1354)
+   |    |    |    | ['Pane6']
+   |    |    |    |    | 
+   |    |    |    |    | Pane - ''    (L332, T209, R2231, B1354)
+   |    |    |    |    | ['Pane7']
+   |    |    |    |    |    | 
+   |    |    |    |    |    | Pane - ''    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['Pane8']
+   |    |    |    |    |    | 
+   |    |    |    |    |    | Pane - ''    (L332, T209, R2231, B1354)
+   |    |    |    |    |    | ['Pane9']
+   |    |    |    |    |    |    | 
+   |    |    |    |    |    |    | Pane - ''    (L332, T209, R2231, B1354)
+   |    |    |    |    |    |    | ['Pane10']
+   |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    | Pane - ''    (L332, T209, R2231, B1354)
+   |    |    |    |    |    |    |    | ['Pane11']
+   |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    | Pane - ''    (L332, T209, R2231, B1354)
+   |    |    |    |    |    |    |    |    | ['Pane12']
+   |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    | Pane - ''    (L332, T209, R2231, B1354)
+   |    |    |    |    |    |    |    |    |    | ['Pane13']
+   |    |    |    |    |    |    |    |    |    |    | 
+   |    |    |    |    |    |    |    |    |    |    | Pane - ''    (L0, T0, R0, B0)
+   |    |    |    |    |    |    |    |    |    |    | ['Pane14']
+   |    |    |    |    |    | 
+   |    |    |    |    |    | Pane - ''    (L0, T0, R0, B0)
+   |    |    |    |    |    | ['Pane15']
+   |    |    |    | 
+   |    |    |    | Pane - ''    (L332, T209, R2231, B1354)
+   |    |    |    | ['Pane16']
+   | 
+   | TitleBar - ''    (L355, T167, R2229, B209)
+   | ['TitleBar']
+   |    | 
+   |    | Menu - '系统'    (L331, T175, R364, B208)
+   |    | ['系统', '系统Menu', 'Menu', '系统0', '系统1']
+   |    | child_window(title="系统", auto_id="MenuBar", control_type="MenuBar")
+   |    |    | 
+   |    |    | MenuItem - '系统'    (L331, T175, R364, B208)
+   |    |    | ['系统2', 'MenuItem', '系统MenuItem']
+   |    |    | child_window(title="系统", control_type="MenuItem")
+   |    | 
+   |    | Button - '最小化'    (L2018, T165, R2089, B209)
+   |    | ['最小化', 'Button', '最小化Button', 'Button0', 'Button1']
+   |    | child_window(title="最小化", control_type="Button")
+   |    | 
+   |    | Button - '最大化'    (L2089, T165, R2159, B209)
+   |    | ['最大化Button', '最大化', 'Button2']
+   |    | child_window(title="最大化", control_type="Button")
+   |    | 
+   |    | Button - '关闭'    (L2159, T165, R2230, B209)
+   |    | ['关闭Button', 'Button3', '关闭']
+   |    | child_window(title="关闭", control_type="Button")

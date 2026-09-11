@@ -1,0 +1,15 @@
+[wait] interface not ready: network failed after retries: <urlopen error [WinError 10053] 你的主机中的软件中止了一个已建立的连接。>
+[wait] interface not ready: network failed after retries: <urlopen error [WinError 10053] 你的主机中的软件中止了一个已建立的连接。>
+[wait] interface not ready: network failed after retries: <urlopen error [WinError 10053] 你的主机中的软件中止了一个已建立的连接。>
+[wait] interface not ready: network failed after retries: <urlopen error [WinError 10053] 你的主机中的软件中止了一个已建立的连接。>
+[wait] interface not ready: network failed after retries: <urlopen error [WinError 10053] 你的主机中的软件中止了一个已建立的连接。>
+[wait] interface not ready: network failed after retries: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[enter] remaining_real_duration_s=1200.0
+[step 20] V=5032.1 cleared=0 absent=0 discovered=12 action=SCAN
+[step 40] V=8699.6 cleared=2 absent=7 discovered=11 action=REFINE
+[step 60] V=10128.4 cleared=7 absent=7 discovered=6 action=REFINE
+[step 80] V=11771.4 cleared=12 absent=7 discovered=1 action=REFINE
+[exit] {'accepted': True, 'real_timestamp_ms': 1789116164851, 'virtual_time_s': 12017.919516, 'exit_reason': 'user_exit'}
+[done] virtual_time=12017.920s cleared=13 steps=83
+[log] D:\数学建模\B_RL\results\official_p4_rl_clean.jsonl

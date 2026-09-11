@@ -1,0 +1,20 @@
+{
+  "index": 1,
+  "mode": 4,
+  "entered": true,
+  "success": true,
+  "cleared": 15,
+  "absent": 5,
+  "virtual_time_s": 13236.937292,
+  "avg_clear_time_s": 882.4624861333334,
+  "measure_calls": 261,
+  "clear_calls": 198,
+  "clear_failures": 183,
+  "switches": 217,
+  "fallback_actions": 2,
+  "macro_steps": 80,
+  "real_duration_s_local": 5.118536472320557,
+  "policy_deviations_from_prior": 0,
+  "hybrid_gate_fallbacks": 0,
+  "request_log": "D:\\数学建模\\B_RL\\results\\batch_p4_20\\run_01.requests.jsonl"
+}

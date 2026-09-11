@@ -1,0 +1,42 @@
+[
+  {
+    "index": 1,
+    "mode": 3,
+    "entered": true,
+    "success": true,
+    "cleared": 10,
+    "absent": 10,
+    "virtual_time_s": 4413.949619138331,
+    "avg_clear_time_s": 441.39496191383313,
+    "measure_calls": 108,
+    "clear_calls": 10,
+    "clear_failures": 0,
+    "switches": 94,
+    "fallback_actions": 0,
+    "macro_steps": 37,
+    "real_duration_s_local": 2.0117838382720947,
+    "policy_deviations_from_prior": 0,
+    "hybrid_gate_fallbacks": 0,
+    "request_log": "D:\\数学建模\\B_RL\\results\\batch_mock_test\\run_01.requests.jsonl"
+  },
+  {
+    "index": 2,
+    "mode": 3,
+    "entered": true,
+    "success": true,
+    "cleared": 10,
+    "absent": 10,
+    "virtual_time_s": 4413.949619138331,
+    "avg_clear_time_s": 441.39496191383313,
+    "measure_calls": 108,
+    "clear_calls": 10,
+    "clear_failures": 0,
+    "switches": 94,
+    "fallback_actions": 0,
+    "macro_steps": 37,
+    "real_duration_s_local": 2.0995147228240967,
+    "policy_deviations_from_prior": 0,
+    "hybrid_gate_fallbacks": 0,
+    "request_log": "D:\\数学建模\\B_RL\\results\\batch_mock_test\\run_02.requests.jsonl"
+  }
+]

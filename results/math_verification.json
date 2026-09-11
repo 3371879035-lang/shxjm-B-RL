@@ -1,0 +1,34 @@
+{
+  "S3": {
+    "points": 7,
+    "analytic_worst_distance": 968.9015717043836,
+    "numeric": {
+      "points": 7,
+      "worst_distance": 968.8945444541902,
+      "misses": 0,
+      "samples": 200000
+    }
+  },
+  "S4": {
+    "points": 31,
+    "numeric": {
+      "points": 31,
+      "misses": 0,
+      "samples": 200000,
+      "worst_visible_min": 949.0168510026574
+    }
+  },
+  "q_pm_random_sector_max": 807.6603492263839,
+  "optical_fallback_random_max": 18.029623974353726,
+  "geometry": {
+    "cases": 600,
+    "bad_containment": 0,
+    "bad_circle": 0
+  },
+  "diameter_crosscheck": {
+    "cases": 300,
+    "worst_abs_diff": 0.0,
+    "mismatches": 0
+  },
+  "min_enclosing_triangle_40": 23.094010767585033
+}

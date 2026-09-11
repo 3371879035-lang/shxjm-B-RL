@@ -1,0 +1,1 @@
+{"t": 1789115950.9648464, "path": "/exit", "payload": {"arena_id": "default", "robot_id": "202610094088", "request_id": "exit-1-1789115950923"}, "response": {"accepted": true, "real_timestamp_ms": 1789115950392, "virtual_time_s": 4804.778931, "exit_reason": "user_exit"}}

@@ -1,0 +1,108 @@
+{
+  "config": {
+    "mode": 4,
+    "n_sources": 12,
+    "steps": 1000,
+    "rollout": 256,
+    "bc_episodes": 20,
+    "bc_epochs": 3,
+    "bc_coef": 1.0,
+    "prior_logit": 5.0,
+    "lr": 0.0001,
+    "epochs": 2,
+    "batch_size": 128,
+    "hidden": 128,
+    "seed": 0,
+    "save": "D:\\数学建模\\B_RL\\results\\ppo_mode4_safe.pt",
+    "eval_seeds": "5100-5130"
+  },
+  "history": [
+    {
+      "global_step": 256,
+      "episodes_done": 3,
+      "mean_episode_return": -83.50593433614584,
+      "mean_episode_virtual_time": 18350.593433614584,
+      "policy_loss": 0.00013387808576226234,
+      "value_loss": 3113.96533203125,
+      "entropy": 1.0028100460767746,
+      "clip_fraction": 0.0,
+      "bc_loss": 0.18615403771400452,
+      "buffer_size": 256
+    },
+    {
+      "global_step": 512,
+      "episodes_done": 3,
+      "mean_episode_return": -35.54439554321485,
+      "mean_episode_virtual_time": 20769.816875159442,
+      "policy_loss": 8.478132076561451e-05,
+      "value_loss": 3068.2084350585938,
+      "entropy": 0.9720852971076965,
+      "clip_fraction": 0.0,
+      "bc_loss": 0.1713709682226181,
+      "buffer_size": 256
+    },
+    {
+      "global_step": 768,
+      "episodes_done": 4,
+      "mean_episode_return": -54.689812240406525,
+      "mean_episode_virtual_time": 17950.317092891575,
+      "policy_loss": -0.00013787508942186832,
+      "value_loss": 4033.16943359375,
+      "entropy": 1.0300486981868744,
+      "clip_fraction": 0.0,
+      "bc_loss": 0.18769989907741547,
+      "buffer_size": 256
+    },
+    {
+      "global_step": 1024,
+      "episodes_done": 3,
+      "mean_episode_return": -31.492308305223748,
+      "mean_episode_virtual_time": 20841.978174083768,
+      "policy_loss": -1.181778497993946e-05,
+      "value_loss": 4572.35595703125,
+      "entropy": 1.190062254667282,
+      "clip_fraction": 0.0,
+      "bc_loss": 0.21485210955142975,
+      "buffer_size": 256
+    }
+  ],
+  "baseline_summary": {
+    "episodes": 31,
+    "success_rate": 1.0,
+    "mean_cleared_ratio": 1.0,
+    "mean_virtual_time": 13197.872142816961,
+    "median_virtual_time": 13061.23783480911,
+    "mean_avg_clear_time_success_only": 1099.8226785680802,
+    "mean_wall_time": 0.9523441253169891,
+    "mean_measurements": 389.258064516129,
+    "mean_clear_ops": 103.3225806451613,
+    "mean_clear_fail": 91.3225806451613,
+    "mean_switches": 341.16129032258067,
+    "fallback_rate": 0.9032258064516129
+  },
+  "final_summary": {
+    "episodes": 31,
+    "success_rate": 1.0,
+    "mean_cleared_ratio": 1.0,
+    "mean_virtual_time": 13197.872142816961,
+    "median_virtual_time": 13061.23783480911,
+    "mean_avg_clear_time_success_only": 1099.8226785680802,
+    "mean_wall_time": 0.8032057208399619,
+    "mean_measurements": 389.258064516129,
+    "mean_clear_ops": 103.3225806451613,
+    "mean_clear_fail": 91.3225806451613,
+    "mean_switches": 341.16129032258067,
+    "fallback_rate": 0.9032258064516129
+  },
+  "paired": {
+    "n_pairs": 31,
+    "mean_time_a": 13197.872142816961,
+    "mean_time_b": 13197.872142816961,
+    "mean_diff_b_minus_a": 0.0,
+    "median_diff_b_minus_a": 0.0,
+    "stderr_diff": 0.0,
+    "wins_b": 0,
+    "ties": 31,
+    "wins_a": 0
+  }
+}

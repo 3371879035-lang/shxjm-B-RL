@@ -1,0 +1,5 @@
+﻿problem,method,runs,sources,cleared,success_rate,mean_virtual_time_per_source_s,median_virtual_time_per_source_s,mean_program_run_s,mean_measures,mean_switches,mean_clear_failures
+3,Traditional,14,192,192,1.000,594.814,599.172,4.343,106.21,95.43,4.00
+3,PlanB-RL,20,262,262,1.000,428.639,424.062,2.015,110.45,95.85,15.55
+4,Traditional,17,224,223,0.941,1075.747,1104.569,4.708,320.76,283.35,22.94
+4,PlanB-RL,20,241,241,1.000,1122.775,1199.619,5.048,368.60,320.90,108.35

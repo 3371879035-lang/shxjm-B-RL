@@ -1,0 +1,35 @@
+{
+  "accepted_actions": 238,
+  "virtual_time_s": 6940.276104,
+  "program_run_duration_s_from_log": 2.613,
+  "move_distance_m": 29316.380512208496,
+  "measure_calls": 120,
+  "clear_calls": 116,
+  "channel_switches": 101,
+  "clear_failures": 102,
+  "cleared_channels": [
+    1,
+    4,
+    6,
+    7,
+    8,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "cleared_count": 14,
+  "measure_results": {
+    "no_signal": 70,
+    "direction": 50
+  },
+  "clear_results": {
+    "success": 14,
+    "no_target_in_range": 102
+  }
+}
