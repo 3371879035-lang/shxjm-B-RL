@@ -1,0 +1,10 @@
+{
+  "scope": "synthetic paired, NOT official; G31 and G25O share new bilateral solver",
+  "bootstrap_seed": 20260911,
+  "bootstrap_replicates": 10000,
+  "row_count": 1000,
+  "scenario_configurations": 400,
+  "all_cleared_runs": 1000,
+  "python": "3.13.5",
+  "numpy": "2.3.5"
+}

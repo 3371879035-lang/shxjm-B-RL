@@ -1,0 +1,9 @@
+{
+  "cases": 5292,
+  "failed": 0,
+  "max_extra_measures": 12,
+  "max_clear_attempts": 2,
+  "max_rounds": 6,
+  "wall_s": 1.1676084995269775,
+  "failures": []
+}

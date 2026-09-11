@@ -102,3 +102,37 @@ if __name__ == "__main__":
     print("S4", len(p4))
     print(coverage_verify_s3(samples=50000))
     print(coverage_verify_s4(samples=50000))
+
+
+def s25_points() -> np.ndarray:
+    """问题4新覆盖构造：原点 + 内环12点 + 外环12点，共25点。
+
+    内环半径970m，角度15+30k度；外环半径1880m，角度30k度。
+    外正十二边形内切圆半径 1880*cos15° = 1815.94m > 1800m，覆盖目标圆。
+    36个三角形最大边长约975.90m < 1000m，保证任意180度定向源至少一点可见。
+    """
+    k = np.arange(12, dtype=float)
+    origin = np.zeros((1, 2), dtype=float)
+    a_in = np.deg2rad(15.0 + 30.0 * k)
+    inner = 970.0 * np.column_stack([np.cos(a_in), np.sin(a_in)])
+    a_out = np.deg2rad(30.0 * k)
+    outer = 1880.0 * np.column_stack([np.cos(a_out), np.sin(a_out)])
+    return np.vstack([origin, inner, outer])
+
+
+def s25_max_triangle_edge() -> float:
+    """返回36个覆盖三角形的最大边长。"""
+    pts = s25_points()
+    O = pts[0]
+    inner = pts[1:13]
+    outer = pts[13:25]
+    edges = []
+    for k in range(12):
+        k2 = (k + 1) % 12
+        tri1 = [O, inner[k], inner[k2]]
+        tri2 = [outer[k], outer[k2], inner[k]]
+        tri3 = [inner[k], inner[k2], outer[k2]]
+        for tri in (tri1, tri2, tri3):
+            for i in range(3):
+                edges.append(float(np.linalg.norm(tri[i] - tri[(i + 1) % 3])))
+    return max(edges)

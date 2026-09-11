@@ -1,0 +1,8 @@
+{
+  "n_per_group": 100,
+  "start_seed": 92000,
+  "wall_s": 288.5984501838684,
+  "s25_points": 25,
+  "s25_max_triangle_edge_m": 975.897190465528,
+  "rows": 800
+}

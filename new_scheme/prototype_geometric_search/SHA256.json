@@ -1,0 +1,16 @@
+{
+  "README.md": "72805dc72caaeb92f8f9f3b92b9b70d4aaf0105c6469a2cad99c0ffa7347d142",
+  "requirements.txt": "6b31945d5fd7ddd30400099a60a08042b14c9dc25a416abb6a65491101a41715",
+  "bilateral_solver.py": "9a40af180c4bc942122398cc7258f7e10aa58762d5eb4314bc31563f09a52866",
+  "stress_test.py": "ab6b7ca1bbadaec88161ff5431d53d59d135b5c81680d4b3fcc4109a9fdc7170",
+  "global_benchmark.py": "b96e00a7c19e9e897d94eea408b3147144485abb2b62c124334261eebadceffc",
+  "verify_geometry.py": "9d07277bf12907a175be5a43594c1c386fb7b3ea42f7758cb6219a32750a2fce",
+  "analyze_results.py": "9c4b1d47c070aef012a365fb78a9d788b5f25ded378e69a4ce811c8b17c8542f",
+  "bilateral_test_3000.json": "de30a2a6975a034d4118dd2a6cc1b9dad39a80be4c808ccfe8ddcd8925688908",
+  "stress_test_results.json": "869a2d1b6bbabdf0deb061a605142e0c36b3d0d92e8485f316e690957c12fbe8",
+  "geometry_verified.json": "1f3aff9a2d7e13a83a3f6344409f089137427a5708a2444107dc1287ef1a9047",
+  "global_ablation_validation.csv": "88e26905a622de115a7146adb94ce61d772c0d3870a44cef7b07ee627d77ca8f",
+  "global_validation_summary.jsonl": "6d5b9e3ec4237f38f3ecfd24fc708130ccb56a4d9e0513f71ac86334824c3a51",
+  "paired_validation_summary.json": "c6616c24537ba2244aa782cf4c429bf8a97fc1ee4022191a0a04a68d1b8b62fa",
+  "analysis_metadata.json": "f965439c5d317448731586bd6b00dc0f8e99cbf18c727e3f6805e096f605a36b"
+}

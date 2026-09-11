@@ -79,7 +79,31 @@ RL 网络不能自行提前退出；所有动作屏蔽与有限额度（每源�
 
 本项目同时按 radio-interference-b-modeling 专用技能执行：问题一路由到几何 reference，问题二使用信息收益/代价权衡，问题三覆盖搜索与频道账本，问题四保留 no_signal 的多重解释。旋转卡壳直径已与暴力顶点对交叉验证，半平面、退化、最小包围圆和覆盖证明均做数值检查。详见 problem_spec.md。
 
-## 7. 已知限制
+## 7. 新主方案：25点覆盖 + 双侧区间定位
+
+在原有安全PPO之外，仓库新增了基于几何结构改进的新候选 G25O：
+
+- 问题4保证覆盖从31点降到25点，完整覆盖巡航路线由原下界28500m降到18173.85m，至少缩短36.2%；
+- 首次有效示向后用成对 no_signal 将距离区间折半，最多12次追加测向加2次末端光学尝试即可保证清除；
+- 在本地严格配对中，G25O相对A0在四组场景各100对上平均虚拟时间降低12.64%、3.51%、45.91%、33.87%，800局全部清除。
+
+代码位置：
+
+- `brl/coverage.py::s25_points`
+- `brl/bilateral.py`
+- `brl/g25o.py`
+- `scripts/run_g25o_compare.py`
+- `scripts/run_official_g25o.py`
+- `docs/NEW_SCHEME.md`
+
+官方演练入口：
+
+```powershell
+python scripts\run_official_g25o.py --mode 3 --robot-id 202610094088 --base-url http://127.0.0.1:2026
+python scripts\run_official_g25o.py --mode 4 --robot-id 202610094088 --base-url http://127.0.0.1:2026
+```
+
+## 8. 已知限制
 
 - 官方模拟器需要登录和联网，本目录无法执行正式测试；本地结果来自严格复现题面规则的 local_env.py 与 mock_server.py，不等同于官方成绩。
 - 训练分布是设计者设定的，不是官方案例生成分布。

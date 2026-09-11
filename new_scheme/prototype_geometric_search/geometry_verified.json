@@ -1,0 +1,26 @@
+{
+  "triangles": 36,
+  "max_triangle_edge_m": 975.897190465528,
+  "outer_apothem_m": 1815.9405534234484,
+  "tiling_area_difference_m2": 0.0,
+  "random_cases": 200000,
+  "misses": 0,
+  "largest_observed_nearest_visible_m": 973.7918312825121,
+  "routes_nearest_then_2opt": {
+    "S7": {
+      "n_points": 7,
+      "open_route_m": 7200.000000000001
+    },
+    "S31": {
+      "n_points": 31,
+      "open_route_m": 29890.896534380867
+    },
+    "S25": {
+      "n_points": 25,
+      "open_route_m": 18173.851318393576
+    }
+  },
+  "terminal_two_disk_radius_bound_m": 17.855744048302768,
+  "bilateral_at_m750_side_m": 18.222238672724814,
+  "proof_eps_deg": 1.01
+}

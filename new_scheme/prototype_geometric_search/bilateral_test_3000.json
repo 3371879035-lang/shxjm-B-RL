@@ -1,0 +1,46 @@
+{
+  "scope": "single-source local; first positive at origin GIVEN, not counted; no channel switching",
+  "epsilon_deg": 1.01,
+  "results": [
+    {
+      "scenario": "omni",
+      "cases": 1000,
+      "all_cleared": 1000,
+      "mean_s": 251.5718369170995,
+      "p95_s": 312.22346655364737,
+      "max_s": 323.8324707208298,
+      "mean_distance_m": 1170.3091845854976,
+      "mean_extra_measures": 2.502,
+      "max_extra_measures": 4,
+      "max_clear_attempts": 1,
+      "mean_failed_clear": 0.0
+    },
+    {
+      "scenario": "directional",
+      "cases": 1000,
+      "all_cleared": 1000,
+      "mean_s": 301.4901277805096,
+      "p95_s": 367.3304952468055,
+      "max_s": 388.58284311100107,
+      "mean_distance_m": 1351.6506389025483,
+      "mean_extra_measures": 5.232,
+      "max_extra_measures": 12,
+      "max_clear_attempts": 1,
+      "mean_failed_clear": 0.0
+    },
+    {
+      "scenario": "directional_boundary",
+      "cases": 1000,
+      "all_cleared": 1000,
+      "mean_s": 259.0648287853536,
+      "p95_s": 320.0190726915738,
+      "max_s": 337.1323363843417,
+      "mean_distance_m": 1197.5741439267679,
+      "mean_extra_measures": 2.91,
+      "max_extra_measures": 5,
+      "max_clear_attempts": 1,
+      "mean_failed_clear": 0.0
+    }
+  ],
+  "wall_s": 1.0428507328033447
+}

@@ -1,0 +1,17 @@
+{
+  "success": false,
+  "cleared": 12,
+  "virtual_time_s": 8556.743400064386,
+  "distance_m": 31088.717000321933,
+  "measure_calls": 385,
+  "switches": 354,
+  "clear_calls": 12,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "extra_measurements": 50,
+  "mode": 4,
+  "variant": "G25O",
+  "robot_id": "202610094088",
+  "request_log": "D:\\数学建模\\B_RL\\results\\official_g25o_mock4\\requests.jsonl"
+}

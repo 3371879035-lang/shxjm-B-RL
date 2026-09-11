@@ -2,3 +2,5 @@
 *.pyc
 *.pyo
 .DS_Store
+
+new_scheme_assets/
