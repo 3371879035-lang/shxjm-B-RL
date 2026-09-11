@@ -1,0 +1,2602 @@
+[
+  {
+    "run": 1,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4370.130519,
+      "distance_m": 18085.652593132083,
+      "measure_calls": 115,
+      "switches": 113,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 31,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0001\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137005180,
+        "virtual_time_s": 4370.130519,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 2,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4185.914996,
+      "distance_m": 17164.575001258057,
+      "measure_calls": 118,
+      "switches": 110,
+      "clear_calls": 11,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 21,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0002\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137016628,
+        "virtual_time_s": 4185.914996,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 3,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 4247.544315,
+      "distance_m": 17592.7215649124,
+      "measure_calls": 113,
+      "switches": 106,
+      "clear_calls": 12,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 22,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0003\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137028131,
+        "virtual_time_s": 4247.544315,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 4,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4045.721456,
+      "distance_m": 16988.607279867887,
+      "measure_calls": 96,
+      "switches": 88,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 36,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0004\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137040682,
+        "virtual_time_s": 4045.721456,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 5,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 4158.796145,
+      "distance_m": 16978.980730227035,
+      "measure_calls": 118,
+      "switches": 113,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 26,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0005\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137052263,
+        "virtual_time_s": 4158.796145,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 6,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 4308.676545,
+      "distance_m": 17993.382729175115,
+      "measure_calls": 109,
+      "switches": 105,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0006\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137065069,
+        "virtual_time_s": 4308.676545,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 7,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4306.928726,
+      "distance_m": 17689.643623668475,
+      "measure_calls": 118,
+      "switches": 114,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0007\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137076789,
+        "virtual_time_s": 4306.928726,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 8,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 3885.324377,
+      "distance_m": 16181.621887940793,
+      "measure_calls": 97,
+      "switches": 96,
+      "clear_calls": 14,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 31,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0008\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137088403,
+        "virtual_time_s": 3885.324377,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 9,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4387.983243,
+      "distance_m": 18374.91620760909,
+      "measure_calls": 108,
+      "switches": 100,
+      "clear_calls": 15,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0009\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137099772,
+        "virtual_time_s": 4387.983243,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 10,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 3827.194847,
+      "distance_m": 15815.974238020988,
+      "measure_calls": 101,
+      "switches": 99,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0010\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137112324,
+        "virtual_time_s": 3827.194847,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 11,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4129.313686,
+      "distance_m": 16891.568435948386,
+      "measure_calls": 115,
+      "switches": 108,
+      "clear_calls": 14,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0011\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137124167,
+        "virtual_time_s": 4129.313686,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 12,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 3985.233587,
+      "distance_m": 16596.167945948564,
+      "measure_calls": 99,
+      "switches": 91,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 36,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0012\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137135306,
+        "virtual_time_s": 3985.233587,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 13,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 3979.279128,
+      "distance_m": 16331.39564203767,
+      "measure_calls": 111,
+      "switches": 108,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 22,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0013\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137147246,
+        "virtual_time_s": 3979.279128,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 14,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4563.11353,
+      "distance_m": 19350.56764428189,
+      "measure_calls": 104,
+      "switches": 90,
+      "clear_calls": 17,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0014\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137159489,
+        "virtual_time_s": 4563.11353,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 15,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4486.995158,
+      "distance_m": 18869.975791528366,
+      "measure_calls": 108,
+      "switches": 103,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 30,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0015\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137170912,
+        "virtual_time_s": 4486.995158,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 16,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4054.48301,
+      "distance_m": 16657.41505377284,
+      "measure_calls": 109,
+      "switches": 107,
+      "clear_calls": 15,
+      "failed_clear": 2,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0016\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137182784,
+        "virtual_time_s": 4054.48301,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 17,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4343.641016,
+      "distance_m": 17528.205074874022,
+      "measure_calls": 133,
+      "switches": 123,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 23,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0017\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137196358,
+        "virtual_time_s": 4343.641016,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 18,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4793.064999,
+      "distance_m": 20460.324982957656,
+      "measure_calls": 105,
+      "switches": 96,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 36,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0018\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137207882,
+        "virtual_time_s": 4793.064999,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 19,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 3960.38064,
+      "distance_m": 16191.903213008924,
+      "measure_calls": 111,
+      "switches": 107,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0019\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137219899,
+        "virtual_time_s": 3960.38064,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 20,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 4272.258729,
+      "distance_m": 17896.29363685141,
+      "measure_calls": 104,
+      "switches": 98,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0020\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137231879,
+        "virtual_time_s": 4272.258729,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 21,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4187.324127,
+      "distance_m": 17106.620632965714,
+      "measure_calls": 118,
+      "switches": 111,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0021\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137243325,
+        "virtual_time_s": 4187.324127,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 22,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 3908.780846,
+      "distance_m": 16093.904231967945,
+      "measure_calls": 107,
+      "switches": 105,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 21,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0022\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137254830,
+        "virtual_time_s": 3908.780846,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 23,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 4072.850141,
+      "distance_m": 16504.25069592202,
+      "measure_calls": 120,
+      "switches": 112,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0023\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137266120,
+        "virtual_time_s": 4072.850141,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 24,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 3653.942878,
+      "distance_m": 14764.714386335825,
+      "measure_calls": 108,
+      "switches": 106,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0024\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137276945,
+        "virtual_time_s": 3653.942878,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 25,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 3867.104273,
+      "distance_m": 15685.52136873408,
+      "measure_calls": 113,
+      "switches": 107,
+      "clear_calls": 12,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0025\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137288944,
+        "virtual_time_s": 3867.104273,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 26,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 3888.308969,
+      "distance_m": 15991.544844736625,
+      "measure_calls": 103,
+      "switches": 100,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0026\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137300436,
+        "virtual_time_s": 3888.308969,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 27,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4629.012837,
+      "distance_m": 19695.064184468,
+      "measure_calls": 104,
+      "switches": 97,
+      "clear_calls": 15,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0027\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137312256,
+        "virtual_time_s": 4629.012837,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 28,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 4696.65322,
+      "distance_m": 19463.26610416932,
+      "measure_calls": 125,
+      "switches": 116,
+      "clear_calls": 13,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0028\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137324046,
+        "virtual_time_s": 4696.65322,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 29,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4076.820731,
+      "distance_m": 17064.103665866456,
+      "measure_calls": 99,
+      "switches": 96,
+      "clear_calls": 15,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0029\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137335839,
+        "virtual_time_s": 4076.820731,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 30,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4469.485254,
+      "distance_m": 18782.426260492724,
+      "measure_calls": 108,
+      "switches": 105,
+      "clear_calls": 14,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0030\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137347070,
+        "virtual_time_s": 4469.485254,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 31,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 4007.524582,
+      "distance_m": 15952.622912831319,
+      "measure_calls": 128,
+      "switches": 122,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0031\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137358595,
+        "virtual_time_s": 4007.524582,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 32,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4019.333359,
+      "distance_m": 16076.666802448686,
+      "measure_calls": 126,
+      "switches": 121,
+      "clear_calls": 11,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 21,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0032\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137370252,
+        "virtual_time_s": 4019.333359,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 33,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4186.014152,
+      "distance_m": 17070.070752297586,
+      "measure_calls": 117,
+      "switches": 114,
+      "clear_calls": 15,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0033\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137381482,
+        "virtual_time_s": 4186.014152,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 34,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 3898.090087,
+      "distance_m": 15715.450444933338,
+      "measure_calls": 117,
+      "switches": 112,
+      "clear_calls": 12,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0034\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137393513,
+        "virtual_time_s": 3898.090087,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 35,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 3866.166513,
+      "distance_m": 15820.832557931199,
+      "measure_calls": 108,
+      "switches": 102,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0035\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137405138,
+        "virtual_time_s": 3866.166513,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 36,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 3751.502579,
+      "distance_m": 15117.512900311622,
+      "measure_calls": 111,
+      "switches": 107,
+      "clear_calls": 14,
+      "failed_clear": 2,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 30,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0036\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137416777,
+        "virtual_time_s": 3751.502579,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 37,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 3962.164032,
+      "distance_m": 16045.82015876555,
+      "measure_calls": 118,
+      "switches": 113,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 24,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0037\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137428450,
+        "virtual_time_s": 3962.164032,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 38,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4282.34459,
+      "distance_m": 17371.722948586732,
+      "measure_calls": 127,
+      "switches": 123,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 22,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0038\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137439940,
+        "virtual_time_s": 4282.34459,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 39,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4463.483954,
+      "distance_m": 19012.41976854316,
+      "measure_calls": 98,
+      "switches": 91,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 39,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0039\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137451530,
+        "virtual_time_s": 4463.483954,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 40,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 4443.281755,
+      "distance_m": 18366.408785462037,
+      "measure_calls": 117,
+      "switches": 110,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 33,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0040\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137463782,
+        "virtual_time_s": 4443.281755,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 41,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4039.827009,
+      "distance_m": 16714.135043574537,
+      "measure_calls": 106,
+      "switches": 102,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 30,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0041\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137475565,
+        "virtual_time_s": 4039.827009,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 42,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4038.362075,
+      "distance_m": 16011.810367962591,
+      "measure_calls": 132,
+      "switches": 126,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 24,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0042\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137487867,
+        "virtual_time_s": 4038.362075,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 43,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 3953.868844,
+      "distance_m": 16264.344220237828,
+      "measure_calls": 107,
+      "switches": 103,
+      "clear_calls": 13,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0043\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137499783,
+        "virtual_time_s": 3953.868844,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 44,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 3588.348895,
+      "distance_m": 14471.744473539053,
+      "measure_calls": 107,
+      "switches": 104,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 23,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0044\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137512856,
+        "virtual_time_s": 3588.348895,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 45,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 4173.396533,
+      "distance_m": 17246.982668297373,
+      "measure_calls": 108,
+      "switches": 103,
+      "clear_calls": 17,
+      "failed_clear": 2,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 33,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0045\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137524902,
+        "virtual_time_s": 4173.396533,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 46,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4249.307714,
+      "distance_m": 17756.538580482877,
+      "measure_calls": 106,
+      "switches": 103,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 31,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0046\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137537170,
+        "virtual_time_s": 4249.307714,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 47,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 3958.25893,
+      "distance_m": 15856.294657124628,
+      "measure_calls": 124,
+      "switches": 117,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 23,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0047\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137549241,
+        "virtual_time_s": 3958.25893,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 48,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 3704.162153,
+      "distance_m": 15285.810771198701,
+      "measure_calls": 95,
+      "switches": 92,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0048\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137561742,
+        "virtual_time_s": 3704.162153,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 49,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 4133.050572,
+      "distance_m": 16825.25285874051,
+      "measure_calls": 116,
+      "switches": 110,
+      "clear_calls": 16,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0049\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137573960,
+        "virtual_time_s": 4133.050572,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 50,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 3328.842836,
+      "distance_m": 14399.21418074289,
+      "measure_calls": 65,
+      "switches": 44,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 37,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0050\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137586064,
+        "virtual_time_s": 3328.842836,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 51,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 4006.130867,
+      "distance_m": 16105.65433635287,
+      "measure_calls": 123,
+      "switches": 115,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 25,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0051\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137598705,
+        "virtual_time_s": 4006.130867,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 52,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4432.134521,
+      "distance_m": 18635.672612685375,
+      "measure_calls": 106,
+      "switches": 102,
+      "clear_calls": 15,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 33,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0052\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137610944,
+        "virtual_time_s": 4432.134521,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 53,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 4228.832291,
+      "distance_m": 17519.16145274586,
+      "measure_calls": 110,
+      "switches": 109,
+      "clear_calls": 14,
+      "failed_clear": 2,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0053\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137622847,
+        "virtual_time_s": 4228.832291,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 54,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4225.003981,
+      "distance_m": 17800.01990584652,
+      "measure_calls": 99,
+      "switches": 87,
+      "clear_calls": 17,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0054\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137635169,
+        "virtual_time_s": 4225.003981,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 55,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 4333.906355,
+      "distance_m": 18199.53176692495,
+      "measure_calls": 104,
+      "switches": 99,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 33,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0055\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137647295,
+        "virtual_time_s": 4333.906355,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 56,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4193.44371,
+      "distance_m": 16987.218555142113,
+      "measure_calls": 121,
+      "switches": 115,
+      "clear_calls": 16,
+      "failed_clear": 2,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0056\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137660357,
+        "virtual_time_s": 4193.44371,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 57,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4550.576705,
+      "distance_m": 18922.883524274355,
+      "measure_calls": 118,
+      "switches": 111,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0057\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137672218,
+        "virtual_time_s": 4550.576705,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 58,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4265.000159,
+      "distance_m": 18025.0007842815,
+      "measure_calls": 98,
+      "switches": 90,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0058\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137684616,
+        "virtual_time_s": 4265.000159,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 59,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4289.597152,
+      "distance_m": 17762.985756009133,
+      "measure_calls": 113,
+      "switches": 107,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0059\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137697991,
+        "virtual_time_s": 4289.597152,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 60,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4192.169868,
+      "distance_m": 17170.849345824834,
+      "measure_calls": 119,
+      "switches": 113,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 23,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0060\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137710671,
+        "virtual_time_s": 4192.169868,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 61,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4773.064176,
+      "distance_m": 20435.320883450102,
+      "measure_calls": 102,
+      "switches": 93,
+      "clear_calls": 17,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0061\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137723034,
+        "virtual_time_s": 4773.064176,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 62,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 4354.105604,
+      "distance_m": 18255.52802860039,
+      "measure_calls": 105,
+      "switches": 100,
+      "clear_calls": 16,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 37,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0062\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137736697,
+        "virtual_time_s": 4354.105604,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 63,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4646.470297,
+      "distance_m": 19637.351493089627,
+      "measure_calls": 108,
+      "switches": 103,
+      "clear_calls": 16,
+      "failed_clear": 2,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0063\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137749093,
+        "virtual_time_s": 4646.470297,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 64,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4099.610541,
+      "distance_m": 16658.052700231085,
+      "measure_calls": 121,
+      "switches": 113,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 22,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0064\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137761325,
+        "virtual_time_s": 4099.610541,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 65,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4232.160294,
+      "distance_m": 17745.801475836233,
+      "measure_calls": 102,
+      "switches": 93,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 31,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0065\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137773340,
+        "virtual_time_s": 4232.160294,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 66,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4400.089605,
+      "distance_m": 18505.448022438126,
+      "measure_calls": 104,
+      "switches": 99,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0066\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137785315,
+        "virtual_time_s": 4400.089605,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 67,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4080.518723,
+      "distance_m": 16647.59360189664,
+      "measure_calls": 115,
+      "switches": 111,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0067\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137798935,
+        "virtual_time_s": 4080.518723,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 68,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 4504.83476,
+      "distance_m": 18909.17378863801,
+      "measure_calls": 112,
+      "switches": 108,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0068\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137811178,
+        "virtual_time_s": 4504.83476,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 69,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 3944.723066,
+      "distance_m": 16223.615324784072,
+      "measure_calls": 106,
+      "switches": 102,
+      "clear_calls": 14,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0069\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137823752,
+        "virtual_time_s": 3944.723066,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 70,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 3507.65866,
+      "distance_m": 14003.293299779149,
+      "measure_calls": 109,
+      "switches": 107,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0070\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137835821,
+        "virtual_time_s": 3507.65866,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 71,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 3830.963371,
+      "distance_m": 15529.816851201504,
+      "measure_calls": 112,
+      "switches": 107,
+      "clear_calls": 12,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0071\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137847426,
+        "virtual_time_s": 3830.963371,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 72,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 3922.104067,
+      "distance_m": 16480.52032458802,
+      "measure_calls": 93,
+      "switches": 86,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0072\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137859394,
+        "virtual_time_s": 3922.104067,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 73,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 4266.055728,
+      "distance_m": 17560.278653813377,
+      "measure_calls": 116,
+      "switches": 111,
+      "clear_calls": 13,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 26,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0073\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137871339,
+        "virtual_time_s": 4266.055728,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 74,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4583.311739,
+      "distance_m": 19446.5586949469,
+      "measure_calls": 105,
+      "switches": 99,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 30,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0074\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137883133,
+        "virtual_time_s": 4583.311739,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 75,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 4172.332668,
+      "distance_m": 17701.66333435185,
+      "measure_calls": 93,
+      "switches": 92,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0075\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137896284,
+        "virtual_time_s": 4172.332668,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 76,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 4176.462348,
+      "distance_m": 17232.31173703916,
+      "measure_calls": 113,
+      "switches": 110,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0076\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137908104,
+        "virtual_time_s": 4176.462348,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 77,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4316.772531,
+      "distance_m": 18233.862647312657,
+      "measure_calls": 99,
+      "switches": 95,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0077\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137920470,
+        "virtual_time_s": 4316.772531,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 78,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 3971.888266,
+      "distance_m": 16109.441326327627,
+      "measure_calls": 116,
+      "switches": 110,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0078\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137932554,
+        "virtual_time_s": 3971.888266,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 79,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 3829.0215,
+      "distance_m": 15380.107499684682,
+      "measure_calls": 113,
+      "switches": 108,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 36,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0079\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137945520,
+        "virtual_time_s": 3829.0215,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 80,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4049.872306,
+      "distance_m": 16589.36152529302,
+      "measure_calls": 113,
+      "switches": 111,
+      "clear_calls": 12,
+      "failed_clear": 2,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 21,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0080\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137957747,
+        "virtual_time_s": 4049.872306,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 81,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 3988.149607,
+      "distance_m": 16390.748050457103,
+      "measure_calls": 110,
+      "switches": 105,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0081\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137969853,
+        "virtual_time_s": 3988.149607,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 82,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4253.75177,
+      "distance_m": 17778.758848804144,
+      "measure_calls": 104,
+      "switches": 98,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0082\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137981714,
+        "virtual_time_s": 4253.75177,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 83,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4372.105156,
+      "distance_m": 17975.525783100537,
+      "measure_calls": 122,
+      "switches": 117,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 21,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0083\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789137993736,
+        "virtual_time_s": 4372.105156,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 84,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 3945.083567,
+      "distance_m": 15890.417828655887,
+      "measure_calls": 120,
+      "switches": 117,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 21,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0084\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138005814,
+        "virtual_time_s": 3945.083567,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 85,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 3546.926952,
+      "distance_m": 14544.63475808873,
+      "measure_calls": 95,
+      "switches": 93,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0085\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138017628,
+        "virtual_time_s": 3546.926952,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 86,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 4074.661501,
+      "distance_m": 16698.30751417387,
+      "measure_calls": 114,
+      "switches": 110,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 26,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0086\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138029836,
+        "virtual_time_s": 4074.661501,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 87,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 4155.857594,
+      "distance_m": 17184.28796598701,
+      "measure_calls": 108,
+      "switches": 104,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 33,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0087\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138041855,
+        "virtual_time_s": 4155.857594,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 88,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4466.365893,
+      "distance_m": 18676.82946732973,
+      "measure_calls": 111,
+      "switches": 106,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0088\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138053376,
+        "virtual_time_s": 4466.365893,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 89,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4201.101378,
+      "distance_m": 17140.506888791322,
+      "measure_calls": 118,
+      "switches": 115,
+      "clear_calls": 14,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0089\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138065398,
+        "virtual_time_s": 4201.101378,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 90,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 3458.784559,
+      "distance_m": 13828.922802021894,
+      "measure_calls": 106,
+      "switches": 105,
+      "clear_calls": 12,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 25,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0090\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138078540,
+        "virtual_time_s": 3458.784559,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 91,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4740.141349,
+      "distance_m": 19775.70674911603,
+      "measure_calls": 118,
+      "switches": 112,
+      "clear_calls": 17,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0091\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138090706,
+        "virtual_time_s": 4740.141349,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 92,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 4003.16136,
+      "distance_m": 16335.806793543285,
+      "measure_calls": 114,
+      "switches": 111,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 26,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0092\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138102463,
+        "virtual_time_s": 4003.16136,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 93,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4706.94243,
+      "distance_m": 19814.7121394473,
+      "measure_calls": 112,
+      "switches": 105,
+      "clear_calls": 17,
+      "failed_clear": 3,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0093\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138115303,
+        "virtual_time_s": 4706.94243,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 94,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4894.767931,
+      "distance_m": 20463.839648003068,
+      "measure_calls": 124,
+      "switches": 114,
+      "clear_calls": 14,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 31,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0094\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138127327,
+        "virtual_time_s": 4894.767931,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 95,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 4423.727491,
+      "distance_m": 18628.637460839873,
+      "measure_calls": 108,
+      "switches": 103,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 23,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0095\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138139082,
+        "virtual_time_s": 4423.727491,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 96,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 4384.183477,
+      "distance_m": 18340.917386973397,
+      "measure_calls": 108,
+      "switches": 103,
+      "clear_calls": 15,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 30,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0096\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138151040,
+        "virtual_time_s": 4384.183477,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 97,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 4006.908348,
+      "distance_m": 16294.541731629855,
+      "measure_calls": 117,
+      "switches": 113,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 21,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0097\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138163273,
+        "virtual_time_s": 4006.908348,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 98,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4062.305056,
+      "distance_m": 16701.525283659004,
+      "measure_calls": 110,
+      "switches": 107,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0098\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138175622,
+        "virtual_time_s": 4062.305056,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 99,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 4461.892882,
+      "distance_m": 18504.464415963354,
+      "measure_calls": 116,
+      "switches": 106,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 41,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0099\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138188176,
+        "virtual_time_s": 4461.892882,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 100,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 4104.90879,
+      "distance_m": 17044.54394137881,
+      "measure_calls": 106,
+      "switches": 101,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 30,
+      "mode": 3,
+      "variant": "G25OR",
+      "robot_id": "202610094088",
+      "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p3_100_final\\run_0100\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789138200157,
+        "virtual_time_s": 4104.90879,
+        "exit_reason": "user_exit"
+      }
+    }
+  }
+]

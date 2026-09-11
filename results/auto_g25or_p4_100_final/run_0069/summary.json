@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "cleared": 12,
+  "virtual_time_s": 6941.940219,
+  "distance_m": 26174.701111413928,
+  "measure_calls": 276,
+  "switches": 267,
+  "clear_calls": 12,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "extra_measurements": 35,
+  "mode": 4,
+  "variant": "G25OR",
+  "robot_id": "202610094088",
+  "request_log": "D:\\数学建模\\B_RL\\results\\auto_g25or_p4_100_final\\run_0069\\requests.jsonl",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 1789139221450,
+    "virtual_time_s": 6941.940219,
+    "exit_reason": "user_exit"
+  }
+}
