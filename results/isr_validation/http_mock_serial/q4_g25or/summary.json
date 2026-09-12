@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "mode": 4,
+  "variant": "G25OR",
+  "coverage": "S25",
+  "robot_id": "TEST",
+  "request_log": "results\\isr_validation\\http_mock_serial\\q4_g25or\\requests.jsonl",
+  "cleared": 12,
+  "virtual_time_s": 6728.512117263927,
+  "distance_m": 24757.56058631964,
+  "measure_calls": 288,
+  "switches": 277,
+  "clear_calls": 12,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "extra_measurements": 31,
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 0,
+    "virtual_time_s": 6728.512117263927,
+    "exit_reason": "user_exit"
+  }
+}

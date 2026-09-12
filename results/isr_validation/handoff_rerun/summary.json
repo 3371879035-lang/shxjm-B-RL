@@ -1,0 +1,31 @@
+{
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "datasets": [
+    {
+      "dataset": "FINAL_holdout200.csv",
+      "expected_runs": 800,
+      "rerun_runs": 800,
+      "mismatches": 157
+    },
+    {
+      "dataset": "FINAL_stress_endpoints30.csv",
+      "expected_runs": 120,
+      "rerun_runs": 120,
+      "mismatches": 35
+    },
+    {
+      "dataset": "FINAL_stress_constant30.csv",
+      "expected_runs": 120,
+      "rerun_runs": 120,
+      "mismatches": 26
+    }
+  ],
+  "total_reruns": 1040,
+  "total_mismatches": 218,
+  "fully_reproduced": false,
+  "known_root_cause": "Symmetric bilateral probes were sorted by raw floating-point travel distance; platform-level last-bit differences can reverse an exact-distance tie."
+}

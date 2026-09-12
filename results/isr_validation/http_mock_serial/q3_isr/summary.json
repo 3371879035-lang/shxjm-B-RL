@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "mode": 3,
+  "variant": "ISR",
+  "coverage": "S25",
+  "robot_id": "TEST",
+  "request_log": "results\\isr_validation\\http_mock_serial\\q3_isr\\requests.jsonl",
+  "cleared": 12,
+  "virtual_time_s": 3314.1894173104965,
+  "distance_m": 13055.947086552484,
+  "measure_calls": 109,
+  "switches": 98,
+  "clear_calls": 12,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "candidate": "ISR-Q3r800-Q4r300-origin0-20260912",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 0,
+    "virtual_time_s": 3314.1894173104965,
+    "exit_reason": "user_exit"
+  }
+}

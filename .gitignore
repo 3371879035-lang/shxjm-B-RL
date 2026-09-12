@@ -4,3 +4,6 @@
 .DS_Store
 
 new_scheme_assets/
+**/.official_experiment.lock
+results/isr_validation/local_smoke/
+results/isr_validation/http_mock/

@@ -1,0 +1,33 @@
+{
+  "archived_case": {
+    "mode": 3,
+    "seed": 220001,
+    "variant": "final",
+    "archived_virtual_time_s": 3748.552641100904,
+    "original_windows_rerun_virtual_time_s": 3692.4645993546965,
+    "difference_s": -56.08804174620764,
+    "distance_difference_m": -255.440208731039,
+    "measure_difference": -1
+  },
+  "first_action_divergence": {
+    "action_index_zero_based": 90,
+    "channel": 2,
+    "windows_probe": [796.996900167, -632.787919849],
+    "linux_probe": [828.203106533, -651.612707051],
+    "travel_distance_both_m": 750.221333996
+  },
+  "root_cause": "The bilateral solver sorted two theoretically equidistant symmetric probes by raw floating-point distance. Platform-level last-bit differences reversed the stable list order and changed later observations.",
+  "fix": "Travel distances are rounded to nine decimal places and original candidate order is the explicit tie-break.",
+  "post_fix_cross_platform_check": {
+    "windows_virtual_time_s": 3748.376119872717,
+    "wsl_linux_virtual_time_s": 3748.376119872717,
+    "measure_calls_both": 116,
+    "distance_m_both": 15016.880599363583
+  },
+  "archived_handoff_full_rerun": {
+    "runs": 1040,
+    "mismatches": 218,
+    "status": "not_fully_reproduced_on_windows",
+    "note": "The archive is retained unchanged. Detailed differences are in handoff_rerun/differences.csv."
+  }
+}
