@@ -8,6 +8,7 @@ import numpy as np
 
 from brl.coverage import s25_points, s3_points
 from brl.g25o import _poly_center_radius as center_radius
+from brl.g25o import route_open
 from brl.independent_candidate import CheckedView
 from brl.jsp.policy import JSPPolicy
 from brl.protocol import CertificateViolation
@@ -26,7 +27,7 @@ class CVRConfig:
     max_plan_call_s: float = 0.5
     max_plan_total_s: float = 12.0
     max_segments: int = 100
-    max_segment_depth: int = 4
+    max_segment_depth: int = 1
 
 
 class CVRPolicy:
@@ -83,6 +84,7 @@ class CVRPolicy:
         self.extra_measurements = 0
         self.initial_fixed_nodes = len(points)
         self.removed_legacy_stations: set[int] = set()
+        self.outer_first = False
 
     def _complete(self) -> bool:
         if self.env.cleared_count() >= 16:
@@ -232,6 +234,7 @@ class CVRPolicy:
             node = next((pending for pending in self.plan.nodes if pending.node_id.value == task.key), None)
             if node is None:
                 continue
+            old_tracks = tuple(self.executor.tracks)
             for raw_channel in task.channels:
                 channel = ChannelId(raw_channel)
                 if self.env.channels[raw_channel].status != "unknown":
@@ -245,10 +248,58 @@ class CVRPolicy:
                     break
             if node.legacy_station is None:
                 completed_variable = True
+            if not self._complete():
+                self._refine_at_completed_node(old_tracks, np.asarray(node.position, dtype=float))
             if self._complete():
                 break
         if segment.mutations and completed_variable:
             self.executed_replacements += 1
+
+    def _refine_at_completed_node(self, old_tracks: tuple[int, ...], point: np.ndarray) -> None:
+        """Preserve ISR's useful one-shot bearing refinement at a scan stop."""
+        for channel in old_tracks:
+            if channel not in self.executor.tracks or self._complete():
+                continue
+            track = self.executor.tracks[channel]
+            center, radius = center_radius(track["P"])
+            if radius <= 19.5 or track["nobs"] >= 4:
+                continue
+            delta = center - point
+            distance = float(np.linalg.norm(delta))
+            first_direction = center - track["first"]
+            first_length = float(np.linalg.norm(first_direction))
+            if first_length < 1e-9:
+                continue
+            sine = abs(delta[0] * first_direction[1] - delta[1] * first_direction[0]) / (
+                distance * first_length + 1e-9
+            )
+            if distance <= 1200.0 and sine > 0.15:
+                response = self.env.measure(point, channel, is_refine=True)
+                self.executor._observe_scan(channel, point, response)
+
+    def _next_hard_job(self) -> tuple[str, str | int] | None:
+        pending = tuple(self.plan.nodes)
+        active = pending
+        if self.outer_first:
+            outer = tuple(
+                node
+                for node in pending
+                if node.legacy_station is not None and node.legacy_station.value >= 13
+            )
+            if outer:
+                active = outer
+        jobs: list[tuple[str, str | int]] = [("scan", node.node_id.value) for node in active]
+        positions = [node.position for node in active]
+        threshold = 800.0 if self.env.mode == 3 else 300.0
+        for channel, track in self.executor.tracks.items():
+            center, radius = center_radius(track["P"])
+            if not pending or radius <= threshold:
+                jobs.append(("resolve", channel))
+                positions.append(tuple(map(float, center)))
+        if not jobs:
+            return None
+        index = route_open(np.asarray(positions, dtype=float), self.env.pos)[0]
+        return jobs[index]
 
     def _execute_one_locator(self) -> None:
         if not self.executor.locators:
@@ -297,6 +348,8 @@ class CVRPolicy:
             if self._complete():
                 return self
 
+        self.outer_first = bool(self.env.mode == 4 and self.env.discovered_count() <= 0)
+
         if not self.config.planner_enabled:
             self._fallback("planner_disabled")
             return self
@@ -306,6 +359,14 @@ class CVRPolicy:
                 return self
             if not self.plan.nodes:
                 break
+            hard_job = self._next_hard_job()
+            if hard_job is None:
+                break
+            if hard_job[0] == "resolve":
+                channel = int(hard_job[1])
+                self.executor._resolve(channel)
+                self._remove_discovered_channel(ChannelId(channel))
+                continue
             snapshot = self._public_snapshot()
             if snapshot.tracks:
                 exit_position = min(
@@ -320,6 +381,7 @@ class CVRPolicy:
                 self.ledger,
                 exit_position,
                 allow_replacements=self.config.variable_waypoints,
+                forced_first_node=str(hard_job[1]),
             )
             elapsed = time.perf_counter() - started
             self.replans += 1
@@ -339,8 +401,6 @@ class CVRPolicy:
                 self._fallback(reason)
                 return self
             self._apply_segment(segment)
-            if not self._complete():
-                self._execute_one_locator()
 
         if not self._complete():
             self._fallback("segment_budget" if self.plan.nodes else "unfinished_localization")

@@ -73,6 +73,12 @@ class WaypointGenerator:
             # share physical travel if the certificate accepts the replacement.
             for node in pending[:4]:
                 fixed = np.asarray(node.position, dtype=float)
+                toward = next_position - fixed
+                toward_length = float(np.linalg.norm(toward))
+                if toward_length > 1e-9:
+                    unit = toward / toward_length
+                    for distance in (10.0, 20.0, 30.0, 45.0):
+                        points.append(_inside_domain(fixed + distance * unit))
                 for fraction in (0.25, 0.5, 0.75):
                     points.append(_inside_domain((1.0 - fraction) * fixed + fraction * next_position))
 
@@ -104,7 +110,15 @@ class WaypointGenerator:
         for block in blocks:
             removed = tuple(node.node_id for node in block)
             channels = frozenset(channel for node in block for channel in node.channels)
-            for point in candidates:
+            centroid = np.mean(np.asarray([node.position for node in block], dtype=float), axis=0)
+            local_candidates = sorted(
+                candidates,
+                key=lambda point: (
+                    float(np.linalg.norm(np.asarray(point, dtype=float) - centroid)),
+                    point,
+                ),
+            )[:6]
+            for point in local_candidates:
                 if len(proposals) >= 96:
                     return tuple(proposals)
                 serial += 1

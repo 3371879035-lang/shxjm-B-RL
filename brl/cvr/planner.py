@@ -96,7 +96,12 @@ class SegmentPlanner:
             values.insert(0, current)
         return tuple(values)
 
-    def _tasks(self, snapshot: PublicCVRSnapshot, plan: FutureCoveragePlan) -> tuple[MacroTask, ...]:
+    def _tasks(
+        self,
+        snapshot: PublicCVRSnapshot,
+        plan: FutureCoveragePlan,
+        forced_first_node: str | None = None,
+    ) -> tuple[MacroTask, ...]:
         current = np.asarray(snapshot.position, dtype=float)
         ordered = sorted(
             plan.nodes,
@@ -104,7 +109,13 @@ class SegmentPlanner:
                 float(np.linalg.norm(np.asarray(node.position, dtype=float) - current)),
                 node.node_id.value,
             ),
-        )[: self.config.max_depth]
+        )
+        if forced_first_node is not None:
+            forced = next((node for node in ordered if node.node_id.value == forced_first_node), None)
+            if forced is not None:
+                ordered.remove(forced)
+                ordered.insert(0, forced)
+        ordered = ordered[: self.config.max_depth]
         return tuple(
             MacroTask(
                 "measure",
@@ -169,8 +180,9 @@ class SegmentPlanner:
         ledger: CoverageEvidenceLedger,
         exit_position: tuple[float, float],
         reason: str,
+        forced_first_node: str | None = None,
     ) -> PlannedSegment:
-        tasks = self._tasks(snapshot, snapshot.plan)
+        tasks = self._tasks(snapshot, snapshot.plan, forced_first_node)
         tasks, cost = self._best_order(snapshot, tasks, exit_position)
         certificates = self._certificates(snapshot.plan, ledger)
         return PlannedSegment(tasks, (), self._aggregate(certificates), certificates, cost, cost, reason)
@@ -182,11 +194,12 @@ class SegmentPlanner:
         exit_position: tuple[float, float],
         *,
         allow_replacements: bool = True,
+        forced_first_node: str | None = None,
     ) -> PlannedSegment:
         started = time.perf_counter()
         if self.config.max_call_s <= 0.0 or self.total_wall_s >= self.config.max_total_s:
-            return self._baseline(snapshot, ledger, exit_position, "planning_budget_fallback")
-        baseline = self._baseline(snapshot, ledger, exit_position, "frozen_baseline")
+            return self._baseline(snapshot, ledger, exit_position, "planning_budget_fallback", forced_first_node)
+        baseline = self._baseline(snapshot, ledger, exit_position, "frozen_baseline", forced_first_node)
         if not allow_replacements:
             self.last_proposal_count = 0
             elapsed = time.perf_counter() - started
@@ -195,18 +208,25 @@ class SegmentPlanner:
 
         chosen = baseline
         proposals = self.generator.replacement_proposals(snapshot)[: self.config.max_proposals]
+        if forced_first_node is not None:
+            proposals = tuple(
+                proposal
+                for proposal in proposals
+                if any(node.value == forced_first_node for node in proposal.removed)
+            )
         self.last_proposal_count = len(proposals)
         for proposal in proposals:
             if time.perf_counter() - started > self.config.max_call_s:
                 elapsed = time.perf_counter() - started
                 self.total_wall_s += elapsed
-                return self._baseline(snapshot, ledger, exit_position, "planning_budget_fallback")
+                return self._baseline(snapshot, ledger, exit_position, "planning_budget_fallback", forced_first_node)
             changed = snapshot.plan.replace(proposal.removed, proposal.added)
             certificates = self._certificates(changed, ledger)
             aggregate = self._aggregate(certificates)
             if not aggregate.covered:
                 continue
-            tasks = self._tasks(snapshot, changed)
+            replacement_first = proposal.added[0].node_id.value
+            tasks = self._tasks(snapshot, changed, replacement_first)
             tasks, cost = self._best_order(snapshot, tasks, exit_position)
             if cost <= baseline.baseline_cost_s - self.config.min_predicted_gain_s:
                 mutation = PlanMutation(proposal.proposal_id, snapshot.plan, changed)
@@ -227,5 +247,5 @@ class SegmentPlanner:
         elapsed = time.perf_counter() - started
         self.total_wall_s += elapsed
         if self.total_wall_s > self.config.max_total_s:
-            return self._baseline(snapshot, ledger, exit_position, "planning_budget_fallback")
+            return self._baseline(snapshot, ledger, exit_position, "planning_budget_fallback", forced_first_node)
         return chosen
