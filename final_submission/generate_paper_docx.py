@@ -66,7 +66,7 @@ def setup_document(doc):
     style_fonts(normal, 12, east='宋体', ascii_f='Times New Roman')
     pf = normal.paragraph_format
     pf.line_spacing_rule = WD_LINE_SPACING.MULTIPLE
-    pf.line_spacing = 1.28
+    pf.line_spacing = 1.22
     pf.space_before = Pt(0)
     pf.space_after = Pt(0)
     try:
