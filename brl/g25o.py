@@ -583,18 +583,10 @@ def _run_full(policy: G25OPolicy, env: RadioEnv) -> dict:
             if r <= 19.5 or st["nobs"] >= 4:
                 continue
             a = st["first"]
-            v1 = a - p
-            v2 = c - p
-            n1 = float(np.linalg.norm(v1))
-            n2 = float(np.linalg.norm(v2))
-            if n1 < 1.0 or n2 < 1.0:
-                continue
-            cosang = float(np.dot(v1, v2) / (n1 * n2))
-            cosang = min(1.0, max(-1.0, cosang))
-            ang = math.acos(cosang)
+            sine = bearing_cross_sine(a, c, p)
             d = float(np.linalg.norm(p - c))
             thr = 0.15 if mode == 3 else 0.12
-            if d <= 1200.0 and ang > thr:
+            if d <= 1200.0 and sine > thr:
                 measure_and_observe(ch, p, coverage_idx=None, is_refine=True)
                 update_absence()
         # 若已有清除证书，尝试低绕行插入清除。

@@ -14,16 +14,16 @@
       "Full_noQ4": {
         "runs": 15,
         "all_clear": true,
-        "mean_v_s": 4259.596251126302,
-        "mean_distance_m": 17701.981255631512,
+        "mean_v_s": 4242.579533867026,
+        "mean_distance_m": 17605.231002668457,
         "dynamic_absent_channels": 0,
         "dynamic_absent_cells": 0
       },
       "Full_Q4": {
         "runs": 15,
         "all_clear": true,
-        "mean_v_s": 4259.596251126302,
-        "mean_distance_m": 17701.981255631512,
+        "mean_v_s": 4242.579533867026,
+        "mean_distance_m": 17605.231002668457,
         "dynamic_absent_channels": 0,
         "dynamic_absent_cells": 0
       }
@@ -40,16 +40,16 @@
       "Full_noQ4": {
         "runs": 15,
         "all_clear": true,
-        "mean_v_s": 6908.540960214896,
-        "mean_distance_m": 26288.70480107448,
+        "mean_v_s": 6909.982478630359,
+        "mean_distance_m": 26281.91239315179,
         "dynamic_absent_channels": 0,
         "dynamic_absent_cells": 0
       },
       "Full_Q4": {
         "runs": 15,
         "all_clear": true,
-        "mean_v_s": 6908.540960214896,
-        "mean_distance_m": 26288.70480107448,
+        "mean_v_s": 6909.982478630359,
+        "mean_distance_m": 26281.91239315179,
         "dynamic_absent_channels": 0,
         "dynamic_absent_cells": 16283
       }
@@ -92,16 +92,16 @@
       "Full_noQ4": {
         "runs": 15,
         "all_clear": true,
-        "mean_v_s": 9492.026646027369,
-        "mean_distance_m": 33107.799896803524,
+        "mean_v_s": 9496.792506362814,
+        "mean_distance_m": 33096.29586514741,
         "dynamic_absent_channels": 0,
         "dynamic_absent_cells": 0
       },
       "Full_Q4": {
         "runs": 15,
         "all_clear": true,
-        "mean_v_s": 9492.026646027369,
-        "mean_distance_m": 33107.799896803524,
+        "mean_v_s": 9496.792506362814,
+        "mean_distance_m": 33096.29586514741,
         "dynamic_absent_channels": 0,
         "dynamic_absent_cells": 32846
       }
