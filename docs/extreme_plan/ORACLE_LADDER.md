@@ -70,3 +70,26 @@ Q3和Q4的最大瓶颈都是未知源空间搜索；Q4其次是空频道扫描�
 - `results/extreme_plan/oracle_ladder_50scenes.csv`
 - `results/extreme_plan/oracle_ladder_50scenes_summary.json`
 - 代码：`brl/oracle_policy.py`、`scripts/run_oracle_ladder.py`
+
+## 6. 因果拆分（复用同一批50对场景）
+
+在五策略配对之外，新增 A/B/C 三个诊断臂，逐场景恒等式为
+
+    G25OR - O0 = (G25OR - C) + (C - B) + (B - O0)
+
+其中 A = 首次发现全部真实源即停；B = A + 真值最优20 m清除；C = 真值仅用于选择合法覆盖/求解顺序。
+
+| 项目 | Q3 s/源 | Q4 s/源 |
+| --- | ---: | ---: |
+| A 仅发现 | 130.51 | 329.90 |
+| B 发现+真值清除 | 268.85 | 468.18 |
+| C 合法路线Oracle | 330.11 | 606.28 |
+| 顺序损失 G-C | 1.94 | 7.69 |
+| 合法信息/证明 C-B | 61.27 | 138.10 |
+| 搜索-清除整合 B-O0 | 126.02 | 323.86 |
+| 总差距 G-O0 | 189.22 | 469.65 |
+
+结论：顺序/微顺序损失占总差距仅1.0%/1.6%；最大瓶颈是固定全覆盖路线先发现后清除的串行结构
+（B-O0 占66.6%/69.0%）；Q4 的合法信息/空频道证明成本也显著更高。复现与完整表见
+`docs/extreme_plan/CAUSAL_DECOMPOSITION.md`，原始数据见
+`results/extreme_plan/causal_decomposition_50scenes_*.csv/json`。

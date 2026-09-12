@@ -1,0 +1,84 @@
+{
+  "n": 50,
+  "start": 160000,
+  "summary": {
+    "problem3": {
+      "n_scenes": 50,
+      "sources_total": 662,
+      "all_A_found": true,
+      "all_B_clear": true,
+      "all_B_success": true,
+      "all_C_clear": true,
+      "all_C_success": true,
+      "baseline_s_per_source": 332.0519615599227,
+      "O3_s_per_source": 256.7730270706836,
+      "O0_s_per_source": 142.82881189353458,
+      "A_discovery_s_per_source": 130.51008716283718,
+      "A_discovery_distance_per_source": 465.45904095904086,
+      "A_discovery_measures_per_source": 6.305976606726606,
+      "B_total_s_per_source": 268.8488123754305,
+      "B_cleanup_s_per_source": 138.33872521259335,
+      "B_cleanup_distance_per_source": 666.6936260629667,
+      "C_total_s_per_source": 330.11414106423837,
+      "C_naive_total_s_per_source": 332.1729790280065,
+      "C_measures_per_source": 9.270497252747253,
+      "gaps": {
+        "order_gain_G_minus_C": 1.937820495684411,
+        "info_cost_C_minus_B": 61.26532868880784,
+        "integration_gap_B_minus_O0": 126.02000048189596,
+        "total_gap_G_minus_O0": 189.2231496663882,
+        "identity_check": 2.842170943040401e-14,
+        "baseline_minus_A": 201.5418743970855,
+        "B_minus_A": 138.33872521259332,
+        "G_minus_O3": 75.27893448923908,
+        "O3_minus_O0": 113.94421517714903
+      },
+      "C_candidate_counts": {
+        "baseline": 48,
+        "source_first": 1,
+        "baseline_rev": 1
+      },
+      "C_scenes_with_positive_order_gain": 14,
+      "C_max_order_gain_s_per_source": 25.000329965009833
+    },
+    "problem4": {
+      "n_scenes": 50,
+      "sources_total": 662,
+      "all_A_found": true,
+      "all_B_clear": true,
+      "all_B_success": true,
+      "all_C_clear": true,
+      "all_C_success": true,
+      "baseline_s_per_source": 613.9703489348257,
+      "O3_s_per_source": 402.7938152576564,
+      "O0_s_per_source": 144.3205856160901,
+      "A_discovery_s_per_source": 329.89547877566895,
+      "A_discovery_distance_per_source": 1030.2161671883684,
+      "A_discovery_measures_per_source": 20.88559282384282,
+      "B_total_s_per_source": 468.18278576518173,
+      "B_cleanup_s_per_source": 138.2873069895127,
+      "B_cleanup_distance_per_source": 666.4365349475636,
+      "C_total_s_per_source": 606.2815524357133,
+      "C_naive_total_s_per_source": 619.0248496179698,
+      "C_measures_per_source": 24.4593817016317,
+      "gaps": {
+        "order_gain_G_minus_C": 7.6887964991123745,
+        "info_cost_C_minus_B": 138.09876667053157,
+        "integration_gap_B_minus_O0": 323.86220014909156,
+        "total_gap_G_minus_O0": 469.64976331873555,
+        "identity_check": -5.684341886080802e-14,
+        "baseline_minus_A": 284.0748701591567,
+        "B_minus_A": 138.28730698951279,
+        "G_minus_O3": 211.1765336771693,
+        "O3_minus_O0": 258.47322964156626
+      },
+      "C_candidate_counts": {
+        "baseline_rev": 16,
+        "baseline": 33,
+        "source_first": 1
+      },
+      "C_scenes_with_positive_order_gain": 19,
+      "C_max_order_gain_s_per_source": 84.85259919863415
+    }
+  }
+}
