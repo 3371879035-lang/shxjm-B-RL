@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "mode": 4,
+  "variant": "ISRV2",
+  "coverage": "S25",
+  "robot_id": "202610094088",
+  "request_log": "D:\\数学建模\\B_RL\\results\\isrv2\\official_q4_isrv2_30_20260913\\runs\\main-b019-p1-isrv2-q4\\runner\\requests.jsonl",
+  "cleared": 14,
+  "virtual_time_s": 6513.395721,
+  "distance_m": 24016.978607605044,
+  "measure_calls": 275,
+  "switches": 262,
+  "clear_calls": 15,
+  "failed_clear": 1,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "soft_actions": 0,
+  "planning_wall_s": 0.16213829990010709,
+  "soft_disabled_reason": "",
+  "decision_log": [],
+  "candidate": "ISRV2-safe-soft-20260912",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 1789230266453,
+    "virtual_time_s": 6513.395721,
+    "exit_reason": "user_exit"
+  }
+}

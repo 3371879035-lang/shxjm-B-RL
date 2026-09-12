@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "practice_only": true,
+  "schedule_seed": 20260913,
+  "smoke_runs_per_group": 0,
+  "main_runs_per_group": 30,
+  "variants": [
+    "ISRV2"
+  ],
+  "modes": [
+    4
+  ],
+  "robot_id": "202610094088",
+  "base_url": "http://127.0.0.1:2026",
+  "database": "C:\\Users\\huani\\Desktop\\CUMCM2026B\\Jammers-simulator-full-win64\\Jammers-simulator-full\\JammersSimulatorData\\practice-statistics-queue.sqlite3",
+  "runner_timeout_s": 1170.0,
+  "python_executable": "D:\\python\\python.exe",
+  "git_head": "913f66311d8bd5eef77c9d03711bef4c6c458cbf",
+  "code_sha256": {
+    "scripts\\run_official_g25o.py": "73c8113e403a2d4f098dabcbf8b13117d93dd5938086384b25611e57a55fbc46",
+    "brl\\independent_candidate.py": "e33230c4162458fe980598ea3b03b7f1cefd8c62661e49f306762a46f05cd1ea",
+    "brl\\bilateral.py": "0fcc349f257c5485d99e497f45aa7f26783eae33fda6c28becdc1d80be917e8b",
+    "brl\\protocol.py": "b8ee15bbacf61645ae882a44e6bd970e91507e9f8a9004e7b7b9eab90ee95538",
+    "brl\\remote.py": "c0fd51256eac3f73bd70c2b1e315dc9d32af23ae87f506a6c6b1e61b0d7480f8",
+    "brl\\isr_v2.py": "77d443b0d7604e6efb221c61903665790e62c8c47467df9519af378ffb24a07b",
+    "scripts\\auto_official_isr_experiment.py": "9e32a21d16eb38472b6705c7b9cbc636fc3b403e528fa491518edcbd243f153a"
+  },
+  "schedule": [
+    {
+      "run_id": "main-b001-p1-isrv2-q4",
+      "global_index": 1,
+      "phase": "main",
+      "block": 1,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b002-p1-isrv2-q4",
+      "global_index": 2,
+      "phase": "main",
+      "block": 2,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b003-p1-isrv2-q4",
+      "global_index": 3,
+      "phase": "main",
+      "block": 3,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b004-p1-isrv2-q4",
+      "global_index": 4,
+      "phase": "main",
+      "block": 4,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b005-p1-isrv2-q4",
+      "global_index": 5,
+      "phase": "main",
+      "block": 5,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b006-p1-isrv2-q4",
+      "global_index": 6,
+      "phase": "main",
+      "block": 6,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b007-p1-isrv2-q4",
+      "global_index": 7,
+      "phase": "main",
+      "block": 7,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b008-p1-isrv2-q4",
+      "global_index": 8,
+      "phase": "main",
+      "block": 8,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b009-p1-isrv2-q4",
+      "global_index": 9,
+      "phase": "main",
+      "block": 9,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b010-p1-isrv2-q4",
+      "global_index": 10,
+      "phase": "main",
+      "block": 10,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b011-p1-isrv2-q4",
+      "global_index": 11,
+      "phase": "main",
+      "block": 11,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b012-p1-isrv2-q4",
+      "global_index": 12,
+      "phase": "main",
+      "block": 12,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b013-p1-isrv2-q4",
+      "global_index": 13,
+      "phase": "main",
+      "block": 13,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b014-p1-isrv2-q4",
+      "global_index": 14,
+      "phase": "main",
+      "block": 14,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b015-p1-isrv2-q4",
+      "global_index": 15,
+      "phase": "main",
+      "block": 15,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b016-p1-isrv2-q4",
+      "global_index": 16,
+      "phase": "main",
+      "block": 16,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b017-p1-isrv2-q4",
+      "global_index": 17,
+      "phase": "main",
+      "block": 17,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b018-p1-isrv2-q4",
+      "global_index": 18,
+      "phase": "main",
+      "block": 18,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b019-p1-isrv2-q4",
+      "global_index": 19,
+      "phase": "main",
+      "block": 19,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b020-p1-isrv2-q4",
+      "global_index": 20,
+      "phase": "main",
+      "block": 20,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b021-p1-isrv2-q4",
+      "global_index": 21,
+      "phase": "main",
+      "block": 21,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b022-p1-isrv2-q4",
+      "global_index": 22,
+      "phase": "main",
+      "block": 22,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b023-p1-isrv2-q4",
+      "global_index": 23,
+      "phase": "main",
+      "block": 23,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b024-p1-isrv2-q4",
+      "global_index": 24,
+      "phase": "main",
+      "block": 24,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b025-p1-isrv2-q4",
+      "global_index": 25,
+      "phase": "main",
+      "block": 25,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b026-p1-isrv2-q4",
+      "global_index": 26,
+      "phase": "main",
+      "block": 26,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b027-p1-isrv2-q4",
+      "global_index": 27,
+      "phase": "main",
+      "block": 27,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b028-p1-isrv2-q4",
+      "global_index": 28,
+      "phase": "main",
+      "block": 28,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b029-p1-isrv2-q4",
+      "global_index": 29,
+      "phase": "main",
+      "block": 29,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b030-p1-isrv2-q4",
+      "global_index": 30,
+      "phase": "main",
+      "block": 30,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISRV2",
+      "coverage": "S25"
+    }
+  ]
+}

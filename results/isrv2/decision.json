@@ -17,7 +17,7 @@
     "endpoints": [281000, 281029],
     "constant_plus_one": [281100, 281129]
   },
-  "new_official_runs_executed": 20,
+  "new_official_runs_executed": 50,
   "official_batch": {
     "state": "complete",
     "verified_full_clear": 20,
@@ -27,6 +27,20 @@
     "q4_isrv2_relative_change_percent": -21.133986277748484,
     "q4_exact_one_sided_permutation_p": 0.05138339920948617,
     "interpretation": "Q4 is a high-priority follow-up candidate, but five independent practices per arm do not override the failed local development gate."
+  },
+  "q4_isrv2_followup": {
+    "state": "complete",
+    "new_runs": 30,
+    "new_sources": 378,
+    "new_cleared": 378,
+    "technical_failures": 0,
+    "confirmed_not_clear": 0,
+    "new30_mean_seconds_per_source": 511.7930191073922,
+    "cumulative35_mean_seconds_per_source": 501.0108051212603,
+    "available28_isr_mean_seconds_per_source": 491.5234799111884,
+    "cumulative_isrv2_relative_change_percent": 1.9301875897741683,
+    "recommendation": "KEEP_ISR_V1",
+    "interpretation": "The initial five-run advantage did not reproduce in the frozen 30-run follow-up. ISRV2 has a better observed tail but no mean-time advantage."
   },
   "mock_http": {
     "q3": {"sources": 12, "cleared": 12, "requests": 125, "exit_accepted": true},

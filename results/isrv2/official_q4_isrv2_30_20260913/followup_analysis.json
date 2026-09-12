@@ -1,0 +1,101 @@
+{
+  "followup_state": "complete",
+  "followup_attempts": 30,
+  "followup_verified_full_clear": 30,
+  "followup_technical_failures": 0,
+  "followup_confirmed_not_clear": 0,
+  "bootstrap_samples": 10000,
+  "seed": 20260913,
+  "followup30_isrv2": {
+    "runs": 30,
+    "sources": 378,
+    "cleared": 378,
+    "mean_seconds_per_source": 511.7930191073922,
+    "mean_ci95": [
+      472.5990995452804,
+      549.4010254072422
+    ],
+    "aggregate_seconds_per_source": 495.56227355026454,
+    "median_seconds_per_source": 504.1754534230769,
+    "p90_seconds_per_source": 643.8761615063637,
+    "p95_seconds_per_source": 659.7283639586364,
+    "max_seconds_per_source": 680.4176565,
+    "distance_per_source_m": 1791.8193053022396,
+    "move_time_per_source": 358.3638610604479,
+    "measure_time_per_source": 110.8994708994709,
+    "switch_time_per_source": 21.235449735449734,
+    "failed_clear_time_per_source": 0.06349206349206349,
+    "measure_calls": 8384,
+    "switches": 8027,
+    "failed_clear": 8,
+    "program_wall_p95_s": 4.382499999999999
+  },
+  "cumulative35_isrv2": {
+    "runs": 35,
+    "sources": 447,
+    "cleared": 447,
+    "mean_seconds_per_source": 501.0108051212603,
+    "mean_ci95": [
+      464.3687701963745,
+      536.0413030212131
+    ],
+    "aggregate_seconds_per_source": 484.6829139194631,
+    "median_seconds_per_source": 499.8007332307692,
+    "p90_seconds_per_source": 641.27533126,
+    "p95_seconds_per_source": 658.1896273245454,
+    "max_seconds_per_source": 680.4176565,
+    "distance_per_source_m": 1755.5062932800906,
+    "move_time_per_source": 351.1012586560181,
+    "measure_time_per_source": 107.86353467561521,
+    "switch_time_per_source": 20.65771812080537,
+    "failed_clear_time_per_source": 0.06040268456375839,
+    "measure_calls": 9643,
+    "switches": 9234,
+    "failed_clear": 9,
+    "program_wall_p95_s": 4.334999999999999
+  },
+  "available28_isr_v1": {
+    "runs": 28,
+    "sources": 368,
+    "cleared": 368,
+    "mean_seconds_per_source": 491.5234799111884,
+    "mean_ci95": [
+      442.0133567047951,
+      541.7463252963267
+    ],
+    "aggregate_seconds_per_source": 470.29010876086954,
+    "median_seconds_per_source": 495.6831362884615,
+    "p90_seconds_per_source": 684.2928349700001,
+    "p95_seconds_per_source": 695.6060436299999,
+    "max_seconds_per_source": 720.0564999000001,
+    "distance_per_source_m": 1721.5184796531798,
+    "move_time_per_source": 344.30369593063597,
+    "measure_time_per_source": 101.48097826086956,
+    "switch_time_per_source": 19.407608695652176,
+    "failed_clear_time_per_source": 0.09782608695652174,
+    "measure_calls": 7469,
+    "switches": 7142,
+    "failed_clear": 12,
+    "program_wall_p95_s": 4.47
+  },
+  "comparison": {
+    "cumulative_isrv2_relative_to_isr_mean_percent": 1.9301875897741683,
+    "cumulative_isrv2_relative_to_isr_aggregate_percent": 3.060409923677976,
+    "independent_bootstrap_mean_delta_ci95": [
+      -52.46069443815613,
+      71.3780393176882
+    ],
+    "permutation": {
+      "observed_mean_delta": 9.487325210071901,
+      "one_sided_p_candidate_faster": 0.6196638033619664,
+      "two_sided_p": 0.7629423705762942,
+      "samples": 100000
+    },
+    "initial5_vs_followup30_mean_delta": 75.47549790292248,
+    "initial5_mean": 436.3175212044697,
+    "followup30_mean": 511.7930191073922
+  },
+  "comparison_limit": "The 35 ISRV2 and 28 ISR-v1 practices are independent, non-contemporaneous official scenarios.",
+  "recommendation": "KEEP_ISR_V1",
+  "reason": "The initial five-run ISRV2 advantage did not reproduce; cumulative ISRV2 mean and aggregate T/N are higher than the available ISR-v1 pool."
+}
