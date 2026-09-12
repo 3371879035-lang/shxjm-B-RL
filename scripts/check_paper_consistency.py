@@ -26,6 +26,10 @@ def main():
     stress=load('b1_stress_paired_summary.json')
     for k in ('cluster','edge','minradius','outward'):
         checks.append((f'stress_{k}', abs(stress[k]['pct']-(-2.77))<1.8 or abs(stress[k]['pct']-(-4.40))<0.3 or abs(stress[k]['pct']-(-3.17))<0.3 or abs(stress[k]['pct']-(-4.26))<0.3, 'pressure'))
+    off=load('official_b1_p4_all_summary.json')
+    checks.append(('official_s25_agg', abs(off['S25']['aggregate_V_per_source']-530.16)<0.1, '530.16'))
+    checks.append(('official_s21_agg', abs(off['S21']['aggregate_V_per_source']-534.03)<0.1, '534.03'))
+    checks.append(('official_p', off['comparison']['mannwhitney_p']>0.05, 'p>0.05'))
     # 论文文本存在性
     for val in ['11.547','817.749','998.7889','18173.851','17908.930','3.49%','4.66%','2.77%','4.40%','3.17%','4.26%']:
         checks.append((f'text_{val}', val in text, val))

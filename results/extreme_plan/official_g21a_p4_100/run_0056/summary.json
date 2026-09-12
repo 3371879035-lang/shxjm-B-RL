@@ -1,0 +1,211 @@
+{
+  "success": true,
+  "cleared": 12,
+  "virtual_time_s": 7934.201398,
+  "distance_m": 30951.007010229747,
+  "measure_calls": 287,
+  "switches": 249,
+  "clear_calls": 12,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "extra_measurements": 49,
+  "opportunistic_measure_count": 12,
+  "opportunistic_direction_count": 8,
+  "opportunistic_no_signal_count": 4,
+  "opportunistic_near_count": 0,
+  "legs_evaluated": 20,
+  "legs_selected": 8,
+  "clear_ready_count": 0,
+  "became_clear_ready_count": 0,
+  "zero_detour_clear_count": 0,
+  "zero_detour_violations": 0,
+  "candidate_count": 275,
+  "coverage_move_m": 12346.466654238164,
+  "opportunity_move_m": 5562.4634106576805,
+  "resolver_move_m": 12751.81925783087,
+  "clear_move_m": 290.2576875030318,
+  "coverage_measure_count": 238,
+  "resolver_measure_count": 37,
+  "per_source": {
+    "9": {
+      "first_seen_time": 53.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 750.2331034606926,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 452.6704947255989,
+      "clear_certificate_time": null,
+      "clear_time": 6434.253374
+    },
+    "12": {
+      "first_seen_time": 71.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 750.2331034606916,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 113.22717140866177,
+      "clear_certificate_time": null,
+      "clear_time": 6717.518652
+    },
+    "16": {
+      "first_seen_time": 95.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 19.539777601593634,
+      "radius_after_opportunistic": 19.539777601593634,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 1189.253720562309,
+      "clear_certificate_time": null,
+      "clear_time": 5959.351926
+    },
+    "14": {
+      "first_seen_time": 396.6,
+      "first_seen_position": [
+        998.0,
+        0.0
+      ],
+      "radius_after_first": 92.44671492138876,
+      "radius_after_opportunistic": 92.44671492138876,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 704.8223738130217,
+      "clear_certificate_time": null,
+      "clear_time": 5312.407599
+    },
+    "8": {
+      "first_seen_time": 1128.001572,
+      "first_seen_position": [
+        -706.0,
+        706.0
+      ],
+      "radius_after_first": 23.822519413212763,
+      "radius_after_opportunistic": 23.822519413212763,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 633.1514867000213,
+      "clear_certificate_time": null,
+      "clear_time": 6855.843809
+    },
+    "11": {
+      "first_seen_time": 1140.001572,
+      "first_seen_position": [
+        -706.0,
+        706.0
+      ],
+      "radius_after_first": 104.73567651906201,
+      "radius_after_opportunistic": 104.73567651906201,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 741.0477965401813,
+      "clear_certificate_time": null,
+      "clear_time": 7934.201398
+    },
+    "15": {
+      "first_seen_time": 1152.001572,
+      "first_seen_position": [
+        -706.0,
+        706.0
+      ],
+      "radius_after_first": 26.07369661041026,
+      "radius_after_opportunistic": 26.07369661041026,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 1143.2288000985654,
+      "clear_certificate_time": null,
+      "clear_time": 7110.09821
+    },
+    "2": {
+      "first_seen_time": 1352.802095,
+      "first_seen_position": [
+        -998.0,
+        0.0
+      ],
+      "radius_after_first": 100.42899178081299,
+      "radius_after_opportunistic": 100.42899178081299,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 970.2717579381887,
+      "clear_certificate_time": null,
+      "clear_time": 6178.646929
+    },
+    "10": {
+      "first_seen_time": 1855.403142,
+      "first_seen_position": [
+        0.0,
+        -998.0
+      ],
+      "radius_after_first": 71.87963852876827,
+      "radius_after_opportunistic": 71.87963852876827,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 866.2525984515182,
+      "clear_certificate_time": null,
+      "clear_time": 5539.515439
+    },
+    "3": {
+      "first_seen_time": 2056.203665,
+      "first_seen_position": [
+        706.0,
+        -706.0
+      ],
+      "radius_after_first": 43.961211012970566,
+      "radius_after_opportunistic": 43.961211012970566,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 707.8176840941644,
+      "clear_certificate_time": null,
+      "clear_time": 5709.69493
+    },
+    "13": {
+      "first_seen_time": 2339.780742,
+      "first_seen_position": [
+        933.0,
+        -1616.0
+      ],
+      "radius_after_first": 750.2331034606918,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 375.210926750275,
+      "clear_certificate_time": null,
+      "clear_time": 5155.488895
+    },
+    "17": {
+      "first_seen_time": 4082.056306,
+      "first_seen_position": [
+        -1616.0,
+        933.0
+      ],
+      "radius_after_first": 750.1165426755489,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 2116.1256054612822,
+      "clear_certificate_time": null,
+      "clear_time": 7733.325336
+    }
+  },
+  "mode": 4,
+  "variant": "G21A",
+  "coverage": "S21",
+  "robot_id": "202610094088",
+  "request_log": "results\\extreme_plan\\official_g21a_p4_100\\run_0056\\requests.jsonl",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 1789189801642,
+    "virtual_time_s": 7934.201398,
+    "exit_reason": "user_exit"
+  }
+}

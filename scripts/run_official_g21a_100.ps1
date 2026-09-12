@@ -1,0 +1,3 @@
+Set-Location "D:\数学建模\B_RL"
+python scripts\auto_official_g25o_batch.py --mode 4 --runs 100 --variant G21A --coverage S21 --out-dir results\extreme_plan\official_g21a_p4_100 *> results\extreme_plan\official_g21a_p4_100.log
+python scripts\auto_official_g25o_batch.py --mode 4 --runs 100 --variant G25OR --coverage S21 --out-dir results\extreme_plan\official_s21_p4_100 *> results\extreme_plan\official_s21_p4_100.log

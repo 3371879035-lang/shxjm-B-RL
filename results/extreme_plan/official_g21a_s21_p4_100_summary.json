@@ -1,0 +1,55 @@
+{
+  "G21A": {
+    "runs": 100,
+    "all_clear": true,
+    "full_clear_runs": 100,
+    "total_sources": 1295,
+    "total_V": 699301.5478599999,
+    "aggregate_V_per_source": 540.0011952586872,
+    "mean_run_V_per_source": 557.6435864443143,
+    "median_run_V_per_source": 560.7623123846154,
+    "p90_run_V_per_source": 713.92741593,
+    "p95_run_V_per_source": 730.390774325,
+    "std_run_V_per_source": 119.97032025308633,
+    "mean_measures": 231.62,
+    "mean_distance_m": 27813.977409302363,
+    "zero_failure_95_upper_bound": 0.029513049607039932,
+    "mean_opp": 11.98,
+    "mean_opp_dir": 10.05,
+    "mean_opp_ns": 1.93,
+    "mean_legs": 7.59,
+    "mean_became_cr": 2.41
+  },
+  "S21": {
+    "runs": 100,
+    "all_clear": true,
+    "full_clear_runs": 100,
+    "total_sources": 1290,
+    "total_V": 663258.598297,
+    "aggregate_V_per_source": 514.1539521682171,
+    "mean_run_V_per_source": 528.3745685961388,
+    "median_run_V_per_source": 528.9173090769232,
+    "p90_run_V_per_source": 664.32875186,
+    "p95_run_V_per_source": 683.1544743781818,
+    "std_run_V_per_source": 102.87717369756908,
+    "mean_measures": 234.43,
+    "mean_distance_m": 25856.87991067533,
+    "zero_failure_95_upper_bound": 0.029513049607039932,
+    "mean_opp": 0.0,
+    "mean_opp_dir": 0.0,
+    "mean_opp_ns": 0.0,
+    "mean_legs": 0.0,
+    "mean_became_cr": 0.0
+  },
+  "comparison": {
+    "mean_diff_g21a_minus_s21_s_per_source": 29.26901784817551,
+    "pct_change": 5.539444853665388,
+    "mannwhitney_p": 0.045774105179034644,
+    "welch_p": 0.06554888580102516,
+    "bootstrap_ci95": [
+      -1.4265056018720812,
+      59.72036790302643
+    ]
+  },
+  "note": "官方问题4各100局，随机不可重放；分布比较，不是同案例配对。"
+}

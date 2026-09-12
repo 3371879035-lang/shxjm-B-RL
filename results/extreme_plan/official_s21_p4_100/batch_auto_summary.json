@@ -1,0 +1,2702 @@
+[
+  {
+    "run": 1,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6399.709072,
+      "distance_m": 25498.545368422096,
+      "measure_calls": 207,
+      "switches": 195,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 39,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0001\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789190988667,
+        "virtual_time_s": 6399.709072,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 2,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6939.004689,
+      "distance_m": 27080.023442020847,
+      "measure_calls": 245,
+      "switches": 228,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 61,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0002\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191017606,
+        "virtual_time_s": 6939.004689,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 3,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 7071.29442,
+      "distance_m": 27846.47209837217,
+      "measure_calls": 242,
+      "switches": 232,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 22,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0003\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191046249,
+        "virtual_time_s": 7071.29442,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 4,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4431.871818,
+      "distance_m": 18059.359080325008,
+      "measure_calls": 124,
+      "switches": 117,
+      "clear_calls": 17,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 42,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0004\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191072713,
+        "virtual_time_s": 4431.871818,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 5,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 6800.393834,
+      "distance_m": 26501.96915436373,
+      "measure_calls": 241,
+      "switches": 230,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0005\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191105499,
+        "virtual_time_s": 6800.393834,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 6,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6797.042527,
+      "distance_m": 27180.212625698576,
+      "measure_calls": 216,
+      "switches": 211,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 42,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0006\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191136366,
+        "virtual_time_s": 6797.042527,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 7,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 3807.709017,
+      "distance_m": 15348.545080890826,
+      "measure_calls": 112,
+      "switches": 98,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 43,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0007\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191162187,
+        "virtual_time_s": 3807.709017,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 8,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 6624.803476,
+      "distance_m": 25224.017382478836,
+      "measure_calls": 255,
+      "switches": 250,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 33,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0008\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191190235,
+        "virtual_time_s": 6624.803476,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 9,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 7420.738142,
+      "distance_m": 30443.69069890854,
+      "measure_calls": 210,
+      "switches": 207,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 48,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0009\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191221443,
+        "virtual_time_s": 7420.738142,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 10,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 7084.849629,
+      "distance_m": 27609.248145020945,
+      "measure_calls": 249,
+      "switches": 243,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 55,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0010\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191248271,
+        "virtual_time_s": 7084.849629,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 11,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 6874.475341,
+      "distance_m": 26277.376702330886,
+      "measure_calls": 262,
+      "switches": 254,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 30,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0011\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191277749,
+        "virtual_time_s": 6874.475341,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 12,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6811.17497,
+      "distance_m": 27000.87485037421,
+      "measure_calls": 225,
+      "switches": 216,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 38,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0012\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191307623,
+        "virtual_time_s": 6811.17497,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 13,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4975.594941,
+      "distance_m": 19957.974701710296,
+      "measure_calls": 152,
+      "switches": 144,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 38,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0013\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191339884,
+        "virtual_time_s": 4975.594941,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 14,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6336.246815,
+      "distance_m": 25861.234089436006,
+      "measure_calls": 182,
+      "switches": 179,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0014\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191369574,
+        "virtual_time_s": 6336.246815,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 15,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6910.678086,
+      "distance_m": 26193.390426370628,
+      "measure_calls": 272,
+      "switches": 262,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 18,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0015\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191399595,
+        "virtual_time_s": 6910.678086,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 16,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 5970.185923,
+      "distance_m": 23305.92961579717,
+      "measure_calls": 208,
+      "switches": 189,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 53,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0016\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191433198,
+        "virtual_time_s": 5970.185923,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 17,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6098.99991,
+      "distance_m": 22854.99955387818,
+      "measure_calls": 246,
+      "switches": 238,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 37,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0017\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191463710,
+        "virtual_time_s": 6098.99991,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 18,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 6994.160115,
+      "distance_m": 27460.800570132673,
+      "measure_calls": 241,
+      "switches": 232,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 38,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0018\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191491232,
+        "virtual_time_s": 6994.160115,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 19,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 5227.64518,
+      "distance_m": 20818.225882500647,
+      "measure_calls": 168,
+      "switches": 141,
+      "clear_calls": 17,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 59,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0019\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191522240,
+        "virtual_time_s": 5227.64518,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 20,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6940.731813,
+      "distance_m": 25658.659058723562,
+      "measure_calls": 294,
+      "switches": 289,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 24,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0020\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191552760,
+        "virtual_time_s": 6940.731813,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 21,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6561.932057,
+      "distance_m": 25454.660283011202,
+      "measure_calls": 237,
+      "switches": 226,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 36,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0021\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191579452,
+        "virtual_time_s": 6561.932057,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 22,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 6762.055714,
+      "distance_m": 26740.278567334557,
+      "measure_calls": 226,
+      "switches": 219,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 40,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0022\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191604621,
+        "virtual_time_s": 6762.055714,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 23,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 6638.152622,
+      "distance_m": 25590.763112246088,
+      "measure_calls": 246,
+      "switches": 235,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 24,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0023\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191636636,
+        "virtual_time_s": 6638.152622,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 24,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6600.85409,
+      "distance_m": 26409.27044515198,
+      "measure_calls": 209,
+      "switches": 199,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 47,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0024\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191664586,
+        "virtual_time_s": 6600.85409,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 25,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 7528.308583,
+      "distance_m": 28041.542911785673,
+      "measure_calls": 313,
+      "switches": 300,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0025\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191691785,
+        "virtual_time_s": 7528.308583,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 26,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 6441.988371,
+      "distance_m": 24624.94185234505,
+      "measure_calls": 245,
+      "switches": 237,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 23,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0026\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191720033,
+        "virtual_time_s": 6441.988371,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 27,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 7220.938879,
+      "distance_m": 27719.694387117102,
+      "measure_calls": 273,
+      "switches": 262,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0027\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191746438,
+        "virtual_time_s": 7220.938879,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 28,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6627.998462,
+      "distance_m": 25539.99230993321,
+      "measure_calls": 245,
+      "switches": 235,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0028\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191776076,
+        "virtual_time_s": 6627.998462,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 29,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 7220.021927,
+      "distance_m": 28160.10962828546,
+      "measure_calls": 256,
+      "switches": 243,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 43,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0029\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191800988,
+        "virtual_time_s": 7220.021927,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 30,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6306.701511,
+      "distance_m": 22653.50755045432,
+      "measure_calls": 289,
+      "switches": 281,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 24,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0030\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191826263,
+        "virtual_time_s": 6306.701511,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 31,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6357.372828,
+      "distance_m": 24946.864131906364,
+      "measure_calls": 220,
+      "switches": 208,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 26,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0031\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191850598,
+        "virtual_time_s": 6357.372828,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 32,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4180.004896,
+      "distance_m": 16935.02446998096,
+      "measure_calls": 120,
+      "switches": 113,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0032\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191875811,
+        "virtual_time_s": 4180.004896,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 33,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 7013.215198,
+      "distance_m": 27416.07598358679,
+      "measure_calls": 246,
+      "switches": 240,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 31,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0033\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191900123,
+        "virtual_time_s": 7013.215198,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 34,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6051.293151,
+      "distance_m": 23771.46576483787,
+      "measure_calls": 206,
+      "switches": 197,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 46,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0034\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191928167,
+        "virtual_time_s": 6051.293151,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 35,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6477.283218,
+      "distance_m": 24071.416097196477,
+      "measure_calls": 270,
+      "switches": 263,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 30,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0035\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191956795,
+        "virtual_time_s": 6477.283218,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 36,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 6773.982315,
+      "distance_m": 25839.91155562092,
+      "measure_calls": 260,
+      "switches": 251,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0036\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789191984677,
+        "virtual_time_s": 6773.982315,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 37,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 7017.17239,
+      "distance_m": 27995.861945816458,
+      "measure_calls": 227,
+      "switches": 213,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 44,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0037\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192013938,
+        "virtual_time_s": 7017.17239,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 38,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6904.125439,
+      "distance_m": 27465.627182911496,
+      "measure_calls": 225,
+      "switches": 211,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 59,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0038\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192040607,
+        "virtual_time_s": 6904.125439,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 39,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 6618.182303,
+      "distance_m": 24870.91151302756,
+      "measure_calls": 267,
+      "switches": 254,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0039\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192065572,
+        "virtual_time_s": 6618.182303,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 40,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6717.866105,
+      "distance_m": 26654.330517660423,
+      "measure_calls": 222,
+      "switches": 207,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 43,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0040\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192093334,
+        "virtual_time_s": 6717.866105,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 41,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 6424.101396,
+      "distance_m": 24595.506977758338,
+      "measure_calls": 243,
+      "switches": 225,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 40,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0041\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192121181,
+        "virtual_time_s": 6424.101396,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 42,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6983.617222,
+      "distance_m": 27388.086108182,
+      "measure_calls": 240,
+      "switches": 231,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 44,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0042\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192147774,
+        "virtual_time_s": 6983.617222,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 43,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6749.767351,
+      "distance_m": 26148.836753641313,
+      "measure_calls": 244,
+      "switches": 240,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 37,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0043\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192174164,
+        "virtual_time_s": 6749.767351,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 44,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6307.819493,
+      "distance_m": 24239.097456788015,
+      "measure_calls": 235,
+      "switches": 225,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 28,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0044\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192202181,
+        "virtual_time_s": 6307.819493,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 45,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 7257.68172,
+      "distance_m": 28878.408593781125,
+      "measure_calls": 238,
+      "switches": 227,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0045\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192230206,
+        "virtual_time_s": 7257.68172,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 46,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 7030.877587,
+      "distance_m": 27024.387915677304,
+      "measure_calls": 261,
+      "switches": 251,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 37,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0046\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192256652,
+        "virtual_time_s": 7030.877587,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 47,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 7672.166804,
+      "distance_m": 30405.83400710549,
+      "measure_calls": 255,
+      "switches": 241,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 56,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0047\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192281713,
+        "virtual_time_s": 7672.166804,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 48,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6459.67935,
+      "distance_m": 24328.396740292857,
+      "measure_calls": 259,
+      "switches": 249,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 20,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0048\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192307838,
+        "virtual_time_s": 6459.67935,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 49,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 4312.571453,
+      "distance_m": 17257.8572608602,
+      "measure_calls": 133,
+      "switches": 116,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 48,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0049\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192331421,
+        "virtual_time_s": 4312.571453,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 50,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 7081.820025,
+      "distance_m": 27834.100125722984,
+      "measure_calls": 243,
+      "switches": 230,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 40,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0050\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192357600,
+        "virtual_time_s": 7081.820025,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 51,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6363.171691,
+      "distance_m": 25870.858445427035,
+      "measure_calls": 187,
+      "switches": 179,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 33,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0051\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192384517,
+        "virtual_time_s": 6363.171691,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 52,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 7227.627709,
+      "distance_m": 28853.138552694112,
+      "measure_calls": 231,
+      "switches": 222,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 48,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0052\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192412471,
+        "virtual_time_s": 7227.627709,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 53,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 7365.02504,
+      "distance_m": 28760.125182037955,
+      "measure_calls": 259,
+      "switches": 253,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0053\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192437781,
+        "virtual_time_s": 7365.02504,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 54,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6663.28784,
+      "distance_m": 26866.43919324512,
+      "measure_calls": 204,
+      "switches": 195,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 44,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0054\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192465825,
+        "virtual_time_s": 6663.28784,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 55,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6689.60501,
+      "distance_m": 24563.02503727029,
+      "measure_calls": 291,
+      "switches": 272,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0055\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192492983,
+        "virtual_time_s": 6689.60501,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 56,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6596.473185,
+      "distance_m": 25522.365925602317,
+      "measure_calls": 240,
+      "switches": 232,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0056\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192518249,
+        "virtual_time_s": 6596.473185,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 57,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6201.022799,
+      "distance_m": 24850.11399521342,
+      "measure_calls": 194,
+      "switches": 186,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 36,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0057\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192542823,
+        "virtual_time_s": 6201.022799,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 58,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6860.443979,
+      "distance_m": 26972.219892986883,
+      "measure_calls": 234,
+      "switches": 221,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 65,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0058\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192568130,
+        "virtual_time_s": 6860.443979,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 59,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6626.877608,
+      "distance_m": 24829.38804615114,
+      "measure_calls": 270,
+      "switches": 261,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0059\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192592658,
+        "virtual_time_s": 6626.877608,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 60,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 7253.123698,
+      "distance_m": 27990.618494198392,
+      "measure_calls": 267,
+      "switches": 255,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 51,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0060\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192617550,
+        "virtual_time_s": 7253.123698,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 61,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 6292.179878,
+      "distance_m": 25180.89939279223,
+      "measure_calls": 199,
+      "switches": 181,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 54,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0061\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192644169,
+        "virtual_time_s": 6292.179878,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 62,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6660.151355,
+      "distance_m": 24265.756762636433,
+      "measure_calls": 294,
+      "switches": 287,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 38,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0062\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192674188,
+        "virtual_time_s": 6660.151355,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 63,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 6597.864981,
+      "distance_m": 26269.324909826344,
+      "measure_calls": 214,
+      "switches": 206,
+      "clear_calls": 14,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 39,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0063\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192698140,
+        "virtual_time_s": 6597.864981,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 64,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 7092.834715,
+      "distance_m": 28194.173577882528,
+      "measure_calls": 233,
+      "switches": 224,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 45,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0064\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192735384,
+        "virtual_time_s": 7092.834715,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 65,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 6885.09071,
+      "distance_m": 26735.45352860764,
+      "measure_calls": 248,
+      "switches": 233,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 45,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0065\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192760633,
+        "virtual_time_s": 6885.09071,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 66,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6222.836748,
+      "distance_m": 25049.18373341942,
+      "measure_calls": 193,
+      "switches": 178,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 37,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0066\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192784711,
+        "virtual_time_s": 6222.836748,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 67,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6640.515768,
+      "distance_m": 26682.578832882657,
+      "measure_calls": 207,
+      "switches": 199,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0067\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192809774,
+        "virtual_time_s": 6640.515768,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 68,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 7094.130366,
+      "distance_m": 27630.651819940787,
+      "measure_calls": 252,
+      "switches": 248,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 39,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0068\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192836279,
+        "virtual_time_s": 7094.130366,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 69,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6976.765365,
+      "distance_m": 26688.82683691033,
+      "measure_calls": 265,
+      "switches": 254,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0069\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192861058,
+        "virtual_time_s": 6976.765365,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 70,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 7043.653417,
+      "distance_m": 29068.267078617522,
+      "measure_calls": 194,
+      "switches": 185,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 40,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0070\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192884691,
+        "virtual_time_s": 7043.653417,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 71,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 7122.172503,
+      "distance_m": 27980.862499836672,
+      "measure_calls": 245,
+      "switches": 236,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 38,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0071\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192914764,
+        "virtual_time_s": 7122.172503,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 72,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6660.969595,
+      "distance_m": 26584.847983116128,
+      "measure_calls": 213,
+      "switches": 204,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 47,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0072\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192940425,
+        "virtual_time_s": 6660.969595,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 73,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6985.768199,
+      "distance_m": 26063.84099076375,
+      "measure_calls": 289,
+      "switches": 278,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0073\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192966372,
+        "virtual_time_s": 6985.768199,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 74,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6756.418374,
+      "distance_m": 25542.091855931172,
+      "measure_calls": 268,
+      "switches": 258,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0074\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789192992659,
+        "virtual_time_s": 6756.418374,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 75,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 7178.595042,
+      "distance_m": 27992.975196661635,
+      "measure_calls": 256,
+      "switches": 245,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 31,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0075\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193029022,
+        "virtual_time_s": 7178.595042,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 76,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 6055.665407,
+      "distance_m": 22748.327022583187,
+      "measure_calls": 243,
+      "switches": 236,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 31,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0076\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193062211,
+        "virtual_time_s": 6055.665407,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 77,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6494.380081,
+      "distance_m": 25626.900404411474,
+      "measure_calls": 217,
+      "switches": 209,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 42,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0077\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193095747,
+        "virtual_time_s": 6494.380081,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 78,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6641.413759,
+      "distance_m": 24737.068790906374,
+      "measure_calls": 275,
+      "switches": 269,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 30,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0078\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193125448,
+        "virtual_time_s": 6641.413759,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 79,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 7049.291449,
+      "distance_m": 27686.45724074387,
+      "measure_calls": 243,
+      "switches": 232,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 41,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0079\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193154166,
+        "virtual_time_s": 7049.291449,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 80,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 6586.071029,
+      "distance_m": 26410.355153191485,
+      "measure_calls": 208,
+      "switches": 199,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0080\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193182318,
+        "virtual_time_s": 6586.071029,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 81,
+    "summary": {
+      "success": true,
+      "cleared": 13,
+      "virtual_time_s": 6866.759326,
+      "distance_m": 26453.79663133167,
+      "measure_calls": 253,
+      "switches": 246,
+      "clear_calls": 13,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 39,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0081\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193214531,
+        "virtual_time_s": 6866.759326,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 82,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6620.906499,
+      "distance_m": 25129.532489431876,
+      "measure_calls": 259,
+      "switches": 250,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 22,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0082\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193249002,
+        "virtual_time_s": 6620.906499,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 83,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6856.553827,
+      "distance_m": 26452.769123394664,
+      "measure_calls": 252,
+      "switches": 246,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0083\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193282078,
+        "virtual_time_s": 6856.553827,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 84,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6864.139173,
+      "distance_m": 26865.695844383135,
+      "measure_calls": 237,
+      "switches": 233,
+      "clear_calls": 15,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 47,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0084\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193310681,
+        "virtual_time_s": 6864.139173,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 85,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6891.69776,
+      "distance_m": 26428.48879904817,
+      "measure_calls": 261,
+      "switches": 241,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 39,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0085\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193344510,
+        "virtual_time_s": 6891.69776,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 86,
+    "summary": {
+      "success": true,
+      "cleared": 16,
+      "virtual_time_s": 6130.406338,
+      "distance_m": 24927.031674812635,
+      "measure_calls": 180,
+      "switches": 165,
+      "clear_calls": 16,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 49,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0086\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193379842,
+        "virtual_time_s": 6130.406338,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 87,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6436.066399,
+      "distance_m": 23950.33199081283,
+      "measure_calls": 268,
+      "switches": 256,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 23,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0087\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193417673,
+        "virtual_time_s": 6436.066399,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 88,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 7046.841732,
+      "distance_m": 27404.208654360245,
+      "measure_calls": 253,
+      "switches": 246,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 24,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0088\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193447116,
+        "virtual_time_s": 7046.841732,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 89,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6714.702408,
+      "distance_m": 26478.512044257892,
+      "measure_calls": 228,
+      "switches": 219,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 27,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0089\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193471456,
+        "virtual_time_s": 6714.702408,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 90,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6726.246525,
+      "distance_m": 25731.232623357722,
+      "measure_calls": 256,
+      "switches": 247,
+      "clear_calls": 11,
+      "failed_clear": 1,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 24,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0090\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193495807,
+        "virtual_time_s": 6726.246525,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 91,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6211.678891,
+      "distance_m": 24118.39445158148,
+      "measure_calls": 223,
+      "switches": 213,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0091\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193522342,
+        "virtual_time_s": 6211.678891,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 92,
+    "summary": {
+      "success": true,
+      "cleared": 11,
+      "virtual_time_s": 6885.798794,
+      "distance_m": 26343.993959831958,
+      "measure_calls": 262,
+      "switches": 252,
+      "clear_calls": 11,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0092\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193551978,
+        "virtual_time_s": 6885.798794,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 93,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 7365.009487,
+      "distance_m": 28235.04743643211,
+      "measure_calls": 278,
+      "switches": 268,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 44,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0093\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193586382,
+        "virtual_time_s": 7365.009487,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 94,
+    "summary": {
+      "success": true,
+      "cleared": 12,
+      "virtual_time_s": 6671.700825,
+      "distance_m": 25973.504110754566,
+      "measure_calls": 237,
+      "switches": 232,
+      "clear_calls": 12,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 29,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0094\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193620248,
+        "virtual_time_s": 6671.700825,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 95,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6918.552335,
+      "distance_m": 27637.761681791868,
+      "measure_calls": 222,
+      "switches": 211,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 32,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0095\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193654849,
+        "virtual_time_s": 6918.552335,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 96,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 6395.388734,
+      "distance_m": 25066.943670015396,
+      "measure_calls": 220,
+      "switches": 212,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 34,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0096\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193688196,
+        "virtual_time_s": 6395.388734,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 97,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 7323.412996,
+      "distance_m": 29747.064976971855,
+      "measure_calls": 218,
+      "switches": 209,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 41,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0097\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193722075,
+        "virtual_time_s": 7323.412996,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 98,
+    "summary": {
+      "success": true,
+      "cleared": 10,
+      "virtual_time_s": 6830.893578,
+      "distance_m": 25829.46789352993,
+      "measure_calls": 271,
+      "switches": 260,
+      "clear_calls": 10,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 25,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0098\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193756902,
+        "virtual_time_s": 6830.893578,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 99,
+    "summary": {
+      "success": true,
+      "cleared": 14,
+      "virtual_time_s": 7009.363178,
+      "distance_m": 28186.81588481603,
+      "measure_calls": 218,
+      "switches": 212,
+      "clear_calls": 14,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 35,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0099\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193793060,
+        "virtual_time_s": 7009.363178,
+        "exit_reason": "user_exit"
+      }
+    }
+  },
+  {
+    "run": 100,
+    "summary": {
+      "success": true,
+      "cleared": 15,
+      "virtual_time_s": 6792.190014,
+      "distance_m": 27325.950072352804,
+      "measure_calls": 210,
+      "switches": 202,
+      "clear_calls": 15,
+      "failed_clear": 0,
+      "solver_failures": 0,
+      "optical_fallbacks": 0,
+      "extra_measurements": 39,
+      "mode": 4,
+      "variant": "G25OR",
+      "coverage": "S21",
+      "robot_id": "202610094088",
+      "request_log": "results\\extreme_plan\\official_s21_p4_100\\run_0100\\requests.jsonl",
+      "exit_response": {
+        "accepted": true,
+        "real_timestamp_ms": 1789193826309,
+        "virtual_time_s": 6792.190014,
+        "exit_reason": "user_exit"
+      }
+    }
+  }
+]

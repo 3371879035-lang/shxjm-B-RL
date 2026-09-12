@@ -13,6 +13,7 @@ if str(ROOT) not in sys.path:
 
 from brl.coverage import s21_points, s25_points, s3_points, s4_points
 from brl.g25o import G25OPolicy
+from brl.g21a import G21APolicy
 from brl.remote import OfficialClient, RemoteBelief
 
 
@@ -68,9 +69,14 @@ def main():
     # 完成证书必须和策略实际扫描的点集一致。
     belief.coverage_points = cov_points
     belief.n_coverage = len(cov_points)
-    policy = G25OPolicy(args.variant, coverage=args.coverage)
-    print(f"[enter] remaining_real_duration_s={client.remaining_real_duration_s}", flush=True)
-    result = policy.run(belief)
+    if str(args.variant).upper().startswith("G21A"):
+        policy = G21APolicy(mode=args.mode)
+        print(f"[enter] remaining_real_duration_s={client.remaining_real_duration_s}", flush=True)
+        result = policy.run(belief)
+    else:
+        policy = G25OPolicy(args.variant, coverage=args.coverage)
+        print(f"[enter] remaining_real_duration_s={client.remaining_real_duration_s}", flush=True)
+        result = policy.run(belief)
     result.update({"mode": args.mode, "variant": args.variant, "coverage": args.coverage,
                    "robot_id": args.robot_id, "request_log": str(req_log)})
     if belief.success and not getattr(belief, "exited", False):

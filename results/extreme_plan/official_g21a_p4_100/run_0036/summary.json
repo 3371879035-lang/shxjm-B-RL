@@ -1,0 +1,239 @@
+{
+  "success": true,
+  "cleared": 14,
+  "virtual_time_s": 6969.003765,
+  "distance_m": 28630.01883571471,
+  "measure_calls": 200,
+  "switches": 170,
+  "clear_calls": 15,
+  "failed_clear": 1,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "extra_measurements": 42,
+  "opportunistic_measure_count": 14,
+  "opportunistic_direction_count": 9,
+  "opportunistic_no_signal_count": 5,
+  "opportunistic_near_count": 0,
+  "legs_evaluated": 20,
+  "legs_selected": 8,
+  "clear_ready_count": 0,
+  "became_clear_ready_count": 3,
+  "zero_detour_clear_count": 0,
+  "zero_detour_violations": 0,
+  "candidate_count": 267,
+  "coverage_move_m": 12184.999874332028,
+  "opportunity_move_m": 5336.203560026718,
+  "resolver_move_m": 9145.368586868673,
+  "clear_move_m": 1963.446814487289,
+  "coverage_measure_count": 158,
+  "resolver_measure_count": 28,
+  "per_source": {
+    "5": {
+      "first_seen_time": 29.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 19.04588751668057,
+      "radius_after_opportunistic": 19.04588751668057,
+      "n_opportunistic": 1,
+      "n_bilateral": 0,
+      "resolver_move_distance": 0.0,
+      "clear_certificate_time": 760.56102,
+      "clear_time": 904.92107
+    },
+    "6": {
+      "first_seen_time": 35.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 26.868136640879253,
+      "radius_after_opportunistic": 26.868136640879253,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 1512.0020290905743,
+      "clear_certificate_time": null,
+      "clear_time": 5827.068445
+    },
+    "9": {
+      "first_seen_time": 53.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 57.530102778525375,
+      "radius_after_opportunistic": 57.530102778525375,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 828.1192738336279,
+      "clear_certificate_time": null,
+      "clear_time": 6457.629331
+    },
+    "10": {
+      "first_seen_time": 59.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 42.27638828908816,
+      "radius_after_opportunistic": 42.27638828908816,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 517.9076611675819,
+      "clear_certificate_time": null,
+      "clear_time": 4875.597679
+    },
+    "12": {
+      "first_seen_time": 71.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 750.2331034606921,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 905.3437383099064,
+      "clear_certificate_time": null,
+      "clear_time": 5163.309749
+    },
+    "13": {
+      "first_seen_time": 77.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 32.51541860801811,
+      "radius_after_opportunistic": 32.51541860801811,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 295.0009906497128,
+      "clear_certificate_time": null,
+      "clear_time": 5898.375668
+    },
+    "14": {
+      "first_seen_time": 83.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 43.311380618212134,
+      "radius_after_opportunistic": 43.311380618212134,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 392.2517601075695,
+      "clear_certificate_time": null,
+      "clear_time": 5993.198286
+    },
+    "16": {
+      "first_seen_time": 95.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 750.2331034606929,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 660.8011238452015,
+      "clear_certificate_time": null,
+      "clear_time": 6969.003765
+    },
+    "17": {
+      "first_seen_time": 101.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 750.2331034606917,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 330.51712276437723,
+      "clear_certificate_time": null,
+      "clear_time": 5333.802555
+    },
+    "20": {
+      "first_seen_time": 119.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 17.535386093964807,
+      "radius_after_opportunistic": 17.535386093964807,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 411.1225449588532,
+      "clear_certificate_time": 1197.336765,
+      "clear_time": 5250.534258
+    },
+    "11": {
+      "first_seen_time": 372.6,
+      "first_seen_position": [
+        998.0,
+        0.0
+      ],
+      "radius_after_first": 13.207518342948177,
+      "radius_after_opportunistic": 13.207518342948177,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 831.1490636128144,
+      "clear_certificate_time": 541.760497,
+      "clear_time": 6628.859144
+    },
+    "3": {
+      "first_seen_time": 567.400523,
+      "first_seen_position": [
+        706.0,
+        706.0
+      ],
+      "radius_after_first": 31.45408944990791,
+      "radius_after_opportunistic": 31.45408944990791,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 1376.283672744151,
+      "clear_certificate_time": null,
+      "clear_time": 6279.677184
+    },
+    "15": {
+      "first_seen_time": 1453.777314,
+      "first_seen_position": [
+        -706.0,
+        -706.0
+      ],
+      "radius_after_first": 698.2668654022744,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 772.4100300097922,
+      "clear_certificate_time": null,
+      "clear_time": 5513.659604
+    },
+    "8": {
+      "first_seen_time": 2075.955439,
+      "first_seen_position": [
+        933.0,
+        -1616.0
+      ],
+      "radius_after_first": 750.1165426755489,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 179.02814046097888,
+      "clear_certificate_time": null,
+      "clear_time": 4752.925555
+    }
+  },
+  "mode": 4,
+  "variant": "G21A",
+  "coverage": "S21",
+  "robot_id": "202610094088",
+  "request_log": "results\\extreme_plan\\official_g21a_p4_100\\run_0036\\requests.jsonl",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 1789189268348,
+    "virtual_time_s": 6969.003765,
+    "exit_reason": "user_exit"
+  }
+}

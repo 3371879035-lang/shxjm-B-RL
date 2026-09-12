@@ -1,0 +1,211 @@
+{
+  "success": true,
+  "cleared": 12,
+  "virtual_time_s": 7332.244361,
+  "distance_m": 28041.22182449222,
+  "measure_calls": 282,
+  "switches": 254,
+  "clear_calls": 12,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "extra_measurements": 35,
+  "opportunistic_measure_count": 12,
+  "opportunistic_direction_count": 11,
+  "opportunistic_no_signal_count": 1,
+  "opportunistic_near_count": 0,
+  "legs_evaluated": 20,
+  "legs_selected": 9,
+  "clear_ready_count": 0,
+  "became_clear_ready_count": 4,
+  "zero_detour_clear_count": 0,
+  "zero_detour_violations": 0,
+  "candidate_count": 251,
+  "coverage_move_m": 11656.18157828496,
+  "opportunity_move_m": 6087.941407381336,
+  "resolver_move_m": 7459.796241583568,
+  "clear_move_m": 2837.3025972423548,
+  "coverage_measure_count": 247,
+  "resolver_measure_count": 23,
+  "per_source": {
+    "2": {
+      "first_seen_time": 11.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 19.021364619922416,
+      "radius_after_opportunistic": 19.021364619922416,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 1058.6144556682675,
+      "clear_certificate_time": 1062.361544,
+      "clear_time": 5996.372412
+    },
+    "5": {
+      "first_seen_time": 29.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 16.26349628226348,
+      "radius_after_opportunistic": 16.26349628226348,
+      "n_opportunistic": 1,
+      "n_bilateral": 0,
+      "resolver_move_distance": 0.0,
+      "clear_certificate_time": 1684.002879,
+      "clear_time": 1893.604994
+    },
+    "11": {
+      "first_seen_time": 65.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 57.23312459122949,
+      "radius_after_opportunistic": 57.23312459122949,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 389.67393621359406,
+      "clear_certificate_time": null,
+      "clear_time": 5427.565088
+    },
+    "18": {
+      "first_seen_time": 107.0,
+      "first_seen_position": [
+        0.0,
+        0.0
+      ],
+      "radius_after_first": 22.878009222819074,
+      "radius_after_opportunistic": 22.878009222819074,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 1178.0307826082535,
+      "clear_certificate_time": null,
+      "clear_time": 5687.770963
+    },
+    "15": {
+      "first_seen_time": 396.6,
+      "first_seen_position": [
+        998.0,
+        0.0
+      ],
+      "radius_after_first": 26.959327301279217,
+      "radius_after_opportunistic": 26.959327301279217,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 352.9172049618351,
+      "clear_certificate_time": null,
+      "clear_time": 5779.649521
+    },
+    "1": {
+      "first_seen_time": 584.400524,
+      "first_seen_position": [
+        706.0,
+        706.0
+      ],
+      "radius_after_first": 102.0321948020529,
+      "radius_after_opportunistic": 102.0321948020529,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 232.02342276096306,
+      "clear_certificate_time": null,
+      "clear_time": 6618.347588
+    },
+    "4": {
+      "first_seen_time": 596.400524,
+      "first_seen_position": [
+        706.0,
+        706.0
+      ],
+      "radius_after_first": 241.66951208767316,
+      "radius_after_opportunistic": 241.66951208767316,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 228.31691351235153,
+      "clear_certificate_time": null,
+      "clear_time": 6744.616104
+    },
+    "20": {
+      "first_seen_time": 1148.00157,
+      "first_seen_position": [
+        -706.0,
+        706.0
+      ],
+      "radius_after_first": 14.42371881369543,
+      "radius_after_opportunistic": 14.42371881369543,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 820.1068837926738,
+      "clear_certificate_time": 1298.162067,
+      "clear_time": 6165.393789
+    },
+    "12": {
+      "first_seen_time": 2319.021179,
+      "first_seen_position": [
+        933.0,
+        -1616.0
+      ],
+      "radius_after_first": 23.864940645412915,
+      "radius_after_opportunistic": 23.864940645412915,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 835.870381822032,
+      "clear_certificate_time": null,
+      "clear_time": 5323.835386
+    },
+    "13": {
+      "first_seen_time": 3615.932458,
+      "first_seen_position": [
+        0.0,
+        1866.0
+      ],
+      "radius_after_first": 715.17038722143,
+      "radius_after_opportunistic": null,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 1476.925272653502,
+      "clear_certificate_time": null,
+      "clear_time": 6537.903373
+    },
+    "6": {
+      "first_seen_time": 4355.479453,
+      "first_seen_position": [
+        -1866.0,
+        0.0
+      ],
+      "radius_after_first": 48.96448833326129,
+      "radius_after_opportunistic": 48.96448833326129,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 2248.5801265296645,
+      "clear_certificate_time": null,
+      "clear_time": 7223.381746
+    },
+    "14": {
+      "first_seen_time": 4632.662165,
+      "first_seen_position": [
+        -1616.0,
+        -933.0
+      ],
+      "radius_after_first": 16.640100301950703,
+      "radius_after_opportunistic": 16.640100301950703,
+      "n_opportunistic": 1,
+      "n_bilateral": 1,
+      "resolver_move_distance": 519.3130768135183,
+      "clear_certificate_time": 4840.184659,
+      "clear_time": 7332.244361
+    }
+  },
+  "mode": 4,
+  "variant": "G21A",
+  "coverage": "S21",
+  "robot_id": "202610094088",
+  "request_log": "results\\extreme_plan\\official_g21a_p4_100\\run_0015\\requests.jsonl",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 1789188705950,
+    "virtual_time_s": 7332.244361,
+    "exit_reason": "user_exit"
+  }
+}
