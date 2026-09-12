@@ -93,3 +93,6 @@ Q3和Q4的最大瓶颈都是未知源空间搜索；Q4其次是空频道扫描�
 （B-O0 占66.6%/69.0%）；Q4 的合法信息/空频道证明成本也显著更高。复现与完整表见
 `docs/extreme_plan/CAUSAL_DECOMPOSITION.md`，原始数据见
 `results/extreme_plan/causal_decomposition_50scenes_*.csv/json`。
+## 7. Clear-as-Search Shadow Audit（负结果）
+
+在同一批50+50场景上回放G25OR自然停点，影子测量未知频道并更新搜索证书。结果：首停点处平均仍有5.92/7.84个真实源未发现，但顺手测量真正发现新源0/10次；有效删除整航点0/0个、距离0/0 m、净节省-23.33/-81.54 s/源。即使忽略证书与测量成本删除首停点后全部覆盖任务，Q3也仅25.02 s/源，低于30-40 Gate；Q4为109.11 s/源但不可达。结论：不要在现有clear/定位停点上实现B3，需重新设计搜索感知路线。详见`docs/extreme_plan/CLEAR_AS_SEARCH_SHADOW_AUDIT.md`。
