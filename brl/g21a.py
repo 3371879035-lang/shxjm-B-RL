@@ -82,6 +82,13 @@ class G21APolicy:
         self.clear_ready = 0
         self.became_clear_ready = 0
         self.zero_detour_clear = 0
+        self.coverage_move_m = 0.0
+        self.opportunity_move_m = 0.0
+        self.resolver_move_m = 0.0
+        self.clear_move_m = 0.0
+        self.coverage_measure_count = 0
+        self.resolver_measure_count = 0
+        self.clear_calls = 0
         self.per_source = {}
 
     def _source_log(self, ch):
@@ -100,10 +107,29 @@ class G21APolicy:
         order = route_open(points, env.pos)
         tracks: Dict[int, dict] = {}
 
+        def _measure_env(ch, q, coverage_idx, is_refine, phase):
+            d0 = float(env.move_distance)
+            out = env.measure(q, ch, coverage_idx=coverage_idx, is_refine=is_refine)
+            dm = float(env.move_distance) - d0
+            if phase == "coverage":
+                self.coverage_move_m += dm; self.coverage_measure_count += 1
+            elif phase == "opportunity":
+                self.opportunity_move_m += dm
+            else:
+                self.resolver_move_m += dm; self.resolver_measure_count += 1
+            return out
+
+        def _clear_env(ch, q):
+            d0 = float(env.move_distance)
+            out = env.clear(q, ch)
+            self.clear_move_m += float(env.move_distance) - d0
+            self.clear_calls += 1
+            return out
+
         def observe(ch, p, obs):
             typ = obs.get("measure_result")
             if typ == "near":
-                out = env.clear(p, ch)
+                out = _clear_env(ch, p)
                 if out.get("clear_result") == "success":
                     self._source_log(ch)["clear_time"] = float(env.virtual_time)
                     tracks.pop(ch, None)
@@ -134,7 +160,8 @@ class G21APolicy:
 
         def measure_at(ch, q, opportunistic=False, coverage_idx=None, is_refine=False):
             before_move = float(np.linalg.norm(np.asarray(q, dtype=float) - env.pos))
-            out = env.measure(q, ch, coverage_idx=coverage_idx, is_refine=is_refine)
+            phase = "opportunity" if opportunistic else ("coverage" if coverage_idx is not None else "resolver")
+            out = _measure_env(ch, q, coverage_idx, is_refine, phase)
             if opportunistic:
                 self.extra_measurements += 1
                 self.opportunistic_measure += 1
@@ -180,7 +207,7 @@ class G21APolicy:
                     best = (det, ch, qc0)
             if best is not None and not env.done:
                 _, ch, qc0 = best
-                out0 = env.clear(qc0, ch)
+                out0 = _clear_env(ch, qc0)
                 if out0.get("clear_result") == "success":
                     self._source_log(ch)["clear_time"] = float(env.virtual_time)
                     tracks.pop(ch, None)
@@ -263,7 +290,7 @@ class G21APolicy:
                 dmax_q = float(np.max(np.linalg.norm(np.asarray(st["P"], dtype=float) - env.pos[None, :], axis=1)))
                 if dmax_q <= 20.0 - 0.35:
                     self.zero_detour_clear += 1
-                    out0 = env.clear(env.pos, ch)
+                    out0 = _clear_env(ch, env.pos)
                     if out0.get("clear_result") == "success":
                         self._source_log(ch)["clear_time"] = float(env.virtual_time)
                         tracks.pop(ch, None)
@@ -283,7 +310,7 @@ class G21APolicy:
                 detour = float(np.linalg.norm(env.pos - qc) + np.linalg.norm(qc - B) - np.linalg.norm(env.pos - B))
                 if detour <= self.detour_clear_limit:
                     self.clear_ready += 1
-                    out = env.clear(qc, ch)
+                    out = _clear_env(ch, qc)
                     if out.get("clear_result") == "success":
                         self._source_log(ch)["clear_time"] = float(env.virtual_time)
                         tracks.pop(ch, None)
@@ -309,7 +336,7 @@ class G21APolicy:
             start_pos = env.pos.copy()
 
             def measure_cb(q):
-                out = env.measure(q, ch, is_refine=True)
+                out = _measure_env(ch, q, None, True, "resolver")
                 self.extra_measurements += 1
                 ans = {"measure_result": out.get("measure_result")}
                 if out.get("svd_deg") is not None:
@@ -317,7 +344,7 @@ class G21APolicy:
                 return ans
 
             def clear_cb(q):
-                return {"clear_result": env.clear(q, ch).get("clear_result")}
+                return {"clear_result": _clear_env(ch, q).get("clear_result")}
 
             try:
                 solve_bilateral(first, deg, start_pos, measure_cb, clear_cb, initial_region=P)
@@ -326,7 +353,7 @@ class G21APolicy:
                 for q in optical_fallback_points(first, deg):
                     if env.channels[ch].status == "cleared" or env.done:
                         break
-                    if env.clear(q, ch).get("clear_result") == "success":
+                    if _clear_env(ch, q).get("clear_result") == "success":
                         break
                 self.fallback_count += 1
             sl["resolver_move_distance"] += float(np.linalg.norm(env.pos - start_pos))
@@ -371,5 +398,12 @@ class G21APolicy:
             "clear_ready_count": int(self.clear_ready),
             "became_clear_ready_count": int(self.became_clear_ready),
             "zero_detour_clear_count": int(self.zero_detour_clear),
+            "coverage_move_m": float(self.coverage_move_m),
+            "opportunity_move_m": float(self.opportunity_move_m),
+            "resolver_move_m": float(self.resolver_move_m),
+            "clear_move_m": float(self.clear_move_m),
+            "coverage_measure_count": int(self.coverage_measure_count),
+            "resolver_measure_count": int(self.resolver_measure_count),
+            "clear_calls": int(self.clear_calls),
             "per_source": self.per_source,
         }

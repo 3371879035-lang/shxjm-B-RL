@@ -1,0 +1,190 @@
+{
+  "reps_per_family_n": 15,
+  "scale": 1260,
+  "overall": {
+    "runs_per_method": 630,
+    "all_clear_base": true,
+    "all_clear_g21a": true,
+    "base_mean_v_per_source": 524.8384215300722,
+    "g21a_mean_v_per_source": 544.1316871054986,
+    "overall_pct_change": 3.6760390977437116,
+    "overall_paired_ttest_p": 3.6510391170023005e-77,
+    "wall_s": 609.4994637966156
+  },
+  "families": {
+    "uniform": {
+      "G25OR-S21": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 488.51540499137406,
+        "median_v_per_source": 495.4914410041935,
+        "p95_v_per_source": 643.3817081115666,
+        "mean_distance_m": 24199.976205770352,
+        "mean_measures": 204.8,
+        "mean_resolver_move_m": null
+      },
+      "G21A": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 513.8153215157878,
+        "median_v_per_source": 521.1599743317512,
+        "p95_v_per_source": 678.410941032478,
+        "mean_distance_m": 25981.480040636943,
+        "mean_measures": 198.71428571428572,
+        "mean_resolver_move_m": 7923.177437572357
+      },
+      "comparison": {
+        "mean_diff_s21g21a_minus_base": 25.29991652441373,
+        "pct_change": 5.178939346827858,
+        "median_pct_change": 5.180419115925845,
+        "paired_ttest_p": 1.1470770124337684e-19,
+        "wilcoxon_p": 8.132986831733359e-17
+      }
+    },
+    "edge": {
+      "G25OR-S21": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 511.7888923900194,
+        "median_v_per_source": 522.9253188271932,
+        "p95_v_per_source": 678.4247222556987,
+        "mean_distance_m": 24549.807678445974,
+        "mean_measures": 245.27619047619046,
+        "mean_resolver_move_m": null
+      },
+      "G21A": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 540.0474757138763,
+        "median_v_per_source": 548.8085508336508,
+        "p95_v_per_source": 717.7093540235312,
+        "mean_distance_m": 26504.129718226683,
+        "mean_measures": 238.86666666666667,
+        "mean_resolver_move_m": 9755.458468268635
+      },
+      "comparison": {
+        "mean_diff_s21g21a_minus_base": 28.258583323856953,
+        "pct_change": 5.5215311907007765,
+        "median_pct_change": 4.949699522009751,
+        "paired_ttest_p": 1.1594360260067082e-20,
+        "wilcoxon_p": 4.2546145101219906e-16
+      }
+    },
+    "cluster": {
+      "G25OR-S21": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 416.1262669658399,
+        "median_v_per_source": 428.6163564149243,
+        "p95_v_per_source": 584.9584272864653,
+        "mean_distance_m": 20330.53775028321,
+        "mean_measures": 175.5047619047619,
+        "mean_resolver_move_m": null
+      },
+      "G21A": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 428.5496858622375,
+        "median_v_per_source": 437.18758014642754,
+        "p95_v_per_source": 598.0969354357692,
+        "mean_distance_m": 21217.510795051137,
+        "mean_measures": 173.66666666666666,
+        "mean_resolver_move_m": 4111.386791316406
+      },
+      "comparison": {
+        "mean_diff_s21g21a_minus_base": 12.423418896397607,
+        "pct_change": 2.985492597471011,
+        "median_pct_change": 1.999742567734814,
+        "paired_ttest_p": 2.2809496351035067e-17,
+        "wilcoxon_p": 1.6435715029352512e-15
+      }
+    },
+    "minradius": {
+      "G25OR-S21": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 494.8527370557875,
+        "median_v_per_source": 504.19110664136474,
+        "p95_v_per_source": 673.8523698109274,
+        "mean_distance_m": 24343.296124368968,
+        "mean_measures": 212.0857142857143,
+        "mean_resolver_move_m": null
+      },
+      "G21A": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 515.307248867157,
+        "median_v_per_source": 522.0037072387353,
+        "p95_v_per_source": 687.0641792473971,
+        "mean_distance_m": 25783.739997544024,
+        "mean_measures": 207.27619047619046,
+        "mean_resolver_move_m": 6576.50907490477
+      },
+      "comparison": {
+        "mean_diff_s21g21a_minus_base": 20.454511811369514,
+        "pct_change": 4.1334543147254665,
+        "median_pct_change": 3.5329065433200477,
+        "paired_ttest_p": 3.499136949021029e-14,
+        "wilcoxon_p": 2.112543111656881e-13
+      }
+    },
+    "outward": {
+      "G25OR-S21": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 699.0878689800895,
+        "median_v_per_source": 689.258611631541,
+        "p95_v_per_source": 853.4473733697163,
+        "mean_distance_m": 32292.445854485766,
+        "mean_measures": 405.1333333333333,
+        "mean_resolver_move_m": null
+      },
+      "G21A": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 701.1116793268525,
+        "median_v_per_source": 686.0156083284165,
+        "p95_v_per_source": 858.4626061974407,
+        "mean_distance_m": 32508.959156243494,
+        "mean_measures": 403.0285714285714,
+        "mean_resolver_move_m": 14012.48744147746
+      },
+      "comparison": {
+        "mean_diff_s21g21a_minus_base": 2.023810346762957,
+        "pct_change": 0.28949298601269197,
+        "median_pct_change": -0.4705060260978113,
+        "paired_ttest_p": 0.11863840502106776,
+        "wilcoxon_p": 0.9477483564245941
+      }
+    },
+    "mixed": {
+      "G25OR-S21": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 538.6593587973231,
+        "median_v_per_source": 526.6275413442702,
+        "p95_v_per_source": 696.9479797704437,
+        "mean_distance_m": 26442.206759887988,
+        "mean_measures": 244.33333333333334,
+        "mean_resolver_move_m": null
+      },
+      "G21A": {
+        "runs": 105,
+        "all_clear": true,
+        "mean_v_per_source": 565.9587113470799,
+        "median_v_per_source": 565.9107549962333,
+        "p95_v_per_source": 721.2977857672173,
+        "mean_distance_m": 28441.72660948338,
+        "mean_measures": 239.62857142857143,
+        "mean_resolver_move_m": 9530.574889545907
+      },
+      "comparison": {
+        "mean_diff_s21g21a_minus_base": 27.299352549756804,
+        "pct_change": 5.0680178676759065,
+        "median_pct_change": 7.459392182886742,
+        "paired_ttest_p": 1.6552574609558625e-22,
+        "wilcoxon_p": 1.5804939466193218e-17
+      }
+    }
+  }
+}
