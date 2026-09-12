@@ -132,7 +132,7 @@ class G25OPolicy:
             return s4_points()
         return s25_points()
 
-    def run(self, env: RadioEnv) -> dict:
+    def run(self, env: RadioEnv, resume: bool = False) -> dict:
         if self.full_rolling:
             return _run_full(self, env)
         mode = env.mode
@@ -142,6 +142,22 @@ class G25OPolicy:
             env.n_coverage = len(points)
         order = route_open(points, env.pos)
         tracks: Dict[int, dict] = {}
+        if resume:
+            # 从已有环境状态恢复：把已发现但未清除的频道转成 track，
+            # 供续行基策略继续定位清除，而不是从空 tracks 重新开始。
+            for ch, st in env.channels.items():
+                if st.status != "discovered":
+                    continue
+                first = None; deg = None
+                for ob in st.observations:
+                    if ob.get("result") == "direction" and ob.get("svd_deg") is not None:
+                        first = np.asarray(ob["position"], dtype=float)
+                        deg = float(ob["svd_deg"]); break
+                if first is None or deg is None:
+                    continue
+                P = st.poly if st.poly is not None and len(st.poly) > 0 else initial_track_polygon(first, deg)
+                tracks[int(ch)] = {"first": first.copy(), "deg": deg, "P": P,
+                                   "nobs": max(1, sum(1 for ob in st.observations if ob.get("result") == "direction"))}
 
         def observe(ch: int, p: np.ndarray, obs: dict) -> None:
             typ = obs.get("measure_result")
@@ -347,8 +363,11 @@ def _q3_proven_absent(neg_points, cells, cell_radius=None, margin: float = 1e-6)
     pts = np.asarray(neg_points, dtype=float)
     if len(pts) == 0 or cells is None or len(cells) == 0:
         return False
-    spacing = 200.0
-    half = spacing / 2.0
+    # cell_radius 是旧接口传入的外接圆半径；正方形半边长 = R/sqrt(2)
+    if cell_radius is not None and float(cell_radius) > 0:
+        half = float(cell_radius) / math.sqrt(2.0)
+    else:
+        half = 100.0
     safe_r = 1000.0 - margin
     corners = np.asarray([[-half, -half], [half, -half], [half, half], [-half, half]], dtype=float)
     for c in np.asarray(cells, dtype=float):

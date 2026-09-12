@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from brl.coverage import s21_points, s25_points, s3_points
+from brl.coverage import s21_points, s25_points, s3_points, s4_points
 from brl.g25o import G25OPolicy
 from brl.remote import OfficialClient, RemoteBelief
 
@@ -62,7 +62,7 @@ def main():
     elif args.coverage == "S21":
         cov_points = s21_points()
     elif args.coverage == "S4":
-        cov_points = __import__("brl.coverage", fromlist=["s4_points"]).s4_points()
+        cov_points = s4_points()
     else:
         cov_points = s25_points()
     # 完成证书必须和策略实际扫描的点集一致。

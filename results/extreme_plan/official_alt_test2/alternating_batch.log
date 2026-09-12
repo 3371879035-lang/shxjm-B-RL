@@ -1,0 +1,5 @@
+[pair 1] S25: started, waiting runner
+[pair 1] S25: success=True cleared=10 V=7541.230179
+[pair 1] S21: started, waiting runner
+[pair 1] S21: success=True cleared=14 V=7482.288293
+[done] pairs=1 wall_s=49.6

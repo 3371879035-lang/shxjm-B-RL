@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "cleared": 11,
+  "virtual_time_s": 6909.46531,
+  "distance_m": 25227.326575096697,
+  "measure_calls": 303,
+  "switches": 294,
+  "clear_calls": 11,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "extra_measurements": 47,
+  "mode": 4,
+  "variant": "G25O",
+  "coverage": "S25",
+  "robot_id": "202610094088",
+  "request_log": "results\\extreme_plan\\official_alt_smoke\\S25_run_001\\run_0001\\requests.jsonl",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 1789178866323,
+    "virtual_time_s": 6909.46531,
+    "exit_reason": "user_exit"
+  }
+}

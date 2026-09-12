@@ -1,10 +1,10 @@
 {
-  "n_per_group": 50,
-  "start_seed": 93000,
-  "wall_s": 231.57123851776123,
+  "n_per_group": 5,
+  "start_seed": 99000,
+  "wall_s": 8.367295265197754,
   "variant": "G25OR",
-  "coverage": "S25",
-  "coverage_points": 25,
+  "coverage": "S21",
+  "coverage_points": 21,
   "s25_max_triangle_edge_m": 975.897190465528,
-  "rows": 400
+  "rows": 40
 }

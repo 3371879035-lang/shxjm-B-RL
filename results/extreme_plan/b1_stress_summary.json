@@ -1,0 +1,110 @@
+{
+  "n": 20,
+  "start": 98000,
+  "summary": {
+    "cluster": {
+      "p3_S25": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 2846.583069701873,
+        "mean_distance_m": 10971.415348509363
+      },
+      "p3_S21": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 2846.583069701873,
+        "mean_distance_m": 10971.415348509363
+      },
+      "p4_S25": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 5850.164533170133,
+        "mean_distance_m": 21708.572665850665
+      },
+      "p4_S21": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 5688.060604590218,
+        "mean_distance_m": 21847.053022951088
+      }
+    },
+    "edge": {
+      "p3_S25": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 4673.881195906946,
+        "mean_distance_m": 19033.40597953473
+      },
+      "p3_S21": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 4673.881195906946,
+        "mean_distance_m": 19033.40597953473
+      },
+      "p4_S25": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 9357.627511748069,
+        "mean_distance_m": 32308.13755874035
+      },
+      "p4_S21": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 8945.964703493764,
+        "mean_distance_m": 32470.823517468827
+      }
+    },
+    "minradius": {
+      "p3_S25": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 4505.0102732851965,
+        "mean_distance_m": 18593.301366425985
+      },
+      "p3_S21": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 4505.0102732851965,
+        "mean_distance_m": 18593.301366425985
+      },
+      "p4_S25": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 7219.110436123034,
+        "mean_distance_m": 26827.302180615166
+      },
+      "p4_S21": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 6990.56845452271,
+        "mean_distance_m": 27108.842272613547
+      }
+    },
+    "outward": {
+      "p3_S25": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 4245.885395771468,
+        "mean_distance_m": 17590.42697885734
+      },
+      "p3_S21": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 4245.885395771468,
+        "mean_distance_m": 17590.42697885734
+      },
+      "p4_S25": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 8204.642149274494,
+        "mean_distance_m": 28762.710746372475
+      },
+      "p4_S21": {
+        "runs": 20,
+        "all_clear": true,
+        "mean_v_s": 7855.051621453837,
+        "mean_distance_m": 28935.508107269183
+      }
+    }
+  }
+}

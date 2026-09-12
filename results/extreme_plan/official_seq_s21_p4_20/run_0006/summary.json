@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "cleared": 16,
+  "virtual_time_s": 4174.35675,
+  "distance_m": 16736.78373968784,
+  "measure_calls": 126,
+  "switches": 117,
+  "clear_calls": 16,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "extra_measurements": 42,
+  "mode": 4,
+  "variant": "G25O",
+  "coverage": "S21",
+  "robot_id": "202610094088",
+  "request_log": "results\\extreme_plan\\official_seq_s21_p4_20\\run_0006\\requests.jsonl",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 1789180625620,
+    "virtual_time_s": 4174.35675,
+    "exit_reason": "user_exit"
+  }
+}

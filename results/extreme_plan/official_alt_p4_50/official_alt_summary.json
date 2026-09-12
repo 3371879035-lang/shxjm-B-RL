@@ -1,0 +1,47 @@
+{
+  "dir": "results\\extreme_plan\\official_alt_p4_50",
+  "S25": {
+    "runs": 14,
+    "all_clear": true,
+    "full_clear_runs": 14,
+    "total_sources": 197,
+    "total_V": 98995.09059099999,
+    "aggregate_V_per_source": 502.5131502081218,
+    "mean_run_V_per_source": 514.3210935737899,
+    "median_run_V_per_source": 514.24604615,
+    "std_run_V_per_source": 115.31584310114523,
+    "min_run_V_per_source": 315.7835028125,
+    "max_run_V_per_source": 781.1093281999999,
+    "mean_measures": 264.92857142857144,
+    "mean_distance_m": 27111.460951593388
+  },
+  "S21": {
+    "runs": 13,
+    "all_clear": true,
+    "full_clear_runs": 13,
+    "total_sources": 161,
+    "total_V": 92225.87507099999,
+    "aggregate_V_per_source": 572.8315221801241,
+    "mean_run_V_per_source": 586.7086309859961,
+    "median_run_V_per_source": 553.5299893846154,
+    "std_run_V_per_source": 102.90787594543936,
+    "min_run_V_per_source": 428.1175235333333,
+    "max_run_V_per_source": 741.7421876000001,
+    "mean_measures": 249.76923076923077,
+    "mean_distance_m": 27711.10579215009
+  },
+  "comparison": {
+    "mean_diff_S21_minus_S25_s_per_source": 72.38753741220626,
+    "pct_change": 14.074386276716217,
+    "mannwhitney_p": 0.15228075837759508,
+    "bootstrap_ci95": [
+      -10.210103915498106,
+      151.08852429176105
+    ],
+    "zero_failure_95_upper_bound": {
+      "S25": 0.19263617565013536,
+      "S21": 0.20581666518655073
+    }
+  },
+  "note": "官方案例随机不可重放，交替顺序只控制时间/批次效应；这是分布比较，不是同案例配对。"
+}
