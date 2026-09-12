@@ -140,9 +140,22 @@ def main():
         click_button(w, "关闭公告", timeout=0.5)
         start_text = f"开始问题{args.mode}演练测试"
         if not click_button(w, start_text, timeout=30):
-            proc.kill()
-            print(f"[batch] run {i}: start button not found", flush=True)
-            break
+            ok = False
+            for _ in range(6):
+                time.sleep(5)
+                try:
+                    cleanup_result_dialog(w, args.mode, timeout=15)
+                    w2, _ = get_sim_window()
+                    click_button(w2, "关闭公告", timeout=1)
+                    if click_button(w2, start_text, timeout=10):
+                        ok = True
+                        break
+                except Exception:
+                    pass
+            if not ok:
+                proc.kill()
+                print(f"[batch] run {i}: start button not found", flush=True)
+                break
         print(f"[batch] run {i}: clicked {start_text}, waiting runner...", flush=True)
         deadline = time.time() + 300
         while proc.poll() is None and time.time() < deadline:

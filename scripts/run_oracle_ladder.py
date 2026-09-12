@@ -51,6 +51,8 @@ def sanity_checks():
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--n',type=int,default=50); ap.add_argument('--start',type=int,default=160000)
+    ap.add_argument('--out',default=str(ROOT/'results'/'extreme_plan'/'oracle_ladder.csv'))
+    ap.add_argument('--summary-out',default=str(ROOT/'results'/'extreme_plan'/'oracle_ladder_summary.json'))
     args=ap.parse_args(); rows=[]; t0=time.time()
     for mode in (3,4):
         for i in range(args.n):
@@ -60,7 +62,7 @@ def main():
             for method in METHODS:
                 rows.append(run_method(method,mode,seed,src))
         print('[oracle] mode',mode,'done',flush=True)
-    p=ROOT/'results'/'extreme_plan'/'oracle_ladder.csv'; p.parent.mkdir(parents=True,exist_ok=True)
+    p=Path(args.out); p.parent.mkdir(parents=True,exist_ok=True)
     with open(p,'w',newline='',encoding='utf-8-sig') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
     summary={}
@@ -82,6 +84,6 @@ def main():
             'search_O3_minus_O0':o3['mean_v_per_source']-o0['mean_v_per_source'],
             'total_headroom_G_minus_O0':g['mean_v_per_source']-o0['mean_v_per_source']}
     out={'n':args.n,'start':args.start,'sanity':sanity_checks(),'summary':summary,'wall_s':time.time()-t0}
-    (ROOT/'results'/'extreme_plan'/'oracle_ladder_summary.json').write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8')
+    Path(args.summary_out).write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(out,ensure_ascii=False,indent=2)[:8000])
 if __name__=='__main__': main()

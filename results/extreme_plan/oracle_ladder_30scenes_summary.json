@@ -1,0 +1,152 @@
+{
+  "n": 30,
+  "start": 170000,
+  "sanity": {
+    "all_ok": true,
+    "checks": [
+      {
+        "pos": [
+          100.0,
+          0.0
+        ],
+        "o0_time": 21.0,
+        "expected": 21.0,
+        "ok": true
+      },
+      {
+        "pos": [
+          10.0,
+          0.0
+        ],
+        "o0_time": 5.0,
+        "expected": 5.0,
+        "ok": true
+      },
+      {
+        "pos": [
+          0.0,
+          0.0
+        ],
+        "o0_time": 5.0,
+        "expected": 5.0,
+        "ok": true
+      },
+      {
+        "omni_time": 242.86765338232573,
+        "directional_time": 242.86765338232573,
+        "omni_dist": 1139.3382669116288,
+        "directional_dist": 1139.3382669116288,
+        "ok": true
+      }
+    ]
+  },
+  "summary": {
+    "problem3": {
+      "G25OR": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 343.71901062147793,
+        "median_v_per_source": 331.84356163970347,
+        "mean_distance_per_source": 1410.164337295424,
+        "mean_measures_per_source": 9.567299922299922,
+        "mean_clear_calls_per_source": 1.0058974358974357
+      },
+      "O1": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 318.88333365955106,
+        "median_v_per_source": 308.74948785677344,
+        "mean_distance_per_source": 1410.164337295424,
+        "mean_measures_per_source": 5.42042735042735,
+        "mean_clear_calls_per_source": 1.0058974358974357
+      },
+      "O2": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 298.7228268418429,
+        "median_v_per_source": 303.65400821064816,
+        "mean_distance_per_source": 1254.6801355689656,
+        "mean_measures_per_source": 7.209410450660451,
+        "mean_clear_calls_per_source": 1.0
+      },
+      "O3": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 270.21218098524923,
+        "median_v_per_source": 258.29140260986355,
+        "mean_distance_per_source": 1235.8436020901934,
+        "mean_measures_per_source": 3.0625378787878788,
+        "mean_clear_calls_per_source": 1.0
+      },
+      "O0": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 144.0237224067693,
+        "median_v_per_source": 141.39419397256194,
+        "mean_distance_per_source": 695.1186120338465,
+        "mean_measures_per_source": 0.0,
+        "mean_clear_calls_per_source": 1.0
+      },
+      "gaps_s_per_source": {
+        "channel_G_minus_O1": 24.83567696192688,
+        "location_G_minus_O2": 44.99618377963503,
+        "search_O3_minus_O0": 126.18845857847992,
+        "total_headroom_G_minus_O0": 199.69528821470863
+      }
+    },
+    "problem4": {
+      "G25OR": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 627.740868642019,
+        "median_v_per_source": 608.9061186321078,
+        "mean_distance_per_source": 2275.8550327982853,
+        "mean_measures_per_source": 28.29464452214452,
+        "mean_clear_calls_per_source": 1.0
+      },
+      "O1": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 510.6621733979236,
+        "median_v_per_source": 473.60974791208264,
+        "mean_distance_per_source": 2135.353232956984,
+        "mean_measures_per_source": 13.441027583527582,
+        "mean_clear_calls_per_source": 1.0
+      },
+      "O2": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 536.0280413288548,
+        "median_v_per_source": 531.6366965868363,
+        "mean_distance_per_source": 1931.8803824406991,
+        "mean_measures_per_source": 24.4248445998446,
+        "mean_clear_calls_per_source": 1.0
+      },
+      "O3": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 390.9896380831091,
+        "median_v_per_source": 380.3317329142111,
+        "mean_distance_per_source": 1650.0001329174881,
+        "mean_measures_per_source": 9.561013986013986,
+        "mean_clear_calls_per_source": 1.0
+      },
+      "O0": {
+        "runs": 30,
+        "all_clear": true,
+        "mean_v_per_source": 143.43235665468126,
+        "median_v_per_source": 142.3668388656642,
+        "mean_distance_per_source": 692.1617832734062,
+        "mean_measures_per_source": 0.0,
+        "mean_clear_calls_per_source": 1.0
+      },
+      "gaps_s_per_source": {
+        "channel_G_minus_O1": 117.0786952440954,
+        "location_G_minus_O2": 91.71282731316421,
+        "search_O3_minus_O0": 247.55728142842787,
+        "total_headroom_G_minus_O0": 484.30851198733774
+      }
+    }
+  },
+  "wall_s": 69.3990330696106
+}
