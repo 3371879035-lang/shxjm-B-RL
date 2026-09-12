@@ -1,4 +1,4 @@
-"""Resumable, practice-only G25OR/ISR experiment driver.
+"""Resumable, practice-only multi-variant experiment driver.
 
 The driver first runs 12 smoke practices (three per problem/variant).  It enters
 the 400-run experiment only if every smoke run is fully verified.  It never
@@ -154,13 +154,15 @@ def return_to_practice(mode: int, timeout: float = 30.0) -> bool:
     return False
 
 
-def make_schedule(smoke_runs: int, main_runs: int, seed: int) -> list[dict]:
+def make_schedule(smoke_runs: int, main_runs: int, seed: int,
+                  variants: list[str] | None = None) -> list[dict]:
     rng = random.Random(seed)
+    variants = variants or ["G25OR", "ISR"]
     schedule = []
     global_index = 0
     for phase, blocks in (("smoke", smoke_runs), ("main", main_runs)):
         for block in range(1, blocks + 1):
-            jobs = [(3, "G25OR"), (3, "ISR"), (4, "G25OR"), (4, "ISR")]
+            jobs = [(mode, variant) for mode in (3, 4) for variant in variants]
             rng.shuffle(jobs)
             for position, (mode, variant) in enumerate(jobs, 1):
                 global_index += 1
@@ -177,13 +179,15 @@ def load_or_create_manifest(out: Path, args) -> dict:
     path = out / "manifest.json"
     code_files = [
         RUNNER, ROOT / "brl" / "independent_candidate.py", ROOT / "brl" / "bilateral.py",
-        ROOT / "brl" / "protocol.py", ROOT / "brl" / "remote.py", Path(__file__).resolve(),
+        ROOT / "brl" / "protocol.py", ROOT / "brl" / "remote.py",
+        ROOT / "brl" / "isr_v2.py", Path(__file__).resolve(),
     ]
     generated = {
         "schema_version": 1, "practice_only": True,
         "schedule_seed": args.schedule_seed,
         "smoke_runs_per_group": args.smoke_runs_per_group,
         "main_runs_per_group": args.main_runs_per_group,
+        "variants": args.variants,
         "robot_id": str(args.robot_id), "base_url": args.base_url,
         "database": str(Path(args.database).resolve()),
         "runner_timeout_s": float(args.runner_timeout_s),
@@ -191,7 +195,8 @@ def load_or_create_manifest(out: Path, args) -> dict:
         "git_head": git_head(),
         "code_sha256": {str(path.relative_to(ROOT)): file_sha256(path) for path in code_files},
         "schedule": make_schedule(
-            args.smoke_runs_per_group, args.main_runs_per_group, args.schedule_seed
+            args.smoke_runs_per_group, args.main_runs_per_group, args.schedule_seed,
+            args.variants,
         ),
     }
     if path.exists():
@@ -203,6 +208,8 @@ def load_or_create_manifest(out: Path, args) -> dict:
         ):
             if existing.get(key) != generated.get(key):
                 raise RuntimeError(f"resume manifest mismatch for {key}")
+        if existing.get("variants", ["G25OR", "ISR"]) != generated["variants"]:
+            raise RuntimeError("resume manifest mismatch for variants")
         return existing
     atomic_json(path, generated)
     return generated
@@ -348,11 +355,16 @@ def main() -> None:
     parser.add_argument("--database", default=str(DEFAULT_DB))
     parser.add_argument("--smoke-runs-per-group", type=int, default=3)
     parser.add_argument("--main-runs-per-group", type=int, default=100)
+    parser.add_argument("--variants", default="G25OR,ISR",
+                        help="comma-separated runner variants, e.g. ISR,ISRV2")
     parser.add_argument("--schedule-seed", type=int, default=20260912)
     parser.add_argument("--runner-timeout-s", type=float, default=1170.0)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--prepare-only", action="store_true")
     args = parser.parse_args()
+    args.variants = [value.strip().upper() for value in args.variants.split(",") if value.strip()]
+    if not args.variants or any(value not in {"G25OR", "ISR", "ISRV2"} for value in args.variants):
+        raise SystemExit("--variants must contain G25OR, ISR, or ISRV2")
     out = Path(args.out_dir).resolve()
     out.mkdir(parents=True, exist_ok=True)
 
@@ -393,7 +405,7 @@ def main() -> None:
                 continue
             if job["phase"] == "main":
                 smoke = [a for a in progress["attempts"] if a["phase"] == "smoke"]
-                expected = args.smoke_runs_per_group * 4
+                expected = args.smoke_runs_per_group * 2 * len(args.variants)
                 if len(smoke) != expected or any(a["status"] != "verified_full_clear" for a in smoke):
                     progress.update(state="stopped", stop_reason="smoke_gate_failed")
                     atomic_json(progress_path, progress)
