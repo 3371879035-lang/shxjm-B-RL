@@ -21,6 +21,7 @@ from .geometry import (DOMAIN_RADIUS, MAX_RECEIVE_RADIUS, circle_outer_halfplane
 from .local_env import (CHANNELS, CLEAR_MARGIN, MAX_SOURCES, ChannelState, MacroAction,
                         MacroEnv, NEAR_DIST)
 from .resolver import reliable_clear
+from .protocol import ActionIOError
 
 
 class OfficialClient:
@@ -160,10 +161,28 @@ class RemoteBelief:
     def measure(self, position: Sequence[float], channel: int,
                 coverage_idx: Optional[int] = None, is_refine: bool = False) -> dict:
         p = np.asarray(position, dtype=float)
-        out = self.client.measure(p, int(channel))
+        try:
+            out = self.client.measure(p, int(channel))
+        except ActionIOError:
+            raise
+        except Exception as exc:
+            raise ActionIOError("official /measure transport failed") from exc
         if out.get("accepted") is not True:
             self.invalid_responses += 1
-            raise RuntimeError(f"/measure not accepted: {out}")
+            raise ActionIOError(f"/measure not accepted: {out}")
+        result = str(out.get("measure_result", ""))
+        if result not in ("direction", "near", "no_signal"):
+            self.invalid_responses += 1
+            raise ActionIOError(f"/measure invalid result: {out}")
+        if result == "direction":
+            try:
+                value = float(out["svd_deg"])
+            except (KeyError, TypeError, ValueError, OverflowError) as exc:
+                self.invalid_responses += 1
+                raise ActionIOError(f"/measure missing direction: {out}") from exc
+            if not np.isfinite(value):
+                self.invalid_responses += 1
+                raise ActionIOError(f"/measure non-finite direction: {out}")
         dt = self._dt(out)
         # 成功 measure 后当前位置与测向机频道更新
         self._move_to(p)
@@ -174,7 +193,7 @@ class RemoteBelief:
         if is_refine:
             self.refine_actions += 1
         st = self.channels[int(channel)]
-        result = str(out.get("measure_result", "no_signal"))
+        result = str(out["measure_result"])
         obs = {"position": p.copy(), "result": result}
         svd = out.get("svd_deg")
         if svd is not None:
@@ -212,10 +231,18 @@ class RemoteBelief:
     def clear(self, position: Sequence[float], channel: int) -> dict:
         p = np.asarray(position, dtype=float)
         st = self.channels[int(channel)]
-        out = self.client.clear(p, int(channel))
+        try:
+            out = self.client.clear(p, int(channel))
+        except ActionIOError:
+            raise
+        except Exception as exc:
+            raise ActionIOError("official /clear transport failed") from exc
         if out.get("accepted") is not True:
             self.invalid_responses += 1
-            raise RuntimeError(f"/clear not accepted: {out}")
+            raise ActionIOError(f"/clear not accepted: {out}")
+        if out.get("clear_result") not in ("success", "no_target_in_range"):
+            self.invalid_responses += 1
+            raise ActionIOError(f"/clear invalid result: {out}")
         dt = self._dt(out)
         self._move_to(p)
         self.n_clear += 1

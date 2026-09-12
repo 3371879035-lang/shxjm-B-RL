@@ -12,11 +12,29 @@ from typing import Callable, Optional
 import numpy as np
 
 from .geometry import minimum_enclosing_circle
+from .protocol import OFFICIAL_BEARING_ENVELOPE_DEG
 
-EPS_DEG = 1.01  # 1度传感误差 + 0.005度两位小数舍入余量
+EPS_DEG = OFFICIAL_BEARING_ENVELOPE_DEG
 EPS = math.radians(EPS_DEG)
 K = math.tan(EPS)
 R_MAX = 1500.0
+
+
+def _ordered_by_travel(points, current_position):
+    """Order symmetric candidates reproducibly across platforms.
+
+    Several bilateral probes are theoretically equidistant.  Raw libm/BLAS
+    rounding used to reverse those ties on Windows and Linux, which changed the
+    observation sequence.  Nine decimal places are far below the simulator's
+    coordinate precision while making the documented list order the tie-break.
+    """
+    current = np.asarray(current_position, dtype=float)
+    indexed = list(enumerate(points))
+    indexed.sort(key=lambda item: (
+        round(float(np.linalg.norm(np.asarray(item[1], dtype=float) - current)), 9),
+        item[0],
+    ))
+    return [point for _, point in indexed]
 
 
 def clip(poly: np.ndarray, normal: np.ndarray, offset: float) -> np.ndarray:
@@ -111,7 +129,7 @@ def solve_bilateral(first_position, first_bearing_deg: float, current_position,
         mid = (lo + hi) / 2.0
         side = mid * K + 5.0
         probes = [np.array([mid, side]), np.array([mid, -side])]
-        probes.sort(key=lambda q: float(np.linalg.norm(glob(q) - pos)))
+        probes = _ordered_by_travel(probes, B.T @ (pos - origin))
         observed = False
         for q in probes:
             pos = glob(q)
@@ -153,7 +171,7 @@ def solve_bilateral(first_position, first_bearing_deg: float, current_position,
         raise RuntimeError("Interval did not contract within six rounds")
     targets = [np.array([(lo + hi) / 2.0, hi * K / 2.0]),
                np.array([(lo + hi) / 2.0, -hi * K / 2.0])]
-    targets.sort(key=lambda q: float(np.linalg.norm(glob(q) - pos)))
+    targets = _ordered_by_travel(targets, B.T @ (pos - origin))
     for q in targets:
         pos = glob(q)
         nc += 1

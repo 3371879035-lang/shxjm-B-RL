@@ -16,6 +16,7 @@ from .certificates import (cell_index_of_point, grid_cells_intersecting_disk,
 from .coverage import s25_points, s21_points, s3_points, s4_points
 from .geometry import bearing_cross_sine, minimum_enclosing_circle
 from .local_env import CHANNELS, RadioEnv
+from .protocol import ActionIOError, OFFICIAL_BEARING_ENVELOPE_DEG
 from .resolver import optical_fallback_points
 
 
@@ -56,7 +57,7 @@ def _clip_target_square(poly: np.ndarray) -> np.ndarray:
 def initial_track_polygon(p: np.ndarray, theta_deg: float) -> np.ndarray:
     # 严格外包半径1500m的扇形：用远边弦在中央方向投影为1500m。
     # 两个边界点取 p + (1500/cos eps) * u(theta±eps)，三角形包含整个扇形。
-    eps = math.radians(1.01)
+    eps = math.radians(OFFICIAL_BEARING_ENVELOPE_DEG)
     th = math.radians(theta_deg)
     L = 1500.0 / math.cos(eps)
     u1 = np.array([math.cos(th - eps), math.sin(th - eps)])
@@ -271,6 +272,8 @@ class G25OPolicy:
 
             try:
                 solve_bilateral(first, first_deg, env.pos, measure_cb, clear_cb, initial_region=P)
+            except ActionIOError:
+                raise
             except Exception:
                 self.solver_failures += 1
                 for q in optical_fallback_points(first, first_deg):
@@ -566,6 +569,8 @@ def _run_full(policy: G25OPolicy, env: RadioEnv) -> dict:
 
         try:
             solve_bilateral(first, first_deg, env.pos, measure_cb, clear_cb, initial_region=P)
+        except ActionIOError:
+            raise
         except Exception:
             policy.solver_failures += 1
             for q in optical_fallback_points(first, first_deg):

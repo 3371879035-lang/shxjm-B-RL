@@ -17,6 +17,7 @@ from .geometry import (DOMAIN_RADIUS, MAX_RECEIVE_RADIUS, circle_outer_halfplane
                        intersect_halfplanes, minimum_enclosing_circle, perpendicular,
                        polygon_centroid, wedge_halfplanes)
 from .resolver import optical_fallback_points, reliable_clear
+from .protocol import quantize_bearing_deg
 
 CHANNELS = list(range(1, 21))
 MAX_SOURCES = 16
@@ -148,7 +149,8 @@ class RadioEnv:
     """遵守题面动作计时与反馈规则的本地二维环境。"""
     def __init__(self, mode: int = 3, n_sources: int = 12, seed: Optional[int] = None,
                  step_limit: int = 20000, virtual_limit: float = 360000.0,
-                 edge_bias: float = 0.15, cluster: bool = False):
+                 edge_bias: float = 0.15, cluster: bool = False,
+                 bearing_decimals: Optional[int] = None):
         assert mode in (3, 4)
         self.mode = mode
         self.requested_n = n_sources
@@ -157,6 +159,7 @@ class RadioEnv:
         self.virtual_limit = virtual_limit
         self.edge_bias = edge_bias
         self.cluster = cluster
+        self.bearing_decimals = bearing_decimals
         self.coverage_points = s3_points() if mode == 3 else s4_points()
         self.n_coverage = len(self.coverage_points)
         self.reset(seed=seed)
@@ -227,6 +230,8 @@ class RadioEnv:
                     result = "direction"
                     err = self.error_field.value(src.channel, float(p[0]), float(p[1]))
                     svd = normalize_deg(self._bearing(p, src.position) + err)
+                    if self.bearing_decimals is not None:
+                        svd = quantize_bearing_deg(svd, self.bearing_decimals)
         move = float(np.linalg.norm(p - self.pos))
         switch = 1.0 if int(channel) != self.current_channel else 0.0
         dt = move / 5.0 + switch + 5.0
