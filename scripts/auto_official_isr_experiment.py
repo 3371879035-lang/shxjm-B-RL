@@ -185,6 +185,9 @@ def load_or_create_manifest(out: Path, args) -> dict:
         "smoke_runs_per_group": args.smoke_runs_per_group,
         "main_runs_per_group": args.main_runs_per_group,
         "robot_id": str(args.robot_id), "base_url": args.base_url,
+        "database": str(Path(args.database).resolve()),
+        "runner_timeout_s": float(args.runner_timeout_s),
+        "python_executable": str(Path(sys.executable).resolve()),
         "git_head": git_head(),
         "code_sha256": {str(path.relative_to(ROOT)): file_sha256(path) for path in code_files},
         "schedule": make_schedule(
@@ -195,7 +198,8 @@ def load_or_create_manifest(out: Path, args) -> dict:
         existing = json.loads(path.read_text(encoding="utf-8"))
         for key in (
             "schedule_seed", "smoke_runs_per_group", "main_runs_per_group",
-            "robot_id", "base_url", "git_head", "code_sha256",
+            "robot_id", "base_url", "database", "runner_timeout_s",
+            "python_executable", "git_head", "code_sha256",
         ):
             if existing.get(key) != generated.get(key):
                 raise RuntimeError(f"resume manifest mismatch for {key}")
