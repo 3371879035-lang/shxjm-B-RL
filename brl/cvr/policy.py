@@ -58,7 +58,22 @@ class CVRPolicy:
         )
         self.engine = CoverageCertificateEngine(env.mode)
         self.planner = SegmentPlanner(self.engine, WaypointGenerator(), planner_config)
-        self.events: list[dict] = []
+        self.events: list[dict] = [
+            {
+                "event": "plan_initial",
+                "mode": int(env.mode),
+                "plan_version": self.plan.version,
+                "nodes": [
+                    {
+                        "node_id": node.node_id.value,
+                        "position": list(node.position),
+                        "channels": [channel.value for channel in sorted(node.channels)],
+                        "legacy_station": node.legacy_station.value,
+                    }
+                    for node in self.plan.nodes
+                ],
+            }
+        ]
         self.fallback_reason = ""
         self._evidence_serial = 0
         self.replans = 0
@@ -153,8 +168,6 @@ class CVRPolicy:
             self.plan = self.plan.complete_node_channel(node.node_id, channel)
         if result in {"direction", "near"} or self.env.channels[channel.value].status == "cleared":
             self._remove_discovered_channel(channel)
-        elif result == "no_signal":
-            self._refresh_absence(channel)
 
         if node.legacy_station is None:
             self.extra_measurements += 1
@@ -162,6 +175,7 @@ class CVRPolicy:
             {
                 "event": "measurement",
                 "request_id": evidence_id,
+                "node_id": node.node_id.value,
                 "channel": channel.value,
                 "position": list(node.position),
                 "legacy_station": None if node.legacy_station is None else node.legacy_station.value,
@@ -170,6 +184,8 @@ class CVRPolicy:
                 "plan_version": self.plan.version,
             }
         )
+        if result == "no_signal":
+            self._refresh_absence(channel)
 
     def _apply_segment(self, segment: PlannedSegment) -> None:
         if segment.mutations:
@@ -307,7 +323,7 @@ class CVRPolicy:
             )
             elapsed = time.perf_counter() - started
             self.replans += 1
-            self.replacement_candidates += len(self.planner.generator.replacement_proposals(snapshot)) if self.config.variable_waypoints else 0
+            self.replacement_candidates += int(self.planner.last_proposal_count)
             self.events.append(
                 {
                     "event": "segment",

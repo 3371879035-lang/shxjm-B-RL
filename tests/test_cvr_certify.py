@@ -20,6 +20,12 @@ def test_q3_rejects_sparse_outer_points():
     assert result.max_gap_m > 0.0
 
 
+def test_q3_origin_alone_does_not_certify_the_disk():
+    result = CoverageCertificateEngine(3).certify(((0.0, 0.0),))
+    assert not result.covered
+    assert result.max_gap_m == 800.0
+
+
 def test_q4_rejects_plan_with_a_missing_outer_witness():
     points = tuple(map(tuple, np.delete(s25_points(), 13, axis=0)))
     result = CoverageCertificateEngine(4).certify(points)

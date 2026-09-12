@@ -58,6 +58,7 @@ class SegmentPlanner:
         self.generator = generator
         self.config = config or SegmentPlannerConfig()
         self.total_wall_s = 0.0
+        self.last_proposal_count = 0
 
     @staticmethod
     def _switches(current: int, channels: tuple[int, ...]) -> int:
@@ -135,11 +136,17 @@ class SegmentPlanner:
     ) -> tuple[tuple[int, CertificateResult], ...]:
         channels = sorted({channel for node in plan.nodes for channel in node.channels})
         results = []
+        cache: dict[tuple[tuple[float, float], ...], CertificateResult] = {}
         for channel in channels:
             points = ledger.negative_points(channel) + tuple(
                 node.position for node in plan.nodes if channel in node.channels
             )
-            results.append((channel.value, self.engine.certify(points)))
+            key = tuple((round(float(x), 9), round(float(y), 9)) for x, y in points)
+            result = cache.get(key)
+            if result is None:
+                result = self.engine.certify(points)
+                cache[key] = result
+            results.append((channel.value, result))
         return tuple(results)
 
     def _aggregate(
@@ -181,12 +188,15 @@ class SegmentPlanner:
             return self._baseline(snapshot, ledger, exit_position, "planning_budget_fallback")
         baseline = self._baseline(snapshot, ledger, exit_position, "frozen_baseline")
         if not allow_replacements:
+            self.last_proposal_count = 0
             elapsed = time.perf_counter() - started
             self.total_wall_s += elapsed
             return baseline
 
         chosen = baseline
-        for proposal in self.generator.replacement_proposals(snapshot)[: self.config.max_proposals]:
+        proposals = self.generator.replacement_proposals(snapshot)[: self.config.max_proposals]
+        self.last_proposal_count = len(proposals)
+        for proposal in proposals:
             if time.perf_counter() - started > self.config.max_call_s:
                 elapsed = time.perf_counter() - started
                 self.total_wall_s += elapsed

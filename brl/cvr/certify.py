@@ -25,7 +25,9 @@ def _nearest_distance(point: np.ndarray, points: np.ndarray) -> float:
 
 
 def _boundary_candidate_angles(points: np.ndarray) -> list[float]:
-    angles: list[float] = []
+    # A reference boundary point is required for rotationally symmetric and
+    # otherwise degenerate point sets (for example, the origin alone).
+    angles: list[float] = [0.0]
     for point in points:
         if np.linalg.norm(point) > 1e-12:
             angles.append(math.atan2(float(point[1]), float(point[0])) + math.pi)
