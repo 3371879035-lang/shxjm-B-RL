@@ -62,7 +62,9 @@ def candidate_features(snapshot: PublicSnapshot, candidate: PublicCandidate) -> 
     delta = q - p
     distance = float(np.linalg.norm(delta))
     unit = delta / distance if distance > 1e-12 else np.zeros(2, dtype=float)
-    track = next((t for t in snapshot.tracks if t.channel == candidate.key), None)
+    source_action = candidate.kind.startswith("locate") or candidate.kind == "resolve"
+    track = (next((t for t in snapshot.tracks if t.channel == candidate.key), None)
+             if source_action else None)
     kind = [1.0 if candidate.kind == name else 0.0 for name in KINDS]
     values = [
         snapshot.mode / 4.0,

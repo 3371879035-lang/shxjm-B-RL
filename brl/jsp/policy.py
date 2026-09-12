@@ -264,7 +264,11 @@ class JSPPolicy:
         # Open-route estimate from the candidate endpoint over remaining station
         # and next localization points.  It values actual bilateral probes rather
         # than polygon centers.
-        remaining_points = [self.points[i] for i in scan_indices if i != candidate.key]
+        # Candidate keys are type-dependent: scan keys are station indices,
+        # while locate/resolve keys are channel numbers.  A localization action
+        # must not accidentally remove a same-numbered pending station.
+        completed_station = candidate.key if candidate.kind in {"scan4", "scanall"} else None
+        remaining_points = [self.points[i] for i in scan_indices if i != completed_station]
         if (candidate.kind == "scan4"
                 and len(self._pending_channels(candidate.key)) > candidate.measure_count):
             # A segment does not complete the station.  Omitting its return leg

@@ -6,6 +6,7 @@ import numpy as np
 import pytest
 
 from brl.jsp import JSPCandidate, JSPConfig, JSPPolicy
+from brl.jsp.policy import CandidateAction
 from brl.jsp.snapshot import candidate_features
 from brl.local_env import RadioEnv, Source, random_sources
 
@@ -127,3 +128,27 @@ def test_discovered_source_has_interruptible_and_continuous_candidates_without_r
     candidates = policy.candidates()
     assert any(c.kind == "locate1" and c.key == 1 for c in candidates)
     assert any(c.kind == "resolve" and c.key == 1 for c in candidates)
+
+
+def test_localize_candidate_does_not_remove_same_numbered_station_from_cost():
+    env = RadioEnv(mode=4, n_sources=1, seed=606, bearing_decimals=2)
+    env.reset(seed=606, sources=[Source(1, np.array([1400.0, 0.0]), 1500.0)])
+    env.error_field.value = lambda *args: 0.0
+    policy = JSPPolicy(env)
+    policy._scan(0, 1)
+    candidate = CandidateAction("locate1", 1, tuple(policy._locator_action(1)[1]))
+    score_with_both = policy._analytic(candidate, [1, 2])
+    score_without_one = policy._analytic(candidate, [2])
+    assert score_with_both > score_without_one
+
+
+def test_scan_candidate_does_not_read_same_numbered_channel_track():
+    env = RadioEnv(mode=3, n_sources=1, seed=607, bearing_decimals=2)
+    env.reset(seed=607, sources=[Source(1, np.array([900.0, 0.0]), 1500.0)])
+    env.error_field.value = lambda *args: 0.0
+    policy = JSPPolicy(env)
+    policy._scan(0, 1)
+    scan = CandidateAction("scanall", 1, tuple(policy.points[1]), 20)
+    row = candidate_features(policy.public_snapshot(), policy._public_candidate(scan))
+    assert row[17] == 0.0
+    assert row[18] == 0.0
