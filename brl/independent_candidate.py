@@ -10,7 +10,8 @@ from brl.g25o import (route_open, initial_track_polygon as initial_poly,
     _best_clear_point as best_clear)
 from brl.coverage import s3_points, s25_points
 from brl.bilateral import bearing_clip, solve_bilateral
-from brl.protocol import ActionIOError
+from brl.protocol import (ActionIOError, CertificateViolation,
+                          GeometryNumericalError)
 
 class CheckedView:
     _allowed = {"mode","pos","current_channel","channels","n_coverage",
@@ -87,7 +88,7 @@ class Baseline:
             # them immediately so the caller can retry the same request id and
             # the policy cannot issue a different action after an uncertain one.
             raise
-        except RuntimeError:
+        except GeometryNumericalError:
             self.solver_failures+=1
             # Certified optical strip cover: 2 rows x 61 columns; independent final fallback.
             a=math.radians(st['deg']);u=np.array([math.cos(a),math.sin(a)]);v=np.array([-u[1],u[0]])
@@ -97,7 +98,7 @@ class Baseline:
                     if env.clear(st['first']+x*u+y*v,ch)['clear_result']=='success':break
                 if env.channels[ch].status=='cleared':break
         if env.channels[ch].status!='cleared':
-            raise RuntimeError('Geometric fallback failed: not a completion certificate')
+            raise CertificateViolation('geometric fallback failed: not a completion certificate')
         self.tracks.pop(ch,None)
     def run(self):
         env=self.env
@@ -213,7 +214,7 @@ class IndependentCandidate:
         view.n_coverage=len(policy.points)
         policy.run()
         success=bool(view.completion_certificate())
-        if not success:raise RuntimeError("Candidate returned without a completion certificate")
+        if not success:raise CertificateViolation("candidate returned without a completion certificate")
         return {"success":success,"cleared":int(view.cleared_count()),
             "virtual_time_s":float(view.virtual_time),"distance_m":float(view.move_distance),
             "measure_calls":int(view.n_measure),"switches":int(view.n_switch),

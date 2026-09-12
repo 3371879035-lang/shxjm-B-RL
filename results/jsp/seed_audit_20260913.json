@@ -1,0 +1,25 @@
+{
+  "checked_at_local_date": "2026-09-13",
+  "search_scope": "results/**/*.csv and results/**/*.jsonl",
+  "original_ranges": {
+    "train": [290000, 290255],
+    "calibration": [291000, 291063]
+  },
+  "collision": {
+    "seed": 290000,
+    "evidence": "results/jsp/counterfactual_smoke",
+    "use": "collector smoke only"
+  },
+  "replacement_rule": "increment both complete ranges by 10000",
+  "frozen_replacement_ranges": {
+    "train": [300000, 300255],
+    "calibration": [301000, 301063]
+  },
+  "replacement_search_result_before_collection": "no matches",
+  "acceptance_ranges": {
+    "spatial": [280000, 280199],
+    "endpoint": [281000, 281029],
+    "constant_plus_one": [281100, 281129]
+  },
+  "acceptance_search_result_before_collection": "no matches"
+}

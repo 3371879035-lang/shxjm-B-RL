@@ -17,6 +17,8 @@ from brl.g25o import G25OPolicy
 from brl.g21a import G21APolicy
 from brl.independent_candidate import IndependentCandidate
 from brl.isr_v2 import ISRV2Candidate
+from brl.jsp import JSPCandidate
+from brl.jsp.model import JSPRanker
 from brl.remote import OfficialClient, RemoteBelief
 
 
@@ -38,18 +40,33 @@ def main():
     ap.add_argument("--wait-interface-s", type=float, default=1200.0)
     ap.add_argument("--out-dir", type=str, default="")
     ap.add_argument("--variant", type=str, default="G25O")
+    ap.add_argument("--planner", choices=["analytic", "learned"], default="analytic")
+    ap.add_argument("--model", type=str, default="")
     ap.add_argument("--coverage", type=str, default="S25", choices=["S25", "S21", "S4"])
     args = ap.parse_args()
 
     variant = str(args.variant).upper()
-    if variant in {"ISR", "ISRV2"} and args.coverage != "S25":
+    if variant in {"ISR", "ISRV2", "JSP"} and args.coverage != "S25":
         ap.error(f"{variant} fixes Q3 to S3 and Q4 to S25; --coverage must be S25")
+    if variant == "JSP" and args.planner == "learned":
+        if not args.model:
+            ap.error("JSP learned planner requires --model")
+        # Validate feature version, problem number, file presence and hash before
+        # /enter so a packaging error cannot consume an official attempt.
+        try:
+            JSPRanker(args.model, args.mode)
+        except Exception as exc:
+            ap.error(f"invalid JSP model: {exc}")
+    if variant != "JSP" and (args.planner != "analytic" or args.model):
+        ap.error("--planner/--model are only valid with --variant JSP")
 
     stamp = time.strftime("%Y%m%d_%H%M%S")
     out_dir = Path(args.out_dir) if args.out_dir else (ROOT / "results" / f"official_g25o_mode{args.mode}_{stamp}")
     out_dir.mkdir(parents=True, exist_ok=True)
     req_log = out_dir / "requests.jsonl"
     client = OfficialClient(args.base_url, args.robot_id, log_path=str(req_log))
+    entered = False
+    exit_attempted = False
 
     result = {"success": False, "mode": args.mode, "variant": args.variant,
               "coverage": args.coverage, "robot_id": args.robot_id,
@@ -60,6 +77,7 @@ def main():
             try:
                 enter = client.enter()
                 if enter.get("accepted") is True:
+                    entered = True
                     break
                 raise RuntimeError(f"/enter rejected: {enter}")
             except Exception as e:
@@ -80,15 +98,20 @@ def main():
         belief.coverage_points = cov_points
         belief.n_coverage = len(cov_points)
         print(f"[enter] remaining_real_duration_s={client.remaining_real_duration_s}", flush=True)
+        client.set_action_deadline(reserve_exit_s=30.0)
         if variant == "ISR":
             result.update(IndependentCandidate(mode=args.mode).run(belief))
         elif variant == "ISRV2":
             result.update(ISRV2Candidate(mode=args.mode).run(belief))
+        elif variant == "JSP":
+            result.update(JSPCandidate(mode=args.mode, planner=args.planner,
+                                       model_path=args.model or None).run(belief))
         elif variant.startswith("G21A"):
             result.update(G21APolicy(mode=args.mode).run(belief))
         else:
             result.update(G25OPolicy(args.variant, coverage=args.coverage).run(belief))
         if belief.success and not getattr(belief, "exited", False):
+            exit_attempted = True
             exit_resp = client.exit()
             if exit_resp.get("accepted") is not True:
                 raise RuntimeError(f"/exit rejected: {exit_resp}")
@@ -97,6 +120,15 @@ def main():
     except Exception as exc:
         result.update({"success": False, "error_type": type(exc).__name__,
                        "error": str(exc), "traceback": traceback.format_exc()})
+        if entered and not exit_attempted:
+            exit_attempted = True
+            try:
+                exit_resp = client.exit()
+                result["failure_exit_response"] = exit_resp
+                if exit_resp.get("accepted") is not True:
+                    result["failure_exit_error"] = f"/exit rejected: {exit_resp}"
+            except Exception as exit_exc:
+                result["failure_exit_error"] = f"{type(exit_exc).__name__}: {exit_exc}"
         raise
     finally:
         result.update({"mode": args.mode, "variant": args.variant,

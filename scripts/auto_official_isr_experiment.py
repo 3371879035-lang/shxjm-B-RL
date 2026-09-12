@@ -24,6 +24,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.auto_official_g25o_batch import find_button, get_sim_window
+from brl.jsp.model import JSPRanker
 
 DEFAULT_DB = Path(
     r"C:\Users\huani\Desktop\CUMCM2026B\Jammers-simulator-full-win64\Jammers-simulator-full"
@@ -99,13 +100,17 @@ def db_connect(path: Path):
     return connection
 
 
-def db_max_id(path: Path) -> int:
+def db_marker(path: Path, mode: int, robot_id: str) -> tuple[int, int]:
     with db_connect(path) as connection:
-        row = connection.execute("SELECT COALESCE(MAX(id),0) AS id FROM practice_statistics_tasks").fetchone()
-    return int(row["id"])
+        row = connection.execute(
+            """SELECT COALESCE(MAX(id),0) AS id,
+                      COALESCE(MAX(CASE WHEN problem_no=? AND team_no=? THEN practice_run_no END),0) AS run_no
+                 FROM practice_statistics_tasks""", (mode, str(robot_id))).fetchone()
+    return int(row["id"]), int(row["run_no"])
 
 
-def match_database_record(path: Path, after_id: int, mode: int, robot_id: str, timeout_s: float = 30.0):
+def match_database_record(path: Path, after_id: int, mode: int, robot_id: str,
+                          prepared_at_ms: int, timeout_s: float = 30.0):
     deadline = time.time() + timeout_s
     rows = []
     while time.time() < deadline:
@@ -116,8 +121,8 @@ def match_database_record(path: Path, after_id: int, mode: int, robot_id: str, t
                           program_run_duration_ms,channel_switch_count,clear_failure_count,
                           jammer_count,state,created_at_ms,updated_at_ms
                      FROM practice_statistics_tasks
-                    WHERE id>? AND problem_no=? AND team_no=? ORDER BY id""",
-                (after_id, mode, str(robot_id)),
+                    WHERE id>? AND problem_no=? AND team_no=? AND created_at_ms>=? ORDER BY id""",
+                (after_id, mode, str(robot_id), prepared_at_ms - 5000),
             ).fetchall()
         if rows:
             break
@@ -184,8 +189,18 @@ def load_or_create_manifest(out: Path, args) -> dict:
         ROOT / "brl" / "protocol.py", ROOT / "brl" / "remote.py",
         ROOT / "brl" / "isr_v2.py", Path(__file__).resolve(),
     ]
+    if "JSP" in args.variants:
+        code_files.extend([
+            ROOT / "brl" / "bilateral_state.py", ROOT / "brl" / "jsp" / "policy.py",
+            ROOT / "brl" / "jsp" / "snapshot.py", ROOT / "brl" / "jsp" / "model.py",
+        ])
+    model_path = Path(args.jsp_model).resolve() if args.jsp_model else None
+    model_metadata = model_path.with_suffix(model_path.suffix + ".json") if model_path else None
+    if model_path:
+        code_files.extend([model_path, model_metadata])
     generated = {
         "schema_version": 1, "practice_only": True,
+        "experiment_kind": args.experiment_kind,
         "schedule_seed": args.schedule_seed,
         "smoke_runs_per_group": args.smoke_runs_per_group,
         "main_runs_per_group": args.main_runs_per_group,
@@ -193,6 +208,8 @@ def load_or_create_manifest(out: Path, args) -> dict:
         "modes": args.modes,
         "robot_id": str(args.robot_id), "base_url": args.base_url,
         "database": str(Path(args.database).resolve()),
+        "jsp_planner": args.jsp_planner,
+        "jsp_model": str(model_path) if model_path else "",
         "runner_timeout_s": float(args.runner_timeout_s),
         "python_executable": str(Path(sys.executable).resolve()),
         "git_head": git_head(),
@@ -207,7 +224,8 @@ def load_or_create_manifest(out: Path, args) -> dict:
         for key in (
             "schedule_seed", "smoke_runs_per_group", "main_runs_per_group",
             "robot_id", "base_url", "database", "runner_timeout_s",
-            "python_executable", "git_head", "code_sha256",
+            "python_executable", "git_head", "code_sha256", "experiment_kind",
+            "jsp_planner", "jsp_model",
         ):
             if existing.get(key) != generated.get(key):
                 raise RuntimeError(f"resume manifest mismatch for {key}")
@@ -241,9 +259,12 @@ def run_job(out: Path, job: dict, args) -> dict:
     if run_dir.exists() and any(run_dir.iterdir()):
         raise RuntimeError(f"refusing to overwrite non-empty run directory: {run_dir}")
     run_dir.mkdir(parents=True, exist_ok=True)
-    before_id = db_max_id(Path(args.database))
+    before_id, before_run_no = db_marker(Path(args.database), job["mode"], str(args.robot_id))
+    prepared_at_ms = int(time.time() * 1000)
     attempt = {**job, "status": "prepared", "run_dir": str(run_dir),
-               "db_before_id": before_id, "prepared_at_ms": int(time.time() * 1000)}
+               "db_before_id": before_id, "db_before_practice_run_no": before_run_no,
+               "expected_practice_run_no": before_run_no + 1,
+               "prepared_at_ms": prepared_at_ms}
     atomic_json(run_dir / "attempt.json", attempt)
 
     if not return_to_practice(job["mode"], timeout=30):
@@ -260,6 +281,10 @@ def run_job(out: Path, job: dict, args) -> dict:
         "--wait-interface-s", "180", "--variant", job["variant"],
         "--coverage", "S25", "--out-dir", str(run_dir / "runner"),
     ]
+    if job["variant"] == "JSP":
+        command.extend(["--planner", args.jsp_planner])
+        if args.jsp_model:
+            command.extend(["--model", str(Path(args.jsp_model).resolve())])
     process = subprocess.Popen(command, cwd=ROOT, stdout=out_log, stderr=err_log)
     started = False
     for _ in range(2):
@@ -299,17 +324,20 @@ def run_job(out: Path, job: dict, args) -> dict:
         except Exception as exc:
             attempt["summary_error"] = str(exc)
     rows = match_database_record(
-        Path(args.database), before_id, job["mode"], str(args.robot_id), timeout_s=30
+        Path(args.database), before_id, job["mode"], str(args.robot_id),
+        prepared_at_ms=prepared_at_ms, timeout_s=30
     )
-    if len(rows) == 1:
-        db_record = rows[0]
+    matching = [row for row in rows
+                if int(row["practice_run_no"]) == int(attempt["expected_practice_run_no"])]
+    if len(rows) == 1 and len(matching) == 1:
+        db_record = matching[0]
         match_status = "verified"
     elif not rows:
         db_record = {}
         match_status = "missing"
     else:
         db_record = {}
-        match_status = "ambiguous"
+        match_status = "ambiguous" if len(matching) != 0 or len(rows) > 1 else "run_sequence_mismatch"
         attempt["database_candidates"] = rows
 
     attempt.update({
@@ -365,23 +393,40 @@ def main() -> None:
     parser.add_argument("--modes", default="3,4",
                         help="comma-separated problem numbers, e.g. 4")
     parser.add_argument("--schedule-seed", type=int, default=20260912)
-    parser.add_argument("--runner-timeout-s", type=float, default=1170.0)
+    # Outer watchdog only; action cutoff comes from /enter remaining time minus
+    # the 30-second exit reserve inside OfficialClient.
+    parser.add_argument("--runner-timeout-s", type=float, default=1500.0)
+    parser.add_argument("--experiment-kind", choices=["legacy", "jsp30"], default="legacy")
+    parser.add_argument("--jsp-planner", choices=["analytic", "learned"], default="analytic")
+    parser.add_argument("--jsp-model", default="")
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--prepare-only", action="store_true")
     args = parser.parse_args()
     args.variants = [value.strip().upper() for value in args.variants.split(",") if value.strip()]
-    if not args.variants or any(value not in {"G25OR", "ISR", "ISRV2"} for value in args.variants):
-        raise SystemExit("--variants must contain G25OR, ISR, or ISRV2")
+    if not args.variants or any(value not in {"G25OR", "ISR", "ISRV2", "JSP"} for value in args.variants):
+        raise SystemExit("--variants must contain G25OR, ISR, ISRV2, or JSP")
     try:
         args.modes = [int(value.strip()) for value in args.modes.split(",") if value.strip()]
     except ValueError as exc:
         raise SystemExit("--modes must contain 3 or 4") from exc
     if not args.modes or any(value not in {3, 4} for value in args.modes):
         raise SystemExit("--modes must contain 3 or 4")
+    if "JSP" in args.variants and args.jsp_planner == "learned":
+        if not args.jsp_model:
+            raise SystemExit("learned JSP requires --jsp-model")
+        for mode in args.modes:
+            JSPRanker(args.jsp_model, mode)
+    if args.experiment_kind == "jsp30":
+        if (args.variants != ["ISR", "JSP"] or len(args.modes) != 1
+                or args.smoke_runs_per_group != 0 or args.main_runs_per_group != 15):
+            raise SystemExit(
+                "jsp30 requires --variants ISR,JSP, one --modes value, "
+                "--smoke-runs-per-group 0, and --main-runs-per-group 15")
     out = Path(args.out_dir).resolve()
     out.mkdir(parents=True, exist_ok=True)
 
-    with SingleInstance(out / ".official_experiment.lock"):
+    # One lock shared by every official batch, including legacy result folders.
+    with SingleInstance(ROOT / "results" / ".official_experiment.lock"):
         assert_no_other_runner()
         manifest = load_or_create_manifest(out, args)
         progress_path = out / "progress.json"

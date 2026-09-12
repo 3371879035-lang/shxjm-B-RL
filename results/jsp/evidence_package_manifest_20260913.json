@@ -1,0 +1,11 @@
+{
+  "file": "B题_JSP本地完整证据_20260913.zip",
+  "sha256": "acf13c495a01d7035e0d1640bb796a92641d49b59e887e50b6069ba2d24cee9c",
+  "entries": 39,
+  "contains_invalid_or_aborted_runs": false,
+  "contains_raw_counterfactual_branches_and_labels": true,
+  "contains_final_development_decision_logs": true,
+  "contains_models_and_hash_metadata": true,
+  "contains_protocol_alignment_evidence": true,
+  "contains_reports_and_figure": true
+}

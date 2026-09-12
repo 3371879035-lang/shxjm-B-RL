@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "starting_commit": "c88abfa71c79366909cf99708b490e46bc29938f",
+  "branch": "jsp-validation-20260913",
+  "feature_version": "jsp-public-relative-v2",
+  "protocol_alignment": {
+    "cases_per_version": 500,
+    "all_fields_equal_with_atol_1e-9": true,
+    "maximum_observed_delta": 0.0
+  },
+  "counterfactual_training": {
+    "seed_replacement_reason": "290000 was occupied by collector smoke",
+    "train_seeds": [300000, 300255],
+    "calibration_seeds": [301000, 301063],
+    "q3": {
+      "trajectory_cases": 640,
+      "labels": 16342,
+      "valid": true,
+      "max_cost_identity_error_s": 3.637978807091713e-12,
+      "elapsed_s": 883.3583118999959
+    },
+    "q4": {
+      "trajectory_cases": 640,
+      "labels": 16748,
+      "valid": true,
+      "max_cost_identity_error_s": 1.4551915228366852e-11,
+      "elapsed_s": 1939.7363814999699
+    }
+  },
+  "models": {
+    "q3_sha256": "a26766ecec707489d30dc8760d7c3540648e7aa47b37493d7377ea222ed55916",
+    "q4_sha256": "5e7aa58c79cfd5c2ad96cb6560d4963f625b49b90702a227a8d4135e48da3c31"
+  },
+  "development": {
+    "q3": {
+      "runs": 150,
+      "all_clear": true,
+      "baseline_mean_seconds_per_source": 277.60826510081023,
+      "jsp_g_mean_seconds_per_source": 275.24083811757146,
+      "jsp_g_relative_change_percent": -0.8527941278618112,
+      "jsp_l_mean_seconds_per_source": 276.05340476135336,
+      "jsp_l_relative_change_percent": -0.5600915156082409,
+      "optical_fallbacks": 0,
+      "eligible_candidate": null
+    },
+    "q4": {
+      "runs": 150,
+      "all_clear": true,
+      "baseline_mean_seconds_per_source": 551.8657216798852,
+      "jsp_g_mean_seconds_per_source": 574.3957177920205,
+      "jsp_g_relative_change_percent": 4.082514138322235,
+      "jsp_l_mean_seconds_per_source": 584.8430472060988,
+      "jsp_l_relative_change_percent": 5.975606788156784,
+      "optical_fallbacks": 0,
+      "eligible_candidate": null
+    }
+  },
+  "independent_acceptance": {
+    "started": false,
+    "reason": "Neither problem had a development candidate at least 3 percent faster than ISR-v1"
+  },
+  "official_practice_30": {
+    "started": false,
+    "reason": "The preregistered local gate failed for both Q3 and Q4"
+  },
+  "recommendation": {
+    "q3": "ISR-v1",
+    "q4": "ISR-v1",
+    "machine_learning_additional_value": false
+  }
+}

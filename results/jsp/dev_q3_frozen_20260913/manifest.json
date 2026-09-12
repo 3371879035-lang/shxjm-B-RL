@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "stage": "dev",
+  "modes": [
+    3
+  ],
+  "arms": [
+    "ISR",
+    "JSPG",
+    "JSPL"
+  ],
+  "models": {
+    "3": {
+      "path": "D:\\数学建模\\B_RL\\results\\jsp\\models_20260913\\jsp_q3.joblib",
+      "sha256": "a26766ecec707489d30dc8760d7c3540648e7aa47b37493d7377ea222ed55916",
+      "metadata_sha256": "7ec0698ece7794998121b95be7794df3a8a81a239cb7aeda20adf783acce0adf"
+    }
+  },
+  "python": "3.14.3",
+  "numpy": "2.4.2",
+  "scikit_learn": "1.8.0",
+  "bootstrap_seed": 20260912,
+  "git_head_at_freeze": "c88abfa71c79366909cf99708b490e46bc29938f",
+  "seed_audit": "160000-160049 is development",
+  "code_sha256": {
+    "scripts\\run_jsp_experiments.py": "cb4871811c13c6f0d50a6cc557c703ac2a1220dfb5f12b25ff9af39546b2a0bd",
+    "scripts\\run_g25o_compare.py": "5129ad41e91e5dcdee51abadf3e038e82ab6cce2d645673fbb40dd209c76707d",
+    "brl\\jsp\\policy.py": "36694e5c9651f2335c437e116eddb90292fc050bb9972001178a9768fd4f8e96",
+    "brl\\jsp\\snapshot.py": "07856371bb9ad9398bf0ebd9319902082448f4bab955fd12a9c7d01f04ebd256",
+    "brl\\jsp\\model.py": "1f3e3d3ee054b9f8e851ddd0bf02bc1d1967cd0e2a9cb8923a4a54c24c35d352",
+    "brl\\bilateral_state.py": "cca5a27795d720fe27535ed6047a61ed256f95546942601af9a9e458635dbe5f",
+    "brl\\bilateral.py": "48d898300a3b7b1836bce55e98275135bfac4325890a6230e1d824f5e73183ff",
+    "brl\\independent_candidate.py": "bf3e2ed5729c1754a5be1856630e1d630388b6cd339eb42eaa4938a677125910",
+    "brl\\local_env.py": "3b3091818b0ea780ce168c2575de288caea790eb13ee5af55dc8a169aae980f4",
+    "brl\\protocol.py": "3d0fa7e7943f20326161881d2797f3a389251464afb724d895014734791fb2d0"
+  }
+}

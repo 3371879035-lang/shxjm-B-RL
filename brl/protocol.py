@@ -12,6 +12,18 @@ class ActionIOError(RuntimeError):
     """A transport/protocol failure that policy fallbacks must not consume."""
 
 
+class GeometryNumericalError(RuntimeError):
+    """A numerical geometry failure for which the certified fallback is valid."""
+
+
+class CertificateViolation(RuntimeError):
+    """Observed feedback contradicts a claimed geometric clear certificate."""
+
+
+class DeadlineExceeded(ActionIOError):
+    """The official real-time budget can no longer safely accept an action."""
+
+
 def quantize_bearing_deg(value: float, decimals: int = OFFICIAL_BEARING_DECIMALS) -> float:
     """Match the official two-decimal bearing response while preserving [0, 360)."""
     return float(round(float(value), int(decimals)) % 360.0)

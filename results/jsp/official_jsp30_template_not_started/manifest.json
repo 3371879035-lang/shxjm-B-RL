@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "practice_only": true,
+  "experiment_kind": "jsp30",
+  "schedule_seed": 20260912,
+  "smoke_runs_per_group": 0,
+  "main_runs_per_group": 15,
+  "variants": [
+    "ISR",
+    "JSP"
+  ],
+  "modes": [
+    4
+  ],
+  "robot_id": "202610094088",
+  "base_url": "http://127.0.0.1:2026",
+  "database": "C:\\Users\\huani\\Desktop\\CUMCM2026B\\Jammers-simulator-full-win64\\Jammers-simulator-full\\JammersSimulatorData\\practice-statistics-queue.sqlite3",
+  "jsp_planner": "analytic",
+  "jsp_model": "",
+  "runner_timeout_s": 1500.0,
+  "python_executable": "D:\\python\\python.exe",
+  "git_head": "c88abfa71c79366909cf99708b490e46bc29938f",
+  "code_sha256": {
+    "scripts\\run_official_g25o.py": "80b5548cc1a8b1a0aba3642602bf4a4e5814a5d1decee7e7622fa1b9c9abd88a",
+    "brl\\independent_candidate.py": "bf3e2ed5729c1754a5be1856630e1d630388b6cd339eb42eaa4938a677125910",
+    "brl\\bilateral.py": "48d898300a3b7b1836bce55e98275135bfac4325890a6230e1d824f5e73183ff",
+    "brl\\protocol.py": "3d0fa7e7943f20326161881d2797f3a389251464afb724d895014734791fb2d0",
+    "brl\\remote.py": "db4b1445e7fd7d80a27acc4e568256dc4c03051c620dc0db2a930ceda90a86b9",
+    "brl\\isr_v2.py": "77d443b0d7604e6efb221c61903665790e62c8c47467df9519af378ffb24a07b",
+    "scripts\\auto_official_isr_experiment.py": "224aa9101ca7804b0503c88d04f24378dab3b0acbecb5733f3691979f64583fd",
+    "brl\\bilateral_state.py": "cca5a27795d720fe27535ed6047a61ed256f95546942601af9a9e458635dbe5f",
+    "brl\\jsp\\policy.py": "36694e5c9651f2335c437e116eddb90292fc050bb9972001178a9768fd4f8e96",
+    "brl\\jsp\\snapshot.py": "07856371bb9ad9398bf0ebd9319902082448f4bab955fd12a9c7d01f04ebd256",
+    "brl\\jsp\\model.py": "1f3e3d3ee054b9f8e851ddd0bf02bc1d1967cd0e2a9cb8923a4a54c24c35d352"
+  },
+  "schedule": [
+    {
+      "run_id": "main-b001-p1-jsp-q4",
+      "global_index": 1,
+      "phase": "main",
+      "block": 1,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b001-p2-isr-q4",
+      "global_index": 2,
+      "phase": "main",
+      "block": 1,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b002-p1-isr-q4",
+      "global_index": 3,
+      "phase": "main",
+      "block": 2,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b002-p2-jsp-q4",
+      "global_index": 4,
+      "phase": "main",
+      "block": 2,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b003-p1-jsp-q4",
+      "global_index": 5,
+      "phase": "main",
+      "block": 3,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b003-p2-isr-q4",
+      "global_index": 6,
+      "phase": "main",
+      "block": 3,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b004-p1-jsp-q4",
+      "global_index": 7,
+      "phase": "main",
+      "block": 4,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b004-p2-isr-q4",
+      "global_index": 8,
+      "phase": "main",
+      "block": 4,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b005-p1-jsp-q4",
+      "global_index": 9,
+      "phase": "main",
+      "block": 5,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b005-p2-isr-q4",
+      "global_index": 10,
+      "phase": "main",
+      "block": 5,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b006-p1-isr-q4",
+      "global_index": 11,
+      "phase": "main",
+      "block": 6,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b006-p2-jsp-q4",
+      "global_index": 12,
+      "phase": "main",
+      "block": 6,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b007-p1-jsp-q4",
+      "global_index": 13,
+      "phase": "main",
+      "block": 7,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b007-p2-isr-q4",
+      "global_index": 14,
+      "phase": "main",
+      "block": 7,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b008-p1-jsp-q4",
+      "global_index": 15,
+      "phase": "main",
+      "block": 8,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b008-p2-isr-q4",
+      "global_index": 16,
+      "phase": "main",
+      "block": 8,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b009-p1-jsp-q4",
+      "global_index": 17,
+      "phase": "main",
+      "block": 9,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b009-p2-isr-q4",
+      "global_index": 18,
+      "phase": "main",
+      "block": 9,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b010-p1-isr-q4",
+      "global_index": 19,
+      "phase": "main",
+      "block": 10,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b010-p2-jsp-q4",
+      "global_index": 20,
+      "phase": "main",
+      "block": 10,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b011-p1-isr-q4",
+      "global_index": 21,
+      "phase": "main",
+      "block": 11,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b011-p2-jsp-q4",
+      "global_index": 22,
+      "phase": "main",
+      "block": 11,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b012-p1-jsp-q4",
+      "global_index": 23,
+      "phase": "main",
+      "block": 12,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b012-p2-isr-q4",
+      "global_index": 24,
+      "phase": "main",
+      "block": 12,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b013-p1-jsp-q4",
+      "global_index": 25,
+      "phase": "main",
+      "block": 13,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b013-p2-isr-q4",
+      "global_index": 26,
+      "phase": "main",
+      "block": 13,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b014-p1-isr-q4",
+      "global_index": 27,
+      "phase": "main",
+      "block": 14,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b014-p2-jsp-q4",
+      "global_index": 28,
+      "phase": "main",
+      "block": 14,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b015-p1-isr-q4",
+      "global_index": 29,
+      "phase": "main",
+      "block": 15,
+      "block_position": 1,
+      "mode": 4,
+      "variant": "ISR",
+      "coverage": "S25"
+    },
+    {
+      "run_id": "main-b015-p2-jsp-q4",
+      "global_index": 30,
+      "phase": "main",
+      "block": 15,
+      "block_position": 2,
+      "mode": 4,
+      "variant": "JSP",
+      "coverage": "S25"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "module_root": "D:\\数学建模\\B_RL\\results\\jsp\\reference",
+  "cases": 500,
+  "modes": {
+    "3": {
+      "cases": 250,
+      "mean_time_per_source_s": 280.87840902268425,
+      "max_cost_identity_error_s": 2.2737367544323206e-12
+    },
+    "4": {
+      "cases": 250,
+      "mean_time_per_source_s": 565.5345547706686,
+      "max_cost_identity_error_s": 9.094947017729282e-12
+    }
+  }
+}

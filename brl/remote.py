@@ -21,7 +21,8 @@ from .geometry import (DOMAIN_RADIUS, MAX_RECEIVE_RADIUS, circle_outer_halfplane
 from .local_env import (CHANNELS, CLEAR_MARGIN, MAX_SOURCES, ChannelState, MacroAction,
                         MacroEnv, NEAR_DIST)
 from .resolver import reliable_clear
-from .protocol import ActionIOError
+from .protocol import (ActionIOError, DeadlineExceeded,
+                       OFFICIAL_BEARING_ENVELOPE_DEG)
 
 
 class OfficialClient:
@@ -36,6 +37,7 @@ class OfficialClient:
         self.counter = 0
         self.last_virtual_time = 0.0
         self.remaining_real_duration_s: Optional[float] = None
+        self.action_deadline_monotonic: Optional[float] = None
         self.requests: List[dict] = []
         if log_path:
             Path(log_path).parent.mkdir(parents=True, exist_ok=True)
@@ -55,15 +57,38 @@ class OfficialClient:
         body = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
         last_err = None
         for attempt in range(self.max_network_retries):
+            if (path not in {"/enter", "/exit"}
+                    and self.action_deadline_monotonic is not None
+                    and time.monotonic() >= self.action_deadline_monotonic):
+                self._log({"t": time.time(), "path": path, "payload": payload,
+                           "attempt": attempt + 1, "error_type": "DeadlineExceeded",
+                           "error": "action deadline reached"})
+                raise DeadlineExceeded("official action deadline reached; reserve time for exit")
+            request_timeout = self.timeout
+            if path not in {"/enter", "/exit"} and self.action_deadline_monotonic is not None:
+                request_timeout = min(request_timeout, max(
+                    0.05, self.action_deadline_monotonic - time.monotonic()))
             req = Request(self.base_url + path, data=body,
                           headers={"Content-Type": "application/json"}, method="POST")
             try:
-                with urlopen(req, timeout=self.timeout) as resp:
+                with urlopen(req, timeout=request_timeout) as resp:
                     raw = resp.read().decode("utf-8")
-                    out = json.loads(raw)
+                    try:
+                        out = json.loads(raw)
+                    except (json.JSONDecodeError, TypeError) as exc:
+                        self._log({"t": time.time(), "path": path, "payload": payload,
+                                   "attempt": attempt + 1, "error_type": type(exc).__name__,
+                                   "error": "invalid JSON response", "raw": raw[:1000]})
+                        raise ActionIOError("official response is not valid JSON") from exc
                     self._log({"t": time.time(), "path": path, "payload": payload, "response": out})
                     if out.get("accepted") is True and "virtual_time_s" in out:
-                        self.last_virtual_time = float(out["virtual_time_s"])
+                        try:
+                            vt = float(out["virtual_time_s"])
+                        except (TypeError, ValueError, OverflowError) as exc:
+                            raise ActionIOError("official response has invalid virtual_time_s") from exc
+                        if not np.isfinite(vt) or vt + 1e-9 < self.last_virtual_time:
+                            raise ActionIOError("official virtual_time_s must be finite and monotonic")
+                        self.last_virtual_time = vt
                     return out
             except HTTPError as e:
                 # HTTP 业务错误体可能仍是 JSON；读取后返回，避免错误重试改变状态。
@@ -77,9 +102,17 @@ class OfficialClient:
                 return out
             except (URLError, TimeoutError, ConnectionError, OSError) as e:
                 last_err = e
-                time.sleep(0.2 * (attempt + 1))
+                self._log({"t": time.time(), "path": path, "payload": payload,
+                           "attempt": attempt + 1, "error_type": type(e).__name__,
+                           "error": str(e)})
+                if attempt + 1 < self.max_network_retries:
+                    delay = 0.2 * (attempt + 1)
+                    if path not in {"/enter", "/exit"} and self.action_deadline_monotonic is not None:
+                        delay = min(delay, max(0.0, self.action_deadline_monotonic - time.monotonic()))
+                    if delay > 0.0:
+                        time.sleep(delay)
                 continue
-        raise RuntimeError(f"network failed after retries: {last_err}")
+        raise ActionIOError(f"network failed after retries: {last_err}")
 
     def base(self, prefix: str) -> dict:
         return {"arena_id": "default", "robot_id": self.robot_id,
@@ -88,9 +121,25 @@ class OfficialClient:
     def enter(self) -> dict:
         out = self.post("/enter", self.base("enter"))
         if out.get("accepted") is True:
-            self.remaining_real_duration_s = float(out.get("remaining_real_duration_s", 1200.0))
+            if "remaining_real_duration_s" not in out:
+                raise ActionIOError("official /enter response missing remaining_real_duration_s")
+            try:
+                remaining = float(out["remaining_real_duration_s"])
+            except (TypeError, ValueError, OverflowError) as exc:
+                raise ActionIOError("official /enter response has invalid remaining duration") from exc
+            if not np.isfinite(remaining) or remaining <= 0.0:
+                raise ActionIOError("official remaining duration must be finite and positive")
+            self.remaining_real_duration_s = remaining
             self.last_virtual_time = 0.0
         return out
+
+    def set_action_deadline(self, reserve_exit_s: float = 30.0) -> None:
+        if self.remaining_real_duration_s is None:
+            raise ActionIOError("cannot set deadline before accepted /enter")
+        usable = float(self.remaining_real_duration_s) - float(reserve_exit_s)
+        if usable <= 0.0:
+            raise DeadlineExceeded("official remaining duration is below the exit reserve")
+        self.action_deadline_monotonic = time.monotonic() + usable
 
     def measure(self, position: Sequence[float], channel: int) -> dict:
         p = self.base("measure")
@@ -135,10 +184,27 @@ class RemoteBelief:
         self.invalid_responses = 0
 
     def _dt(self, out: dict) -> float:
-        vt = float(out.get("virtual_time_s", self.virtual_time))
-        dt = max(0.0, vt - self.virtual_time)
+        if "virtual_time_s" not in out:
+            raise ActionIOError("official response missing virtual_time_s")
+        try:
+            vt = float(out["virtual_time_s"])
+        except (TypeError, ValueError, OverflowError) as exc:
+            raise ActionIOError("official response has invalid virtual_time_s") from exc
+        if not np.isfinite(vt) or vt + 1e-9 < self.virtual_time:
+            raise ActionIOError("official virtual_time_s must be finite and monotonic")
+        dt = vt - self.virtual_time
         self.virtual_time = vt
         return dt
+
+    def _validate_coverage(self, position: np.ndarray, coverage_idx: Optional[int]) -> None:
+        if coverage_idx is None:
+            return
+        idx = int(coverage_idx)
+        if idx < 0 or idx >= int(self.n_coverage):
+            raise ActionIOError("coverage_idx outside the configured coverage set")
+        expected = np.asarray(self.coverage_points[idx], dtype=float)
+        if float(np.linalg.norm(position - expected)) > 1e-6:
+            raise ActionIOError("coverage_idx does not match the measured position")
 
     def _move_to(self, pos: Sequence[float]) -> float:
         p = np.asarray(pos, dtype=float)
@@ -151,7 +217,8 @@ class RemoteBelief:
         st.status = "discovered" if st.status == "unknown" else st.status
         st.has_direction = True
         newpoly = intersect_halfplanes(
-            __import__("brl.geometry", fromlist=["wedge_halfplanes"]).wedge_halfplanes(pos, svd),
+            __import__("brl.geometry", fromlist=["wedge_halfplanes"]).wedge_halfplanes(
+                pos, svd, eps_deg=OFFICIAL_BEARING_ENVELOPE_DEG),
             initial=st.poly, add_domain=False)
         newpoly = intersect_halfplanes(
             circle_outer_halfplanes(pos, MAX_RECEIVE_RADIUS, n=64),
@@ -161,6 +228,7 @@ class RemoteBelief:
     def measure(self, position: Sequence[float], channel: int,
                 coverage_idx: Optional[int] = None, is_refine: bool = False) -> dict:
         p = np.asarray(position, dtype=float)
+        self._validate_coverage(p, coverage_idx)
         try:
             out = self.client.measure(p, int(channel))
         except ActionIOError:
@@ -180,9 +248,11 @@ class RemoteBelief:
             except (KeyError, TypeError, ValueError, OverflowError) as exc:
                 self.invalid_responses += 1
                 raise ActionIOError(f"/measure missing direction: {out}") from exc
-            if not np.isfinite(value):
+            if not np.isfinite(value) or not (0.0 <= value < 360.0):
                 self.invalid_responses += 1
                 raise ActionIOError(f"/measure non-finite direction: {out}")
+        # Validate the clock before mutating position, channel, observations or
+        # coverage evidence.
         dt = self._dt(out)
         # 成功 measure 后当前位置与测向机频道更新
         self._move_to(p)

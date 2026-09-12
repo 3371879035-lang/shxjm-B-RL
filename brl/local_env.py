@@ -17,7 +17,7 @@ from .geometry import (DOMAIN_RADIUS, MAX_RECEIVE_RADIUS, circle_outer_halfplane
                        intersect_halfplanes, minimum_enclosing_circle, perpendicular,
                        polygon_centroid, wedge_halfplanes)
 from .resolver import optical_fallback_points, reliable_clear
-from .protocol import quantize_bearing_deg
+from .protocol import OFFICIAL_BEARING_ENVELOPE_DEG, quantize_bearing_deg
 
 CHANNELS = list(range(1, 21))
 MAX_SOURCES = 16
@@ -218,6 +218,13 @@ class RadioEnv:
         p = np.asarray(position, dtype=float)
         if p.shape != (2,):
             raise ValueError("position must be 2D")
+        if coverage_idx is not None:
+            idx = int(coverage_idx)
+            if idx < 0 or idx >= int(self.n_coverage):
+                raise ValueError("coverage_idx outside the configured coverage set")
+            expected = np.asarray(self.coverage_points[idx], dtype=float)
+            if float(np.linalg.norm(p - expected)) > 1e-6:
+                raise ValueError("coverage_idx does not match the measured position")
         src = self.source_by_channel.get(int(channel))
         result = "no_signal"
         svd = None
@@ -257,7 +264,8 @@ class RadioEnv:
         if result == "direction":
             st.status = "discovered" if st.status == "unknown" else st.status
             st.has_direction = True
-            newpoly = intersect_halfplanes(wedge_halfplanes(p, float(svd)), initial=st.poly, add_domain=False)
+            envelope = OFFICIAL_BEARING_ENVELOPE_DEG if self.bearing_decimals is not None else 1.0
+            newpoly = intersect_halfplanes(wedge_halfplanes(p, float(svd), eps_deg=envelope), initial=st.poly, add_domain=False)
             # 加上检测时有效接收半径上界的外切近似（真实源必在半径<=1500内）
             newpoly = intersect_halfplanes(circle_outer_halfplanes(p, MAX_RECEIVE_RADIUS, n=64),
                                            initial=newpoly, add_domain=False)

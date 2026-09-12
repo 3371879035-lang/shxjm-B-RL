@@ -12,7 +12,8 @@ from typing import Callable, Optional
 import numpy as np
 
 from .geometry import minimum_enclosing_circle
-from .protocol import OFFICIAL_BEARING_ENVELOPE_DEG
+from .protocol import (ActionIOError, CertificateViolation,
+                       GeometryNumericalError, OFFICIAL_BEARING_ENVELOPE_DEG)
 
 EPS_DEG = OFFICIAL_BEARING_ENVELOPE_DEG
 EPS = math.radians(EPS_DEG)
@@ -99,7 +100,7 @@ def solve_bilateral(first_position, first_bearing_deg: float, current_position,
                           (np.array([-K, 1.0]), 0.0), (np.array([-K, -1.0]), 0.0)):
             supplied = clip(supplied, normal, c)
         if len(supplied) == 0:
-            raise RuntimeError("Invalid initial conservative region")
+            raise GeometryNumericalError("invalid initial conservative region")
         poly = supplied
         lo = max(lo, float(poly[:, 0].min()))
         hi = min(hi, float(poly[:, 0].max()))
@@ -122,7 +123,7 @@ def solve_bilateral(first_position, first_bearing_deg: float, current_position,
                 ans = clear(pos)
                 if ans.get("clear_result") == "success":
                     return ret(True)
-                raise RuntimeError("Certified optical clear failed")
+                raise CertificateViolation("certified optical clear failed")
         if hi - lo <= 24.0 + 1e-7:
             break
         rounds += 1
@@ -140,11 +141,11 @@ def solve_bilateral(first_position, first_bearing_deg: float, current_position,
                 nc += 1
                 if clear(pos).get("clear_result") == "success":
                     return ret(True)
-                raise RuntimeError("near clear failed")
+                raise CertificateViolation("near observation contradicted by failed clear")
             if status == "no_signal":
                 continue
             if status != "direction" or "svd_deg" not in ans:
-                raise RuntimeError(f"Invalid measure response: {ans}")
+                raise ActionIOError(f"invalid bilateral measure response: {ans}")
             observed = True
             theta = math.radians(float(ans["svd_deg"]) - first_bearing_deg)
             cx = math.cos(theta)
@@ -166,9 +167,9 @@ def solve_bilateral(first_position, first_bearing_deg: float, current_position,
         poly = clip(poly, np.array([1.0, 0.0]), hi)
         poly = clip(poly, np.array([-1.0, 0.0]), -lo)
         if len(poly) == 0 or lo > hi + 1e-7:
-            raise RuntimeError("Empty certified region")
+            raise GeometryNumericalError("empty certified region")
     if hi - lo > 24.0 + 1e-6:
-        raise RuntimeError("Interval did not contract within six rounds")
+        raise GeometryNumericalError("interval did not contract within seven rounds")
     targets = [np.array([(lo + hi) / 2.0, hi * K / 2.0]),
                np.array([(lo + hi) / 2.0, -hi * K / 2.0])]
     targets = _ordered_by_travel(targets, B.T @ (pos - origin))
@@ -177,4 +178,4 @@ def solve_bilateral(first_position, first_bearing_deg: float, current_position,
         nc += 1
         if clear(pos).get("clear_result") == "success":
             return ret(True)
-    raise RuntimeError("Two-disk terminal cover failed")
+    raise CertificateViolation("two-disk terminal cover failed")

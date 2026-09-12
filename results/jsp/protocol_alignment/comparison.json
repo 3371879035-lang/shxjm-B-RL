@@ -1,0 +1,51 @@
+{
+  "rows": 500,
+  "keys_equal": true,
+  "all_fields_equal_with_atol_1e-9": true,
+  "fields": {
+    "sources": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "success": {
+      "equal": true,
+      "max_abs_delta": null
+    },
+    "cleared": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "virtual_time_s": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "time_per_source_s": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "distance_m": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "measures": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "switches": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "clear_calls": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "failed_clear": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    },
+    "cost_identity_error_s": {
+      "equal": true,
+      "max_abs_delta": 0.0
+    }
+  }
+}

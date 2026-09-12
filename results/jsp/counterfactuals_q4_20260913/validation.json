@@ -1,0 +1,26 @@
+{
+  "dataset_dir": "D:\\数学建模\\B_RL\\results\\jsp\\counterfactuals_q4_20260913",
+  "expected_cases": 640,
+  "reported_cases": 640,
+  "branches": 16748,
+  "labels": 16748,
+  "feature_count": 23,
+  "max_cost_identity_error_s": 1.4551915228366852e-11,
+  "baseline_errors": [],
+  "seed_errors": [],
+  "checks": {
+    "progress_complete": true,
+    "expected_case_count": true,
+    "branch_label_count_equal": true,
+    "branch_keys_unique": true,
+    "label_keys_unique": true,
+    "branch_label_keys_equal": true,
+    "all_success": true,
+    "all_cost_residuals_valid": true,
+    "feature_version_consistent": true,
+    "features_finite": true,
+    "one_zero_baseline_per_snapshot": true,
+    "seed_coverage_exact": true
+  },
+  "valid": true
+}

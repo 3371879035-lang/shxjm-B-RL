@@ -1,0 +1,62 @@
+{
+  "experiment_dir": "D:\\数学建模\\B_RL\\results\\jsp\\dev_q3_frozen_20260913",
+  "comparisons": [
+    {
+      "mode": 3,
+      "error_mode": "spatial",
+      "candidate": "JSPG",
+      "pairs": 50,
+      "component_delta_candidate_minus_isr": {
+        "movement_seconds_per_source": -1.069879280941015,
+        "measurement_seconds_per_source": -1.4047269397269397,
+        "switch_seconds_per_source": 0.012833333333333332,
+        "failed_clear_seconds_per_source": 0.0943459040959041,
+        "successful_clear_seconds_per_source": 0.0
+      },
+      "component_sum_seconds_per_source": -2.367426983238717,
+      "observed_total_delta_seconds_per_source": -2.3674269832387465,
+      "decision_count": 960,
+      "selection_reasons": {
+        "baseline_guard": 298,
+        "baseline_resolution": 647,
+        "bounded_interruption": 3,
+        "deterministic_clear_priority": 12
+      },
+      "chosen_action_types": {
+        "scanall": 298,
+        "resolve": 647,
+        "locate1": 3,
+        "forced_clear": 12
+      }
+    },
+    {
+      "mode": 3,
+      "error_mode": "spatial",
+      "candidate": "JSPL",
+      "pairs": 50,
+      "component_delta_candidate_minus_isr": {
+        "movement_seconds_per_source": -0.7741263234728826,
+        "measurement_seconds_per_source": -0.9969272394272395,
+        "switch_seconds_per_source": 0.12713303363303363,
+        "failed_clear_seconds_per_source": 0.08906018981018982,
+        "successful_clear_seconds_per_source": 0.0
+      },
+      "component_sum_seconds_per_source": -1.5548603394568987,
+      "observed_total_delta_seconds_per_source": -1.5548603394569205,
+      "decision_count": 992,
+      "selection_reasons": {
+        "learned_predicted_gain": 93,
+        "learned_gain_below_threshold": 875,
+        "deterministic_clear_priority": 23,
+        "model_fallback": 1
+      },
+      "chosen_action_types": {
+        "scan4": 32,
+        "scanall": 287,
+        "resolve": 603,
+        "locate1": 47,
+        "forced_clear": 23
+      }
+    }
+  ]
+}
