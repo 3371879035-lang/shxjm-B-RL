@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "stage": "dev",
+  "modes": [
+    3,
+    4
+  ],
+  "arms": [
+    "ISR",
+    "SEGFIXED",
+    "CVR"
+  ],
+  "python": "3.14.3",
+  "numpy": "2.4.2",
+  "scipy": "1.17.1",
+  "git_head_at_freeze": "d8de3ab82e6663d6063414594121f4f9dac4e6d3",
+  "code_hash": "0702abf2a8a90aaf9f6a775fdff3e5ad64f8b5c10cc3848046a3aeeb8e625686",
+  "bootstrap_seed": 20260912,
+  "seed_ranges": "160000-160049"
+}

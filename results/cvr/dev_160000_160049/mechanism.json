@@ -1,0 +1,80 @@
+[
+  {
+    "mode": 3,
+    "arm": "CVR",
+    "replacement_candidates": 59.22,
+    "certified_replacements": 3.08,
+    "executed_replacements": 3.08,
+    "restored_legacy_stations": 2.74,
+    "physical_stations_removed": 3.08,
+    "extra_measurements": 31.7,
+    "replans": 5.98,
+    "segment_interruptions": 0.0,
+    "certificate_wall_s": 0.10618822599644773
+  },
+  {
+    "mode": 3,
+    "arm": "ISR",
+    "replacement_candidates": 0.0,
+    "certified_replacements": 0.0,
+    "executed_replacements": 0.0,
+    "restored_legacy_stations": 0.0,
+    "physical_stations_removed": 0.0,
+    "extra_measurements": 0.0,
+    "replans": 0.0,
+    "segment_interruptions": 0.0,
+    "certificate_wall_s": 0.0
+  },
+  {
+    "mode": 3,
+    "arm": "SEGFIXED",
+    "replacement_candidates": 0.0,
+    "certified_replacements": 0.0,
+    "executed_replacements": 0.0,
+    "restored_legacy_stations": 0.0,
+    "physical_stations_removed": 0.0,
+    "extra_measurements": 0.0,
+    "replans": 5.98,
+    "segment_interruptions": 0.0,
+    "certificate_wall_s": 0.010245636001927778
+  },
+  {
+    "mode": 4,
+    "arm": "CVR",
+    "replacement_candidates": 285.04,
+    "certified_replacements": 7.38,
+    "executed_replacements": 7.38,
+    "restored_legacy_stations": 5.68,
+    "physical_stations_removed": 7.38,
+    "extra_measurements": 67.84,
+    "replans": 23.94,
+    "segment_interruptions": 0.0,
+    "certificate_wall_s": 0.6917082439991645
+  },
+  {
+    "mode": 4,
+    "arm": "ISR",
+    "replacement_candidates": 0.0,
+    "certified_replacements": 0.0,
+    "executed_replacements": 0.0,
+    "restored_legacy_stations": 0.0,
+    "physical_stations_removed": 0.0,
+    "extra_measurements": 0.0,
+    "replans": 0.0,
+    "segment_interruptions": 0.0,
+    "certificate_wall_s": 0.0
+  },
+  {
+    "mode": 4,
+    "arm": "SEGFIXED",
+    "replacement_candidates": 0.0,
+    "certified_replacements": 0.0,
+    "executed_replacements": 0.0,
+    "restored_legacy_stations": 0.0,
+    "physical_stations_removed": 0.0,
+    "extra_measurements": 0.0,
+    "replans": 23.98,
+    "segment_interruptions": 0.0,
+    "certificate_wall_s": 0.05992891197442077
+  }
+]

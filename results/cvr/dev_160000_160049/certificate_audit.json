@@ -1,0 +1,1806 @@
+{
+  "valid": true,
+  "files": {
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160000_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 122,
+      "accepted_request_count": 109
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160000_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160000_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 119,
+      "accepted_request_count": 109
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160001_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 100,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160001_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160001_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 97,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160002_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 99,
+      "accepted_request_count": 81
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160002_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160002_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 93,
+      "accepted_request_count": 81
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160003_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 116,
+      "accepted_request_count": 101
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160003_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160003_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 112,
+      "accepted_request_count": 100
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160004_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 100,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160004_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160004_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 96,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160005_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 81,
+      "accepted_request_count": 63
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160005_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160005_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 78,
+      "accepted_request_count": 63
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160006_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 124,
+      "accepted_request_count": 114
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160006_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160006_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 124,
+      "accepted_request_count": 114
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160007_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 114,
+      "accepted_request_count": 98
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160007_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160007_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 109,
+      "accepted_request_count": 98
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160008_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 99,
+      "accepted_request_count": 85
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160008_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160008_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 96,
+      "accepted_request_count": 85
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160009_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 122,
+      "accepted_request_count": 106
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160009_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160009_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 114,
+      "accepted_request_count": 99
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160010_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 110,
+      "accepted_request_count": 91
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160010_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160010_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 104,
+      "accepted_request_count": 91
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160011_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 107,
+      "accepted_request_count": 91
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160011_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160011_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 102,
+      "accepted_request_count": 91
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160012_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 113,
+      "accepted_request_count": 99
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160012_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160012_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 113,
+      "accepted_request_count": 99
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160013_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 106,
+      "accepted_request_count": 89
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160013_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160013_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 101,
+      "accepted_request_count": 89
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160014_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 89,
+      "accepted_request_count": 69
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160014_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160014_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 85,
+      "accepted_request_count": 69
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160015_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 110,
+      "accepted_request_count": 95
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160015_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160015_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 110,
+      "accepted_request_count": 95
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160016_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 103,
+      "accepted_request_count": 87
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160016_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160016_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 100,
+      "accepted_request_count": 87
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160017_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 97,
+      "accepted_request_count": 81
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160017_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160017_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 95,
+      "accepted_request_count": 81
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160018_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 117,
+      "accepted_request_count": 102
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160018_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160018_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 117,
+      "accepted_request_count": 102
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160019_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 100,
+      "accepted_request_count": 82
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160019_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160019_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 94,
+      "accepted_request_count": 81
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160020_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 97,
+      "accepted_request_count": 78
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160020_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160020_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 86,
+      "accepted_request_count": 70
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160021_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 124,
+      "accepted_request_count": 114
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160021_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160021_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 124,
+      "accepted_request_count": 114
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160022_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 97,
+      "accepted_request_count": 76
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160022_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160022_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 91,
+      "accepted_request_count": 76
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160023_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 99,
+      "accepted_request_count": 81
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160023_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160023_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 95,
+      "accepted_request_count": 81
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160024_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 110,
+      "accepted_request_count": 94
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160024_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160024_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 110,
+      "accepted_request_count": 94
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160025_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 97,
+      "accepted_request_count": 78
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160025_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160025_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 92,
+      "accepted_request_count": 78
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160026_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 103,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160026_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160026_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 98,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160027_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 116,
+      "accepted_request_count": 102
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160027_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160027_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 116,
+      "accepted_request_count": 102
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160028_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 105,
+      "accepted_request_count": 85
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160028_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160028_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 99,
+      "accepted_request_count": 85
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160029_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 79,
+      "accepted_request_count": 57
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160029_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160029_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 74,
+      "accepted_request_count": 57
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160030_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 98,
+      "accepted_request_count": 81
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160030_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160030_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 98,
+      "accepted_request_count": 81
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160031_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 96,
+      "accepted_request_count": 78
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160031_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160031_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 93,
+      "accepted_request_count": 78
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160032_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 101,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160032_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160032_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 95,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160033_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 125,
+      "accepted_request_count": 115
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160033_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160033_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 125,
+      "accepted_request_count": 115
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160034_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 101,
+      "accepted_request_count": 80
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160034_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160034_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 95,
+      "accepted_request_count": 80
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160035_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 97,
+      "accepted_request_count": 79
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160035_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160035_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 95,
+      "accepted_request_count": 79
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160036_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 119,
+      "accepted_request_count": 106
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160036_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160036_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 119,
+      "accepted_request_count": 106
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160037_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 103,
+      "accepted_request_count": 88
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160037_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160037_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 99,
+      "accepted_request_count": 88
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160038_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 103,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160038_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160038_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 100,
+      "accepted_request_count": 84
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160039_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 113,
+      "accepted_request_count": 98
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160039_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160039_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 113,
+      "accepted_request_count": 98
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160040_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 99,
+      "accepted_request_count": 83
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160040_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160040_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 95,
+      "accepted_request_count": 83
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160041_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 106,
+      "accepted_request_count": 89
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160041_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160041_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 101,
+      "accepted_request_count": 89
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160042_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 116,
+      "accepted_request_count": 100
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160042_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160042_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 116,
+      "accepted_request_count": 100
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160043_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 94,
+      "accepted_request_count": 77
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160043_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160043_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 91,
+      "accepted_request_count": 77
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160044_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 99,
+      "accepted_request_count": 82
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160044_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160044_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 95,
+      "accepted_request_count": 82
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160045_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 121,
+      "accepted_request_count": 110
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160045_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160045_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 121,
+      "accepted_request_count": 110
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160046_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 85,
+      "accepted_request_count": 65
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160046_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160046_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 81,
+      "accepted_request_count": 65
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160047_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 74,
+      "accepted_request_count": 52
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160047_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160047_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 69,
+      "accepted_request_count": 52
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160048_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 117,
+      "accepted_request_count": 104
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160048_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160048_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 117,
+      "accepted_request_count": 104
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160049_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 109,
+      "accepted_request_count": 90
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160049_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q3_160049_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 103,
+      "accepted_request_count": 90
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160000_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 320,
+      "accepted_request_count": 298
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160000_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160000_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 310,
+      "accepted_request_count": 298
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160001_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 275,
+      "accepted_request_count": 255
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160001_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160001_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 271,
+      "accepted_request_count": 258
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160002_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 318,
+      "accepted_request_count": 301
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160002_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160002_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 313,
+      "accepted_request_count": 301
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160003_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 249,
+      "accepted_request_count": 225
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160003_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160003_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 241,
+      "accepted_request_count": 225
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160004_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 308,
+      "accepted_request_count": 289
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160004_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160004_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 301,
+      "accepted_request_count": 289
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160005_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 227,
+      "accepted_request_count": 201
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160005_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160005_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 188,
+      "accepted_request_count": 172
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160006_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 333,
+      "accepted_request_count": 314
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160006_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160006_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 326,
+      "accepted_request_count": 314
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160007_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 352,
+      "accepted_request_count": 331
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160007_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160007_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 349,
+      "accepted_request_count": 339
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160008_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 313,
+      "accepted_request_count": 292
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160008_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160008_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 308,
+      "accepted_request_count": 297
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160009_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 265,
+      "accepted_request_count": 241
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160009_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160009_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 257,
+      "accepted_request_count": 241
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160010_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 286,
+      "accepted_request_count": 268
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160010_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160010_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 282,
+      "accepted_request_count": 269
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160011_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 299,
+      "accepted_request_count": 280
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160011_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160011_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 293,
+      "accepted_request_count": 280
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160012_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 245,
+      "accepted_request_count": 220
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160012_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160012_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 237,
+      "accepted_request_count": 220
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160013_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 275,
+      "accepted_request_count": 256
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160013_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160013_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 268,
+      "accepted_request_count": 256
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160014_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 234,
+      "accepted_request_count": 212
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160014_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160014_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 245,
+      "accepted_request_count": 229
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160015_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 213,
+      "accepted_request_count": 190
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160015_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160015_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 207,
+      "accepted_request_count": 190
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160016_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 318,
+      "accepted_request_count": 297
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160016_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160016_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 310,
+      "accepted_request_count": 297
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160017_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 244,
+      "accepted_request_count": 225
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160017_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160017_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 239,
+      "accepted_request_count": 225
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160018_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 254,
+      "accepted_request_count": 230
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160018_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160018_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 247,
+      "accepted_request_count": 230
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160019_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 260,
+      "accepted_request_count": 242
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160019_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160019_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 255,
+      "accepted_request_count": 242
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160020_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 256,
+      "accepted_request_count": 230
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160020_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160020_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 255,
+      "accepted_request_count": 239
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160021_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 325,
+      "accepted_request_count": 307
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160021_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160021_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 318,
+      "accepted_request_count": 307
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160022_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 211,
+      "accepted_request_count": 185
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160022_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160022_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 201,
+      "accepted_request_count": 185
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160023_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 220,
+      "accepted_request_count": 197
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160023_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160023_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 212,
+      "accepted_request_count": 197
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160024_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 247,
+      "accepted_request_count": 225
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160024_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160024_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 241,
+      "accepted_request_count": 225
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160025_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 256,
+      "accepted_request_count": 238
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160025_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160025_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 252,
+      "accepted_request_count": 238
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160026_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 262,
+      "accepted_request_count": 244
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160026_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160026_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 258,
+      "accepted_request_count": 244
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160027_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 244,
+      "accepted_request_count": 220
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160027_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160027_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 236,
+      "accepted_request_count": 220
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160028_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 294,
+      "accepted_request_count": 270
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160028_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160028_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 281,
+      "accepted_request_count": 267
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160029_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 219,
+      "accepted_request_count": 197
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160029_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160029_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 214,
+      "accepted_request_count": 197
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160030_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 225,
+      "accepted_request_count": 201
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160030_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160030_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 218,
+      "accepted_request_count": 201
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160031_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 257,
+      "accepted_request_count": 232
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160031_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160031_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 280,
+      "accepted_request_count": 265
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160032_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 302,
+      "accepted_request_count": 283
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160032_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160032_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 290,
+      "accepted_request_count": 279
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160033_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 304,
+      "accepted_request_count": 282
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160033_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160033_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 295,
+      "accepted_request_count": 282
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160034_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 255,
+      "accepted_request_count": 234
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160034_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160034_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 237,
+      "accepted_request_count": 221
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160035_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 246,
+      "accepted_request_count": 218
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160035_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160035_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 231,
+      "accepted_request_count": 215
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160036_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 279,
+      "accepted_request_count": 257
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160036_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160036_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 272,
+      "accepted_request_count": 257
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160037_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 322,
+      "accepted_request_count": 301
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160037_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160037_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 312,
+      "accepted_request_count": 301
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160038_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 164,
+      "accepted_request_count": 144
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160038_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160038_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 179,
+      "accepted_request_count": 162
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160039_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 261,
+      "accepted_request_count": 238
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160039_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160039_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 254,
+      "accepted_request_count": 238
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160040_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 298,
+      "accepted_request_count": 278
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160040_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160040_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 290,
+      "accepted_request_count": 278
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160041_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 316,
+      "accepted_request_count": 294
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160041_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160041_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 306,
+      "accepted_request_count": 294
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160042_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 271,
+      "accepted_request_count": 247
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160042_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160042_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 263,
+      "accepted_request_count": 247
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160043_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 280,
+      "accepted_request_count": 257
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160043_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160043_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 262,
+      "accepted_request_count": 248
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160044_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 333,
+      "accepted_request_count": 314
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160044_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160044_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 327,
+      "accepted_request_count": 314
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160045_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 302,
+      "accepted_request_count": 285
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160045_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160045_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 297,
+      "accepted_request_count": 285
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160046_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 214,
+      "accepted_request_count": 190
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160046_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160046_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 206,
+      "accepted_request_count": 190
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160047_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 232,
+      "accepted_request_count": 207
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160047_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160047_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 221,
+      "accepted_request_count": 204
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160048_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 301,
+      "accepted_request_count": 282
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160048_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160048_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 295,
+      "accepted_request_count": 282
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160049_spatial_CVR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 260,
+      "accepted_request_count": 241
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160049_spatial_ISR.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 0,
+      "accepted_request_count": 0
+    },
+    "results\\cvr\\dev_160000_160049\\decisions\\q4_160049_spatial_SEGFIXED.jsonl": {
+      "valid": true,
+      "errors": [],
+      "last_plan_version": 255,
+      "accepted_request_count": 241
+    }
+  },
+  "file_count": 300
+}
