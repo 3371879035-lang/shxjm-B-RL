@@ -62,6 +62,30 @@ def expected_worst_radius(P: np.ndarray, q: Sequence[float]) -> float:
     return worst
 
 
+def segment_candidates(A: Sequence[float], B: Sequence[float],
+                       centers: Sequence[Sequence[float]] = ()) -> List[np.ndarray]:
+    """生成当前线段 A->B 上的零绕行候选点，并强制校验零绕行恒等式。"""
+    A = np.asarray(A, dtype=float); B = np.asarray(B, dtype=float)
+    AB = B - A; L = float(np.linalg.norm(AB))
+    if L < 1e-9:
+        return []
+    ts = [0.1 * k for k in range(1, 10)]
+    for c in centers:
+        c = np.asarray(c, dtype=float)
+        t = float(np.dot(c - A, AB) / (L * L))
+        ts.append(float(min(0.95, max(0.05, t))))
+    qs = []
+    for tt in sorted(set(round(t, 6) for t in ts)):
+        q = A + tt * AB
+        if not qs or float(np.linalg.norm(q - qs[-1])) > 1.0:
+            qs.append(q)
+    for q in qs:
+        detour = float(np.linalg.norm(A - q) + np.linalg.norm(q - B) - L)
+        if detour > 1e-6:
+            raise RuntimeError(f"zero-detour violation: {detour}")
+    return qs
+
+
 class G21APolicy:
     def __init__(self, mode: int = 4, opportunistic_budget: Optional[int] = None,
                  detour_clear_limit: float = DETOUR_CLEAR_LIMIT):
@@ -82,6 +106,8 @@ class G21APolicy:
         self.clear_ready = 0
         self.became_clear_ready = 0
         self.zero_detour_clear = 0
+        self.zero_detour_violations = 0
+        self.candidate_count = 0
         self.coverage_move_m = 0.0
         self.opportunity_move_m = 0.0
         self.resolver_move_m = 0.0
@@ -193,7 +219,6 @@ class G21APolicy:
                 measure_at(ch, p, opportunistic=False, coverage_idx=idx, is_refine=False)
 
         def leg_opportunities(B):
-            A = np.asarray(env.pos, dtype=float).copy()
             B = np.asarray(B, dtype=float)
 
             # 保留 G25OR 的顺路滚动清除能力：已获得证书的源低绕行插入。
@@ -214,19 +239,15 @@ class G21APolicy:
                 else:
                     self.fallback_count += 1
 
-            AB = B - np.asarray(env.pos, dtype=float); L = float(np.linalg.norm(AB))
-            if L < 1.0:
-                return
-            ts = [0.1 * k for k in range(1, 10)]
+            # 关键：滚动 clear 结束后重新定义当前路段起点 C=env.pos。
+            A = np.asarray(env.pos, dtype=float).copy()
+            centers = []
             for ch, st in tracks.items():
                 c, r = _poly_center_radius(st["P"])
                 if np.isfinite(r) and r > CLEAR_READY_RADIUS:
-                    t = float(np.dot(c - A, AB) / (L * L)); ts.append(float(min(0.95, max(0.05, t))))
-            uniq = []
-            for t in sorted(set(round(t, 6) for t in ts)):
-                q = A + t * AB
-                if not uniq or float(np.linalg.norm(q - uniq[-1])) > 1.0:
-                    uniq.append(q)
+                    centers.append(c)
+            uniq = segment_candidates(A, B, centers)
+            self.candidate_count += len(uniq)
             candidates = []
             for q in uniq:
                 items = []
@@ -398,6 +419,8 @@ class G21APolicy:
             "clear_ready_count": int(self.clear_ready),
             "became_clear_ready_count": int(self.became_clear_ready),
             "zero_detour_clear_count": int(self.zero_detour_clear),
+            "zero_detour_violations": int(self.zero_detour_violations),
+            "candidate_count": int(self.candidate_count),
             "coverage_move_m": float(self.coverage_move_m),
             "opportunity_move_m": float(self.opportunity_move_m),
             "resolver_move_m": float(self.resolver_move_m),

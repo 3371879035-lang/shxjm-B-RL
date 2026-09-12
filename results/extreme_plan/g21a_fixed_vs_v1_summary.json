@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "uniform": {
+      "n_pairs": 105,
+      "base_mean_v_per_source": 488.51540499137406,
+      "v1_mean": 513.8153215157878,
+      "fixed_mean": 509.7838054215911,
+      "v1_vs_base_pct": 5.178939346827858,
+      "fixed_vs_base_pct": 4.3536806030902175,
+      "fixed_vs_v1_pct": -0.7846235651952598,
+      "fixed_vs_v1_p": 1.293214263101322e-07,
+      "fixed_vs_base_p": 2.6194847665650117e-15
+    },
+    "edge": {
+      "n_pairs": 105,
+      "base_mean_v_per_source": 511.7888923900194,
+      "v1_mean": 540.0474757138763,
+      "fixed_mean": 540.006404595965,
+      "v1_vs_base_pct": 5.5215311907007765,
+      "fixed_vs_base_pct": 5.513506179114551,
+      "fixed_vs_v1_pct": -0.007605093951605652,
+      "fixed_vs_v1_p": 0.7133091998930182,
+      "fixed_vs_base_p": 1.1240687847678262e-20
+    },
+    "cluster": {
+      "n_pairs": 105,
+      "base_mean_v_per_source": 416.1262669658399,
+      "v1_mean": 428.5496858622375,
+      "fixed_mean": 422.1456419773376,
+      "v1_vs_base_pct": 2.985492597471011,
+      "fixed_vs_base_pct": 1.4465260881961768,
+      "fixed_vs_v1_pct": -1.4943527194553867,
+      "fixed_vs_v1_p": 5.050604196819609e-13,
+      "fixed_vs_base_p": 1.6019738931331563e-07
+    },
+    "minradius": {
+      "n_pairs": 105,
+      "base_mean_v_per_source": 494.8527370557875,
+      "v1_mean": 515.307248867157,
+      "fixed_mean": 511.6800136863685,
+      "v1_vs_base_pct": 4.1334543147254665,
+      "fixed_vs_base_pct": 3.4004614646971216,
+      "fixed_vs_v1_pct": -0.7038975657265725,
+      "fixed_vs_v1_p": 8.831597818796684e-05,
+      "fixed_vs_base_p": 1.1704421343275502e-11
+    },
+    "outward": {
+      "n_pairs": 105,
+      "base_mean_v_per_source": 699.0878689800895,
+      "v1_mean": 701.1116793268525,
+      "fixed_mean": 701.5844866434732,
+      "v1_vs_base_pct": 0.28949298601269197,
+      "fixed_vs_base_pct": 0.3571250159190985,
+      "fixed_vs_v1_pct": 0.06743680508569237,
+      "fixed_vs_v1_p": 0.10870899430331502,
+      "fixed_vs_base_p": 0.057049609142643454
+    },
+    "mixed": {
+      "n_pairs": 105,
+      "base_mean_v_per_source": 538.6593587973231,
+      "v1_mean": 565.9587113470799,
+      "fixed_mean": 564.3035118478596,
+      "v1_vs_base_pct": 5.0680178676759065,
+      "fixed_vs_base_pct": 4.760736564160468,
+      "fixed_vs_v1_pct": -0.29245940843999985,
+      "fixed_vs_v1_p": 0.04387071326714354,
+      "fixed_vs_base_p": 1.7806180321139532e-21
+    }
+  },
+  "overall": {
+    "n_pairs": 630,
+    "base_mean": 524.8384215300722,
+    "v1_mean": 544.1316871054986,
+    "fixed_mean": 541.5839773620991,
+    "v1_vs_base_pct": 3.6760390977437116,
+    "fixed_vs_base_pct": 3.190611652098222,
+    "fixed_vs_v1_pct": -0.4682156551021767,
+    "fixed_vs_v1_p": 6.757438576190805e-18,
+    "fixed_vs_base_p": 2.6483108933855457e-63
+  }
+}
