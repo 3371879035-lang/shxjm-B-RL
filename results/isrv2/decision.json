@@ -4,12 +4,12 @@
   "q3": {
     "recommendation": "ISR-v1",
     "isrv2_adopted": false,
-    "reason": "No development arm achieved a 3% mean T/N reduction with acceptable tail behavior."
+    "reason": "ISRV2 failed the local development gate and was 7.33% slower in the 5-per-arm official practice sample."
   },
   "q4": {
     "recommendation": "ISR-v1",
     "isrv2_adopted": false,
-    "reason": "All revised development arms were slower than ISR-v1 on mean T/N."
+    "reason": "Official practices showed a promising 21.13% sample improvement, but the local result was slower and the exact one-sided independent permutation p-value was 0.0514 with only five runs per arm."
   },
   "independent_holdout_executed": false,
   "holdout_seed_ranges_unopened": {
@@ -17,8 +17,17 @@
     "endpoints": [281000, 281029],
     "constant_plus_one": [281100, 281129]
   },
-  "new_official_runs_executed": 0,
-  "official_budget_reserved": 20,
+  "new_official_runs_executed": 20,
+  "official_batch": {
+    "state": "complete",
+    "verified_full_clear": 20,
+    "technical_failures": 0,
+    "confirmed_not_clear": 0,
+    "q3_isrv2_relative_change_percent": 7.330779155887557,
+    "q4_isrv2_relative_change_percent": -21.133986277748484,
+    "q4_exact_one_sided_permutation_p": 0.05138339920948617,
+    "interpretation": "Q4 is a high-priority follow-up candidate, but five independent practices per arm do not override the failed local development gate."
+  },
   "mock_http": {
     "q3": {"sources": 12, "cleared": 12, "requests": 125, "exit_accepted": true},
     "q4": {"sources": 12, "cleared": 12, "requests": 337, "exit_accepted": true}

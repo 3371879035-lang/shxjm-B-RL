@@ -1,0 +1,5 @@
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[wait] interface not ready: network failed after retries: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[enter] remaining_real_duration_s=1200.0
+{"success": true, "mode": 3, "variant": "ISRV2", "coverage": "S25", "robot_id": "202610094088", "request_log": "D:\\数学建模\\B_RL\\results\\isrv2\\official_20_20260912\\runs\\main-b005-p1-isrv2-q3\\runner\\requests.jsonl", "cleared": 11, "virtual_time_s": 3287.981599, "distance_m": 12999.907993883462, "measure_calls": 107, "switches": 98, "clear_calls": 11, "failed_clear": 0, "solver_failures": 0, "optical_fallbacks": 0, "soft_actions": 0, "planning_wall_s": 0.029124800174031407, "soft_disabled_reason": "", "decision_log": [], "candidate": "ISRV2-safe-soft-20260912", "exit_response": {"accepted": true, "real_timestamp_ms": 1789228971166, "virtual_time_s": 3287.981599, "exit_reason": "user_exit"}}

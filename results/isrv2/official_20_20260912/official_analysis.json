@@ -1,0 +1,123 @@
+{
+  "experiment_state": "complete",
+  "attempts": 20,
+  "verified_full_clear_attempts": 20,
+  "technical_failures": 0,
+  "confirmed_not_clear": 0,
+  "design": "5 randomized time blocks; one independent practice for each Q3/Q4 x ISR/ISRV2 cell per block",
+  "not_same_scenario_paired": true,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20260912,
+  "comparisons": [
+    {
+      "mode": 3,
+      "time_blocks": 5,
+      "all_attempts_verified_full_clear": true,
+      "ISR": {
+        "runs": 5,
+        "sources": 64,
+        "cleared": 64,
+        "mean_seconds_per_source": 252.66317060034962,
+        "aggregate_seconds_per_source": 249.7686636875,
+        "median_seconds_per_source": 250.047606,
+        "p90_seconds_per_source": 272.92211995454545,
+        "p95_seconds_per_source": 275.9919177272727,
+        "max_seconds_per_source": 279.0617155,
+        "mean_distance_per_source_m": 991.4142919794633,
+        "measure_calls": 521,
+        "switches": 462,
+        "failed_clear": 3,
+        "program_wall_p95_s": 1.4428
+      },
+      "ISRV2": {
+        "runs": 5,
+        "sources": 62,
+        "cleared": 62,
+        "mean_seconds_per_source": 271.18534964532466,
+        "aggregate_seconds_per_source": 267.0611323064516,
+        "median_seconds_per_source": 277.6903810833333,
+        "p90_seconds_per_source": 300.94022781636363,
+        "p95_seconds_per_source": 301.6178310581818,
+        "max_seconds_per_source": 302.2954343,
+        "mean_distance_per_source_m": 1061.7812934479323,
+        "measure_calls": 550,
+        "switches": 490,
+        "failed_clear": 0,
+        "program_wall_p95_s": 1.9145999999999999
+      },
+      "relative_change_percent": 7.330779155887557,
+      "block_mean_delta_seconds_per_source": 18.52217904497503,
+      "block_bootstrap_mean_delta_ci95": [
+        -14.280915405457876,
+        51.32527349540794
+      ],
+      "block_bootstrap_mean_delta_ci97_5": [
+        -21.050247669267396,
+        59.573064697142875
+      ],
+      "p95_ratio": 1.0928502310572439,
+      "exact_independent_permutation_p_candidate_faster": 0.8616600790513834,
+      "exact_independent_permutation_p_two_sided": 0.2885375494071146,
+      "exploratory_decision": "ISR_FASTER_IN_SAMPLE",
+      "adoption_decision": "KEEP_ISR_V1",
+      "adoption_reason": "Only five independent official practices per arm; local development gate was not passed."
+    },
+    {
+      "mode": 4,
+      "time_blocks": 5,
+      "all_attempts_verified_full_clear": true,
+      "ISR": {
+        "runs": 5,
+        "sources": 61,
+        "cleared": 61,
+        "mean_seconds_per_source": 553.2389689950382,
+        "aggregate_seconds_per_source": 546.2469780491804,
+        "median_seconds_per_source": 541.2154688333334,
+        "p90_seconds_per_source": 652.6550022545455,
+        "p95_seconds_per_source": 675.9355321272727,
+        "max_seconds_per_source": 699.216062,
+        "mean_distance_per_source_m": 2000.0271805115165,
+        "measure_calls": 1487,
+        "switches": 1429,
+        "failed_clear": 2,
+        "program_wall_p95_s": 4.0702
+      },
+      "ISRV2": {
+        "runs": 5,
+        "sources": 69,
+        "cleared": 69,
+        "mean_seconds_per_source": 436.3175212044697,
+        "aggregate_seconds_per_source": 425.0829437681159,
+        "median_seconds_per_source": 457.6589886,
+        "p90_seconds_per_source": 525.0899523242424,
+        "p95_seconds_per_source": 526.2872385712121,
+        "max_seconds_per_source": 527.4845248181819,
+        "mean_distance_per_source_m": 1591.1364709958632,
+        "measure_calls": 1259,
+        "switches": 1207,
+        "failed_clear": 1,
+        "program_wall_p95_s": 3.594
+      },
+      "relative_change_percent": -21.133986277748484,
+      "block_mean_delta_seconds_per_source": -116.92144779056859,
+      "block_bootstrap_mean_delta_ci95": [
+        -176.53534972849647,
+        -51.49823474411254
+      ],
+      "block_bootstrap_mean_delta_ci97_5": [
+        -181.34932177001747,
+        -46.67410320774893
+      ],
+      "p95_ratio": 0.778605671039227,
+      "exact_independent_permutation_p_candidate_faster": 0.05138339920948617,
+      "exact_independent_permutation_p_two_sided": 0.09881422924901186,
+      "exploratory_decision": "ISRV2_FASTER_IN_SAMPLE",
+      "adoption_decision": "KEEP_ISR_V1",
+      "adoption_reason": "Only five independent official practices per arm; local development gate was not passed."
+    }
+  ],
+  "overall_recommendation": {
+    "Q3": "ISR-v1",
+    "Q4": "ISR-v1"
+  }
+}
