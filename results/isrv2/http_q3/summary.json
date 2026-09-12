@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "mode": 3,
+  "variant": "ISRV2",
+  "coverage": "S25",
+  "robot_id": "202610094088",
+  "request_log": "results\\isrv2\\http_q3\\requests.jsonl",
+  "cleared": 12,
+  "virtual_time_s": 3511.6629214403356,
+  "distance_m": 13988.314607201675,
+  "measure_calls": 111,
+  "switches": 99,
+  "clear_calls": 12,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "soft_actions": 1,
+  "planning_wall_s": 0.017359299934469163,
+  "soft_disabled_reason": "",
+  "decision_log": [
+    {
+      "event": "early_clear",
+      "channel": 9,
+      "candidate": [
+        469.75828049282114,
+        -418.9528643470593
+      ],
+      "estimated_hit_fraction": 1.0,
+      "estimated_gain_s": 14.005705732882817,
+      "travel_cost_s": 22.648126080851718,
+      "feedback": "success"
+    }
+  ],
+  "candidate": "ISRV2-safe-soft-20260912",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 0,
+    "virtual_time_s": 3511.6629214403356,
+    "exit_reason": "user_exit"
+  }
+}

@@ -16,6 +16,7 @@ from brl.coverage import s21_points, s25_points, s3_points, s4_points
 from brl.g25o import G25OPolicy
 from brl.g21a import G21APolicy
 from brl.independent_candidate import IndependentCandidate
+from brl.isr_v2 import ISRV2Candidate
 from brl.remote import OfficialClient, RemoteBelief
 
 
@@ -41,8 +42,8 @@ def main():
     args = ap.parse_args()
 
     variant = str(args.variant).upper()
-    if variant == "ISR" and args.coverage != "S25":
-        ap.error("ISR fixes Q3 to S3 and Q4 to S25; --coverage must be S25")
+    if variant in {"ISR", "ISRV2"} and args.coverage != "S25":
+        ap.error(f"{variant} fixes Q3 to S3 and Q4 to S25; --coverage must be S25")
 
     stamp = time.strftime("%Y%m%d_%H%M%S")
     out_dir = Path(args.out_dir) if args.out_dir else (ROOT / "results" / f"official_g25o_mode{args.mode}_{stamp}")
@@ -81,6 +82,8 @@ def main():
         print(f"[enter] remaining_real_duration_s={client.remaining_real_duration_s}", flush=True)
         if variant == "ISR":
             result.update(IndependentCandidate(mode=args.mode).run(belief))
+        elif variant == "ISRV2":
+            result.update(ISRV2Candidate(mode=args.mode).run(belief))
         elif variant.startswith("G21A"):
             result.update(G21APolicy(mode=args.mode).run(belief))
         else:

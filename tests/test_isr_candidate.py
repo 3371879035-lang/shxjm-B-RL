@@ -88,6 +88,56 @@ def test_failed_center_probe_continues_to_bilateral(monkeypatch):
     assert calls == {"clear": 1, "solve": 1}
 
 
+def test_bilateral_transport_failure_does_not_trigger_optical_actions(monkeypatch):
+    env = RadioEnv(mode=3, n_sources=1, seed=81)
+    policy = Baseline(env, try_clear=False)
+    env.channels[1].status = "discovered"
+    policy.tracks[1] = {
+        "first": np.zeros(2), "deg": 0.0,
+        "P": np.array([[0.0, 0.0], [60.0, 0.0], [30.0, 50.0]]), "nobs": 1,
+    }
+    calls = {"clear": 0}
+
+    def clear(position, channel):
+        calls["clear"] += 1
+        return {"accepted": True, "clear_result": "no_target_in_range"}
+
+    def solve(*args, **kwargs):
+        raise ActionIOError("bilateral response lost")
+
+    monkeypatch.setattr(env, "clear", clear)
+    monkeypatch.setattr(candidate_module, "solve_bilateral", solve)
+    with pytest.raises(ActionIOError, match="bilateral response lost"):
+        policy.resolve(1)
+    assert calls["clear"] == 0
+    assert policy.solver_failures == 0
+
+
+def test_transport_failure_after_failed_probe_stops_before_fallback(monkeypatch):
+    env = RadioEnv(mode=3, n_sources=1, seed=82)
+    policy = Baseline(env, try_clear=True)
+    env.channels[1].status = "discovered"
+    policy.tracks[1] = {
+        "first": np.zeros(2), "deg": 0.0,
+        "P": np.array([[0.0, 0.0], [60.0, 0.0], [30.0, 50.0]]), "nobs": 1,
+    }
+    calls = {"clear": 0}
+
+    def clear(position, channel):
+        calls["clear"] += 1
+        return {"accepted": True, "clear_result": "no_target_in_range"}
+
+    def solve(*args, **kwargs):
+        raise ActionIOError("refine timeout")
+
+    monkeypatch.setattr(env, "clear", clear)
+    monkeypatch.setattr(candidate_module, "solve_bilateral", solve)
+    with pytest.raises(ActionIOError, match="refine timeout"):
+        policy.resolve(1)
+    assert calls["clear"] == 1
+    assert policy.solver_failures == 0
+
+
 @pytest.mark.parametrize("policy_factory", [lambda env: IndependentCandidate(3), lambda env: None])
 def test_transport_failure_is_not_converted_to_optical_fallback(monkeypatch, policy_factory):
     sources = random_sources(3, 10, np.random.default_rng(11))

@@ -82,6 +82,11 @@ class Baseline:
             if 19.5<r<=80:
                 if env.clear(c,ch)['clear_result']=='success':self.tracks.pop(ch,None);return
         try:solve_bilateral(st['first'],st['deg'],env.pos,lambda q:env.measure(q,ch,is_refine=True),lambda q:env.clear(q,ch),initial_region=st['P'])
+        except ActionIOError:
+            # Transport/protocol failures are not geometric evidence.  Propagate
+            # them immediately so the caller can retry the same request id and
+            # the policy cannot issue a different action after an uncertain one.
+            raise
         except RuntimeError:
             self.solver_failures+=1
             # Certified optical strip cover: 2 rows x 61 columns; independent final fallback.
@@ -194,13 +199,15 @@ class JointShell(JointRoute):
         return env
 
 class IndependentCandidate:
-    def __init__(self,mode):
+    def __init__(self,mode,*,probe=True,candidate_name=None):
         self.mode=int(mode)
         if self.mode not in (3,4):raise ValueError("mode must be 3 or 4")
+        self.probe=bool(probe)
+        self.candidate_name=candidate_name or ("ISR-Q3r800-Q4r300-origin0-20260912" if self.probe else "ISR-NoProbe-safe-20260912")
     def run(self,env):
         if int(env.mode)!=self.mode:raise ValueError("mode mismatch")
         view=CheckedView(env)
-        policy=JointShell(view,threshold=0,probe=True)
+        policy=JointShell(view,threshold=0,probe=self.probe)
         policy.max_region_radius=800.0 if self.mode==3 else 300.0
         view.coverage_points=policy.points.copy()
         view.n_coverage=len(policy.points)
@@ -212,4 +219,11 @@ class IndependentCandidate:
             "measure_calls":int(view.n_measure),"switches":int(view.n_switch),
             "clear_calls":int(view.n_clear),"failed_clear":int(view.n_clear_fail),
             "solver_failures":int(policy.solver_failures),"optical_fallbacks":int(policy.solver_failures),
-            "candidate":"ISR-Q3r800-Q4r300-origin0-20260912"}
+            "candidate":self.candidate_name}
+
+
+class IndependentCandidateNoProbe(IndependentCandidate):
+    """Counterfactual arm: ISR-v1 with only the early MEC probe disabled."""
+
+    def __init__(self, mode):
+        super().__init__(mode, probe=False, candidate_name="ISR-NoProbe-safe-20260912")

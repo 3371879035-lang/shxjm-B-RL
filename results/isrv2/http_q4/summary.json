@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "mode": 4,
+  "variant": "ISRV2",
+  "coverage": "S25",
+  "robot_id": "202610094088",
+  "request_log": "results\\isrv2\\http_q4\\requests.jsonl",
+  "cleared": 12,
+  "virtual_time_s": 6618.618826694116,
+  "distance_m": 23178.094133470575,
+  "measure_calls": 323,
+  "switches": 308,
+  "clear_calls": 12,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "soft_actions": 0,
+  "planning_wall_s": 0.09708710003178567,
+  "soft_disabled_reason": "",
+  "decision_log": [],
+  "candidate": "ISRV2-safe-soft-20260912",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 0,
+    "virtual_time_s": 6618.618826694116,
+    "exit_reason": "user_exit"
+  }
+}

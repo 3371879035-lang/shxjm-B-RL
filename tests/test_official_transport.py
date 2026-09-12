@@ -52,6 +52,29 @@ def test_network_retry_reuses_identical_request_id(monkeypatch):
     assert executed["count"] == 1
 
 
+def test_clear_response_loss_reuses_identical_request_id(monkeypatch):
+    payloads = []
+    cached = {}
+
+    def fake_urlopen(request, timeout):
+        payload = json.loads(request.data.decode("utf-8"))
+        payloads.append(payload)
+        cached.setdefault(payload["request_id"], {
+            "accepted": True, "virtual_time_s": 3.0,
+            "clear_result": "no_target_in_range",
+        })
+        if len(payloads) == 1:
+            raise TimeoutError("executed but response lost")
+        return FakeResponse(cached[payload["request_id"]])
+
+    monkeypatch.setattr(remote_module, "urlopen", fake_urlopen)
+    monkeypatch.setattr(remote_module.time, "sleep", lambda _: None)
+    client = OfficialClient("http://test", "team", max_network_retries=2)
+    response = client.clear([10.0, 20.0], 4)
+    assert response["clear_result"] == "no_target_in_range"
+    assert payloads[0] == payloads[1]
+
+
 def test_business_rejection_is_not_retried(monkeypatch):
     calls = []
 
@@ -94,3 +117,36 @@ def test_remote_belief_rejects_direction_without_finite_bearing():
     belief = RemoteBelief(InvalidClient(), mode=3)
     with pytest.raises(ActionIOError):
         belief.measure([0.0, 0.0], 1)
+
+
+@pytest.mark.parametrize("response", [
+    {"accepted": False, "error": "rejected"},
+    {"accepted": True, "virtual_time_s": 3.0},
+    {"accepted": True, "virtual_time_s": 3.0, "clear_result": "unknown"},
+])
+def test_remote_belief_rejects_invalid_clear_without_updating_ledger(response):
+    class InvalidClient:
+        def clear(self, *args, **kwargs):
+            return response
+
+    belief = RemoteBelief(InvalidClient(), mode=3)
+    before = (belief.n_clear, belief.n_clear_fail, belief.virtual_time, belief.pos.copy())
+    with pytest.raises(ActionIOError):
+        belief.clear([50.0, 0.0], 1)
+    after = (belief.n_clear, belief.n_clear_fail, belief.virtual_time, belief.pos.copy())
+    assert before[:3] == after[:3]
+    assert (before[3] == after[3]).all()
+
+
+def test_exit_business_rejection_is_not_retried(monkeypatch):
+    calls = []
+
+    def fake_urlopen(request, timeout):
+        calls.append(json.loads(request.data.decode("utf-8")))
+        return FakeResponse({"accepted": False, "error": "exit refused"})
+
+    monkeypatch.setattr(remote_module, "urlopen", fake_urlopen)
+    client = OfficialClient("http://test", "team", max_network_retries=5)
+    response = client.exit()
+    assert response["accepted"] is False
+    assert len(calls) == 1

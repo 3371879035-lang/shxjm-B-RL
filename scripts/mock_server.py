@@ -18,7 +18,7 @@ from brl.local_env import RadioEnv
 
 class MockState:
     def __init__(self, mode=3, seed=12345, n_sources=12):
-        self.env = RadioEnv(mode=mode, n_sources=n_sources, seed=seed)
+        self.env = RadioEnv(mode=mode, n_sources=n_sources, seed=seed, bearing_decimals=2)
         self.entered = False
         self.exited = False
 
@@ -100,5 +100,5 @@ if __name__ == "__main__":
     ap.add_argument("--seed", type=int, default=12345)
     ap.add_argument("--n-sources", type=int, default=12)
     a = ap.parse_args()
-    STATE.env = RadioEnv(mode=a.mode, n_sources=a.n_sources, seed=a.seed)
+    STATE.env = RadioEnv(mode=a.mode, n_sources=a.n_sources, seed=a.seed, bearing_decimals=2)
     main(a.port)

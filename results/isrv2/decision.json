@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-12",
+  "baseline": "ISR-v1-safe",
+  "q3": {
+    "recommendation": "ISR-v1",
+    "isrv2_adopted": false,
+    "reason": "No development arm achieved a 3% mean T/N reduction with acceptable tail behavior."
+  },
+  "q4": {
+    "recommendation": "ISR-v1",
+    "isrv2_adopted": false,
+    "reason": "All revised development arms were slower than ISR-v1 on mean T/N."
+  },
+  "independent_holdout_executed": false,
+  "holdout_seed_ranges_unopened": {
+    "spatial": [280000, 280199],
+    "endpoints": [281000, 281029],
+    "constant_plus_one": [281100, 281129]
+  },
+  "new_official_runs_executed": 0,
+  "official_budget_reserved": 20,
+  "mock_http": {
+    "q3": {"sources": 12, "cleared": 12, "requests": 125, "exit_accepted": true},
+    "q4": {"sources": 12, "cleared": 12, "requests": 337, "exit_accepted": true}
+  }
+}
