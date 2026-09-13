@@ -8,9 +8,11 @@ from typing import Callable, Optional
 
 import numpy as np
 
+from brl.bilateral import bearing_clip
 from brl.bilateral_state import BilateralState
 from brl.coverage import s25_points, s3_points
-from brl.g25o import initial_track_polygon as initial_poly
+from brl.g25o import (initial_track_polygon as initial_poly,
+                      _clip_target_square as target_clip)
 from brl.g25o import route_open, _poly_center_radius as center_radius
 from brl.independent_candidate import CheckedView
 from brl.protocol import (ActionIOError, CertificateViolation,
@@ -100,12 +102,17 @@ class JSPPolicy:
         if ch not in self.tracks:
             poly = initial_poly(p, deg)
             self.tracks[ch] = {"first": p.copy(), "deg": deg, "P": poly, "nobs": 1}
-            self.locators[ch] = BilateralState(p, deg, self.env.pos,
-                                                initial_region=poly)
         else:
-            state = self.locators[ch]
-            state.incorporate_bearing(p, deg)
-            self.tracks[ch]["P"] = state.region.copy()
+            if ch in self.locators:
+                state = self.locators[ch]
+                state.incorporate_bearing(p, deg)
+                self.tracks[ch]["P"] = state.region.copy()
+            else:
+                self.tracks[ch]["P"] = target_clip(bearing_clip(
+                    self.tracks[ch]["P"], p, math.radians(deg)))
+                if not len(self.tracks[ch]["P"]):
+                    self.tracks[ch]["P"] = initial_poly(
+                        self.tracks[ch]["first"], self.tracks[ch]["deg"])
             self.tracks[ch]["nobs"] += 1
 
     def _scan(self, idx: int, limit: Optional[int]) -> None:
@@ -150,11 +157,16 @@ class JSPPolicy:
             return "probe", (float(c[0]), float(c[1]))
         # Candidate generation is a pure preview.  Preparing an action on the
         # live state would cache stale geometry before later scan bearings arrive.
-        action = self.locators[ch].preview_action()
+        if ch in self.locators:
+            state = self.locators[ch]
+        else:
+            track = self.tracks[ch]
+            state = BilateralState(track["first"], track["deg"], self.env.pos,
+                                   initial_region=track["P"])
+        action = state.preview_action()
         return action.kind, action.position
 
     def _execute_locator_one(self, ch: int) -> None:
-        state = self.locators[ch]
         c, r = center_radius(self.tracks[ch]["P"])
         if ch not in self.probe_attempted and 19.5 < r <= 80.0:
             self.probe_attempted.add(ch)
@@ -162,6 +174,12 @@ class JSPPolicy:
             if response.get("clear_result") == "success":
                 self.tracks.pop(ch, None); self.locators.pop(ch, None)
             return
+        if ch not in self.locators:
+            track = self.tracks[ch]
+            self.locators[ch] = BilateralState(
+                track["first"], track["deg"], self.env.pos,
+                initial_region=track["P"])
+        state = self.locators[ch]
         action = state.next_action()
         if action is None:
             return
@@ -192,7 +210,7 @@ class JSPPolicy:
 
     def _resolve(self, ch: int) -> None:
         try:
-            while ch in self.locators and not self.env.done:
+            while ch in self.tracks and not self.env.done:
                 self._execute_locator_one(ch)
         except ActionIOError:
             raise
@@ -256,7 +274,12 @@ class JSPPolicy:
             fixed = ((3.0 if action_kind == "probe" else 5.0)
                      + (1.0 if action_kind == "measure" and candidate.key != self.env.current_channel else 0.0))
             if candidate.kind == "resolve":
-                state = self.locators[candidate.key]
+                if candidate.key in self.locators:
+                    state = self.locators[candidate.key]
+                else:
+                    track = self.tracks[candidate.key]
+                    state = BilateralState(track["first"], track["deg"], self.env.pos,
+                                           initial_region=track["P"])
                 width = max(0.0, state.hi - state.lo)
                 remaining = max(0, min(7 - state.rounds,
                                        int(math.ceil(math.log2(max(width, 24.0) / 24.0)))))
@@ -275,7 +298,7 @@ class JSPPolicy:
             # made the first prototype bounce between tasks and underpriced the
             # largest source of extra movement.
             remaining_points.append(self.points[candidate.key])
-        for ch in sorted(self.locators):
+        for ch in sorted(self.tracks):
             if ch == candidate.key and candidate.kind == "resolve":
                 continue
             _, action_position = self._locator_action(ch)
@@ -304,7 +327,7 @@ class JSPPolicy:
                                        min(self.config.scan_segment, n)))
             raw.append(CandidateAction("scanall", idx,
                                        tuple(float(x) for x in self.points[idx]), n))
-        for ch in sorted(self.locators):
+        for ch in sorted(self.tracks):
             action_kind, action_position = self._locator_action(ch)
             if action_position is not None:
                 # Every discovered source contributes both interruptible and
@@ -467,8 +490,8 @@ class JSPPolicy:
             pts = self.points[np.asarray(pending)]
             idx = pending[route_open(pts, self.env.pos)[0]]
             self._scan(idx, None)
-        while self.locators and not self.env.done:
-            ch = min(self.locators, key=lambda c: float(np.linalg.norm(
+        while self.tracks and not self.env.done:
+            ch = min(self.tracks, key=lambda c: float(np.linalg.norm(
                 np.asarray(self._locator_action(c)[1]) - self.env.pos)))
             self._resolve(ch)
 
@@ -476,7 +499,7 @@ class JSPPolicy:
         """Continue the frozen ISR scheduling rule from the current JSP state."""
         while not self.env.done:
             stations = self._pending_stations()
-            if not stations and not self.locators:
+            if not stations and not self.tracks:
                 break
             kind, key = self._baseline_choice(stations)
             if kind == "scan":
@@ -492,7 +515,7 @@ class JSPPolicy:
         self.outer_first = bool(self.env.mode == 4 and self.env.discovered_count() <= 0)
         while not self.env.done and self.decisions < self.config.max_decisions:
             forced = []
-            for ch in sorted(self.locators):
+            for ch in sorted(self.tracks):
                 action_kind, position = self._locator_action(ch)
                 if action_kind == "clear" and position is not None:
                     forced.append((float(np.linalg.norm(

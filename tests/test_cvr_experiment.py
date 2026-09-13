@@ -51,9 +51,9 @@ def paired_fixture(
 
 
 def test_development_schedule_has_exact_three_arms():
-    rows = list(jobs("dev", [3, 4], ["ISR", "SEGFIXED", "CVR"]))
+    rows = list(jobs("dev", [3, 4], ["ISR", "COMPAT", "CVR"]))
     assert len(rows) == 2 * 50 * 3
-    assert {row[-1] for row in rows} == {"ISR", "SEGFIXED", "CVR"}
+    assert {row[-1] for row in rows} == {"ISR", "COMPAT", "CVR"}
 
 
 def test_candidate_below_three_percent_is_not_eligible():

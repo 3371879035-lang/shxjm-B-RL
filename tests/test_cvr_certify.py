@@ -44,3 +44,20 @@ def test_q3_analytic_radius_dominates_dense_deterministic_sample():
         nearest = np.min(np.linalg.norm(sample[:, None, :] - points[None, :, :], axis=2), axis=1)
         maximum = max(maximum, float(np.max(nearest)))
     assert maximum <= required + 1e-6
+
+
+def test_q4_dense_boundary_and_orientation_witnesses():
+    """Adversarial numeric cross-check; the analytic certificate remains primary."""
+    points = np.asarray(s25_points(), dtype=float)
+    source_angles = np.linspace(0.0, 2.0 * math.pi, 72, endpoint=False)
+    orientation_angles = np.linspace(0.0, 2.0 * math.pi, 72, endpoint=False)
+    # Include the origin, near-boundary rings, and the exact 1800 m boundary.
+    for radius in (0.0, 300.0, 900.0, 1500.0, 1799.999, 1800.0):
+        for source_angle in source_angles:
+            source = radius * np.array([math.cos(source_angle), math.sin(source_angle)])
+            offsets = points - source
+            in_range = np.linalg.norm(offsets, axis=1) <= 1000.0 + 1e-9
+            for orientation in orientation_angles:
+                forward = np.array([math.cos(orientation), math.sin(orientation)])
+                visible = in_range & ((offsets @ forward) >= -1e-9)
+                assert np.any(visible), (radius, source_angle, orientation)

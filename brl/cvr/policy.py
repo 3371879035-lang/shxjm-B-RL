@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import copy
 import time
 from typing import Callable
 
@@ -13,11 +14,13 @@ from brl.independent_candidate import CheckedView
 from brl.jsp.policy import JSPPolicy
 from brl.protocol import CertificateViolation
 
+from .compat import ISRCompatibilityExecutor
 from .certify import CoverageCertificateEngine
 from .evidence import CoverageEvidenceLedger, CoverageNode, FutureCoveragePlan
 from .ids import ChannelId, PlanNodeId, StationId
 from .planner import PlannedSegment, SegmentPlanner, SegmentPlannerConfig
 from .waypoints import PublicCVRSnapshot, PublicCVRTrack, WaypointGenerator
+from .journal import EventJournal, JournaledActionView
 
 
 @dataclass(frozen=True)
@@ -33,9 +36,11 @@ class CVRConfig:
 class CVRPolicy:
     """Execute certified search mutations while reusing hard localization state."""
 
-    def __init__(self, env, config: CVRConfig | None = None) -> None:
+    def __init__(self, env, config: CVRConfig | None = None,
+                 journal: EventJournal | None = None) -> None:
         self.env = env
         self.config = config or CVRConfig()
+        self.journal = journal or EventJournal()
         self.executor = JSPPolicy(env)
         points = s3_points() if env.mode == 3 else s25_points()
         all_channels = frozenset(ChannelId(channel) for channel in range(1, 21))
@@ -59,7 +64,8 @@ class CVRPolicy:
         )
         self.engine = CoverageCertificateEngine(env.mode)
         self.planner = SegmentPlanner(self.engine, WaypointGenerator(), planner_config)
-        self.events: list[dict] = [
+        self.events = self.journal.events
+        self.journal.emit(
             {
                 "event": "plan_initial",
                 "mode": int(env.mode),
@@ -74,7 +80,7 @@ class CVRPolicy:
                     for node in self.plan.nodes
                 ],
             }
-        ]
+        )
         self.fallback_reason = ""
         self._evidence_serial = 0
         self.replans = 0
@@ -131,7 +137,7 @@ class CVRPolicy:
         if result.covered:
             self.certified_absent.add(channel)
             self._remove_discovered_channel(channel)
-            self.events.append(
+            self.journal.emit(
                 {
                     "event": "certified_absent",
                     "channel": channel.value,
@@ -173,7 +179,7 @@ class CVRPolicy:
 
         if node.legacy_station is None:
             self.extra_measurements += 1
-        self.events.append(
+        self.journal.emit(
             {
                 "event": "measurement",
                 "request_id": evidence_id,
@@ -199,7 +205,7 @@ class CVRPolicy:
                 if node.node_id not in remaining_ids and node.legacy_station is not None
             }
             self.removed_legacy_stations.update(removed_fixed)
-            self.events.append(
+            self.journal.emit(
                 {
                     "event": "plan_mutation",
                     "proposal_id": mutation.proposal_id,
@@ -319,7 +325,7 @@ class CVRPolicy:
         _, channel, kind = min(options)
         before = float(self.env.virtual_time)
         self.executor._execute_locator_one(channel)
-        self.events.append(
+        self.journal.emit(
             {
                 "event": "locator_action",
                 "channel": channel,
@@ -331,12 +337,55 @@ class CVRPolicy:
 
     def _fallback(self, reason: str) -> None:
         self.fallback_reason = reason
-        self.events.append(
+        self.journal.emit(
             {"event": "fallback", "reason": reason, "plan_version": self.plan.version}
         )
-        self.executor.resume_baseline()
+        self.finish_current_plan()
 
-    def run(self) -> "CVRPolicy":
+    def finish_current_plan(self) -> None:
+        """Finish exactly the surviving public obligations without replanning.
+
+        Certified negative evidence and completed variable nodes remain valid;
+        this continuation therefore does not restart S3/S25 from the origin.
+        """
+        guard = 0
+        while not self._complete() and guard < 200:
+            guard += 1
+            hard_job = self._next_hard_job()
+            if hard_job is None:
+                break
+            if hard_job[0] == "resolve":
+                channel = int(hard_job[1])
+                self.executor._resolve(channel)
+                self._remove_discovered_channel(ChannelId(channel))
+                continue
+            snapshot = self._public_snapshot()
+            segment = self.planner._baseline(
+                snapshot, self.ledger, snapshot.position, "deterministic_continuation",
+                forced_first_node=str(hard_job[1]),
+            )
+            self._apply_segment(segment)
+        if not self._complete():
+            raise CertificateViolation("deterministic continuation exhausted without completion")
+
+    def checkpoint(self) -> "CVRPolicy":
+        """In-memory local-experiment checkpoint; no simulator truth is exposed online."""
+        clone = copy.deepcopy(self)
+        clone.journal = EventJournal()
+        clone.events = clone.journal.events
+        clone.env.journal = clone.journal
+        return clone
+
+    def run(self, decision_hook: Callable | None = None) -> "CVRPolicy":
+        if not self.config.planner_enabled:
+            executor = ISRCompatibilityExecutor(self.env)
+            executor.run()
+            self.fallback_reason = "planner_disabled"
+            self.journal.emit({
+                "event": "fallback", "reason": "planner_disabled",
+                "plan_version": self.plan.version,
+            })
+            return self
         # Preserve the comparable zero-distance origin survey.
         origin = next(node for node in self.plan.nodes if node.legacy_station == StationId(0))
         for channel in tuple(sorted(origin.channels)):
@@ -349,10 +398,7 @@ class CVRPolicy:
                 return self
 
         self.outer_first = bool(self.env.mode == 4 and self.env.discovered_count() <= 0)
-
-        if not self.config.planner_enabled:
-            self._fallback("planner_disabled")
-            return self
+        self.executor.outer_first = self.outer_first
 
         for _ in range(self.config.max_segments):
             if self._complete():
@@ -386,12 +432,17 @@ class CVRPolicy:
             elapsed = time.perf_counter() - started
             self.replans += 1
             self.replacement_candidates += int(self.planner.last_proposal_count)
-            self.events.append(
+            self.journal.emit(
                 {
                     "event": "segment",
                     "reason": segment.reason,
                     "estimated_cost_s": segment.estimated_cost_s,
                     "baseline_cost_s": segment.baseline_cost_s,
+                    "declared_exit_position": list(map(float, exit_position)),
+                    "planned_depth": len(segment.tasks),
+                    "task_kinds": [task.kind for task in segment.tasks],
+                    "task_keys": [task.key for task in segment.tasks],
+                    "expanded_proposals": int(self.planner.last_proposal_count),
                     "planning_wall_s": elapsed,
                     "plan_version": self.plan.version,
                 }
@@ -400,6 +451,8 @@ class CVRPolicy:
                 reason = "per_call_budget" if elapsed > self.config.max_plan_call_s else "episode_budget"
                 self._fallback(reason)
                 return self
+            if decision_hook is not None:
+                decision_hook(self, segment, hard_job, snapshot, exit_position)
             self._apply_segment(segment)
 
         if not self._complete():
@@ -414,13 +467,36 @@ class CVRCandidate:
             raise ValueError("mode must be 3 or 4")
         self.config = config or CVRConfig()
 
-    def run(self, env, decision_hook: Callable | None = None) -> dict:
+    def run(self, env, decision_hook: Callable | None = None,
+            journal_path=None) -> dict:
         if int(env.mode) != self.mode:
             raise ValueError("mode mismatch")
-        view = CheckedView(env)
-        policy = CVRPolicy(view, self.config)
-        policy.run()
-        success = bool(policy._complete())
+        checked = CheckedView(env)
+        journal = EventJournal(journal_path)
+        view = JournaledActionView(checked, journal)
+        policy = CVRPolicy(view, self.config, journal=journal)
+        try:
+            policy.run(decision_hook=decision_hook)
+            success = bool(policy._complete())
+            journal.emit({
+                "event": "terminal", "status": "complete" if success else "incomplete",
+                "success": success, "cleared": int(view.cleared_count()),
+                "completion_certificate": success,
+                "virtual_time_s": float(view.virtual_time),
+                "distance_m": float(view.move_distance),
+                "measure_calls": int(view.n_measure), "switches": int(view.n_switch),
+                "clear_calls": int(view.n_clear), "failed_clear": int(view.n_clear_fail),
+                "plan_version": policy.plan.version,
+            })
+        except Exception as exc:
+            journal.emit({
+                "event": "terminal", "status": "failed", "success": False,
+                "cleared": int(view.cleared_count()), "completion_certificate": False,
+                "virtual_time_s": float(view.virtual_time),
+                "error_type": type(exc).__name__, "error": str(exc),
+                "plan_version": policy.plan.version,
+            })
+            raise
         if not success:
             raise CertificateViolation("CVR returned without a completion certificate")
         return {
@@ -445,6 +521,6 @@ class CVRCandidate:
             "extra_measurements": int(policy.extra_measurements),
             "optical_fallbacks": int(policy.executor.optical_fallbacks),
             "plan_versions": int(policy.plan.version),
-            "decision_log": policy.events,
+            "decision_log": list(journal.events),
             "candidate": "CVR-analytic-20260913",
         }

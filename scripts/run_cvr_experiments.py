@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+from dataclasses import asdict
 import hashlib
 import json
 from pathlib import Path
@@ -18,8 +19,10 @@ if str(ROOT) not in sys.path:
 import numpy as np
 import scipy
 
+from brl.coverage import s25_points, s3_points
 from brl.cvr import CVRCandidate, CVRConfig
-from brl.independent_candidate import IndependentCandidate
+from brl.cvr.journal import EventJournal, JournaledActionView
+from brl.independent_candidate import CheckedView, IndependentCandidate
 from brl.local_env import RadioEnv
 from scripts.run_g25o_compare import generate_sources
 
@@ -35,6 +38,9 @@ MECHANISM_FIELDS = [
     "segment_interruptions",
     "certificate_wall_s",
     "fallback_reason",
+    "fixed_obligations_completed", "variable_obligations_completed",
+    "fixed_stations_visited", "variable_points_visited", "repeat_station_visits",
+    "declared_exits_visited", "mean_planned_depth", "locator_action_events",
 ]
 
 FIELDS = [
@@ -54,8 +60,31 @@ def _stable_hash(value) -> str:
 
 
 def code_hash() -> str:
-    files = sorted((ROOT / "brl" / "cvr").glob("*.py")) + [Path(__file__).resolve()]
+    files = sorted((ROOT / "brl" / "cvr").glob("*.py")) + [
+        ROOT / "brl" / "bilateral.py", ROOT / "brl" / "bilateral_state.py",
+        ROOT / "brl" / "coverage.py", ROOT / "brl" / "geometry.py",
+        ROOT / "brl" / "independent_candidate.py", ROOT / "brl" / "jsp" / "policy.py",
+        ROOT / "brl" / "local_env.py", ROOT / "brl" / "protocol.py",
+        ROOT / "scripts" / "run_g25o_compare.py", Path(__file__).resolve(),
+    ]
     return _stable_hash({str(path.relative_to(ROOT)): _sha256(path) for path in files})
+
+
+def arm_config(mode: int, arm: str) -> dict:
+    if arm == "ISR":
+        return {"candidate": "IndependentCandidate", "probe": True}
+    if arm == "COMPAT":
+        return asdict(CVRConfig(planner_enabled=False))
+    if arm == "SEGFIXED":
+        return asdict(CVRConfig(variable_waypoints=False))
+    if arm == "CVR":
+        return asdict(CVRConfig())
+    raise ValueError(arm)
+
+
+def config_hash(mode: int, arm: str) -> str:
+    return _stable_hash({"mode": mode, "arm": arm, "bearing_decimals": 2,
+                         "config": arm_config(mode, arm)})
 
 
 class EndpointErrorField:
@@ -89,6 +118,8 @@ def jobs(stage: str, modes: list[int], arms: list[str]):
 def make_candidate(mode: int, arm: str):
     if arm == "ISR":
         return IndependentCandidate(mode)
+    if arm == "COMPAT":
+        return CVRCandidate(mode, CVRConfig(planner_enabled=False))
     if arm == "SEGFIXED":
         return CVRCandidate(mode, CVRConfig(variable_waypoints=False))
     if arm == "CVR":
@@ -96,7 +127,54 @@ def make_candidate(mode: int, arm: str):
     raise ValueError(arm)
 
 
-def run_one(mode: int, seed: int, kind: str, error_mode: str, arm: str) -> tuple[dict, list[dict]]:
+def _initial_event(mode: int) -> dict:
+    points = s3_points() if mode == 3 else s25_points()
+    return {
+        "event": "plan_initial", "mode": mode, "plan_version": 1,
+        "nodes": [{"node_id": f"fixed-{index}", "position": list(map(float, point)),
+                   "channels": list(range(1, 21)), "legacy_station": index}
+                  for index, point in enumerate(points)],
+    }
+
+
+def _mechanism_from_events(events: list[dict]) -> dict:
+    measurements = [row for row in events
+                    if row.get("event") == "action_confirmed"
+                    and row.get("action_kind") == "measure"]
+    fixed = [row for row in measurements if row.get("coverage_idx") is not None]
+    variable = [row for row in measurements
+                if row.get("coverage_idx") is None and not row.get("is_refine")]
+    fixed_sequence = [int(row["coverage_idx"]) for row in fixed]
+    station_arrivals = [value for index, value in enumerate(fixed_sequence)
+                        if index == 0 or fixed_sequence[index - 1] != value]
+    repeat_visits = len(station_arrivals) - len(set(station_arrivals))
+    variable_points = {(round(float(row["position"][0]), 8),
+                        round(float(row["position"][1]), 8)) for row in variable}
+    segments = [row for row in events if row.get("event") == "segment"]
+    actions = [row for row in events if row.get("event") == "action_confirmed"]
+    exits_visited = 0
+    for index, segment in enumerate(segments):
+        start_seq = int(segment.get("sequence", 0))
+        end_seq = int(segments[index + 1].get("sequence", 10**18)) if index + 1 < len(segments) else 10**18
+        exit_point = np.asarray(segment.get("declared_exit_position", [np.inf, np.inf]), dtype=float)
+        if any(start_seq < int(action.get("sequence", 0)) < end_seq
+               and np.linalg.norm(np.asarray(action.get("position"), dtype=float) - exit_point) <= 1e-8
+               for action in actions):
+            exits_visited += 1
+    return {
+        "fixed_obligations_completed": len(fixed),
+        "variable_obligations_completed": len(variable),
+        "fixed_stations_visited": len(set(fixed_sequence)),
+        "variable_points_visited": len(variable_points),
+        "repeat_station_visits": repeat_visits,
+        "declared_exits_visited": exits_visited,
+        "mean_planned_depth": float(np.mean([row.get("planned_depth", 0) for row in segments])) if segments else 0.0,
+        "locator_action_events": sum(row.get("event") == "locator_action" for row in events),
+    }
+
+
+def run_one(mode: int, seed: int, kind: str, error_mode: str, arm: str,
+            journal_path: Path | None = None) -> tuple[dict, list[dict]]:
     sources = generate_sources(seed, mode, kind)
     env = RadioEnv(
         mode=mode,
@@ -114,7 +192,23 @@ def run_one(mode: int, seed: int, kind: str, error_mode: str, arm: str) -> tuple
         raise ValueError(error_mode)
 
     started = time.perf_counter()
-    result = make_candidate(mode, arm).run(env)
+    if arm == "ISR":
+        journal = EventJournal(journal_path)
+        journal.emit(_initial_event(mode))
+        wrapped = JournaledActionView(CheckedView(env), journal)
+        result = make_candidate(mode, arm).run(wrapped)
+        success = bool(result["success"] and env.completion_certificate())
+        journal.emit({
+            "event": "terminal", "status": "complete" if success else "incomplete",
+            "success": success, "completion_certificate": success,
+            "cleared": env.cleared_count(), "virtual_time_s": env.virtual_time,
+            "distance_m": env.move_distance, "measure_calls": env.n_measure,
+            "switches": env.n_switch, "clear_calls": env.n_clear,
+            "failed_clear": env.n_clear_fail, "plan_version": 1,
+        })
+        result["decision_log"] = list(journal.events)
+    else:
+        result = make_candidate(mode, arm).run(env, journal_path=journal_path)
     wall_s = time.perf_counter() - started
     source_count = len(sources)
     reconstructed = (
@@ -125,7 +219,8 @@ def run_one(mode: int, seed: int, kind: str, error_mode: str, arm: str) -> tuple
         + 5.0 * env.cleared_count()
     )
     revision = code_hash()
-    config = _stable_hash({"mode": mode, "arm": arm, "bearing_decimals": 2})
+    config = config_hash(mode, arm)
+    mechanism = _mechanism_from_events(result.get("decision_log", []))
     row = {
         "mode": mode,
         "seed": seed,
@@ -155,6 +250,7 @@ def run_one(mode: int, seed: int, kind: str, error_mode: str, arm: str) -> tuple
         "segment_interruptions": result.get("segment_interruptions", 0),
         "certificate_wall_s": result.get("planning_wall_s", 0.0),
         "fallback_reason": result.get("fallback_reason", ""),
+        **mechanism,
         "code_hash": revision,
         "config_hash": config,
         "status": "complete",
@@ -247,6 +343,8 @@ def summarize(rows: list[dict], stage: str) -> dict:
                     "mean_distance_delta_m": distance_delta,
                     "mean_measure_delta": float(np.mean([float(candidate[s]["measure_calls"]) - float(baseline[s]["measure_calls"]) for s in seeds])),
                     "mean_switch_delta": float(np.mean([float(candidate[s]["switches"]) - float(baseline[s]["switches"]) for s in seeds])),
+                    "mean_clear_delta": float(np.mean([float(candidate[s]["clear_calls"]) - float(baseline[s]["clear_calls"]) for s in seeds])),
+                    "mean_failed_clear_delta": float(np.mean([float(candidate[s]["failed_clear"]) - float(baseline[s]["failed_clear"]) for s in seeds])),
                     "mechanism": mechanism,
                     "fallback_counts": {
                         reason: sum(1 for seed in seeds if str(candidate[seed].get("fallback_reason", "")) == reason)
@@ -326,6 +424,8 @@ def freeze_manifest(out: Path, stage: str, modes: list[int], arms: list[str]) ->
         "scipy": scipy.__version__,
         "git_head_at_freeze": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
         "code_hash": code_hash(),
+        "configurations": {f"q{mode}-{arm}": arm_config(mode, arm)
+                           for mode in modes for arm in arms},
         "bootstrap_seed": 20260912,
         "seed_ranges": "160000-160049" if stage == "dev" else "280000-280199,281000-281029,281100-281129",
     }
@@ -359,7 +459,7 @@ def validate_acceptance_request(summary_path: Path, modes: list[int], arms: list
 
 def _blank_row(mode, seed, kind, error_mode, arm, status) -> dict:
     row = {field: "" for field in FIELDS}
-    row.update({"mode": mode, "seed": seed, "kind": kind, "error_mode": error_mode, "arm": arm, "status": status, "code_hash": code_hash(), "config_hash": _stable_hash({"mode": mode, "arm": arm, "bearing_decimals": 2})})
+    row.update({"mode": mode, "seed": seed, "kind": kind, "error_mode": error_mode, "arm": arm, "status": status, "code_hash": code_hash(), "config_hash": config_hash(mode, arm)})
     return row
 
 
@@ -367,14 +467,14 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--stage", choices=["dev", "acceptance"], required=True)
     parser.add_argument("--modes", default="3,4")
-    parser.add_argument("--arms", default="ISR,SEGFIXED,CVR")
+    parser.add_argument("--arms", default="ISR,COMPAT,CVR")
     parser.add_argument("--out-dir", required=True)
     parser.add_argument("--development-summary", type=Path)
     args = parser.parse_args()
     modes = [int(value) for value in args.modes.split(",")]
     arms = [value.strip().upper() for value in args.arms.split(",")]
-    if not set(arms).issubset({"ISR", "SEGFIXED", "CVR"}) or "ISR" not in arms:
-        raise SystemExit("arms must contain ISR and only ISR,SEGFIXED,CVR")
+    if not set(arms).issubset({"ISR", "COMPAT", "SEGFIXED", "CVR"}) or "ISR" not in arms:
+        raise SystemExit("arms must contain ISR and only ISR,COMPAT,SEGFIXED,CVR")
     out = Path(args.out_dir)
     if args.stage == "acceptance":
         if args.development_summary is None:
@@ -392,6 +492,8 @@ def main() -> None:
         (int(row["mode"]), int(row["seed"]), row["error_mode"], row["arm"])
         for row in existing
         if row.get("status") == "complete"
+        and row.get("code_hash") == code_hash()
+        and row.get("config_hash") == config_hash(int(row["mode"]), row["arm"])
     }
     decisions_dir = out / "decisions"
     decisions_dir.mkdir(exist_ok=True)
@@ -407,8 +509,15 @@ def main() -> None:
                 continue
             writer.writerow(_blank_row(mode, seed, kind, error_mode, arm, "started"))
             handle.flush()
+            decision_path = decisions_dir / f"q{mode}_{seed}_{error_mode}_{arm}.jsonl"
+            if decision_path.exists():
+                attempt = 2
+                while decision_path.with_name(decision_path.stem + f".attempt-{attempt}.jsonl").exists():
+                    attempt += 1
+                decision_path = decision_path.with_name(decision_path.stem + f".attempt-{attempt}.jsonl")
             try:
-                row, decisions = run_one(mode, seed, kind, error_mode, arm)
+                row, decisions = run_one(mode, seed, kind, error_mode, arm,
+                                         journal_path=decision_path)
             except Exception as exc:
                 failure = _blank_row(mode, seed, kind, error_mode, arm, "failed")
                 failure.update({"success": False, "error_type": type(exc).__name__, "error": str(exc)})
@@ -417,8 +526,6 @@ def main() -> None:
                 with (out / "failures.jsonl").open("a", encoding="utf-8") as failures:
                     failures.write(json.dumps(failure, ensure_ascii=False) + "\n")
                 raise
-            decision_path = decisions_dir / f"q{mode}_{seed}_{error_mode}_{arm}.jsonl"
-            decision_path.write_text("".join(json.dumps(event, ensure_ascii=False) + "\n" for event in decisions), encoding="utf-8")
             writer.writerow(row)
             handle.flush()
             if not row["success"] or row["sources"] != row["cleared"] or abs(row["cost_identity_error_s"]) > 1e-6:

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "scenes": 20,
+  "suffix_branches": 160,
+  "snapshots": 80,
+  "all_complete": true,
+  "mean_actual_delta_s": 6.518728937255173,
+  "median_actual_delta_s": 0.0,
+  "predicted_actual_correlation": -0.07692832787907174,
+  "certified_replacement_snapshots": 38,
+  "replacement_actual_win_rate": 0.7105263157894737,
+  "replacement_mean_actual_delta_s": 13.723639867905627
+}

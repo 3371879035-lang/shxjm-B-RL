@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "stage": "dev",
+  "modes": [
+    3,
+    4
+  ],
+  "arms": [
+    "ISR",
+    "COMPAT",
+    "CVR"
+  ],
+  "python": "3.14.3",
+  "numpy": "2.4.2",
+  "scipy": "1.17.1",
+  "git_head_at_freeze": "15092513e2843c3ff8243147199609e651f3753d",
+  "code_hash": "865253bfb4da606fb81de9fba3ee0337a4edbca08785e4cd7d8dce066bca4fff",
+  "configurations": {
+    "q3-ISR": {
+      "candidate": "IndependentCandidate",
+      "probe": true
+    },
+    "q3-COMPAT": {
+      "planner_enabled": false,
+      "variable_waypoints": true,
+      "max_plan_call_s": 0.5,
+      "max_plan_total_s": 12.0,
+      "max_segments": 100,
+      "max_segment_depth": 1
+    },
+    "q3-CVR": {
+      "planner_enabled": true,
+      "variable_waypoints": true,
+      "max_plan_call_s": 0.5,
+      "max_plan_total_s": 12.0,
+      "max_segments": 100,
+      "max_segment_depth": 1
+    },
+    "q4-ISR": {
+      "candidate": "IndependentCandidate",
+      "probe": true
+    },
+    "q4-COMPAT": {
+      "planner_enabled": false,
+      "variable_waypoints": true,
+      "max_plan_call_s": 0.5,
+      "max_plan_total_s": 12.0,
+      "max_segments": 100,
+      "max_segment_depth": 1
+    },
+    "q4-CVR": {
+      "planner_enabled": true,
+      "variable_waypoints": true,
+      "max_plan_call_s": 0.5,
+      "max_plan_total_s": 12.0,
+      "max_segments": 100,
+      "max_segment_depth": 1
+    }
+  },
+  "bootstrap_seed": 20260912,
+  "seed_ranges": "160000-160049"
+}

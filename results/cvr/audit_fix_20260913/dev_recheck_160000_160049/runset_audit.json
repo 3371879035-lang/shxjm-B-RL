@@ -1,0 +1,2111 @@
+{
+  "schema_version": 1,
+  "csv_rows": 419,
+  "started_rows": 210,
+  "complete_rows": 209,
+  "failed_rows": 0,
+  "completed_journals_valid": 209,
+  "completed_truth_and_cost_valid": 209,
+  "all_completed_valid": true,
+  "unlinked_or_incomplete_journals": [
+    {
+      "journal": "decisions\\q4_160019_spatial_CVR.jsonl",
+      "valid": false,
+      "errors": [
+        "journal must contain exactly one terminal record"
+      ]
+    }
+  ],
+  "completed": [
+    {
+      "mode": 3,
+      "seed": 160000,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160000_spatial_ISR.jsonl",
+      "journal_sha256": "1827c6fc773ac27b61c2d78b1025eba6937913206ef8d2bbe7fd4b64791822c9",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160000,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160000_spatial_COMPAT.jsonl",
+      "journal_sha256": "f9a44197dbb900c7b781d612bb635ec5fea690a1c957988d4da05799f650b3d9",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160000,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160000_spatial_CVR.jsonl",
+      "journal_sha256": "2a8f51ef6624112acb2952be9f18fbbc80798908b833e5aa3bb0862847d06b03",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160001,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160001_spatial_ISR.jsonl",
+      "journal_sha256": "c40c4358ae566fe0e6a284c1a0ef70c61e5b64a14de920c306f4e359aff1503d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160001,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160001_spatial_COMPAT.jsonl",
+      "journal_sha256": "5fd392a3d6989997c49ecee0f2bd6c0ec9712bdda32dab3cd647505fa4c12a1d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160001,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160001_spatial_CVR.jsonl",
+      "journal_sha256": "e1e666c20d1039bda46d21217458fee03dc1388fff4fd7cec670424b60b85e9c",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160002,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160002_spatial_ISR.jsonl",
+      "journal_sha256": "5ff7f7330c45dc3a9c49fe49dee5a2c2811f1311c8b0ebcc8b11bb55c34fee53",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160002,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160002_spatial_COMPAT.jsonl",
+      "journal_sha256": "84f6763c487f1e1e5d5bea2accdc1fb1ce6b96bc1047c35312d0eca6fd23f410",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160002,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160002_spatial_CVR.jsonl",
+      "journal_sha256": "f32b5ee9c24d5dfdb6b9cfdf5e14b502645701e0f9cb18039e3e7ff6f8b30995",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160003,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160003_spatial_ISR.jsonl",
+      "journal_sha256": "4977d99dd0134ff4dd027345a15770c1011121c2cd6a4c876b07b7178fea22d3",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160003,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160003_spatial_COMPAT.jsonl",
+      "journal_sha256": "80bffba407835add829fb7eecd2b026503d86617b9482ccb6f6e5f8bd587a0e3",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160003,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160003_spatial_CVR.jsonl",
+      "journal_sha256": "41a1e7d81b9b3a67d46de01270d66a83947857bc6570c4f30ac107b8ad5df53a",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160004,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160004_spatial_ISR.jsonl",
+      "journal_sha256": "c0a9ade1db79048eae91e57aa031c56db700411d2273710027fa9f1e43b6305b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160004,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160004_spatial_COMPAT.jsonl",
+      "journal_sha256": "ff92706ed0c389eaa723e8339e41ee9ee94c4ce66a4f8e943b0eacfd869f0957",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160004,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160004_spatial_CVR.jsonl",
+      "journal_sha256": "f03a22aa647019dd0279504aa173a949dc4ed5ede43b19cc332e11b33c7270bb",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160005,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160005_spatial_ISR.jsonl",
+      "journal_sha256": "a384bc5af2f90b4e91fe879cc5f2ea05e292306b9e3a9945fe74557e8395beff",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160005,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160005_spatial_COMPAT.jsonl",
+      "journal_sha256": "5e130f47581ef768319d8afe0ae8ab38424466a58b6999aae4fecc454a2623c7",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160005,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160005_spatial_CVR.jsonl",
+      "journal_sha256": "f1f0f45b4d9463519d97502d89c755f64963a2c06052948fc527e98dd9764e86",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160006,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160006_spatial_ISR.jsonl",
+      "journal_sha256": "51c01445a0ee634f87cf13a15d0984952ce7bf8e6b0d5def644e110db03ac6a0",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160006,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160006_spatial_COMPAT.jsonl",
+      "journal_sha256": "7bbe5bfe37ad81a765b9cd79776d7d60b71ce33d6aec28b67588dfbe29333d98",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160006,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160006_spatial_CVR.jsonl",
+      "journal_sha256": "e0cdb66fdf4b846e0a9708012bcb558697330beaaa61014dab23750be1623ceb",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160007,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160007_spatial_ISR.jsonl",
+      "journal_sha256": "5f3d1c76c73c3be726d6ce3ed17a2a79c4ff8a75eef7a30ca1ca38c974580a30",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160007,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160007_spatial_COMPAT.jsonl",
+      "journal_sha256": "af6283c4a554691e185f9b159fe841e45c4ed3ac7da428b126238b5c8f7c02b5",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160007,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160007_spatial_CVR.jsonl",
+      "journal_sha256": "99876e7d4643042ddd248a1c0e69be279cd2b8db2c8af2f4871abe463363d165",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160008,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160008_spatial_ISR.jsonl",
+      "journal_sha256": "52999b8d2d6cc094219d21b56a09d21c85b452b02d9562e83d744014b7862be5",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160008,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160008_spatial_COMPAT.jsonl",
+      "journal_sha256": "e616f04b354f391ebc47840bf1f1d3021c02d72b136e2f01e0d21958baf79908",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160008,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160008_spatial_CVR.jsonl",
+      "journal_sha256": "01646e37f2cee4ac5c52eb62f5c81eaf717a7baa6b1f8636080718c2f430eda1",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160009,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160009_spatial_ISR.jsonl",
+      "journal_sha256": "efccba74a2dc6f627313711b81012cdd234c110d97bf86936f16c06f229ea6c7",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160009,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160009_spatial_COMPAT.jsonl",
+      "journal_sha256": "f5b2c36e85a74aea0d23e1b1f01e46932bc1db7bd46c248f4ff255463f1e816a",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160009,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160009_spatial_CVR.jsonl",
+      "journal_sha256": "70ba7620717697bd090738a6bcbda0f8c3049d7f74b69bdcb9dc8d1150d00fea",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160010,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160010_spatial_ISR.jsonl",
+      "journal_sha256": "b529e70d92b1a4e08dfa5f132d2c48d7fbe2f8d720d1754ce0a7c1ea95ebdd0c",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160010,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160010_spatial_COMPAT.jsonl",
+      "journal_sha256": "b069641dd1b621647d7dacbae535b453f496aa67d5077159770b982f73a765dd",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160010,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160010_spatial_CVR.jsonl",
+      "journal_sha256": "95f59352427022ea51b28512ef6362a58a67198ce1eb4bb7eebd757cafba90d7",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160011,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160011_spatial_ISR.jsonl",
+      "journal_sha256": "82f5adc066ff3e4701c58dd8242a0105dc9e4672bb254c95673cb7428e9321d0",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160011,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160011_spatial_COMPAT.jsonl",
+      "journal_sha256": "503fbb2b2a4b8770bf2116c34d360b23f0bae5cf897672531102c8d8cc8aa097",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160011,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160011_spatial_CVR.jsonl",
+      "journal_sha256": "bc6d43df1e4dabe56c75e7aa77547c68f417e6d3b11d161dc31f201f67ee5f84",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160012,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160012_spatial_ISR.jsonl",
+      "journal_sha256": "0e4493ac3fe451a60bd1f5d3b4a618ecaaad42c97f9c1112c167eb46a34fd539",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160012,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160012_spatial_COMPAT.jsonl",
+      "journal_sha256": "e77abbb4ea939b65e832ce8e32b7b29aa10c1a51ab393d61bd03cb9d86b48b1c",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160012,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160012_spatial_CVR.jsonl",
+      "journal_sha256": "a90477de725ffa81a1526afbfc6ace5371b485991d6da93fdf0884bf4c262410",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160013,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160013_spatial_ISR.jsonl",
+      "journal_sha256": "a727ae461b5003befb6fd2f9534bfc3b33848a3f968045ea1e4d3397fe61f89d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160013,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160013_spatial_COMPAT.jsonl",
+      "journal_sha256": "b0f34fc265bc3de73a7a430ad5496d5cc0ff7b3922e3e25e640b87551c9314e8",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160013,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160013_spatial_CVR.jsonl",
+      "journal_sha256": "62f3d19ec70dd2d19456110188fb80dce1eed2be1dab8bb8bc8032be38f25f7e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160014,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160014_spatial_ISR.jsonl",
+      "journal_sha256": "5867d20edb1a5c03ebe9cbfef499ad8e5edb7913181089cec17bf9e77c555284",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160014,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160014_spatial_COMPAT.jsonl",
+      "journal_sha256": "53c9947c5bb30596f1639ba55816287dbf05b21fc7646f2e10480977db123a50",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160014,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160014_spatial_CVR.jsonl",
+      "journal_sha256": "7113bd64e333f5e2eaeb4c6dab7d7ac595cc06a1cecf918df952e54a9dcb526e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160015,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160015_spatial_ISR.jsonl",
+      "journal_sha256": "e4b9b6f3d16bc25e38b1118b047bd0cd6e7853a0682f2702eee2781a4b02fa61",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160015,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160015_spatial_COMPAT.jsonl",
+      "journal_sha256": "a38a52beb828fac2d10f8cdca32bb673d0d552cf05d6d9aa1e8ea82a5bc01ef4",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160015,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160015_spatial_CVR.jsonl",
+      "journal_sha256": "ed608be1f798aec663807bcd80539be416c8a42926bafe3d7c2f30af12c19a9b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160016,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160016_spatial_ISR.jsonl",
+      "journal_sha256": "49526ffba09c13e820253098b6590d254d8b6f31905d1683e110fd4114245663",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160016,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160016_spatial_COMPAT.jsonl",
+      "journal_sha256": "f3be85a5ca22746abe10304de287925f64c4580393910243d3b8fff87f3c1954",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160016,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160016_spatial_CVR.jsonl",
+      "journal_sha256": "aabca71ccfe58290cb8add30f7a064e246ab0460ad9ab78c00120ace1eb319b7",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160017,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160017_spatial_ISR.jsonl",
+      "journal_sha256": "70ba0a9690304c70daeb3872fd340af49c98f92a1a40dde50af67437e6ab7984",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160017,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160017_spatial_COMPAT.jsonl",
+      "journal_sha256": "7193a076779693fe02b2c06ed0828589c078b5ccc6824db440b5b3e52738be22",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160017,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160017_spatial_CVR.jsonl",
+      "journal_sha256": "44b5ed8c80d91248e68680dfbf300ec64aba8810b010be1884256110ca98fd9a",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160018,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160018_spatial_ISR.jsonl",
+      "journal_sha256": "859c342aefaa539468b8e3428e10195c5ddf44ca7f9d89c838aaf850a0a90332",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160018,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160018_spatial_COMPAT.jsonl",
+      "journal_sha256": "b15fd2ea2c59364227e0f11e2ffc3ff58c423324d33ae0a8fdda4ddf87309db1",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160018,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160018_spatial_CVR.jsonl",
+      "journal_sha256": "61b638a23c9f37d80135774dfb9b56f24f7bd2b1e66d7399aefedaf4c6838401",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160019,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160019_spatial_ISR.jsonl",
+      "journal_sha256": "f2bb814c10e00c9348347aeae9a6895658067931519ee63fd6619cf956684d06",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160019,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160019_spatial_COMPAT.jsonl",
+      "journal_sha256": "ea591c4b2537243b7408833af269548901035f83d5c81b69d3685b368a57d46b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160019,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160019_spatial_CVR.jsonl",
+      "journal_sha256": "51cd7824c01c7569e897a976d4a4cf9a022680131d7b3bbb351bf7e223460107",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160020,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160020_spatial_ISR.jsonl",
+      "journal_sha256": "71030b2855eabbfc93cfe8c723e20bef133a7dcb5297799b61608f005a64077e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160020,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160020_spatial_COMPAT.jsonl",
+      "journal_sha256": "4008d4ee7238fe32e4c730929bff1db8c1a605f3825e0280dde379b17e7f8c05",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160020,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160020_spatial_CVR.jsonl",
+      "journal_sha256": "5a6b57932840d4368e1ed2263a02e50004ff65a8e4619ea23d2cc5a8e9ba25d5",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160021,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160021_spatial_ISR.jsonl",
+      "journal_sha256": "89c08f11c8b818b7a9c6563c81de35bf8c28afe8330d41e67a3ded71817ad465",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160021,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160021_spatial_COMPAT.jsonl",
+      "journal_sha256": "2891391d64fc4525cc210487e4c79bc0154124541b98afcaf3897204c92589bf",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160021,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160021_spatial_CVR.jsonl",
+      "journal_sha256": "a88aae90163754c0d918df4f95cb26789cd3706661a0eccbf7b158b9cc1b9db8",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160022,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160022_spatial_ISR.jsonl",
+      "journal_sha256": "4b89523b1c0c5591045e8151466b8b7daf8f05178eb37adf9afb92b4fffcbf1b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160022,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160022_spatial_COMPAT.jsonl",
+      "journal_sha256": "d827d670552a8d2723e7fce57911958c0c9b19036b2a0f94c71ec2c3b7a932a5",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160022,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160022_spatial_CVR.jsonl",
+      "journal_sha256": "c42782edd6729e847593481153f2e8966bf3a362d06da140cd14a1436e4ab932",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160023,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160023_spatial_ISR.jsonl",
+      "journal_sha256": "987f4d4df3af06d471568905f0718fc6c8aa4c6888f9fafdd8b3b12b6d66f370",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160023,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160023_spatial_COMPAT.jsonl",
+      "journal_sha256": "7df3829c2b6dc81ecf91b3944f0590c7e754f2eabf4b631a2b45ef80345acf73",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160023,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160023_spatial_CVR.jsonl",
+      "journal_sha256": "1a7366b6d37ab652d7aad5f8b0aef8d8a1a7671973d7213029cee34ab9202f2f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160024,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160024_spatial_ISR.jsonl",
+      "journal_sha256": "42657bdf779f32f17f169b1b7af76b52ace1c3b5b3843501a1f6223ca1086c62",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160024,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160024_spatial_COMPAT.jsonl",
+      "journal_sha256": "06660a5e3ef177fcdc6d8a2348677fada14f6a8a4dae9e928c56d73d80d09c7e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160024,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160024_spatial_CVR.jsonl",
+      "journal_sha256": "4b1607d544213d81a0b9adba5b4729a4f8907829118f80bdc54fe905d0c9c295",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160025,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160025_spatial_ISR.jsonl",
+      "journal_sha256": "0e742e988a3b3bb57d5970a13137f7c4ca06a16dcca68431edf1091ffac3d06d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160025,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160025_spatial_COMPAT.jsonl",
+      "journal_sha256": "ce9e332c378e6c8ea607ec9adc6ec7564102dd7323443b94a2d3b4bfcf8ca141",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160025,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160025_spatial_CVR.jsonl",
+      "journal_sha256": "738c09c3727f6cf4e7c3476909cf6e98f085e6eadce8e020e7a10006c510925d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160026,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160026_spatial_ISR.jsonl",
+      "journal_sha256": "653eb0c7298886460f75e3b74f2b024fe8144a008a5df491e021aeb364bd004d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160026,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160026_spatial_COMPAT.jsonl",
+      "journal_sha256": "d549696042a1b64ad5d9db73d10c91d14b1d7428bdbc8be0ce611fa4e68fbfd5",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160026,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160026_spatial_CVR.jsonl",
+      "journal_sha256": "fac6d2dfe1a0a426cac79db90a46f856d04632b5d2848ec433cbbc6935bbf164",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160027,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160027_spatial_ISR.jsonl",
+      "journal_sha256": "a36c539cb7bc898642ff6fc0cca547f89c9d3b955a995ce4b6678a1b6b8960fc",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160027,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160027_spatial_COMPAT.jsonl",
+      "journal_sha256": "264a547a2a9a2f0f6d162a9469432ffe2f29082417539266467f8315bf4270dd",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160027,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160027_spatial_CVR.jsonl",
+      "journal_sha256": "45557c353f50158858012a38628164c3ed076bd20526f15985b9262d6e01ea52",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160028,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160028_spatial_ISR.jsonl",
+      "journal_sha256": "23c5990d56f152f2cefa2de60330faee9ca61a23234f8312772e9c603c92202f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160028,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160028_spatial_COMPAT.jsonl",
+      "journal_sha256": "0dc4ab8e029e45badcb9c53ca25c7792a3e00d66759c4359dbac8bbb16004cca",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160028,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160028_spatial_CVR.jsonl",
+      "journal_sha256": "9863963da925764a638d7a229773e955e0a4b4f8e508b81419054a7d0c0dcd71",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160029,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160029_spatial_ISR.jsonl",
+      "journal_sha256": "4e103911fd3ce7b490e733ee8365163aaf94fa070eb919f390d1b108c82cf742",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160029,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160029_spatial_COMPAT.jsonl",
+      "journal_sha256": "a73514194e3e1df7780ee83fed8236071742fbead3c76ab4cab4bf0a38fc2516",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160029,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160029_spatial_CVR.jsonl",
+      "journal_sha256": "0bd211cf490f3550f6e5f876a0ea651b7a19e9455068ccc1be3ddc56bc405467",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160030,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160030_spatial_ISR.jsonl",
+      "journal_sha256": "8639abb8fc9b9cfeea5a11aa2c2948f3709795e1e92351114c84751311f68b4d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160030,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160030_spatial_COMPAT.jsonl",
+      "journal_sha256": "8d9cd560e7fe423d5e30f1df8242212ac278269d9366501f44cc562d8dce2486",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160030,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160030_spatial_CVR.jsonl",
+      "journal_sha256": "60ac0fe1464f4f0a6fe50ac4dca4df5b896cce08028b96466d69eec2297aeb34",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160031,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160031_spatial_ISR.jsonl",
+      "journal_sha256": "db94c0ce84b1de2436f36de6c67411571a7b4c28debaa105559de19e01e57edd",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160031,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160031_spatial_COMPAT.jsonl",
+      "journal_sha256": "282c729bcbd99a0a38764022c6c82ece63b7a043595cd2406d76ec584fec38a6",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160031,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160031_spatial_CVR.jsonl",
+      "journal_sha256": "e0a71e39c607c76635d9e34d664e0037e6a1f1496d288bf44c7766ebd1311f9e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160032,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160032_spatial_ISR.jsonl",
+      "journal_sha256": "db4f6b7c746e40d68d791143a1db6a0c4c23ee47e5c79175a46d362167e43c7e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160032,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160032_spatial_COMPAT.jsonl",
+      "journal_sha256": "01dfda87473e147f3a9cfeac832a601dcf5d21b40cc2ea93e3f2e08339aac154",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160032,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160032_spatial_CVR.jsonl",
+      "journal_sha256": "b67a318d431cdbee3cac4608067d189c3740db6ac1bc4b3fc7716f76261989cc",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160033,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160033_spatial_ISR.jsonl",
+      "journal_sha256": "c5d5560f82c2bf0b69e8539bb7552f98ef4f41c55988a5c99f93fc146d0259fc",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160033,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160033_spatial_COMPAT.jsonl",
+      "journal_sha256": "1164d6f249d280b34e47e6f41b1a9998633c0d5e733730e996ed4088aa241370",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160033,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160033_spatial_CVR.jsonl",
+      "journal_sha256": "571b80121572d75d141a0d3ed41ec276e14ebe972c69e87eb6d697335450274c",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160034,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160034_spatial_ISR.jsonl",
+      "journal_sha256": "c3569dd750ad6ce5c396c5199e5ddaf3ec4f8cb1acebe36d1b0edc0564bedbba",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160034,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160034_spatial_COMPAT.jsonl",
+      "journal_sha256": "d18b61afe888590a7b5f201d8cf1a48ba80ba5706b549737cea4bd6e61730477",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160034,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160034_spatial_CVR.jsonl",
+      "journal_sha256": "7b9ad7a8a72206d0accb1d3c9a5e6b43ba54426da28db8e913625cb439b7a63a",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160035,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160035_spatial_ISR.jsonl",
+      "journal_sha256": "972dc8bc5290ad6cb21562cb072e9d126f7b2f2d8b957f529668ced20ab4a66b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160035,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160035_spatial_COMPAT.jsonl",
+      "journal_sha256": "261f29692cbb15885714a0e294d56c645c8fa6b5286676e7b4da51395e6d0f9d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160035,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160035_spatial_CVR.jsonl",
+      "journal_sha256": "61a9b1d3bd9145240b3a8d6cd8acfec0f3edc152db7aaa6e6b3a8c18adb81cde",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160036,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160036_spatial_ISR.jsonl",
+      "journal_sha256": "25bf78a3178ad1afd3d0cbe1fc17e5fab618a73f3d03e612e40c61cfd62a7266",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160036,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160036_spatial_COMPAT.jsonl",
+      "journal_sha256": "f6c7b8120706c758e6ed2f40816234094839ec144c47b4d8921c23a035ef8a7b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160036,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160036_spatial_CVR.jsonl",
+      "journal_sha256": "1a65035ad81766cbe2e35d42e43d3c54841ceb41c112f93506bf30653505b234",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160037,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160037_spatial_ISR.jsonl",
+      "journal_sha256": "a31168e5e3fa7f596e3a3f3e3ba379a2c5df4c467a95e7efee8b502a9ace0ca3",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160037,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160037_spatial_COMPAT.jsonl",
+      "journal_sha256": "7342b714c29ea3891b748a905f02e74348ea8f45bc09584d2f915dafc9d01f5e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160037,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160037_spatial_CVR.jsonl",
+      "journal_sha256": "3b4ca9a6d6f87fa6917c0d6119fe6744b4a5353a326167fa7d126d572060f70e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160038,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160038_spatial_ISR.jsonl",
+      "journal_sha256": "575cab2a34d5fa7088f361bf3cb14365ef78243b029a68ea39e7ea667d315d99",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160038,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160038_spatial_COMPAT.jsonl",
+      "journal_sha256": "58967c91d55efef4bb14d4bf475ed29c643957f1d843a91b28b9650ff9e9e304",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160038,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160038_spatial_CVR.jsonl",
+      "journal_sha256": "c0731b33af01a7c939181c8ca72057dff27762a26cb63de1472607e92df375c8",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160039,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160039_spatial_ISR.jsonl",
+      "journal_sha256": "c0cefeeedc9fd234da87223d876346bf7c1a68ece0c72bf9d2f872637c51e452",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160039,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160039_spatial_COMPAT.jsonl",
+      "journal_sha256": "560c101a20cb013e0fc73aa0df1bde5b65b6b8feea5058892cf36cec2d60497b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160039,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160039_spatial_CVR.jsonl",
+      "journal_sha256": "7c69f1b79b13e1fb19af9b55147cace0a97beb8fa73329a4200b8e58c923027b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160040,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160040_spatial_ISR.jsonl",
+      "journal_sha256": "df1b563dc497ff0cb845d8a570409b0f47e416428c2d076608d92aacbb890f17",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160040,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160040_spatial_COMPAT.jsonl",
+      "journal_sha256": "ed24e2f0ad60c92925bceeb5b0fba8da61a7fbcfa188d0ba05cfb24dde5f3cd3",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160040,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160040_spatial_CVR.jsonl",
+      "journal_sha256": "5b10d5226c4015b3e40eec82ea86701f29c0634769b7fcd28780676091f36a48",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160041,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160041_spatial_ISR.jsonl",
+      "journal_sha256": "8f607f4c253544846ed169575d5c4636f15653e9d3820284e1dde48969196ab2",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160041,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160041_spatial_COMPAT.jsonl",
+      "journal_sha256": "1b983085fd580aece3e1fd802bbc1856e4bed4cc791c66b55d68337278eae9a8",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160041,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160041_spatial_CVR.jsonl",
+      "journal_sha256": "53fd15ac40ee62c3d4a91864e0d9e58129d50d0d870045ecb4db0a960d8ee853",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160042,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160042_spatial_ISR.jsonl",
+      "journal_sha256": "c90665b4c61b239910a0bd8c7287d8c3cd11cf61d2cbb2fa498b5730ec2c3b36",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160042,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160042_spatial_COMPAT.jsonl",
+      "journal_sha256": "e27994ec08f45a01627a5672daa604859d6497cde5500c10fede785fa03b397d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160042,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160042_spatial_CVR.jsonl",
+      "journal_sha256": "10592fe4e59829b1b4f571a00dbb371b02326a0db6aa64a28b4f4a3e0f6b49af",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160043,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160043_spatial_ISR.jsonl",
+      "journal_sha256": "e4b2700b49419e602afa264edee0741cbf0fe2c00574abff1957cac221f9e37f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160043,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160043_spatial_COMPAT.jsonl",
+      "journal_sha256": "a0243351d573e02a0ffb5f469d8f1cece951fe551af57048be863d619cb57d85",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160043,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160043_spatial_CVR.jsonl",
+      "journal_sha256": "467e3d18f24f9b3772c15115961ca729cce9ba7c0ff080552d03d42d0f83f75f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160044,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160044_spatial_ISR.jsonl",
+      "journal_sha256": "c65881a968018577405ad6e71c9aba1121552edb5b0a818121eb6572353e5e03",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160044,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160044_spatial_COMPAT.jsonl",
+      "journal_sha256": "fedf7f1e2c9025ed64b0c5d528bd772c7c02d5348a6dd43809c8249c0ad87211",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160044,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160044_spatial_CVR.jsonl",
+      "journal_sha256": "30b4854946702ee4cee290d61c39f12a34f3f9d0e97550ac2b9c53e76e5b2ecf",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160045,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160045_spatial_ISR.jsonl",
+      "journal_sha256": "fa45e7969d757257734b14b8f37b884f3693c6a9758494c04ca4eb98b40fc7b5",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160045,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160045_spatial_COMPAT.jsonl",
+      "journal_sha256": "506ab51b2032832fba0582e47702c122cacae163050ee55a8c13bffefde39f8f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160045,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160045_spatial_CVR.jsonl",
+      "journal_sha256": "9a5a32f8ebbbaa5546604d297505b3688f5bfd05fe0a4c2fb43d0a97541ce40c",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160046,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160046_spatial_ISR.jsonl",
+      "journal_sha256": "f85a86e8c0f960681458047d39ad16c7699767b6e2edae1cb2248be3fb235c89",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160046,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160046_spatial_COMPAT.jsonl",
+      "journal_sha256": "c322a575f5b5b889b2cadab5237de0c4afa9df13314001f971bb36d9141c7e19",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160046,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160046_spatial_CVR.jsonl",
+      "journal_sha256": "b658bf1ac4693bc98755b7b72452ab07d8a4b0c0265dc9f130cafb70e41460cb",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160047,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160047_spatial_ISR.jsonl",
+      "journal_sha256": "fd47290711f514a4dcc8aa6860341900169b53445bd91b52c3df3c8cc87481d9",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160047,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160047_spatial_COMPAT.jsonl",
+      "journal_sha256": "3b58c28a8be41e27e8c02cebb3058f5a75d07eb2f1f33285310332d7b8dc115a",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160047,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160047_spatial_CVR.jsonl",
+      "journal_sha256": "3ae3a816048487325419b2105768bf929fdbc2073fcdba91c812d51574852775",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160048,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160048_spatial_ISR.jsonl",
+      "journal_sha256": "0c8cb0d3280d81c5869f7f148fc47d96a27ccc999d1e5dd65082039d5bd56fa4",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160048,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160048_spatial_COMPAT.jsonl",
+      "journal_sha256": "f2797d2098e1e42e085ea85ef17015c8c414e76c066863a3270a11898a16fc40",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160048,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160048_spatial_CVR.jsonl",
+      "journal_sha256": "4ad66ad3cc019ae26522b93942808414e6e3c1437b5b4a43ef5839fc8458d954",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160049,
+      "arm": "ISR",
+      "journal": "decisions\\q3_160049_spatial_ISR.jsonl",
+      "journal_sha256": "c8481e9234caa8b8d24c75defd7fc3ba8d9fc68cd5cba9508b734726044d2ab7",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160049,
+      "arm": "COMPAT",
+      "journal": "decisions\\q3_160049_spatial_COMPAT.jsonl",
+      "journal_sha256": "d903e4f81304ed471513f39ec678af9d0df938f790594a567a8aa6cee2893ea7",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 3,
+      "seed": 160049,
+      "arm": "CVR",
+      "journal": "decisions\\q3_160049_spatial_CVR.jsonl",
+      "journal_sha256": "5cf7606e90d6338a452e693273af8285781f30067383c8dce2023c2f51616ada",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160000,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160000_spatial_ISR.jsonl",
+      "journal_sha256": "fec075456f75ae519d26e7f382bf03b284f90c8fe231027bb4bc6e0ce91fb84e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160000,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160000_spatial_COMPAT.jsonl",
+      "journal_sha256": "b007c388ae53868027602e76c962e82091bda32f1f4cdf06c63164ac493ed61e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160000,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160000_spatial_CVR.jsonl",
+      "journal_sha256": "07185ee9359b7da490eb3b8394c503830a474f72119948f30ec565ff382a2b56",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160001,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160001_spatial_ISR.jsonl",
+      "journal_sha256": "2b02c024b99eb3f57bbeb023341219e37f15bec3850e3b4e35a2dce7b8f8638f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160001,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160001_spatial_COMPAT.jsonl",
+      "journal_sha256": "c2e1925106c2ae1e9b9beb9f3882d90094175b502755d7ad17dadfa6909a09f0",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160001,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160001_spatial_CVR.jsonl",
+      "journal_sha256": "8b5f417cb64ab87b660b84e4b68513a12f77879ef26a2c91d52ca6633ae5be89",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160002,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160002_spatial_ISR.jsonl",
+      "journal_sha256": "55f37cb21157ba6708712b0b4363a0fff0dca62c2a03df0071ad64e3ec83aef3",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160002,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160002_spatial_COMPAT.jsonl",
+      "journal_sha256": "84573a9694b22f3039460fc9269cf990a038951818d274bee6adc57550fc0ffb",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160002,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160002_spatial_CVR.jsonl",
+      "journal_sha256": "cfc80c0e3264c93ef45585dfb305f43fcf691e31fe39500304dcce496b99775a",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160003,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160003_spatial_ISR.jsonl",
+      "journal_sha256": "723ecf92f8d893b546d6ee26a25dd8a94450de0c8f353f5a1dce3e9d723b2027",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160003,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160003_spatial_COMPAT.jsonl",
+      "journal_sha256": "cc5a9cf84ead431003e7d34254652c988372059e623b70ae823bac5c8280ee4c",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160003,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160003_spatial_CVR.jsonl",
+      "journal_sha256": "939b513b82373f492c80ce6e5eb79555de0241bc548d9b74636e04be852a6c5e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160004,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160004_spatial_ISR.jsonl",
+      "journal_sha256": "4c91cb133839edcf0a28b270d3bcd67b35a8f5b6f2cc17ab5f5e1fc79deb4db4",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160004,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160004_spatial_COMPAT.jsonl",
+      "journal_sha256": "913167f4753c3d2c47bbcbb679aa82b39531541c94e46d72f3e8af593c17e9e5",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160004,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160004_spatial_CVR.jsonl",
+      "journal_sha256": "9870f55670cf932b169bf263d1a77d9f9b986bc70548a7b14daa8e4ef22f476e",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160005,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160005_spatial_ISR.jsonl",
+      "journal_sha256": "e8bd67aee1da4a0709420ca1157cd7adb3e2885444080191a86f58cbe1f3a581",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160005,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160005_spatial_COMPAT.jsonl",
+      "journal_sha256": "f14c6997af98df41be05c7e58296cd524f2079ef09868afaa913d0186f3bf65b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160005,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160005_spatial_CVR.jsonl",
+      "journal_sha256": "f0ac77fd8948678b6fc61bd86677e8c060863735120b82e5e547ed97e8600730",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160006,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160006_spatial_ISR.jsonl",
+      "journal_sha256": "949c4d15091e1746e876056635694acda6dbe59f933e7c30447a5137d11b4505",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160006,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160006_spatial_COMPAT.jsonl",
+      "journal_sha256": "c808d7024997cb34c21e534b9c9031464b8628b9b5aae569e1dfbf5b2db11895",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160006,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160006_spatial_CVR.jsonl",
+      "journal_sha256": "e83c42d3ca41d1d1a62767c749d7b8ca91678f444a7a3968adedd355715eb72d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160007,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160007_spatial_ISR.jsonl",
+      "journal_sha256": "fec0691c85c88016a754fa356f5e559d86f7762fc1286bb900789f61ca618df4",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160007,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160007_spatial_COMPAT.jsonl",
+      "journal_sha256": "08b0e864a61a321641a46da646ff56a1713aeea68cecb92f727808738ed9c556",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160007,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160007_spatial_CVR.jsonl",
+      "journal_sha256": "d8a2341e346107c6ccb696ab3b629149bc3961720c54c3e531fc2bbb7ae60a1d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160008,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160008_spatial_ISR.jsonl",
+      "journal_sha256": "291bdf34a9cfc6a9d8056be232e83989e06c75df5f55f14d9ed85420c6dd9ac3",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160008,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160008_spatial_COMPAT.jsonl",
+      "journal_sha256": "6d2f78a23f7575dc18ef82a2fb1b97113cbd52c9d4cff35ea36b622aaeaf9a16",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160008,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160008_spatial_CVR.jsonl",
+      "journal_sha256": "b1f9f3d30a865d27d0f4a3ccc6dd2d53459d02ca0f574c7008506e09c139ff7f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160009,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160009_spatial_ISR.jsonl",
+      "journal_sha256": "daa9167eb04435a7748f5c29f03e48618006fe19d48ac714e9166e25e5138c36",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160009,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160009_spatial_COMPAT.jsonl",
+      "journal_sha256": "5791893b7ff9ccf530c2acd4a5325078449f55da2717bb15272fc920b1a36df0",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160009,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160009_spatial_CVR.jsonl",
+      "journal_sha256": "b28616b5dd0f4319ec7f4dfc0967c3e6e6723700ef6171326f643572faffc023",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160010,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160010_spatial_ISR.jsonl",
+      "journal_sha256": "a9acbd6af7adfe6c6e2052accf01120de4da57bbb59820c5ad586aa7b4b97a51",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160010,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160010_spatial_COMPAT.jsonl",
+      "journal_sha256": "54b4d1394978f5c19bbb6c1efadca18efaa57190c5d952ab67bb4d638c766268",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160010,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160010_spatial_CVR.jsonl",
+      "journal_sha256": "1a5ca61649f67e1612654197ba00145ef561b8d904b58d892f07661d9519a456",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160011,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160011_spatial_ISR.jsonl",
+      "journal_sha256": "ebf1a92051529fe138327ec412a0c8f787928e0e0a43a37cb5ebed78bd9f26b0",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160011,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160011_spatial_COMPAT.jsonl",
+      "journal_sha256": "545dd476bf7b54493d749c5256be8b7212d067fe6c38bca673ca65c174d8e5dd",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160011,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160011_spatial_CVR.jsonl",
+      "journal_sha256": "b4cfd29151d79892df2b9ea58ca1799a1b201e6f8532bd378da57a0ad84dc242",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160012,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160012_spatial_ISR.jsonl",
+      "journal_sha256": "d945cbcaaf756f76036ed1f85577e19c116a4c42804bc45f49764c5a22fbd9b9",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160012,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160012_spatial_COMPAT.jsonl",
+      "journal_sha256": "1a1eeb7c3aabb18b398467d9a39f73b78cab718ed40e8272d288b7956c82bdc9",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160012,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160012_spatial_CVR.jsonl",
+      "journal_sha256": "962cf0dfcc089d438bf0d24978e05ae114de2878a9e0dc5c39a5a0b42de9e003",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160013,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160013_spatial_ISR.jsonl",
+      "journal_sha256": "977d5892f64fb24377667d7d15329b3f68f11706a505274c362a3532a3c200b1",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160013,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160013_spatial_COMPAT.jsonl",
+      "journal_sha256": "025bc2fc62599f507723ad68ecc25f3ab2bac7500f446f23452f99abcd1d8a46",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160013,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160013_spatial_CVR.jsonl",
+      "journal_sha256": "19053ce9d34a6ef500fa1e5748fcdb2eec28611cb1c31440612e0857c7880b4f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160014,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160014_spatial_ISR.jsonl",
+      "journal_sha256": "f92551aecada3e6782006773d936075ed574fbafd7ac3ab22646695ed2198040",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160014,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160014_spatial_COMPAT.jsonl",
+      "journal_sha256": "ef92a0d5def5257835df9143781f9ce0ceccfe5192f070d8c3b27a20fb618659",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160014,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160014_spatial_CVR.jsonl",
+      "journal_sha256": "bf815144e4ef69d6c8a5513954259b8f3904488ddb22c955e770792d547d3b81",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160015,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160015_spatial_ISR.jsonl",
+      "journal_sha256": "596e74ee9d37ff5867b2dd2585d7a13a8204a72165b858bc4bee951d7632747d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160015,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160015_spatial_COMPAT.jsonl",
+      "journal_sha256": "6f7c39538ccf183981b84ac6fa3c6702d3ce317d9f43402f30270c3b7552d1d5",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160015,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160015_spatial_CVR.jsonl",
+      "journal_sha256": "28dc3568a3d32908b2b9dc3e31aaab2329034309659a390fe665c939d4491e8f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160016,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160016_spatial_ISR.jsonl",
+      "journal_sha256": "d6b546ffc35ccf721cba384dc49f878603492a7c4b11b8608b3bcb41fe86226f",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160016,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160016_spatial_COMPAT.jsonl",
+      "journal_sha256": "2a0c1681a3a084f661b8bbafa1cad6509cfe388bf78d428a94bcacd078d13bc3",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160016,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160016_spatial_CVR.jsonl",
+      "journal_sha256": "555a05d8623384875c8b281cc936461fd4a26f4584b1c64865beb82c0d05af7b",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160017,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160017_spatial_ISR.jsonl",
+      "journal_sha256": "8b7c8e210bf5df6dab1990cffdc747e79b28107a2f9a0faa8bce88d0ab8908af",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160017,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160017_spatial_COMPAT.jsonl",
+      "journal_sha256": "9824d18d35a699a6fb5e3d4b4f561b6fcf197b2a2214fb73d76a9a7c2d3f9acc",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160017,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160017_spatial_CVR.jsonl",
+      "journal_sha256": "70516ab27ea07d17b6c6cd3a197d0d9172844cea5deb3c7e3fab87e6a5806fc6",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160018,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160018_spatial_ISR.jsonl",
+      "journal_sha256": "a9d2de7fb697969f8de0e60728321088ad73bcece3cfa8afa25dbeffe3e63a34",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160018,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160018_spatial_COMPAT.jsonl",
+      "journal_sha256": "71acd3b76e294bc7c793b77b20af28f7a3d1dd6f22bf163775cd58d7a344af8c",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160018,
+      "arm": "CVR",
+      "journal": "decisions\\q4_160018_spatial_CVR.jsonl",
+      "journal_sha256": "3c7159db16193d8118e3d4ece9c79f7284168c1bde2cf537c57c2bc516861372",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160019,
+      "arm": "ISR",
+      "journal": "decisions\\q4_160019_spatial_ISR.jsonl",
+      "journal_sha256": "611c5bbde0d925bc014e7031298c118747082218f431667c5f5250cfbd0bf3af",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    },
+    {
+      "mode": 4,
+      "seed": 160019,
+      "arm": "COMPAT",
+      "journal": "decisions\\q4_160019_spatial_COMPAT.jsonl",
+      "journal_sha256": "499b1fba58f80ae265f6fecd200a3e39faa07829d31eb163a5b031266a6d9e7d",
+      "journal_valid": true,
+      "journal_errors": [],
+      "offline_truth_and_cost_ok": true
+    }
+  ]
+}

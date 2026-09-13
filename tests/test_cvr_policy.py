@@ -4,6 +4,7 @@ import pytest
 from brl.cvr import CVRCandidate, CVRConfig
 from brl.local_env import RadioEnv, random_sources
 from brl.protocol import ActionIOError
+from brl.independent_candidate import IndependentCandidate
 
 
 @pytest.mark.parametrize("mode,count", [(3, 10), (3, 16), (4, 10), (4, 16)])
@@ -63,3 +64,40 @@ def test_zero_budget_falls_back_to_isr_and_clears():
     result = CVRCandidate(4, config).run(env)
     assert result["success"] and env.cleared_count() == 10
     assert result["fallback_reason"] in {"per_call_budget", "episode_budget"}
+
+
+@pytest.mark.parametrize("mode,seed", [(3, 160000), (3, 160001), (4, 160000), (4, 160001)])
+def test_planner_disabled_executor_matches_frozen_isr_action_by_action(mode, seed):
+    sources = random_sources(mode, 10, np.random.default_rng(seed))
+    traces = []
+    results = []
+    for candidate in (
+        IndependentCandidate(mode),
+        CVRCandidate(mode, CVRConfig(planner_enabled=False)),
+    ):
+        env = RadioEnv(mode=mode, n_sources=10, seed=seed, bearing_decimals=2)
+        env.reset(seed=seed, sources=sources)
+        trace = []
+        measure, clear = env.measure, env.clear
+        def traced_measure(position, channel, coverage_idx=None, is_refine=False):
+            response = measure(position, channel, coverage_idx=coverage_idx, is_refine=is_refine)
+            trace.append(("measure", int(channel), tuple(map(float, position)),
+                          coverage_idx, bool(is_refine), response.get("accepted"),
+                          response.get("measure_result"), response.get("svd_deg")))
+            return response
+        def traced_clear(position, channel):
+            response = clear(position, channel)
+            trace.append(("clear", int(channel), tuple(map(float, position)),
+                          None, False, response.get("accepted"),
+                          response.get("clear_result")))
+            return response
+        env.measure = traced_measure
+        env.clear = traced_clear
+        results.append(candidate.run(env))
+        traces.append(trace)
+    assert len(traces[0]) == len(traces[1])
+    for baseline, compatible in zip(*traces):
+        assert baseline[:2] == compatible[:2]
+        assert np.linalg.norm(np.asarray(baseline[2]) - np.asarray(compatible[2])) <= 1e-8
+        assert baseline[3:] == compatible[3:]
+    assert abs(results[0]["virtual_time_s"] - results[1]["virtual_time_s"]) <= 1e-6

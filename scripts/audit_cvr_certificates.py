@@ -30,6 +30,14 @@ def audit_events(path: Path) -> dict:
     request_ids: set[str] = set()
     nodes: dict[str, dict] = {}
     mode: int | None = None
+    initialized = False
+    terminal_rows: list[tuple[int, dict]] = []
+    registered: dict[str, dict] = {}
+    finished_requests: set[str] = set()
+    confirmed_measurements: list[dict] = []
+    last_time = -float("inf")
+    last_sequence = 0
+    saw_failed_action = False
 
     lines = path.read_text(encoding="utf-8").splitlines()
     for line_number, line in enumerate(lines, 1):
@@ -41,14 +49,20 @@ def audit_events(path: Path) -> dict:
             errors.append(f"line {line_number}: invalid json: {exc}")
             continue
         event = row.get("event")
+        sequence = int(row.get("sequence", 0))
+        if sequence:
+            if sequence != last_sequence + 1:
+                errors.append(f"line {line_number}: non-consecutive event sequence")
+            last_sequence = sequence
         version = int(row.get("plan_version", row.get("plan_version_before", 0)))
         if version and version < last_version:
             errors.append(f"line {line_number}: plan version moved backward")
 
         if event == "plan_initial":
-            if nodes:
+            if initialized:
                 errors.append(f"line {line_number}: duplicate initial plan")
                 continue
+            initialized = True
             mode = int(row["mode"])
             fixed = s3_points() if mode == 3 else s25_points()
             for serialized in row.get("nodes", []):
@@ -71,6 +85,66 @@ def audit_events(path: Path) -> dict:
             last_version = max(last_version, version)
             continue
 
+        if not initialized:
+            errors.append(f"line {line_number}: event before initial plan")
+
+        if event == "action_registered":
+            request_id = str(row.get("request_id", ""))
+            if not request_id or request_id in registered:
+                errors.append(f"line {line_number}: missing or duplicate registered request id")
+            else:
+                registered[request_id] = row
+            continue
+
+        if event in {"action_confirmed", "action_failed"}:
+            if event == "action_failed":
+                saw_failed_action = True
+            request_id = str(row.get("request_id", ""))
+            original = registered.get(request_id)
+            if original is None or request_id in finished_requests:
+                errors.append(f"line {line_number}: action completion lacks one pending registration")
+                continue
+            finished_requests.add(request_id)
+            for key in ("action_kind", "channel", "position"):
+                if row.get(key) != original.get(key):
+                    errors.append(f"line {line_number}: action completion changed {key}")
+            if event == "action_confirmed":
+                response = row.get("response", {})
+                if response.get("accepted") is not True:
+                    errors.append(f"line {line_number}: unaccepted action was confirmed")
+                before = row.get("before", {})
+                after = row.get("after", {})
+                try:
+                    before_time = float(before["virtual_time_s"])
+                    after_time = float(after["virtual_time_s"])
+                    if not np.isfinite(before_time) or not np.isfinite(after_time):
+                        errors.append(f"line {line_number}: non-finite action time")
+                    if after_time + 1e-12 < before_time or before_time + 1e-12 < last_time:
+                        errors.append(f"line {line_number}: action time moved backward")
+                    last_time = after_time
+                    for counter in ("distance_m", "measure_calls", "switches", "clear_calls", "failed_clear"):
+                        if float(after[counter]) + 1e-12 < float(before[counter]):
+                            errors.append(f"line {line_number}: counter {counter} moved backward")
+                except (KeyError, TypeError, ValueError):
+                    errors.append(f"line {line_number}: incomplete action accounting")
+                if row.get("action_kind") == "measure":
+                    station = row.get("coverage_idx")
+                    if station is not None and mode is not None:
+                        fixed = s3_points() if mode == 3 else s25_points()
+                        try:
+                            index = int(station)
+                            point = np.asarray(row.get("position"), dtype=float)
+                            if not 0 <= index < len(fixed) or np.linalg.norm(point - fixed[index]) > 1e-8:
+                                errors.append(f"line {line_number}: confirmed coverage index/coordinate mismatch")
+                        except (TypeError, ValueError):
+                            errors.append(f"line {line_number}: invalid confirmed coverage index")
+                    confirmed_measurements.append(row)
+            continue
+
+        if event == "terminal":
+            terminal_rows.append((line_number, row))
+            continue
+
         if event == "measurement":
             request_id = str(row.get("request_id", ""))
             if not request_id or request_id in request_ids:
@@ -78,13 +152,27 @@ def audit_events(path: Path) -> dict:
             request_ids.add(request_id)
             channel = int(row["channel"])
             result = row.get("result")
+            position_tuple = tuple(map(float, row["position"]))
+            matching = next((
+                action for action in reversed(confirmed_measurements)
+                if int(action.get("channel", -1)) == channel
+                and np.linalg.norm(np.asarray(action.get("position"), dtype=float)
+                                      - np.asarray(position_tuple)) <= 1e-8
+                and action.get("response", {}).get("measure_result") == result
+            ), None)
+            if matching is None:
+                errors.append(f"line {line_number}: coverage measurement lacks a matching confirmed action")
             if row.get("accepted") is True and result == "no_signal":
-                accepted.setdefault(channel, []).append(tuple(map(float, row["position"])))
+                accepted.setdefault(channel, []).append(position_tuple)
             node_id = str(row.get("node_id", ""))
             if node_id:
                 if node_id not in nodes:
                     errors.append(f"line {line_number}: measurement names a non-pending node")
+                elif row.get("accepted") is not True:
+                    errors.append(f"line {line_number}: unaccepted measurement completed an obligation")
                 else:
+                    if np.linalg.norm(np.asarray(nodes[node_id]["position"]) - np.asarray(position_tuple)) > 1e-8:
+                        errors.append(f"line {line_number}: measurement coordinate differs from plan node")
                     nodes[node_id]["channels"].discard(channel)
                     if not nodes[node_id]["channels"]:
                         nodes.pop(node_id)
@@ -158,11 +246,36 @@ def audit_events(path: Path) -> dict:
 
         last_version = max(last_version, version)
 
+    if not initialized:
+        errors.append("missing initial plan")
+    if len(terminal_rows) != 1:
+        errors.append("journal must contain exactly one terminal record")
+    else:
+        terminal_line, terminal = terminal_rows[0]
+        last_content_line = max((number for number, value in enumerate(lines, 1) if value.strip()), default=0)
+        if terminal_line != last_content_line:
+            errors.append("terminal record must be the last event")
+        if terminal.get("status") != "complete" or terminal.get("success") is not True \
+                or terminal.get("completion_certificate") is not True:
+            errors.append("terminal record does not confirm successful completion")
+        try:
+            if abs(float(terminal.get("virtual_time_s")) - last_time) > 1e-6:
+                errors.append("terminal time differs from last confirmed action")
+        except (TypeError, ValueError):
+            errors.append("terminal record has invalid time")
+    unfinished = set(registered) - finished_requests
+    if unfinished:
+        errors.append(f"unfinished registered actions: {sorted(unfinished)}")
+    if saw_failed_action:
+        errors.append("successful journal contains a failed action")
+
     return {
         "valid": not errors,
         "errors": errors,
         "last_plan_version": last_version,
         "accepted_request_count": len(request_ids),
+        "confirmed_action_count": len(finished_requests),
+        "terminal_count": len(terminal_rows),
     }
 
 

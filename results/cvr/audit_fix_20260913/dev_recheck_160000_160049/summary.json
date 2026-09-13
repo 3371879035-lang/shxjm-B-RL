@@ -1,0 +1,289 @@
+{
+  "stage": "dev",
+  "runs": 209,
+  "max_cost_identity_error_s": 7.275957614183426e-12,
+  "groups": [
+    {
+      "mode": 3,
+      "error_mode": "spatial",
+      "candidate": "COMPAT",
+      "pairs": 50,
+      "all_clear": true,
+      "cost_identity_ok": true,
+      "baseline_mean": 277.60826510081023,
+      "candidate_mean": 277.60826510081023,
+      "mean_delta_s_per_source": 0.0,
+      "relative_change_percent": 0.0,
+      "paired_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_delta_ci97_5": [
+        0.0,
+        0.0
+      ],
+      "baseline_p90": 323.85277080785085,
+      "candidate_p90": 323.85277080785085,
+      "baseline_p95": 332.94878285369424,
+      "candidate_p95": 332.94878285369424,
+      "baseline_max": 383.34393350597605,
+      "candidate_max": 383.34393350597605,
+      "baseline_wall_p95_s": 0.18387954498757608,
+      "candidate_wall_p95_s": 0.18539826500345952,
+      "mean_distance_delta_m": 0.0,
+      "mean_measure_delta": 0.0,
+      "mean_switch_delta": 0.0,
+      "mean_clear_delta": 0.0,
+      "mean_failed_clear_delta": 0.0,
+      "mechanism": {
+        "replacement_candidates": 0.0,
+        "certified_replacements": 0.0,
+        "executed_replacements": 0.0,
+        "restored_legacy_stations": 0.0,
+        "physical_stations_removed": 0.0,
+        "extra_measurements": 0.0,
+        "replans": 0.0,
+        "segment_interruptions": 0.0,
+        "certificate_wall_s": 0.0,
+        "fixed_obligations_completed": 87.44,
+        "variable_obligations_completed": 0.0,
+        "fixed_stations_visited": 6.9,
+        "variable_points_visited": 0.0,
+        "repeat_station_visits": 0.0,
+        "declared_exits_visited": 0.0,
+        "mean_planned_depth": 0.0,
+        "locator_action_events": 0.0
+      },
+      "fallback_counts": {
+        "planner_disabled": 50
+      },
+      "mechanism_gate": false
+    },
+    {
+      "mode": 3,
+      "error_mode": "spatial",
+      "candidate": "CVR",
+      "pairs": 50,
+      "all_clear": true,
+      "cost_identity_ok": true,
+      "baseline_mean": 277.60826510081023,
+      "candidate_mean": 274.9128525691126,
+      "mean_delta_s_per_source": -2.695412531697648,
+      "relative_change_percent": -0.9709410239348681,
+      "paired_delta_ci95": [
+        -4.69172946457459,
+        -0.8139121903772252
+      ],
+      "paired_delta_ci97_5": [
+        -4.965663087573595,
+        -0.5168238092409575
+      ],
+      "baseline_p90": 323.85277080785085,
+      "candidate_p90": 316.76613001041943,
+      "baseline_p95": 332.94878285369424,
+      "candidate_p95": 329.6900731755892,
+      "baseline_max": 383.34393350597605,
+      "candidate_max": 380.5027105161309,
+      "baseline_wall_p95_s": 0.18387954498757608,
+      "candidate_wall_p95_s": 0.4017215249914443,
+      "mean_distance_delta_m": -108.36382640100398,
+      "mean_measure_delta": -3.12,
+      "mean_switch_delta": 0.98,
+      "mean_clear_delta": 0.42,
+      "mean_failed_clear_delta": 0.42,
+      "mechanism": {
+        "replacement_candidates": 59.22,
+        "certified_replacements": 3.06,
+        "executed_replacements": 3.06,
+        "restored_legacy_stations": 2.72,
+        "physical_stations_removed": 3.06,
+        "extra_measurements": 31.42,
+        "replans": 5.98,
+        "segment_interruptions": 0.0,
+        "certificate_wall_s": 0.10431515399948693,
+        "fixed_obligations_completed": 56.74,
+        "variable_obligations_completed": 31.42,
+        "fixed_stations_visited": 3.92,
+        "variable_points_visited": 3.06,
+        "repeat_station_visits": 0.0,
+        "declared_exits_visited": 0.32,
+        "mean_planned_depth": 1.0,
+        "locator_action_events": 0.0
+      },
+      "fallback_counts": {
+        "": 9,
+        "unfinished_localization": 41
+      },
+      "mechanism_gate": true
+    },
+    {
+      "mode": 4,
+      "error_mode": "spatial",
+      "candidate": "COMPAT",
+      "pairs": 20,
+      "all_clear": true,
+      "cost_identity_ok": true,
+      "baseline_mean": 573.4436377339969,
+      "candidate_mean": 573.4436377339969,
+      "mean_delta_s_per_source": 0.0,
+      "relative_change_percent": 0.0,
+      "paired_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_delta_ci97_5": [
+        0.0,
+        0.0
+      ],
+      "baseline_p90": 703.4962128213613,
+      "candidate_p90": 703.4962128213613,
+      "baseline_p95": 790.6575594193708,
+      "candidate_p95": 790.6575594193708,
+      "baseline_max": 863.0015350962577,
+      "candidate_max": 863.0015350962577,
+      "baseline_wall_p95_s": 0.3505740400403738,
+      "candidate_wall_p95_s": 0.34978825501166283,
+      "mean_distance_delta_m": 0.0,
+      "mean_measure_delta": 0.0,
+      "mean_switch_delta": 0.0,
+      "mean_clear_delta": 0.0,
+      "mean_failed_clear_delta": 0.0,
+      "mechanism": {
+        "replacement_candidates": 0.0,
+        "certified_replacements": 0.0,
+        "executed_replacements": 0.0,
+        "restored_legacy_stations": 0.0,
+        "physical_stations_removed": 0.0,
+        "extra_measurements": 0.0,
+        "replans": 0.0,
+        "segment_interruptions": 0.0,
+        "certificate_wall_s": 0.0,
+        "fixed_obligations_completed": 251.0,
+        "variable_obligations_completed": 0.0,
+        "fixed_stations_visited": 23.1,
+        "variable_points_visited": 0.0,
+        "repeat_station_visits": 0.0,
+        "declared_exits_visited": 0.0,
+        "mean_planned_depth": 0.0,
+        "locator_action_events": 0.0
+      },
+      "fallback_counts": {
+        "planner_disabled": 20
+      },
+      "mechanism_gate": false
+    },
+    {
+      "mode": 4,
+      "error_mode": "spatial",
+      "candidate": "CVR",
+      "pairs": 19,
+      "all_clear": true,
+      "cost_identity_ok": true,
+      "baseline_mean": 576.816362019204,
+      "candidate_mean": 596.9730036158213,
+      "mean_delta_s_per_source": 20.1566415966172,
+      "relative_change_percent": 3.4944642565368556,
+      "paired_delta_ci95": [
+        3.287785330227249,
+        40.55701224390273
+      ],
+      "paired_delta_ci97_5": [
+        1.5410396778248519,
+        44.12439577459595
+      ],
+      "baseline_p90": 712.7577427025617,
+      "candidate_p90": 710.8842976181465,
+      "baseline_p95": 794.4651370865752,
+      "candidate_p95": 791.0230161234143,
+      "baseline_max": 863.0015350962577,
+      "candidate_max": 874.361943783993,
+      "baseline_wall_p95_s": 0.35120058003813026,
+      "candidate_wall_p95_s": 1.6648839100089388,
+      "mean_distance_delta_m": 1283.9808889529193,
+      "mean_measure_delta": 9.68421052631579,
+      "mean_switch_delta": 12.421052631578947,
+      "mean_clear_delta": 0.47368421052631576,
+      "mean_failed_clear_delta": 0.47368421052631576,
+      "mechanism": {
+        "replacement_candidates": 286.7894736842105,
+        "certified_replacements": 7.315789473684211,
+        "executed_replacements": 7.315789473684211,
+        "restored_legacy_stations": 6.578947368421052,
+        "physical_stations_removed": 7.315789473684211,
+        "extra_measurements": 67.63157894736842,
+        "replans": 24.0,
+        "segment_interruptions": 0.0,
+        "certificate_wall_s": 0.7013234947379189,
+        "fixed_obligations_completed": 191.31578947368422,
+        "variable_obligations_completed": 67.63157894736842,
+        "fixed_stations_visited": 17.68421052631579,
+        "variable_points_visited": 7.315789473684211,
+        "repeat_station_visits": 0.0,
+        "declared_exits_visited": 1.5789473684210527,
+        "mean_planned_depth": 1.0,
+        "locator_action_events": 0.0
+      },
+      "fallback_counts": {
+        "": 2,
+        "unfinished_localization": 17
+      },
+      "mechanism_gate": true
+    }
+  ],
+  "development_selection": [
+    {
+      "mode": 3,
+      "eligible": [],
+      "preferred": null,
+      "checks": {
+        "COMPAT": {
+          "all_clear": true,
+          "cost_identity": true,
+          "mean_improves_3pct": false,
+          "p95_within_103pct": true,
+          "max_within_103pct": true,
+          "runtime_p95_within_limit": true,
+          "mechanism_gate": false
+        },
+        "CVR": {
+          "all_clear": true,
+          "cost_identity": true,
+          "mean_improves_3pct": false,
+          "p95_within_103pct": true,
+          "max_within_103pct": true,
+          "runtime_p95_within_limit": true,
+          "mechanism_gate": true
+        }
+      },
+      "code_hash": "865253bfb4da606fb81de9fba3ee0337a4edbca08785e4cd7d8dce066bca4fff",
+      "config_hash": null
+    },
+    {
+      "mode": 4,
+      "eligible": [],
+      "preferred": null,
+      "checks": {
+        "COMPAT": {
+          "all_clear": true,
+          "cost_identity": true,
+          "mean_improves_3pct": false,
+          "p95_within_103pct": true,
+          "max_within_103pct": true,
+          "runtime_p95_within_limit": true,
+          "mechanism_gate": false
+        },
+        "CVR": {
+          "all_clear": true,
+          "cost_identity": true,
+          "mean_improves_3pct": false,
+          "p95_within_103pct": true,
+          "max_within_103pct": true,
+          "runtime_p95_within_limit": true,
+          "mechanism_gate": true
+        }
+      },
+      "code_hash": "865253bfb4da606fb81de9fba3ee0337a4edbca08785e4cd7d8dce066bca4fff",
+      "config_hash": null
+    }
+  ]
+}
