@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "mode": 3,
+  "variant": "G25OR",
+  "coverage": "S25",
+  "robot_id": "202610094088",
+  "request_log": "D:\\数学建模\\B_RL\\results\\isr_validation\\official_20260912\\runs\\main-b001-p4-g25or-q3\\runner\\requests.jsonl",
+  "cleared": 14,
+  "virtual_time_s": 3772.552779,
+  "distance_m": 15352.763890851269,
+  "measure_calls": 106,
+  "switches": 102,
+  "clear_calls": 14,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "extra_measurements": 32,
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 1789219403856,
+    "virtual_time_s": 3772.552779,
+    "exit_reason": "user_exit"
+  }
+}

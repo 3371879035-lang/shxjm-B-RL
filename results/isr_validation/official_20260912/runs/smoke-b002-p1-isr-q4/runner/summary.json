@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "mode": 4,
+  "variant": "ISR",
+  "coverage": "S25",
+  "robot_id": "202610094088",
+  "request_log": "D:\\数学建模\\B_RL\\results\\isr_validation\\official_20260912\\runs\\smoke-b002-p1-isr-q4\\runner\\requests.jsonl",
+  "cleared": 11,
+  "virtual_time_s": 6220.505085,
+  "distance_m": 21737.5254391929,
+  "measure_calls": 306,
+  "switches": 288,
+  "clear_calls": 11,
+  "failed_clear": 0,
+  "solver_failures": 0,
+  "optical_fallbacks": 0,
+  "candidate": "ISR-Q3r800-Q4r300-origin0-20260912",
+  "exit_response": {
+    "accepted": true,
+    "real_timestamp_ms": 1789219103323,
+    "virtual_time_s": 6220.505085,
+    "exit_reason": "user_exit"
+  }
+}

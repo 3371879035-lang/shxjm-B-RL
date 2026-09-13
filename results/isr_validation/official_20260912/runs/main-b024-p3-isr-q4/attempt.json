@@ -1,0 +1,14 @@
+{
+  "run_id": "main-b024-p3-isr-q4",
+  "global_index": 107,
+  "phase": "main",
+  "block": 24,
+  "block_position": 3,
+  "mode": 4,
+  "variant": "ISR",
+  "coverage": "S25",
+  "status": "prepared",
+  "run_dir": "D:\\数学建模\\B_RL\\results\\isr_validation\\official_20260912\\runs\\main-b024-p3-isr-q4",
+  "db_before_id": 1110,
+  "prepared_at_ms": 1789222139555
+}

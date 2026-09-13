@@ -1,5 +1,7 @@
 # CVR 实现与实验口径修复报告（2026-09-13）
 
+> GitHub交接复核补充：请同时阅读 [证据边界补充](CVR_EVIDENCE_LIMITATIONS_20260913.md)。下文后缀“全部完成清除”仅由策略完成标志支持，缺少逐分支真值与动作审计；不能据此宣告安全收益或完整重构门槛通过。原数据保留。
+
 ## 结论
 
 本轮修复确认了旧 CVR 实验的对照口径存在实质问题，但修复后当前 CVR 仍不满足采用标准。
@@ -96,4 +98,3 @@ Q4 CVR 平均每局多走 1283.98 米、多测 9.68 次、多切频 12.42 次；
 - 开发逐局 CSV：`results/cvr/audit_fix_20260913/dev_recheck_160000_160049/runs.csv`
 - 开发汇总：`results/cvr/audit_fix_20260913/dev_recheck_160000_160049/summary.json`
 - 日志与真值核对：`results/cvr/audit_fix_20260913/dev_recheck_160000_160049/runset_audit.json`
-
